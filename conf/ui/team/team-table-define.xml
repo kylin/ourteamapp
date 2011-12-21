@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tableList>
+
+	<table id="teamDefineListTable" desc="团队定义列表" extend="">
+				
+		<column property="teamName" label="名称" labelKey="" width="200" 
+			editable="true" cellEditor="" showValue="true" dataType="java.lang.String" 
+			align="" listDataSource="" 
+			canSort="false" canReOrder="true" canFilter="true"
+			canResize="true" icon=""
+			>
+					
+			<image value="*" file="team"/>
+								</column>
+				
+		<column property="teamCode" label="标识" labelKey="" width="200" 
+			editable="true" cellEditor="" showValue="true" dataType="java.lang.String" 
+			align="3" listDataSource="" 
+			canSort="false" canReOrder="true" canFilter="true"
+			canResize="true" icon=""
+			>
+								</column>
+				
+		<column property="remarks" label="备注" labelKey="" width="300" 
+			editable="true" cellEditor="" showValue="true" dataType="java.lang.String" 
+			align="" listDataSource="" 
+			canSort="false" canReOrder="true" canFilter="true"
+			canResize="true" icon=""
+			>
+								</column>
+		
+	</table>
+
+	<table id="teamMemberListTable" desc="团队成员列表" extend="">
+				
+		<column property="employeeCode" label="员工编码" labelKey="" width="200" 
+			editable="true" cellEditor="" showValue="true" dataType="java.lang.String" 
+			align="" listDataSource="" 
+			canSort="false" canReOrder="true" canFilter="true"
+			canResize="true" icon=""
+			>
+					
+			<image value="*" file="employee"/>
+								</column>
+				
+		<column property="employeeName" label="员工名称" labelKey="" width="200" 
+			editable="true" cellEditor="" showValue="true" dataType="java.lang.String" 
+			align="" listDataSource="" 
+			canSort="false" canReOrder="true" canFilter="true"
+			canResize="true" icon=""
+			>
+								</column>
+				
+		<column property="remarks" label="说明" labelKey="" width="300" 
+			editable="true" cellEditor="" showValue="true" dataType="java.lang.String" 
+			align="" listDataSource="" 
+			canSort="false" canReOrder="true" canFilter="true"
+			canResize="true" icon=""
+			>
+								</column>
+		
+	</table>
+
+	<table id="teamMemberConfigListTable" desc="团队成员配置列表" extend="">
+				
+		<column property="sysUserName" label="成员名称" labelKey="" width="200" 
+			editable="false" cellEditor="" showValue="true" dataType="java.lang.String" 
+			align="" listDataSource="" 
+			canSort="false" canReOrder="true" canFilter="true"
+			canResize="true" icon=""
+			>
+					
+			<image value="*" file="user"/>
+								</column>
+				
+		<column property="teamRoleId" label="角色" labelKey="" width="200" 
+			editable="true" cellEditor="" showValue="true" dataType="java.lang.Long" 
+			align="" listDataSource="team.teamRoleList" 
+			canSort="false" canReOrder="true" canFilter="true"
+			canResize="true" icon=""
+			>
+								</column>
+				
+		<column property="remarks" label="说明" labelKey="" width="300" 
+			editable="true" cellEditor="" showValue="true" dataType="java.lang.String" 
+			align="" listDataSource="" 
+			canSort="false" canReOrder="true" canFilter="true"
+			canResize="true" icon=""
+			>
+								</column>
+		
+	</table>
+
+	<table id="teamRoleListTable" desc="团队角色列表" extend="">
+				
+		<column property="teamRoleCode" label="角色编码" labelKey="" width="200" 
+			editable="true" cellEditor="" showValue="true" dataType="java.lang.String" 
+			align="" listDataSource="" 
+			canSort="false" canReOrder="true" canFilter="true"
+			canResize="true" icon=""
+			>
+					
+			<image value="*" file="team_role"/>
+								</column>
+				
+		<column property="teamRoleName" label="角色名称" labelKey="" width="200" 
+			editable="true" cellEditor="" showValue="true" dataType="java.lang.String" 
+			align="" listDataSource="" 
+			canSort="true" canReOrder="true" canFilter="true"
+			canResize="true" icon=""
+			>
+								</column>
+				
+		<column property="remarks" label="说明" labelKey="" width="300" 
+			editable="true" cellEditor="" showValue="true" dataType="java.lang.String" 
+			align="" listDataSource="" 
+			canSort="false" canReOrder="true" canFilter="true"
+			canResize="true" icon=""
+			>
+								</column>
+		
+	</table>
+
+	<table id="teamCalendarTreeTable" desc="团队日历树表" extend="">
+				
+		<column property="name" label="名称" labelKey="" width="200" 
+			editable="true" cellEditor="" showValue="true" dataType="java.lang.String" 
+			align="" listDataSource="" 
+			canSort="false" canReOrder="true" canFilter="true"
+			canResize="true" icon=""
+			>
+								</column>
+				
+		<column property="calendarStyle" label="" labelKey="" width="30" 
+			editable="false" cellEditor="" showValue="false" dataType="java.lang.String" 
+			align="3" listDataSource="" 
+			canSort="false" canReOrder="false" canFilter="false"
+			canResize="false" icon=""
+			>
+								</column>
+				
+		<column property="remarks" label="备注" labelKey="" width="300" 
+			editable="true" cellEditor="" showValue="true" dataType="java.lang.String" 
+			align="" listDataSource="" 
+			canSort="false" canReOrder="true" canFilter="true"
+			canResize="true" icon=""
+			>
+								</column>
+		
+	</table>
+
+</tableList>

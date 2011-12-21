@@ -1,0 +1,260 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tree id="business_template" imageBase="">
+	<nodeDefine>
+			
+		<node id="DAO" image="entity" label="DAO对象" labelKey="" leaf="false" hidden="false" nodePanel="">
+			
+						
+			<actionList>
+		
+					
+			</actionList>
+			
+			<subNodeBuilderList>
+					
+			<nodeBuilder id="DAOObjectTemplateSubNodeBuilder" className="com.ourteam.app.modelbase.ui.BusinessTemplateSubNodeBuilder">
+						
+			</nodeBuilder>
+					
+			<nodeBuilder id="DAOObjectOrmTypeSubNodeBuilder" className="com.ourteam.app.modelbase.ui.BusinessTemplateTypeSubNodeBuilder">
+						
+			</nodeBuilder>
+					
+			</subNodeBuilderList>
+			
+			
+		</node>
+			
+		<node id="SERVICE" image="service" label="服务对象" labelKey="" leaf="false" hidden="false" nodePanel="">
+			
+						
+			<actionList>
+		
+					
+			</actionList>
+			
+			<subNodeBuilderList>
+					
+			<nodeBuilder id="ServiceObjectTemplateSubNodeBuilder" className="com.ourteam.app.modelbase.ui.BusinessTemplateSubNodeBuilder">
+						
+			</nodeBuilder>
+					
+			<nodeBuilder id="ServiceTemplateTypeSubNodeBuilder" className="com.ourteam.app.modelbase.ui.BusinessTemplateTypeSubNodeBuilder">
+						
+			</nodeBuilder>
+					
+			</subNodeBuilderList>
+			
+			
+		</node>
+			
+		<node id="JAVA_CLASS" image="bean" label="DTO对象" labelKey="" leaf="false" hidden="false" nodePanel="">
+			
+						
+			<actionList>
+		
+					
+			</actionList>
+			
+			<subNodeBuilderList>
+					
+			<nodeBuilder id="DTOObjectTemplateSubNodeBuilder" className="com.ourteam.app.modelbase.ui.BusinessTemplateSubNodeBuilder">
+						
+			</nodeBuilder>
+					
+			<nodeBuilder id="DTOTemplateTypeSubNodeBuilder" className="com.ourteam.app.modelbase.ui.BusinessTemplateTypeSubNodeBuilder">
+						
+			</nodeBuilder>
+					
+			</subNodeBuilderList>
+			
+			
+		</node>
+			
+		<node id="ENUM" image="enum" label="枚举对象" labelKey="" leaf="false" hidden="false" nodePanel="">
+			
+						
+			<actionList>
+		
+					
+			</actionList>
+			
+			<subNodeBuilderList>
+					
+			<nodeBuilder id="ENUMObjectTemplateSubNodeBuilder" className="com.ourteam.app.modelbase.ui.BusinessTemplateSubNodeBuilder">
+						
+			</nodeBuilder>
+					
+			<nodeBuilder id="EnumTemplateTypeSubNodeBuilder" className="com.ourteam.app.modelbase.ui.BusinessTemplateTypeSubNodeBuilder">
+						
+			</nodeBuilder>
+					
+			</subNodeBuilderList>
+			
+			
+		</node>
+			
+		<node id="PERSISTENT" image="table" label="数据对象" labelKey="" leaf="false" hidden="false" nodePanel="">
+			
+						
+			<actionList>
+		
+					
+			</actionList>
+			
+			<subNodeBuilderList>
+					
+			<nodeBuilder id="PersistentObjectTemplateSubNodeBuilder" className="com.ourteam.app.modelbase.ui.BusinessTemplateSubNodeBuilder">
+						
+			</nodeBuilder>
+					
+			<nodeBuilder id="PersistentTemplateTypeSubNodeBuilder" className="com.ourteam.app.modelbase.ui.BusinessTemplateTypeSubNodeBuilder">
+						
+			</nodeBuilder>
+					
+			</subNodeBuilderList>
+			
+			
+		</node>
+			
+		<node id="TEMPLATE_TYPE" image="template_type" label="providerName" labelKey="" leaf="false" hidden="false" nodePanel="">
+			
+						
+			<actionList>
+		
+					
+			</actionList>
+			
+			<subNodeBuilderList>
+					
+			<nodeBuilder id="BusinessObjectTemplateSubNodeBuilder" className="com.ourteam.app.modelbase.ui.BusinessObjectTemplateSubNodeBuilder">
+						
+			</nodeBuilder>
+					
+			</subNodeBuilderList>
+			
+			
+		</node>
+			
+		<node id="TEMPLATE" image="template" label="name" labelKey="" leaf="true" hidden="false" nodePanel="">
+			
+						
+			<actionList>
+		
+					
+			</actionList>
+			
+			<subNodeBuilderList>
+					
+			</subNodeBuilderList>
+			
+			
+		</node>
+			
+		<node id="BUSINESS_PACKAGE_TYPE" image="" label="" labelKey="" leaf="false" hidden="false" nodePanel="">
+			
+						
+			<actionList>
+		
+					
+			</actionList>
+			
+			<subNodeBuilderList>
+					
+			<nodeBuilder id="BusinessPackageTypeSubNodeBuilder" className="com.ourteam.app.modelbase.ui.BusinessPackageTypeSubNodeBuilder">
+						
+			</nodeBuilder>
+					
+			</subNodeBuilderList>
+			
+			
+		</node>
+			
+		<node id="BUSINESS_PACKAGE" image="package" label="DAO对象包" labelKey="" leaf="false" hidden="false" nodePanel="">
+			
+						
+			<actionList>
+		
+					
+			</actionList>
+			
+			<subNodeBuilderList>
+					
+			<nodeBuilder id="DAOPackageTemplateSubNodeBuilder" className="com.ourteam.app.modelbase.ui.BusinessTemplateSubNodeBuilder">
+						
+			</nodeBuilder>
+					
+			<nodeBuilder id="DAOPackageOrmTypeSubNodeBuilder" className="com.ourteam.app.modelbase.ui.BusinessPackageProviderTypeSubNodeBuilder">
+						
+			</nodeBuilder>
+					
+			<nodeBuilder id="DAOObjectTypeSubNodeBuilder" className="com.ourteam.app.modelbase.ui.BusinessObjectTypeSubNodeBuilder">
+						
+			</nodeBuilder>
+					
+			</subNodeBuilderList>
+			
+			
+		</node>
+			
+		<node id="SERVICE_PACKAGE" image="service_package" label="服务对象包" labelKey="" leaf="false" hidden="false" nodePanel="">
+			
+						
+			<actionList>
+		
+					
+			</actionList>
+			
+			<subNodeBuilderList>
+					
+			<nodeBuilder id="ServicePackageTemplateSubNodeBuilder" className="com.ourteam.app.modelbase.ui.BusinessTemplateSubNodeBuilder">
+						
+			</nodeBuilder>
+					
+			<nodeBuilder id="ServicePackageProviderTypeSubNodeBuilder" className="com.ourteam.app.modelbase.ui.BusinessPackageProviderTypeSubNodeBuilder">
+						
+			</nodeBuilder>
+					
+			<nodeBuilder id="ServiceObjectTypeSubNodeBuilder" className="com.ourteam.app.modelbase.ui.BusinessObjectTypeSubNodeBuilder">
+						
+			</nodeBuilder>
+					
+			</subNodeBuilderList>
+			
+			
+		</node>
+			
+		<node id="PERSISTENT_PACKAGE" image="packd" label="数据对象包" labelKey="" leaf="false" hidden="false" nodePanel="">
+			
+						
+			<actionList>
+		
+					
+			</actionList>
+			
+			<subNodeBuilderList>
+					
+			<nodeBuilder id="PersistentPackageTemplateSubNodeBuilder" className="com.ourteam.app.modelbase.ui.BusinessTemplateSubNodeBuilder">
+						
+			</nodeBuilder>
+					
+			<nodeBuilder id="PersistentPackageProviderTypeSubNodeBuilder" className="com.ourteam.app.modelbase.ui.BusinessPackageProviderTypeSubNodeBuilder">
+						
+			</nodeBuilder>
+					
+			<nodeBuilder id="PersistentObjectTypeSubNodeBuilder" className="com.ourteam.app.modelbase.ui.BusinessObjectTypeSubNodeBuilder">
+						
+			</nodeBuilder>
+					
+			</subNodeBuilderList>
+			
+			
+		</node>
+		
+	</nodeDefine>
+	
+		
+	<rootNode id="BUSINESS_PACKAGE_TYPE">
+			</rootNode>
+		
+</tree>

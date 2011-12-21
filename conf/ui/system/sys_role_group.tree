@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tree id="sys_role_group" imageBase="/16X16/System">
+	<nodeDefine>
+			
+		<node id="sysDomain" image="/domain.png" label="name" labelKey="" leaf="false" hidden="false" nodePanel="">
+			
+						
+			<actionList>
+		
+					
+			</actionList>
+			
+			<subNodeBuilderList>
+					
+			<nodeBuilder id="SysRoleSubNodeBuilder" className="com.ourteam.app.system.ui.SysRoleSubNodeBuilder">
+						
+			</nodeBuilder>
+					
+			</subNodeBuilderList>
+			
+			
+		</node>
+			
+		<node id="sysRole" image="/role.png" label="name" labelKey="" leaf="true" hidden="false" nodePanel="">
+			
+						
+			<actionList>
+		
+					
+			</actionList>
+			
+			<subNodeBuilderList>
+					
+			</subNodeBuilderList>
+			
+			
+		</node>
+			
+		<node id="sysRoleGroup" image="/role_group.png" label="name" labelKey="" leaf="true" hidden="false" nodePanel="">
+			
+						
+			<actionList>
+		
+					
+			</actionList>
+			
+			<subNodeBuilderList>
+					
+			</subNodeBuilderList>
+			
+			
+		</node>
+			
+		<node id="sysDomainRoot" image="" label="" labelKey="" leaf="false" hidden="false" nodePanel="">
+			
+						
+			<actionList>
+		
+					
+			</actionList>
+			
+			<subNodeBuilderList>
+					
+			<nodeBuilder id="SysRoleGroupSubNodeBuilder" className="com.ourteam.app.system.ui.SysRoleGroupSubNodeBuilder">
+						
+			</nodeBuilder>
+					
+			<nodeBuilder id="SysRoleDomainSubNodeBuilder" className="com.ourteam.app.system.ui.SysRoleDomainSubNodeBuilder">
+						
+			</nodeBuilder>
+					
+			</subNodeBuilderList>
+			
+			
+		</node>
+		
+	</nodeDefine>
+	
+		
+	<rootNode id="sysDomainRoot">
+			</rootNode>
+		
+</tree>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tabbed>
+    
+  <tabbedpane id="meetingConfigTab" desc="会议配置Tab">
+  	  	
+  	<tab name="meetingForm" label="基本信息" labelKey="" icon="team_meeting" compentclass="">
+  		  
+    	<property id="formId" value="meetingForm"/>
+    	  
+    </tab>
+  	  
+  </tabbedpane>
+    
+  <tabbedpane id="addMeetingWizard" desc="添加会议向导">
+  	  	
+  	<tab name="meetingForm" label="会议基本信息" labelKey="" icon="" compentclass="">
+  		  
+    	<property id="formId" value="meetingForm"/>
+    	  
+    </tab>
+  	  
+  </tabbedpane>
+    
+  <tabbedpane id="myWorkReportEditorTab" desc="我的工作日报">
+  	  	
+  	<tab name="dayReport" label="日报" labelKey="" icon="work_report_view_day" compentclass="com.ourteam.app.personal.editor.DayWorkReportEditor">
+  		  
+    </tab>
+  	  	
+  	<tab name="weekReport" label="周报" labelKey="" icon="work_report_view_week" compentclass="com.ourteam.app.personal.editor.WeekWorkReportEditor">
+  		  
+    </tab>
+  	  	
+  	<tab name="monthReport" label="月报" labelKey="" icon="work_report_view_month" compentclass="com.ourteam.app.personal.editor.MonthWorkReportEditor">
+  		  
+    </tab>
+  	  
+  </tabbedpane>
+      
+</tabbed>

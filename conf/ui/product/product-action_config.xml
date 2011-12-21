@@ -1,0 +1,45 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<actions>
+
+	<action type="push" handler="addProductCatalog" desc="add product catalog"
+		icon="product_folder_add" id="addProductCatalog" domain="PRODUCT"
+		confirmInfoKey="" label="新建产品目录" labelKey="">
+	</action>
+
+	<action type="push" handler="addProductDefine" desc="add product define"
+		icon="product_add" id="addProductDefine"
+		domain="PRODUCT" confirmInfoKey="" label="新建产品定义" labelKey="">
+	</action>
+
+	<actiongroup id="productExplorerActionGroup">
+		<action ref="PRODUCT.addProductCatalog"></action>
+	</actiongroup>
+
+	<actiongroup id="productCatalogActionGroup">
+		<action ref="PRODUCT.addProductCatalog"></action>
+		<action ref="PRODUCT.addProductDefine"></action>
+		<action ref="delete" handler="deleteProductCatalog" domain="PRODUCT"></action>
+	</actiongroup>
+
+	<actiongroup id="productDefineActionGroup">
+		<action ref="delete" handler="deleteProductDefine" domain="PRODUCT"></action>
+	</actiongroup>
+
+	<action type="push" handler="addProductFunctionDefine" desc="add product function define"
+		icon="product_function_add" id="addProductFunctionDefine"
+		domain="PRODUCT" confirmInfoKey="" label="新建功能定义" labelKey="">
+	</action>
+
+	<actiongroup id="productFunctionListActionGroup">
+		<action ref="PRODUCT.addProductFunctionDefine"></action>
+		<action ref="delete" handler="deleteProductFunctionDefine"
+			domain="PRODUCT"></action>
+	</actiongroup>
+
+	<actiongroup id="productFunctionNodeActionGroup">
+		<action ref="PRODUCT.addProductFunctionDefine"></action>
+		<action ref="delete" handler="deleteProductFunctionDefine"
+			domain="PRODUCT"></action>
+	</actiongroup>
+
+</actions>

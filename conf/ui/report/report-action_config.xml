@@ -1,0 +1,98 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<actions>
+	
+	<action type="push" handler="addReportProject" desc="Add Report Project"
+		icon="report_project_add" id="addReportProject"
+		confirmInfoKey="" label="新建报表项目" labelKey="">
+	</action>
+	
+	<actiongroup id="reportProjectViewActionGroup">
+		<action ref="addReportProject"></action>
+	</actiongroup>
+	
+	<action type="push" handler="addReportViewDefine" desc="Add Report View Define"
+		icon="report_view_add" id="addReportViewDefine"
+		confirmInfoKey="" label="新建视图定义" labelKey="">
+	</action>
+	
+	<actiongroup id="reportProjectNodeActionGroup">
+		<action ref="addReportViewDefine"/>
+	</actiongroup>
+	
+	<actiongroup id="reportViewDefineNodeActionGroup">
+		<action ref="delete" handler="deleteReportViewDefine"/>
+	</actiongroup>
+	
+	<actiongroup id="reportViewTableListActionGroup">
+		<action ref="moveUp"/>
+		<action ref="moveDown"/>
+	</actiongroup>
+	
+	<actiongroup id="reportViewTableListEditorActionGroup">
+		<action ref="moveUp"/>
+		<action ref="moveDown"/>
+	</actiongroup>
+	
+	<action type="push" handler="addReportCatalog" desc="Add Report Catalog"
+		icon="report_catalog_add" id="addReportCatalog"
+		confirmInfoKey="" label="新建目录" labelKey="">
+	</action>
+	
+	<action type="push" handler="editReportCatalog" desc="Edit Report Catalog"
+		icon="report_catalog_edit" id="editReportCatalog"
+		confirmInfoKey="" label="编辑目录" labelKey="">
+	</action>
+	
+	<action type="push" handler="addReport" desc="Add Report"
+		icon="report_add" id="addReport"
+		confirmInfoKey="" label="添加报表" labelKey="">
+	</action>
+	
+	
+	
+	<actiongroup id="reportViewActionGroup">
+		<action ref="addReportCatalog" handler="addReportRootCatalog"></action>
+	</actiongroup>
+	
+	<actiongroup id="reportCatalogNodeActionGroup">
+		<action ref="addReportCatalog"/>
+		<action ref="editReportCatalog"/>
+		<action ref="delete" handler="deleteReportCatalog" icon="report_catalog_delete"/>
+		<action ref="addReport"/>
+	</actiongroup>
+	
+	<actiongroup id="reportNodeActionGroup">
+		<action ref="edit" handler="editReport" icon="report_edit"/>
+		<action ref="delete" handler="deleteReport"/>
+
+	</actiongroup>
+	
+	
+	
+	<actiongroup id="reportDisplayColumnsActionGroup">
+		<action ref="add" icon="add"/>
+		<action ref="remove" icon="delete"/>
+		<action ref="moveUp"/>
+		<action ref="moveDown"/>
+	</actiongroup>
+	
+	<actiongroup id="reportFilterActionGroup">
+		<action ref="add" icon="filter_add"/>
+		<action ref="remove" icon="filter_delete"/>
+	</actiongroup>
+	
+	<actiongroup id="selectDisplayColumnActionGroup">
+		<action ref="selectAll" />
+		<action ref="moveUp"/>
+		<action ref="moveDown"/>
+	</actiongroup>
+	
+	<actiongroup id="reportEditorActionGroup">
+		<action ref="goFirst" icon="resultset_first_24"/>
+		<action ref="goPrevious" icon="resultset_previous_24"/>
+		<action ref="goNext" icon="resultset_next_24"/>
+		<action ref="goLast" icon="resultset_last_24"/>
+		<action ref="setRowCount"></action>
+	</actiongroup>
+
+</actions>

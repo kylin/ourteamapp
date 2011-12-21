@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?><listdata>
+
+	<select name="booleanList" type="static">
+		<option value="true">是</option>
+		<option value="false">否</option>
+	</select>
+	
+</listdata>

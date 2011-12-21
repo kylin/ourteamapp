@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tree id="middle_ware_tools" imageBase="">
+	<nodeDefine>
+			
+		<node id="middleWareProviderRoot" image="middle_ware_provider" label="providerName" labelKey="" leaf="false" hidden="false" nodePanel="">
+			
+						
+			<actionList>
+		
+					
+			</actionList>
+			
+			<subNodeBuilderList>
+					
+			<nodeBuilder id="MiddleWareProviderNodeBuilder" className="com.ourteam.app.middleware.ui.MiddleWareProviderNodeBuilder">
+						
+			</nodeBuilder>
+					
+			</subNodeBuilderList>
+			
+			
+		</node>
+			
+		<node id="middleWareProvider" image="middle_ware_provider" label="${providerName} ${middleWareName} ${middleWareVersion}" labelKey="" leaf="false" hidden="false" nodePanel="">
+			
+					
+			<property name="actionGroupId" value="middleWareProviderNodeActionGroup" />
+						
+			<actionList>
+		
+					
+			</actionList>
+			
+			<subNodeBuilderList>
+					
+			<nodeBuilder id="MiddleWareToolGroupNodeBuilder" className="com.ourteam.app.middleware.ui.MiddleWareToolGroupNodeBuilder">
+						
+			</nodeBuilder>
+					
+			</subNodeBuilderList>
+			
+			
+		</node>
+			
+		<node id="middleWareToolGroup" image="middle_ware_tool_group" label="groupName" labelKey="" leaf="false" hidden="false" nodePanel="">
+			
+					
+			<property name="actionGroupId" value="middleWareToolGroupNodeActionGroup" />
+						
+			<actionList>
+		
+					
+			</actionList>
+			
+			<subNodeBuilderList>
+					
+			<nodeBuilder id="MiddleWareToolSubGroupNodeBuilder" className="com.ourteam.app.middleware.ui.MiddleWareToolSubGroupNodeBuilder">
+						
+			</nodeBuilder>
+					
+			<nodeBuilder id="MiddleWareToolNodeBuilder" className="com.ourteam.app.middleware.ui.MiddleWareToolNodeBuilder">
+						
+			</nodeBuilder>
+					
+			</subNodeBuilderList>
+			
+			
+		</node>
+			
+		<node id="middleWareTool" image="middle_ware_tool" label="toolName" labelKey="" leaf="true" hidden="false" nodePanel="">
+			
+					
+			<property name="actionGroupId" value="middleWareToolNodeActionGroup" />
+						
+			<actionList>
+		
+					
+			</actionList>
+			
+			<subNodeBuilderList>
+					
+			<nodeBuilder id="MiddleWareToolNodeBuilder" className="com.ourteam.app.middleware.ui.MiddleWareToolNodeBuilder">
+						
+			</nodeBuilder>
+					
+			</subNodeBuilderList>
+			
+			
+		</node>
+		
+	</nodeDefine>
+	
+		
+	<rootNode id="middleWareProviderRoot">
+			</rootNode>
+		
+</tree>

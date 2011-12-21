@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xmlns:tx="http://www.springframework.org/schema/tx"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.0.xsd
+		   http://www.springframework.org/schema/context
+       	   http://www.springframework.org/schema/context/spring-context-2.5.xsd
+           http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-2.0.xsd
+           http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-2.0.xsd">
+
+		
+	<bean id="com.ourteam.bpm.service.IBPMService"
+		class="com.ourteam.bpm.service.BPMServiceImpl" scope="singleton">
+		
+						
+		<property name="bpmProcessDefineDao"
+			ref="com.ourteam.bpm.dao.IBpmProcessDefineDAO" />
+								
+		<property name="bpmRoleDao"
+			ref="com.ourteam.bpm.dao.IBpmRoleDAO" />
+								
+		<property name="bpmEmployeeRoleRelateDao"
+			ref="com.ourteam.bpm.dao.IBpmEmployeeRoleRelateDAO" />
+								
+		<property name="bpmFormDefineDao"
+			ref="com.ourteam.bpm.dao.IBpmFormDefineDAO" />
+								
+		<property name="bpmFormFieldDefineDao"
+			ref="com.ourteam.bpm.dao.IBpmFormFieldDefineDAO" />
+								
+		<property name="bpmProcessRolePurviewDao"
+			ref="com.ourteam.bpm.dao.IBpmProcessRolePurviewDAO" />
+								
+		<property name="bpmFormFieldStatusDefineDao"
+			ref="com.ourteam.bpm.dao.IBpmFormFieldStatusDefineDAO" />
+								
+		<property name="bpmFormFieldListDefineDao"
+			ref="com.ourteam.bpm.dao.IBpmFormFieldListDefineDAO" />
+								
+		<property name="bpmProcessInstanceDao"
+			ref="com.ourteam.bpm.dao.IBpmProcessInstanceDAO" />
+								
+		<property name="bpmDomainDao"
+			ref="com.ourteam.bpm.dao.IBpmDomainDAO" />
+								
+		<property name="bpmDomainSysModuleRelateDao"
+			ref="com.ourteam.bpm.dao.IBpmDomainSysModuleRelateDAO" />
+								
+		<property name="bpmProcessCatalogDao"
+			ref="com.ourteam.bpm.dao.IBpmProcessCatalogDAO" />
+								
+		<property name="dentityService"
+			ref="org.activiti.engine.IdentityService" />		
+								
+		<property name="repositoryService"
+			ref="org.activiti.engine.RepositoryService" />		
+								
+		<property name="runtimeService"
+			ref="org.activiti.engine.RuntimeService" />		
+								
+		<property name="systemSerialCodeService"
+			ref="com.ourteam.system.service.ISystemSerialCodeService" />		
+								
+		<property name="taskService"
+			ref="org.activiti.engine.TaskService" />		
+								
+		<property name="formService"
+			ref="org.activiti.engine.FormService" />		
+								
+		<property name="bpmPublicUiConfigDao"
+			ref="com.ourteam.bpm.dao.IBpmPublicUiConfigDAO" />
+								
+		<property name="bpmTaskDao"
+			ref="com.ourteam.bpm.dao.IBpmTaskDAO" />
+								
+		<property name="bpmTaskRoleRelateDao"
+			ref="com.ourteam.bpm.dao.IBpmTaskRoleRelateDAO" />
+								
+		<property name="employeeService"
+			ref="com.ourteam.hr.service.IEmployeeService" />		
+								
+		<property name="departmentService"
+			ref="com.ourteam.hr.service.IDepartmentService" />		
+								
+		<property name="teamService"
+			ref="com.ourteam.team.service.ITeamService" />		
+								
+		<property name="projectService"
+			ref="com.ourteam.project.service.IProjectService" />		
+								
+		<property name="productService"
+			ref="com.ourteam.product.service.IProductService" />		
+								
+		<property name="historyService"
+			ref="org.activiti.engine.HistoryService" />		
+								
+		<property name="bpmProcessFormInstanceDao"
+			ref="com.ourteam.bpm.dao.IBpmProcessFormInstanceDAO" />
+								
+		<property name="bpmProcessFormValueDao"
+			ref="com.ourteam.bpm.dao.IBpmProcessFormValueDAO" />
+								
+		<property name="bpmAttachmentDao"
+			ref="com.ourteam.bpm.dao.IBpmAttachmentDAO" />
+								
+		<property name="bpmCommentDao"
+			ref="com.ourteam.bpm.dao.IBpmCommentDAO" />
+								
+	</bean>
+	
+</beans>

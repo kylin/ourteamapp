@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<formSet>
+	<form id="databaseViewForm" title="数据库浏览Form" titleKey="" desc="">
+						
+		<property id="name" title="名称" titleKey="" type="text" tipInfo="" desc="" readOnly="false" style="" command="" dataType="" dataSrc="" allowNull="false" value="" >
+								</property>
+				
+		<property id="desc" title="说明" titleKey="" type="ref" tipInfo="" desc="" readOnly="false" style="" command="" dataType="" dataSrc="" allowNull="true" value="descForm" >
+								</property>
+				
+		<property id="url" title="连接串" titleKey="" type="text" tipInfo="" desc="" readOnly="false" style="" command="" dataType="" dataSrc="" allowNull="true" value="" >
+								</property>
+				
+		<property id="user" title="登录用户" titleKey="" type="text" tipInfo="" desc="" readOnly="false" style="" command="" dataType="" dataSrc="" allowNull="false" value="" >
+								</property>
+				
+		<property id="password" title="登录密码" titleKey="" type="text" tipInfo="" desc="" readOnly="false" style="PASSWORD" command="" dataType="" dataSrc="" allowNull="true" value="" >
+								</property>
+				
+		<property id="driver" title="驱动" titleKey="" type="combolist" tipInfo="" desc="" readOnly="false" style="" command="" dataType="" dataSrc="Deiver.driverList" allowNull="false" value="" >
+								</property>
+				
+	</form>
+	<form id="databaseInfoForm" title="数据库信息表单" titleKey="" desc="">
+						
+		<property id="name" title="名称" titleKey="data.common.name" type="text" tipInfo="" desc="" readOnly="false" style="" command="" dataType="" dataSrc="" allowNull="false" value="" >
+								</property>
+				
+		<property id="providerId" title="提供商" titleKey="" type="combolist" tipInfo="" desc="" readOnly="true" style="" command="" dataType="" dataSrc="middleWare.providerList" allowNull="false" value="" >
+								</property>
+				
+		<property id="driveType" title="数据库驱动" titleKey="" type="combolist" tipInfo="" desc="" readOnly="true" style="" command="" dataType="" dataSrc="database.driverList" allowNull="false" value="" >
+								</property>
+				
+		<property id="hostName" title="服务地址" titleKey="data.common.name" type="text" tipInfo="" desc="" readOnly="false" style="" command="" dataType="" dataSrc="" allowNull="false" value="" >
+								</property>
+				
+		<property id="hostPort" title="服务端口" titleKey="data.common.name" type="text" tipInfo="" desc="" readOnly="false" style="" command="" dataType="" dataSrc="" allowNull="true" value="" >
+								</property>
+				
+		<property id="serviceName" title="数据库名" titleKey="data.common.name" type="text" tipInfo="" desc="" readOnly="false" style="" command="" dataType="" dataSrc="" allowNull="true" value="" >
+								</property>
+				
+		<property id="user" title="用户" titleKey="data.common.name" type="text" tipInfo="" desc="" readOnly="false" style="" command="" dataType="" dataSrc="" allowNull="false" value="" >
+								</property>
+				
+		<property id="password" title="密码" titleKey="data.common.name" type="text" tipInfo="" desc="" readOnly="false" style="PASSWORD" command="" dataType="" dataSrc="" allowNull="false" value="" >
+								</property>
+				
+		<property id="desc" title="说明" titleKey="data.common.name" type="ref" tipInfo="" desc="" readOnly="false" style="" command="" dataType="" dataSrc="" allowNull="true" value="descForm" >
+								</property>
+				
+	</form>
+	<form id="searchDatabaseInfoForm" title="查询数据库表单" titleKey="" desc="">
+						
+		<property id="name" title="名称" titleKey="data.common.name" type="text" tipInfo="" desc="" readOnly="false" style="" command="" dataType="" dataSrc="" allowNull="true" value="" >
+								</property>
+				
+		<property id="providerId" title="提供商" titleKey="" type="combolist" tipInfo="" desc="" readOnly="true" style="" command="" dataType="" dataSrc="middleWare.providerList" allowNull="true" value="" >
+								</property>
+				
+	</form>
+	<form id="searchDatabaseObjectForm" title="查询数据库表单" titleKey="" desc="">
+						
+		<property id="tableName" title="数据库表名称" titleKey="data.common.name" type="text" tipInfo="" desc="" readOnly="false" style="" command="" dataType="" dataSrc="" allowNull="true" value="" >
+								</property>
+				
+	</form>
+	<form id="cvsServerInfoForm" title="CVS服务配置表单" titleKey="" desc="">
+						
+		<property id="name" title="名称" titleKey="data.common.name" type="text" tipInfo="" desc="" readOnly="false" style="" command="" dataType="" dataSrc="" allowNull="false" value="" >
+								</property>
+				
+		<property id="hostName" title="服务地址" titleKey="data.common.name" type="text" tipInfo="" desc="" readOnly="false" style="" command="" dataType="" dataSrc="" allowNull="false" value="" >
+								</property>
+				
+		<property id="hostPort" title="服务端口" titleKey="data.common.name" type="text" tipInfo="" desc="" readOnly="false" style="" command="" dataType="" dataSrc="" allowNull="true" value="" >
+								</property>
+				
+		<property id="driveType" title="连接类型" titleKey="data.common.name" type="combolist" tipInfo="" desc="" readOnly="true" style="" command="" dataType="" dataSrc="cvs.ConnectTypeList" allowNull="false" value="" >
+								</property>
+				
+		<property id="user" title="用户" titleKey="data.common.name" type="text" tipInfo="" desc="" readOnly="false" style="" command="" dataType="" dataSrc="" allowNull="false" value="" >
+								</property>
+				
+		<property id="password" title="密码" titleKey="data.common.name" type="text" tipInfo="" desc="" readOnly="false" style="PASSWORD" command="" dataType="" dataSrc="" allowNull="false" value="" >
+								</property>
+				
+		<property id="serviceName" title="根目录" titleKey="data.common.name" type="text" tipInfo="" desc="" readOnly="false" style="" command="" dataType="" dataSrc="" allowNull="false" value="" >
+								</property>
+				
+		<property id="desc" title="说明" titleKey="" type="ref" tipInfo="" desc="" readOnly="false" style="" command="" dataType="" dataSrc="" allowNull="true" value="descForm" >
+								</property>
+				
+	</form>
+	<form id="svnServerInfoForm" title="SVN服务配置表单" titleKey="" desc="">
+						
+		<property id="name" title="名称" titleKey="data.common.name" type="text" tipInfo="" desc="" readOnly="false" style="" command="" dataType="" dataSrc="" allowNull="false" value="" >
+								</property>
+				
+		<property id="hostName" title="服务地址" titleKey="data.common.name" type="text" tipInfo="" desc="" readOnly="false" style="" command="" dataType="" dataSrc="" allowNull="false" value="" >
+								</property>
+				
+		<property id="hostPort" title="服务端口" titleKey="data.common.name" type="text" tipInfo="" desc="" readOnly="false" style="" command="" dataType="" dataSrc="" allowNull="true" value="" >
+								</property>
+				
+		<property id="driveType" title="连接类型" titleKey="data.common.name" type="combolist" tipInfo="" desc="" readOnly="true" style="" command="" dataType="" dataSrc="svn.ConnectTypeList" allowNull="false" value="" >
+								</property>
+				
+		<property id="user" title="用户" titleKey="data.common.name" type="text" tipInfo="" desc="" readOnly="false" style="" command="" dataType="" dataSrc="" allowNull="false" value="" >
+								</property>
+				
+		<property id="password" title="密码" titleKey="data.common.name" type="text" tipInfo="" desc="" readOnly="false" style="PASSWORD" command="" dataType="" dataSrc="" allowNull="false" value="" >
+								</property>
+				
+		<property id="serviceName" title="根目录" titleKey="data.common.name" type="text" tipInfo="" desc="" readOnly="false" style="" command="" dataType="" dataSrc="" allowNull="true" value="" >
+								</property>
+				
+		<property id="desc" title="说明" titleKey="data.common.name" type="ref" tipInfo="" desc="" readOnly="false" style="" command="" dataType="" dataSrc="" allowNull="true" value="descForm" >
+								</property>
+				
+	</form>
+	<form id="middleWareProviderForm" title="中间件提供商表单" titleKey="" desc="">
+						
+		<property id="providerName" title="提供商名称" titleKey="" type="text" tipInfo="" desc="" readOnly="false" style="" command="" dataType="" dataSrc="" allowNull="false" value="" >
+								</property>
+				
+		<property id="middleWareName" title="产品名称" titleKey="" type="text" tipInfo="" desc="" readOnly="false" style="" command="" dataType="" dataSrc="" allowNull="false" value="" >
+								</property>
+				
+		<property id="middleWareVersion" title="产品版本" titleKey="" type="text" tipInfo="" desc="" readOnly="false" style="" command="" dataType="" dataSrc="" allowNull="false" value="" >
+								</property>
+				
+		<property id="remarks" title="" titleKey="" type="ref" tipInfo="" desc="" readOnly="false" style="" command="" dataType="" dataSrc="" allowNull="true" value="remarksForm" >
+								</property>
+				
+	</form>
+	<form id="middleWareToolGroupForm" title="工具分组表单" titleKey="" desc="">
+						
+		<property id="groupName" title="分组名称" titleKey="" type="text" tipInfo="" desc="" readOnly="false" style="" command="" dataType="" dataSrc="" allowNull="false" value="" >
+								</property>
+				
+		<property id="remarks" title="" titleKey="" type="ref" tipInfo="" desc="" readOnly="false" style="" command="" dataType="" dataSrc="" allowNull="true" value="remarksForm" >
+								</property>
+				
+	</form>
+	<form id="middleWareToolInfoForm" title="管理工具信息表单" titleKey="" desc="">
+						
+		<property id="toolName" title="名称" titleKey="" type="text" tipInfo="" desc="" readOnly="false" style="" command="" dataType="" dataSrc="" allowNull="false" value="" >
+								</property>
+				
+		<property id="remarks" title="" titleKey="" type="ref" tipInfo="" desc="" readOnly="false" style="" command="" dataType="" dataSrc="" allowNull="true" value="remarksForm" >
+								</property>
+				
+	</form>
+	<form id="middleWareTooScritpForm" title="工具脚本表单" titleKey="" desc="">
+						
+		<property id="toolScriptType" title="脚本类型" titleKey="" type="combolist" tipInfo="" desc="" readOnly="true" style="" command="" dataType="" dataSrc="middleWare.ScriptTypeList" allowNull="false" value="" >
+								</property>
+				
+		<property id="toolProgram" title="执行程序" titleKey="" type="text" tipInfo="" desc="" readOnly="false" style="" command="" dataType="" dataSrc="" allowNull="true" value="" >
+								</property>
+				
+		<property id="timeOut" title="超时设置" titleKey="" type="text" tipInfo="" desc="" readOnly="false" style="" command="" dataType="" dataSrc="" allowNull="true" value="" >
+								</property>
+				
+		<property id="completeKeyWork" title="脚本完成关键字" titleKey="" type="text" tipInfo="" desc="" readOnly="false" style="" command="" dataType="" dataSrc="" allowNull="true" value="" >
+								</property>
+				
+		<property id="succeedKeyWord" title="脚本成功关键字" titleKey="" type="text" tipInfo="" desc="" readOnly="false" style="" command="" dataType="" dataSrc="" allowNull="true" value="" >
+								</property>
+				
+		<property id="outputFile" title="输出文件" titleKey="" type="text" tipInfo="" desc="" readOnly="false" style="" command="" dataType="" dataSrc="" allowNull="true" value="" >
+								</property>
+				
+		<property id="scriptGroup" title="脚本内容" titleKey="" type="group" tipInfo="" desc="" readOnly="false" style="" command="" dataType="" dataSrc="" allowNull="true" value="numColumns=1" >
+						
+			<layoutData name="horizontalSpan" value="2" />
+						
+			<layoutData name="grabExcessHorizontalSpace" value="true" />
+						
+			<layoutData name="horizontalAlignment" value="FILL" />
+						
+			<layoutData name="grabExcessVerticalSpace" value="true" />
+						
+			<layoutData name="verticalAlignment" value="FILL" />
+									<property id="toolScript" title="" titleKey="" type="text" desc="" readOnly="false" style="WRAP|MULTI" command="" dataType="" dataSrc="" allowNull="true" value="" >
+		
+	<layoutData name="grabExcessHorizontalSpace" value="true" />
+		
+	<layoutData name="horizontalAlignment" value="FILL" />
+		
+	<layoutData name="grabExcessVerticalSpace" value="true" />
+		
+	<layoutData name="verticalAlignment" value="FILL" />
+	
+</property>					</property>
+				
+	</form>
+	<form id="middleWareToolInputForm" title="工具脚本输入表单" titleKey="" desc="">
+						
+		<property id="parameterName" title="参数名称" titleKey="" type="text" tipInfo="" desc="" readOnly="false" style="" command="" dataType="" dataSrc="" allowNull="false" value="" >
+								</property>
+				
+		<property id="parameterCode" title="变量名称" titleKey="" type="text" tipInfo="" desc="" readOnly="false" style="" command="" dataType="" dataSrc="" allowNull="false" value="" >
+								</property>
+				
+		<property id="parameterType" title="参数类型" titleKey="" type="combolist" tipInfo="" desc="" readOnly="true" style="" command="" dataType="" dataSrc="middleWare.InputTypeList" allowNull="false" value="" >
+								</property>
+				
+		<property id="defaultValue" title="默认值" titleKey="" type="combolist" tipInfo="" desc="" readOnly="false" style="" command="" dataType="" dataSrc="" allowNull="true" value="" >
+								</property>
+				
+		<property id="isRequired" title="必须" titleKey="" type="combolist" tipInfo="" desc="" readOnly="true" style="" command="" dataType="" dataSrc="booleanList" allowNull="false" value="" >
+								</property>
+				
+		<property id="remarks" title="" titleKey="" type="ref" tipInfo="" desc="" readOnly="false" style="" command="" dataType="" dataSrc="" allowNull="true" value="remarksForm" >
+								</property>
+				
+	</form>
+	<form id="middleWareToolExecuteForm" title="工具执行表单" titleKey="" desc="">
+						
+		<property id="remarks" title="备注" titleKey="" type="ref" tipInfo="" desc="" readOnly="false" style="" command="" dataType="" dataSrc="" allowNull="true" value="remarksForm" >
+								</property>
+				
+	</form>
+	<form id="middleWareHostLoginForm" title="中间件服务器登录表单" titleKey="" desc="">
+						
+		<property id="host" title="主机地址" titleKey="" type="text" tipInfo="" desc="" readOnly="false" style="" command="" dataType="" dataSrc="" allowNull="false" value="" >
+								</property>
+				
+		<property id="port" title="端口" titleKey="" type="text" tipInfo="" desc="" readOnly="false" style="" command="" dataType="" dataSrc="" allowNull="true" value="" >
+								</property>
+				
+		<property id="loginId" title="用户" titleKey="" type="text" tipInfo="" desc="" readOnly="false" style="" command="" dataType="" dataSrc="" allowNull="false" value="" >
+								</property>
+				
+		<property id="loginPassword" title="密码" titleKey="" type="text" tipInfo="" desc="" readOnly="false" style="PASSWORD" command="" dataType="" dataSrc="" allowNull="true" value="" >
+								</property>
+				
+	</form>
+
+</formSet>

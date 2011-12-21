@@ -1,0 +1,268 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tree id="workspace_explorer" imageBase="">
+	<nodeDefine>
+			
+		<node id="WORKSPACE_ROOT" image="" label="" labelKey="" leaf="false" hidden="false" nodePanel="">
+			
+						
+			<actionList>
+		
+					
+			</actionList>
+			
+			<subNodeBuilderList>
+					
+			<nodeBuilder id="WorkspaceSubNodeBuilder" className="com.ourteam.app.workspace.ui.WorkspaceSubNodeBuilder">
+						
+			</nodeBuilder>
+					
+			</subNodeBuilderList>
+			
+			
+		</node>
+			
+		<node id="WORKSPACE" image="workspace" label="name" labelKey="" leaf="false" hidden="false" nodePanel="">
+			
+						
+			<actionList>
+		
+					
+			</actionList>
+			
+			<subNodeBuilderList>
+					
+			<nodeBuilder id="CodeSourceResourceSubNodeBuilder" className="com.ourteam.app.workspace.ui.SourceCodeResourceSubNodeBuilder">
+						
+			</nodeBuilder>
+					
+			<nodeBuilder id="DependLibaryResourceSubNodeBuilder" className="com.ourteam.app.workspace.ui.DependLibaryResourceSubNodeBuilder">
+						
+			</nodeBuilder>
+					
+			<nodeBuilder id="WorkspaceFileSubNodeBuilder" className="com.ourteam.app.workspace.ui.WorkspaceFileSubNodeBuilder">
+						
+			</nodeBuilder>
+					
+			</subNodeBuilderList>
+			
+			
+		</node>
+			
+		<node id="SOURCE_CODE" image="source_folder" label="name" labelKey="" leaf="false" hidden="false" nodePanel="">
+			
+						
+			<actionList>
+		
+					
+			</actionList>
+			
+			<subNodeBuilderList>
+					
+			<nodeBuilder id="WorkspaceResourceFileSubNodeBuilder" className="com.ourteam.app.workspace.ui.WorkspaceResourceFileSubNodeBuilder">
+						
+			</nodeBuilder>
+					
+			</subNodeBuilderList>
+			
+			
+		</node>
+			
+		<node id="DEPEND_LIBARY" image="depend_lib" label="name" labelKey="" leaf="false" hidden="false" nodePanel="">
+			
+						
+			<actionList>
+		
+					
+			</actionList>
+			
+			<subNodeBuilderList>
+					
+			<nodeBuilder id="WorkspaceResourceFileSubNodeBuilder" className="com.ourteam.app.workspace.ui.WorkspaceResourceFileSubNodeBuilder">
+						
+			</nodeBuilder>
+					
+			</subNodeBuilderList>
+			
+			
+		</node>
+			
+		<node id="DIRECTOR" image="folder" label="name" labelKey="" leaf="false" hidden="false" nodePanel="">
+			
+						
+			<actionList>
+		
+					
+			</actionList>
+			
+			<subNodeBuilderList>
+					
+			<nodeBuilder id="DirectoryResourceFileSubNodeBuilder" className="com.ourteam.app.workspace.ui.DirectoryResourceFileSubNodeBuilder">
+						
+			</nodeBuilder>
+					
+			</subNodeBuilderList>
+			
+			
+		</node>
+			
+		<node id="FILE" image="file" label="nameWithVersionInfo" labelKey="" leaf="true" hidden="false" nodePanel="">
+			
+						
+			<actionList>
+		
+					
+			</actionList>
+			
+			<subNodeBuilderList>
+					
+			</subNodeBuilderList>
+			
+			
+		</node>
+			
+		<node id="SOURCE_PACKAGE" image="source_package" label="name" labelKey="" leaf="false" hidden="false" nodePanel="">
+			
+						
+			<actionList>
+		
+					
+			</actionList>
+			
+			<subNodeBuilderList>
+					
+			<nodeBuilder id="SourceDirectoryResourceFileSubNodeBuilder" className="com.ourteam.app.workspace.ui.SourceDirectoryResourceFileSubNodeBuilder">
+						
+			</nodeBuilder>
+					
+			</subNodeBuilderList>
+			
+			
+		</node>
+			
+		<node id="JAVA_FILE" image="java_file" label="nameWithVersionInfo" labelKey="" leaf="true" hidden="false" nodePanel="">
+			
+						
+			<actionList>
+		
+					
+			</actionList>
+			
+			<subNodeBuilderList>
+					
+			</subNodeBuilderList>
+			
+			
+		</node>
+			
+		<node id="JAR_FILE" image="jar_file" label="nameWithVersionInfo" labelKey="" leaf="true" hidden="false" nodePanel="">
+			
+						
+			<actionList>
+		
+					
+			</actionList>
+			
+			<subNodeBuilderList>
+					
+			</subNodeBuilderList>
+			
+			
+		</node>
+			
+		<node id="UI_ACTION_CONFIG" image="ui_action_config" label="nameWithVersionInfo" labelKey="" leaf="true" hidden="false" nodePanel="">
+			
+						
+			<actionList>
+		
+					
+			</actionList>
+			
+			<subNodeBuilderList>
+					
+			</subNodeBuilderList>
+			
+			
+		</node>
+			
+		<node id="UI_FORM_CONFIG" image="ui_form_config" label="nameWithVersionInfo" labelKey="" leaf="true" hidden="false" nodePanel="">
+			
+						
+			<actionList>
+		
+					
+			</actionList>
+			
+			<subNodeBuilderList>
+					
+			</subNodeBuilderList>
+			
+			
+		</node>
+			
+		<node id="UI_TABLE_CONFIG" image="ui_table_config" label="nameWithVersionInfo" labelKey="" leaf="true" hidden="false" nodePanel="">
+			
+						
+			<actionList>
+		
+					
+			</actionList>
+			
+			<subNodeBuilderList>
+					
+			</subNodeBuilderList>
+			
+			
+		</node>
+			
+		<node id="UI_TREE_CONFIG" image="ui_tree_config" label="nameWithVersionInfo" labelKey="" leaf="true" hidden="false" nodePanel="">
+			
+						
+			<actionList>
+		
+					
+			</actionList>
+			
+			<subNodeBuilderList>
+					
+			</subNodeBuilderList>
+			
+			
+		</node>
+			
+		<node id="UI_TAB_CONFIG" image="ui_tab_config" label="nameWithVersionInfo" labelKey="" leaf="true" hidden="false" nodePanel="">
+			
+						
+			<actionList>
+		
+					
+			</actionList>
+			
+			<subNodeBuilderList>
+					
+			</subNodeBuilderList>
+			
+			
+		</node>
+			
+		<node id="UI_SELECT_LIST_CONFIG" image="ui_combox_config" label="nameWithVersionInfo" labelKey="" leaf="true" hidden="false" nodePanel="">
+			
+						
+			<actionList>
+		
+					
+			</actionList>
+			
+			<subNodeBuilderList>
+					
+			</subNodeBuilderList>
+			
+			
+		</node>
+		
+	</nodeDefine>
+	
+		
+	<rootNode id="WORKSPACE_ROOT">
+			</rootNode>
+		
+</tree>

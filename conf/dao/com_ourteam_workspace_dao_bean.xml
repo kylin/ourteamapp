@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xmlns:tx="http://www.springframework.org/schema/tx"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.0.xsd
+		   http://www.springframework.org/schema/context
+       	   http://www.springframework.org/schema/context/spring-context-2.5.xsd
+           http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-2.0.xsd
+           http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-2.0.xsd">
+
+			
+		
+	<bean id="com.ourteam.workspace.dao.IProjectServerRelateDAO"
+		class="com.ourteam.workspace.dao.impl.ProjectServerRelateDAO" scope="singleton">
+				
+				
+						
+		<property name="dataSource" ref="dataSource"/>
+				
+						
+	</bean>
+					
+		
+	<bean id="com.ourteam.workspace.dao.IProjectWorkspaceRelateDAO"
+		class="com.ourteam.workspace.dao.impl.ProjectWorkspaceRelateDAO" scope="singleton">
+				
+				
+						
+		<property name="dataSource" ref="dataSource"/>
+				
+						
+	</bean>
+					
+		
+	<bean id="com.ourteam.workspace.dao.IWorkspaceDAO"
+		class="com.ourteam.workspace.dao.impl.WorkspaceDAO" scope="singleton">
+				
+				
+						
+		<property name="dataSource" ref="dataSource"/>
+				
+						
+	</bean>
+					
+		
+	<bean id="com.ourteam.workspace.dao.IWorkspaceConfigDAO"
+		class="com.ourteam.workspace.dao.impl.WorkspaceConfigDAO" scope="singleton">
+				
+				
+						
+		<property name="dataSource" ref="dataSource"/>
+				
+						
+	</bean>
+					
+		
+	<bean id="com.ourteam.workspace.dao.IWorkspaceConfigPropertyDAO"
+		class="com.ourteam.workspace.dao.impl.WorkspaceConfigPropertyDAO" scope="singleton">
+				
+				
+						
+		<property name="dataSource" ref="dataSource"/>
+				
+												
+	</bean>
+					
+		
+	<bean id="com.ourteam.workspace.dao.IWorkspaceResourceDAO"
+		class="com.ourteam.workspace.dao.impl.WorkspaceResourceDAO" scope="singleton">
+				
+				
+						
+		<property name="dataSource" ref="dataSource"/>
+				
+						
+		<property name="workspaceResourceBusinessPackageRelate" ref="com.ourteam.workspace.dao.IWorkspaceResourceBusinessPackageRelateDAO"/>
+														
+	</bean>
+					
+		
+	<bean id="com.ourteam.workspace.dao.IWorkspaceResourceBusinessPackageRelateDAO"
+		class="com.ourteam.workspace.dao.impl.WorkspaceResourceBusinessPackageRelateDAO" scope="singleton">
+				
+				
+						
+		<property name="dataSource" ref="dataSource"/>
+				
+																		
+	</bean>
+			
+</beans>

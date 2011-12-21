@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<listdata>
+	
+	<select name="report.joinTypeList" type="static">
+	    <option value=""></option>
+		<option value="LEFT">LEFT</option>
+		<option value="RIGHT">RIGHT</option>
+		<option value="INNER">INNER</option>
+		<option value="OUTER">OUTER</option>
+	</select>
+	
+	<select name="report.fieldDataType" type="static">
+	    <option value="general"></option>
+		<option value="dateTime">日期时间</option>
+	</select>
+	
+	<select name="report.listSource" type="getReportListSource"
+		dataProperty="id" labelProperty="name">
+	</select>
+	
+	<select name="report.unionViewList" type="getReportunionViewList"
+		dataProperty="id" labelProperty="name">
+	</select>
+	
+	<select name="report.reportProjectList" type="getReporProjects"
+		dataProperty="id" labelProperty="name">
+	</select>
+	
+	<select name="report.filterLeftSymb0l" type="static">
+	    <option value=""></option>
+		<option value="(">(</option>
+	</select>
+	
+	<select name="report.filterRightSymb0l" type="static">
+	    <option value=""></option>
+		<option value=")">)</option>
+	</select>
+	
+</listdata>

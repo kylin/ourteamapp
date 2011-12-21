@@ -1,0 +1,28 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<actions>
+	
+	<action type="check" handler="selecteTeam" desc="selecte team "
+		icon="team" id="selecteTeamAction"
+		confirmInfoKey="" label="${teamName}" labelKey="">
+	</action>
+
+	<action type="push" handler="addTeamDefine" desc="add team define"
+		icon="team_add" id="addTeamDefine" domain="TEAM"
+		confirmInfoKey="" label="新建团队" labelKey="">
+	</action>
+
+	<actiongroup id="teamExplorerActionGroup">
+		<action ref="TEAM.addTeamDefine"></action>
+		<action ref="delete" handler="deleteTeamDefine" domain="TEAM"></action>
+	</actiongroup>
+	
+	<action type="push" handler="addTeamCalendar" desc="Add Team Calendar"
+		icon="calendar_add.png" id="addTeamCalendar"
+		confirmInfoKey="" label="新建日历" labelKey="">
+	</action>
+	
+	<actiongroup id="teamCalendarActionGroup">
+		<action ref="addTeamCalendar"></action>
+	</actiongroup>
+
+</actions>

@@ -1,0 +1,328 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tree id="business_object" imageBase="">
+	<nodeDefine>
+			
+		<node id="BUSINESS_DOMAIN_ROOT" image="" label="业务域" labelKey="" leaf="false" hidden="false" nodePanel="">
+			
+						
+			<actionList>
+		
+					
+			</actionList>
+			
+			<subNodeBuilderList>
+					
+			<nodeBuilder id="BusinessDomainNoderBuilder" className="com.ourteam.app.modelbase.ui.BusinessDomainNoderBuilder">
+						
+			</nodeBuilder>
+					
+			</subNodeBuilderList>
+			
+			
+		</node>
+			
+		<node id="BUSINESS_DOMAIN" image="packagefolder" label="" labelKey="" leaf="false" hidden="false" nodePanel="businessDomainTab">
+			
+						
+			<actionList>
+		
+					
+			</actionList>
+			
+			<subNodeBuilderList>
+					
+			<nodeBuilder id="BusinessPackageNodeBuilder" className="com.ourteam.app.modelbase.ui.BusinessPackageNodeBuilder">
+						
+			</nodeBuilder>
+					
+			<nodeBuilder id="ServicePackageNoderBuilder" className="com.ourteam.app.modelbase.ui.ServicePackageNoderBuilder">
+						
+			</nodeBuilder>
+					
+			<nodeBuilder id="PersistentPackageNoderBuilder" className="com.ourteam.app.modelbase.ui.PersistentPackageNoderBuilder">
+						
+			</nodeBuilder>
+					
+			</subNodeBuilderList>
+			
+			
+		</node>
+			
+		<node id="BUSINESS_PACKAGE" image="package" label="" labelKey="" leaf="false" hidden="false" nodePanel="businessPackageTab">
+			
+						
+			<actionList>
+		
+					
+			</actionList>
+			
+			<subNodeBuilderList>
+					
+			<nodeBuilder id="BusinessObjectBuilder" className="com.ourteam.app.modelbase.ui.DaoObjectNodeBuilder">
+						
+			</nodeBuilder>
+					
+			</subNodeBuilderList>
+			
+			
+		</node>
+			
+		<node id="DAO" image="entity" label="" labelKey="" leaf="false" hidden="false" nodePanel="businessObjectTab">
+			
+						
+			<actionList>
+		
+					
+			</actionList>
+			
+			<subNodeBuilderList>
+					
+			<nodeBuilder id="daoPropertyNodeBuilder" className="com.ourteam.app.modelbase.ui.BusinessObjectPropertyNodeBuilder">
+						
+				<property name="subNodeType" value="BUSINESS_PROPERTY"/>
+						
+			</nodeBuilder>
+					
+			</subNodeBuilderList>
+			
+			
+		</node>
+			
+		<node id="BUSINESS_PROPERTY" image="object_property" label="" labelKey="" leaf="true" hidden="false" nodePanel="businessObjectPrioertyTab">
+			
+						
+			<actionList>
+		
+					
+			</actionList>
+			
+			<subNodeBuilderList>
+					
+			</subNodeBuilderList>
+			
+			
+		</node>
+			
+		<node id="JAVA_CLASS" image="bean" label="" labelKey="" leaf="false" hidden="false" nodePanel="classObjectTab">
+			
+						
+			<actionList>
+		
+					
+			</actionList>
+			
+			<subNodeBuilderList>
+					
+			<nodeBuilder id="beanPropertyNodeBuilder" className="com.ourteam.app.modelbase.ui.DomainBeanObjectPropertyNodeBuilder">
+						
+				<property name="subNodeType" value="CLASS_PROPERTY"/>
+						
+			</nodeBuilder>
+					
+			</subNodeBuilderList>
+			
+			
+		</node>
+			
+		<node id="ENUM" image="enum" label="" labelKey="" leaf="false" hidden="false" nodePanel="enumObjectTab">
+			
+						
+			<actionList>
+		
+					
+			</actionList>
+			
+			<subNodeBuilderList>
+					
+			<nodeBuilder id="enumPropertyNodeBuilder" className="com.ourteam.app.modelbase.ui.EnumObjectPropertyNodeBuilder">
+						
+				<property name="subNodeType" value="ENUM_PROPERTY"/>
+						
+			</nodeBuilder>
+					
+			</subNodeBuilderList>
+			
+			
+		</node>
+			
+		<node id="BEAN_PROPERTY" image="field_public" label="" labelKey="" leaf="true" hidden="false" nodePanel="classObjectProperytyTab">
+			
+						
+			<actionList>
+		
+					
+			</actionList>
+			
+			<subNodeBuilderList>
+					
+			</subNodeBuilderList>
+			
+			
+		</node>
+			
+		<node id="ENUM_PROPERTY" image="enum_property" label="" labelKey="" leaf="true" hidden="false" nodePanel="enumObjectPropertyTab">
+			
+						
+			<actionList>
+		
+					
+			</actionList>
+			
+			<subNodeBuilderList>
+					
+			</subNodeBuilderList>
+			
+			
+		</node>
+			
+		<node id="PERSISTENT_PACKAGE" image="packd" label="" labelKey="" leaf="false" hidden="false" nodePanel="persistentPackageTab">
+			
+						
+			<actionList>
+		
+					
+			</actionList>
+			
+			<subNodeBuilderList>
+					
+			<nodeBuilder id="PersistentObjectBuilder" className="com.ourteam.app.modelbase.ui.PersistentObjectNodeBuilder">
+						
+			</nodeBuilder>
+					
+			</subNodeBuilderList>
+			
+			
+		</node>
+			
+		<node id="PERSISTENT" image="table" label="" labelKey="" leaf="false" hidden="false" nodePanel="persistentObjectTab">
+			
+						
+			<actionList>
+		
+					
+			</actionList>
+			
+			<subNodeBuilderList>
+					
+			<nodeBuilder id="PersistentPropertyNodeBuilder" className="com.ourteam.app.modelbase.ui.PersistentPropertyNodeBuilder">
+						
+			</nodeBuilder>
+					
+			</subNodeBuilderList>
+			
+			
+		</node>
+			
+		<node id="PERSISTENT_PROPERTY" image="column" label="" labelKey="" leaf="true" hidden="false" nodePanel="persistenPropertyTab">
+			
+						
+			<actionList>
+		
+					
+			</actionList>
+			
+			<subNodeBuilderList>
+					
+			</subNodeBuilderList>
+			
+			
+		</node>
+			
+		<node id="SERVICE_PACKAGE" image="service_package" label="" labelKey="" leaf="false" hidden="false" nodePanel="servicePackageTab">
+			
+						
+			<actionList>
+		
+					
+			</actionList>
+			
+			<subNodeBuilderList>
+					
+			<nodeBuilder id="ServiceObjectBuilder" className="com.ourteam.app.modelbase.ui.ServiceObjectNodeBuilder">
+						
+			</nodeBuilder>
+					
+			<nodeBuilder id="DomainBeanObjectNodeBuilder" className="com.ourteam.app.modelbase.ui.DomainBeanObjectNodeBuilder">
+						
+			</nodeBuilder>
+					
+			<nodeBuilder id="EnumObjectNodeBuilder" className="com.ourteam.app.modelbase.ui.EnumObjectNodeBuilder">
+						
+			</nodeBuilder>
+					
+			</subNodeBuilderList>
+			
+			
+		</node>
+			
+		<node id="SERVICE" image="service" label="" labelKey="" leaf="false" hidden="false" nodePanel="serviceObjectTab">
+			
+						
+			<actionList>
+		
+					
+			</actionList>
+			
+			<subNodeBuilderList>
+					
+			<nodeBuilder id="ServiceMethodBuilder" className="com.ourteam.app.modelbase.ui.ServiceMethodBuilder">
+						
+			</nodeBuilder>
+					
+			</subNodeBuilderList>
+			
+			
+		</node>
+			
+		<node id="SERVICE_METHOD" image="service_method" label="" labelKey="" leaf="true" hidden="false" nodePanel="serviceMethodTab">
+			
+						
+			<actionList>
+		
+					
+			</actionList>
+			
+			<subNodeBuilderList>
+					
+			</subNodeBuilderList>
+			
+			
+		</node>
+			
+		<node id="PRIMARY_BUSINESS_PROPERTY" image="key_property" label="" labelKey="" leaf="true" hidden="false" nodePanel="">
+			
+						
+			<actionList>
+		
+					
+			</actionList>
+			
+			<subNodeBuilderList>
+					
+			</subNodeBuilderList>
+			
+			
+		</node>
+			
+		<node id="PRIMARY_PERSISTENT_PROPERTY" image="pk_column" label="" labelKey="" leaf="true" hidden="false" nodePanel="">
+			
+						
+			<actionList>
+		
+					
+			</actionList>
+			
+			<subNodeBuilderList>
+					
+			</subNodeBuilderList>
+			
+			
+		</node>
+		
+	</nodeDefine>
+	
+		
+	<rootNode id="BUSINESS_DOMAIN_ROOT">
+			</rootNode>
+		
+</tree>

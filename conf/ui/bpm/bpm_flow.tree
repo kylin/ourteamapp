@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tree id="collaboration_flow" imageBase="">
+	<nodeDefine>
+			
+		<node id="catalogRoot" image="" label="" labelKey="" leaf="false" hidden="false" nodePanel="">
+			
+						
+			<actionList>
+		
+					
+			</actionList>
+			
+			<subNodeBuilderList>
+					
+			<nodeBuilder id="BpmProcessCatalogRootNodeBuilder" className="com.ourteam.app.bpm.ui.BpmProcessCatalogRootNodeBuilder">
+						
+			</nodeBuilder>
+					
+			</subNodeBuilderList>
+			
+			
+		</node>
+			
+		<node id="catalog" image="bpm_process_catalog" label="name" labelKey="" leaf="false" hidden="false" nodePanel="">
+			
+						
+			<actionList>
+		
+					
+			</actionList>
+			
+			<subNodeBuilderList>
+					
+			<nodeBuilder id="BpmProcessCatalogRootNodeBuilder" className="com.ourteam.app.bpm.ui.BpmProcessCatalogRootNodeBuilder">
+						
+			</nodeBuilder>
+					
+			<nodeBuilder id="BpmProcessDefineSubNodeBuilder" className="com.ourteam.app.bpm.ui.BpmProcessDefineSubNodeBuilder">
+						
+			</nodeBuilder>
+					
+			</subNodeBuilderList>
+			
+			
+		</node>
+			
+		<node id="workFlow" image="work_flow" label="processName" labelKey="" leaf="true" hidden="false" nodePanel="">
+			
+						
+			<actionList>
+		
+					
+			</actionList>
+			
+			<subNodeBuilderList>
+					
+			</subNodeBuilderList>
+			
+			
+		</node>
+		
+	</nodeDefine>
+	
+		
+	<rootNode id="catalogRoot">
+			</rootNode>
+		
+</tree>

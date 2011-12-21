@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<actions>
+
+	<action type="push" handler="addSysDepartment" desc="add department"
+		icon="department_add" id="addSysDepartment" domain="SYSTEM"
+		confirmInfoKey="" label="新建部门" labelKey="">
+	</action>
+
+	<actiongroup id="sysDepartmentExplorerActionGroup">
+		<action ref="SYSTEM.addSysDepartment" handler="addRootSysDepartment"></action>
+	</actiongroup>
+
+	<actiongroup id="sysDepartmentActionGroup">
+		<action ref="SYSTEM.addSysDepartment"></action>
+		<action ref="delete" handler="deleteSysDepartment" domain="SYSTEM"></action>
+	</actiongroup>
+	
+</actions>

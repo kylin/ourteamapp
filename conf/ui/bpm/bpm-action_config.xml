@@ -1,0 +1,129 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<actions>
+
+	
+	<actiongroup id="bpmDomainViewActionGroup">
+		<action ref="add" handler="addBpmDomain" icon="bpm_domain_add"/>
+	</actiongroup>
+	
+	<actiongroup id="bpmDomainNodeActionGroup">
+		<action ref="add" label="关联系统模块" handler="addBpmDomainSysModule" icon="bpm_domain_sys_module"/>
+		<action ref="add" label="添加业务角色" handler="addBpmRole" icon="bpm_role_add"/>
+		<action ref="delete" handler="deleteBpmDomain"/>
+	</actiongroup>
+	
+	<actiongroup id="bpmDomainSysModuleNodeActionGroup">
+		<action ref="add" label="添加业务角色" handler="addBpmRole" icon="bpm_role_add"/>
+		<action ref="delete" handler="deleteBpmDomainSysModuleRelate"/>
+	</actiongroup>
+	
+	<actiongroup id="bpmProcessManageViewActionGroup">
+		<action ref="add" label="添加目录" handler="addBpmProcessCatalog" icon="bpm_process_catalog_add"/>
+	</actiongroup>
+	
+	<actiongroup id="bpmProcessCatalogNodeActionGroup">
+		<action ref="add" label="添加目录" handler="addSubBpmProcessCatalog" icon="bpm_process_catalog_add"/>
+		<action ref="add" label="添加业务流程定义" handler="addBpmProcessDefine" icon="work_flow_add"/>
+		<action ref="delete" handler="deleteBpmProcessCatalog"/>
+	</actiongroup>
+	
+	<actiongroup id="bpmProcessDefineNodeActionGroup">
+		<action ref="delete" handler="deleteBpmProcessDefine"/>
+	</actiongroup>
+	
+	<action type="push" handler="addBpmRoleUsers" desc="add bpm role user"
+		icon="employee" id="addBpmRoleUsers" domain=""
+		confirmInfoKey="" label="添加成员" labelKey="">
+	</action>
+	
+	<actiongroup id="bpmRoleNodeActionGroup">
+		<action ref="addBpmRoleUsers"/>
+	</actiongroup>
+	
+	<actiongroup id="bpmRoleUserNodeActionGroup">
+		<action ref="delete" handler="deleteBpmRoleUser"/>
+	</actiongroup>
+	
+	<action type="push" handler="deployBpmProcess" desc="Deploy Process Define"
+		icon="bpm_deploy_24" id="deployBpmProcess" domain=""
+		confirmInfoKey="" label="发布流程" labelKey="">
+	</action>
+	
+	<actiongroup id="bpmProcessDemployActionGroup">
+		<action ref="deployBpmProcess"/>
+	</actiongroup>
+	
+	<action type="push" handler="startBpmProcess" desc="Start Process Define"
+		icon="bpm_start_24" id="startBpmProcess" domain=""
+		confirmInfoKey="" label="启动流程" labelKey="">
+	</action>
+	
+	<action type="push" handler="cancelBpmProcess" desc="Cancel Process Define"
+		icon="bpm_cancel_24" id="cancelBpmProcess" domain=""
+		confirmInfoKey="" label="取消流程" labelKey="">
+	</action>
+	
+	<actiongroup id="bpmProcessEditorActionGroup">
+		<action ref="startBpmProcess"/>
+		<action ref="cancelBpmProcess"/>
+	</actiongroup>
+	
+	<actiongroup id="finishedBpmProcessEditorActionGroup">
+		
+	</actiongroup>
+	
+	<action type="push" handler="editBpmFormField" desc="Edit Bpm Form Field"
+		icon="bpm_form_edit_24" id="editBpmFormField" domain=""
+		confirmInfoKey="" label="设计表单" labelKey="">
+	</action>
+	
+	<actiongroup id="bpmFormListActionGroup">
+		<action ref="editBpmFormField"/>
+	</actiongroup>
+	
+	<action type="push" handler="assignBpmTask" desc="Assign Bpm Task"
+		icon="assign_bpm_task_24" id="assignBpmTask" domain=""
+		confirmInfoKey="" label="任务分派" labelKey="">
+	</action>
+	
+	<action type="push" handler="claimBpmTask" desc="Claim Bpm Task"
+		icon="claim_bpm_task_24" id="claimBpmTask" domain=""
+		confirmInfoKey="" label="任务认领" labelKey="">
+	</action>
+	
+	
+	<actiongroup id="unAssignedBpmTaskListActionGroup">
+		<action ref="assignBpmTask"/>
+		<action ref="claimBpmTask"/>
+	</actiongroup>
+	
+	<action type="push" handler="handleBpmTask" desc="Handle Bpm Task"
+		icon="handle_bpm_task_24" id="handleBpmTask" domain=""
+		confirmInfoKey="" label="任务处理" labelKey="">
+	</action>
+	
+	<actiongroup id="bpmTaskEditorActionGroup">
+		<action ref="handleBpmTask"/>
+		<action ref="claimBpmTask"/>
+		<action ref="assignBpmTask"/>
+	</actiongroup>
+	
+	<action type="push" handler="addBpmAttachment" desc="Add Bpm Attachment"
+		icon="attach_add_24" id="addBpmAttachment" domain=""
+		confirmInfoKey="" label="添加附件" labelKey="">
+	</action>
+	
+	<action type="push" handler="downloadBpmAttachments" desc="Download Bpm Attachments"
+		icon="download_24" id="downloadBpmAttachments" domain=""
+		confirmInfoKey="" label="下载附件" labelKey="">
+	</action>
+	
+	
+	
+	<actiongroup id="bpmAttachmentListActionGroup">
+		<action ref="addBpmAttachment"/>
+		<action ref="downloadBpmAttachments"/>
+		<action ref="delete" handler="deleteBpmTaskAttachment" icon="delete_24"/>
+	</actiongroup>
+	
+</actions>

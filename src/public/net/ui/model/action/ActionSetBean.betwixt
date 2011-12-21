@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<info primitiveTypes="element">
+  <element name="actions">
+    <element name="action" property="actions"/>
+      
+    <element name="actiongroup" property="actionGroups"/>
+        
+    <addDefaults/>
+  </element>
+</info>

@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tabbed>
+    
+  <tabbedpane id="collaborationProcessEditor" desc="协作流程编辑器">
+  	  	
+  	<tab name="processIng" label="处理中" labelKey="" icon="work_flow_process" compentclass="com.ourteam.app.bpm.editor.ProcessingBpmProcessInstanceEditor">
+  		  
+    </tab>
+  	  	
+  	<tab name="finishProcess" label="处理完" labelKey="" icon="work_flow_finish" compentclass="com.ourteam.app.bpm.editor.FinishedBpmProcessInstanceEditor">
+  		  
+    </tab>
+  	  
+  </tabbedpane>
+    
+  <tabbedpane id="addBpmDomainWizard" desc="新建业务域向导">
+  	  	
+  	<tab name="bpmDomainForm" label="业务域信息" labelKey="" icon="" compentclass="">
+  		  
+    	<property id="formId" value="bpmDomainForm"/>
+    	  
+    </tab>
+  	  
+  </tabbedpane>
+    
+  <tabbedpane id="bpmDomainEditorTab" desc="业务域编辑Tab">
+  	  	
+  	<tab name="BpmDomainInfoEditor" label="基本信息" labelKey="" icon="bpm_domain" compentclass="com.ourteam.app.bpm.editor.BpmDomainInfoEditor">
+  		  
+    </tab>
+  	  
+  </tabbedpane>
+    
+  <tabbedpane id="bpmRoleEditorTab" desc="业务角色编辑Tab">
+  	  	
+  	<tab name="BpmRoleInfoEditor" label="基本信息" labelKey="" icon="bpm_role" compentclass="com.ourteam.app.bpm.editor.BpmRoleInfoEditor">
+  		  
+    </tab>
+  	  	
+  	<tab name="BpmDomainRoleUserEditor" label="角色成员" labelKey="" icon="employee" compentclass="com.ourteam.app.bpm.editor.BpmDomainRoleEmployeeEditor">
+  		  
+    </tab>
+  	  
+  </tabbedpane>
+    
+  <tabbedpane id="addBpmRoleEmployeeWizard" desc="添加业务角色与员工关联向导">
+  	  	
+  	<tab name="EmployeeSearchComposite" label="选择员工" labelKey="" icon="" compentclass="com.ourteam.app.hr.ui.EmployeeSearchComposite">
+  		  
+    </tab>
+  	  
+  </tabbedpane>
+    
+  <tabbedpane id="bpmModuleRoleEditorTab" desc="业务模块角色编辑Tab">
+  	  	
+  	<tab name="BpmRoleInfoEditor" label="基本信息" labelKey="" icon="bpm_role" compentclass="com.ourteam.app.bpm.editor.BpmRoleInfoEditor">
+  		  
+    </tab>
+  	  	
+  	<tab name="BpmDomainSysModuleRoleEmployeeEditor" label="角色成员" labelKey="" icon="employee" compentclass="com.ourteam.app.bpm.editor.BpmDomainSysModuleRoleEmployeeEditor">
+  		  
+    </tab>
+  	  
+  </tabbedpane>
+    
+  <tabbedpane id="addBpmRoleWizard" desc="添加业务角色">
+  	  	
+  	<tab name="bpmRoleForm" label="业务角色信息" labelKey="" icon="" compentclass="">
+  		  
+    	<property id="formId" value="bpmRoleForm"/>
+    	  
+    </tab>
+  	  
+  </tabbedpane>
+    
+  <tabbedpane id="addBpmProcessCatalogWizard" desc="添加流程目录向导">
+  	  	
+  	<tab name="bpmProcessCatalogForm" label="目录信息" labelKey="" icon="" compentclass="">
+  		  
+    	<property id="formId" value="bpmProcessCatalogForm"/>
+    	  
+    </tab>
+  	  
+  </tabbedpane>
+    
+  <tabbedpane id="addBpmProcessDefineWizard" desc="添加流程定义向导">
+  	  	
+  	<tab name="bpmProcessDefineForm" label="流程定义信息" labelKey="" icon="" compentclass="">
+  		  
+    	<property id="formId" value="bpmProcessDefineForm"/>
+    	  
+    </tab>
+  	  
+  </tabbedpane>
+    
+  <tabbedpane id="bpmProcessDefineEditorTab" desc="业务流程定义编辑Tab">
+  	  	
+  	<tab name="bpmProcessDefineForm" label="流程定义信息" labelKey="" icon="work_flow" compentclass="com.ourteam.app.bpm.editor.BpmProcessDefineInfoEditor">
+  		  
+    </tab>
+  	  	
+  	<tab name="BpmProcessRoleListEditorPart" label="角色权限配置" labelKey="" icon="bpm_role_purview" compentclass="com.ourteam.app.bpm.editor.BpmProcessRoleListEditorPart">
+  		  
+    </tab>
+  	  	
+  	<tab name="BpmProcessFormListEditorPart" label="流程表单定义" labelKey="" icon="bpm_form" compentclass="com.ourteam.app.bpm.editor.BpmProcessFormListEditorPart">
+  		  
+    </tab>
+  	  	
+  	<tab name="BpmProcessDeployEditorPart" label="流程发布信息" labelKey="" icon="work_flow" compentclass="com.ourteam.app.bpm.editor.BpmProcessDeployEditorPart">
+  		  
+    </tab>
+  	  
+  </tabbedpane>
+    
+  <tabbedpane id="bpmProcessDesignEditTab" desc="流程设计TAB">
+  	  	
+  	<tab name="bpmStepEditor" label="业务流程步骤" labelKey="" icon="bpm_step" compentclass="com.ourteam.app.system.editor.BpmStepDesignEditorPart">
+  		  
+    </tab>
+  	  	
+  	<tab name="bpmFormDesign" label="业务流程表单" labelKey="" icon="bpm_form" compentclass="com.ourteam.app.system.editor.BpmFormDesignEditorPart">
+  		  
+    </tab>
+  	  
+  </tabbedpane>
+    
+  <tabbedpane id="addBpmProcessRoleWziard" desc="添加业务流程角色向导">
+  	  	
+  	<tab name="BpmRoleSearchComposite" label="选择业务角色" labelKey="" icon="" compentclass="com.ourteam.app.bpm.ui.BpmRoleSearchComposite">
+  		  
+    </tab>
+  	  	
+  	<tab name="BpmProcessRolePurviewConfigComposite" label="设置角色权限" labelKey="" icon="" compentclass="com.ourteam.app.bpm.ui.BpmProcessRolePurviewConfigComposite">
+  		  
+    </tab>
+  	  
+  </tabbedpane>
+    
+  <tabbedpane id="addBpmFormWizard" desc="添加业务流程表单">
+  	  	
+  	<tab name="bpmFormDefine" label="业务表单信息" labelKey="" icon="" compentclass="">
+  		  
+    	<property id="formId" value="bpmFormDefine"/>
+    	  
+    </tab>
+  	  
+  </tabbedpane>
+    
+  <tabbedpane id="publicBpmFormConfigTab" desc="共通表单配置">
+  	  	
+  	<tab name="PublicBpmProcessFormListEditorPart" label="公共表单列表" labelKey="" icon="bpm_form" compentclass="com.ourteam.app.bpm.editor.PublicBpmProcessFormListEditorPart">
+  		  
+    </tab>
+  	  
+  </tabbedpane>
+    
+  <tabbedpane id="publicBpmListConfigTab" desc="共通列表配置">
+  	  	
+  	<tab name="PublicBpmProcessComboListEditorPart" label="功能选择列表" labelKey="" icon="combo_field" compentclass="com.ourteam.app.bpm.editor.PublicBpmProcessComboListEditorPart">
+  		  
+    </tab>
+  	  
+  </tabbedpane>
+    
+  <tabbedpane id="bpmTaskViewTab" desc="流程任务编辑Tab">
+  	  	
+  	<tab name="AssignedBpmProcessTaskEditorPart" label="已指派任务" labelKey="" icon="assigned_task" compentclass="com.ourteam.app.bpm.editor.AssignedBpmProcessTaskEditorPart">
+  		  
+    </tab>
+  	  	
+  	<tab name="UnAssignedBpmProcessTaskEditorPart" label="未指派任务" labelKey="" icon="unassign_task" compentclass="com.ourteam.app.bpm.editor.UnAssignedBpmProcessTaskEditorPart">
+  		  
+    </tab>
+  	  	
+  	<tab name="FinishedBpmProcessTaskEditorPart" label="已完成任务" labelKey="" icon="finished_task" compentclass="com.ourteam.app.bpm.editor.FinishedBpmProcessTaskEditorPart">
+  		  
+    </tab>
+  	  
+  </tabbedpane>
+    
+  <tabbedpane id="bpmTaskAssignTab" desc="流程任务分配Tab">
+  	  	
+  	<tab name="BpmTaskAssignComposite" label="任务指派" labelKey="" icon="bpm_tasks" compentclass="com.ourteam.app.bpm.ui.BpmTaskAssignComposite">
+  		  
+    </tab>
+  	  
+  </tabbedpane>
+    
+  <tabbedpane id="bpmTaskHandleTab" desc="任务处理Tab">
+  	  	
+  	<tab name="BpmTaskFormComposite" label="处理表单" labelKey="" icon="bpm_form" compentclass="com.ourteam.app.bpm.ui.BpmTaskFormComposite">
+  		  
+    </tab>
+  	  
+  </tabbedpane>
+    
+  <tabbedpane id="bpmTaskEditorTab" desc="流程任务编辑Tab">
+  	  	
+  	<tab name="BpmTaskFormEditorPart" label="表单" labelKey="" icon="bpm_form" compentclass="com.ourteam.app.bpm.editor.BpmTaskFormEditorPart">
+  		  
+    </tab>
+  	  	
+  	<tab name="BpmProcessFlowEditorPart" label="流程" labelKey="" icon="work_flow" compentclass="com.ourteam.app.bpm.editor.BpmProcessFlowEditorPart">
+  		  
+    </tab>
+  	  	
+  	<tab name="BpmTaskCommentsEditor" label="注释" labelKey="" icon="comments" compentclass="com.ourteam.app.bpm.editor.BpmTaskCommentsEditor">
+  		  
+    </tab>
+  	  	
+  	<tab name="BpmTaskAttachmentListEditorPart" label="附件" labelKey="" icon="attach" compentclass="com.ourteam.app.bpm.editor.BpmTaskAttachmentListEditorPart">
+  		  
+    </tab>
+  	  
+  </tabbedpane>
+    
+  <tabbedpane id="startBpmProcessEditorTab" desc="启动业务流程编辑器">
+  	  	
+  	<tab name="StartBpmProcessFormEditorPart" label="表单" labelKey="" icon="bpm_form" compentclass="com.ourteam.app.bpm.editor.StartBpmProcessFormEditorPart">
+  		  
+    </tab>
+  	  	
+  	<tab name="StartBpmProcessCommentFormEditorPart" label="注释" labelKey="" icon="comments" compentclass="com.ourteam.app.bpm.editor.StartBpmProcessCommentFormEditorPart">
+  		  
+    </tab>
+  	  	
+  	<tab name="StartBpmProcessAttachmentEditorPart" label="附件" labelKey="" icon="attach" compentclass="com.ourteam.app.bpm.editor.StartBpmProcessAttachmentEditorPart">
+  		  
+    </tab>
+  	  
+  </tabbedpane>
+    
+  <tabbedpane id="middleWareToolEditorTab" desc="中间件工具编辑Tab">
+  	  	
+  	<tab name="MiddleWareToolInfoEditorPart" label="基本信息" labelKey="" icon="middle_ware_tool" compentclass="com.ourteam.app.middleware.editor.MiddleWareToolInfoEditorPart">
+  		  
+    </tab>
+  	  	
+  	<tab name="MiddleWareTooScriptEditorPart" label="工具配置" labelKey="" icon="middle_ware_tool_edit" compentclass="com.ourteam.app.middleware.editor.MiddleWareToolScriptEditorPart">
+  		  
+    </tab>
+  	  
+  </tabbedpane>
+      
+</tabbed>
