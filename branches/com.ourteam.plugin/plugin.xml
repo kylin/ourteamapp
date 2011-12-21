@@ -7,6 +7,7 @@
             allowMultiple="false"
             category="com.ourteam.app.ViewCategory"
             class="com.ourteam.plugin.modelbase.ModelBaseExplorer"
+            icon="icons/16X16/Model/business_model.png"
             id="com.ourteam.plugin.modelbase.ModelBaseExplorer"
             name="模型库浏览"
             restorable="true">
