@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tree id="bpm_task" imageBase="">
+	<nodeDefine>
+			
+		<node id="taskRoot" image="" label="" labelKey="" leaf="false" hidden="false" nodePanel="">
+			
+						
+			<actionList>
+		
+					
+			</actionList>
+			
+			<subNodeBuilderList>
+					
+			</subNodeBuilderList>
+			
+			
+		</node>
+			
+		<node id="myTaskNode" image="assigned_task" label="我的任务" labelKey="" leaf="false" hidden="false" nodePanel="">
+			
+						
+			<actionList>
+		
+					
+			</actionList>
+			
+			<subNodeBuilderList>
+					
+			<nodeBuilder id="MyBpmTaskNodeBuilder" className="com.ourteam.app.bpm.ui.MyBpmTaskNodeBuilder">
+						
+			</nodeBuilder>
+					
+			</subNodeBuilderList>
+			
+			
+		</node>
+			
+		<node id="unAssignedTaskNode" image="unassign_task" label="未指派任务" labelKey="" leaf="false" hidden="false" nodePanel="">
+			
+						
+			<actionList>
+		
+					
+			</actionList>
+			
+			<subNodeBuilderList>
+					
+			<nodeBuilder id="UnAssignedBpmTaskTypeNodeBuilder" className="com.ourteam.app.bpm.ui.UnAssignedBpmTaskTypeNodeBuilder">
+						
+			</nodeBuilder>
+					
+			</subNodeBuilderList>
+			
+			
+		</node>
+			
+		<node id="priorityNormalTaskNode" image="priority_normal" label="taskName" labelKey="" leaf="true" hidden="false" nodePanel="">
+			
+						
+			<actionList>
+		
+					
+			</actionList>
+			
+			<subNodeBuilderList>
+					
+			</subNodeBuilderList>
+			
+			
+		</node>
+			
+		<node id="priorityHighTaskNode" image="priority_high" label="taskName" labelKey="" leaf="true" hidden="false" nodePanel="">
+			
+						
+			<actionList>
+		
+					
+			</actionList>
+			
+			<subNodeBuilderList>
+					
+			</subNodeBuilderList>
+			
+			
+		</node>
+			
+		<node id="priorityLowTaskNode" image="priority_low" label="taskName" labelKey="" leaf="true" hidden="false" nodePanel="">
+			
+						
+			<actionList>
+		
+					
+			</actionList>
+			
+			<subNodeBuilderList>
+					
+			</subNodeBuilderList>
+			
+			
+		</node>
+			
+		<node id="bpmRoleNode" image="bpm_role" label="bpmRoleName" labelKey="" leaf="false" hidden="false" nodePanel="">
+			
+						
+			<actionList>
+		
+					
+			</actionList>
+			
+			<subNodeBuilderList>
+					
+			<nodeBuilder id="UnAssignedBpmTaskNodeBuilder" className="com.ourteam.app.bpm.ui.UnAssignedBpmTaskNodeBuilder">
+						
+			</nodeBuilder>
+					
+			</subNodeBuilderList>
+			
+			
+		</node>
+		
+	</nodeDefine>
+	
+		
+	<rootNode id="taskRoot">
+				<subNode id="myTaskNode">
+</subNode>				<subNode id="unAssignedTaskNode">
+</subNode>			</rootNode>
+		
+</tree>

@@ -1,0 +1,394 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<actions>
+
+	<!-- Workspace Actions -->
+
+	<action type="push" handler="addNewWorkspace" desc="add new workspace"
+		icon="workspace_add" id="addNewWorkspace" confirmInfoKey=""
+		label="新建工作平台" labelKey="action.edit.label">
+	</action>
+
+	<action type="push" handler="checkoutWorkspace" desc="add new workspace"
+		icon="workspace_checkout" id="checkoutWorkspace"
+		confirmInfoKey="" label="检出工作平台" labelKey="action.edit.label">
+	</action>
+	
+	<action type="push" handler="selectProject" desc="select project"
+		icon="project" id="selectProjectDropDown" 
+		subActionBeansBuilder="com.ourteam.app.workspace.ProjectFilterSubActionBeansBuilder"
+		confirmInfoKey="" label="选择项目" labelKey="">
+	</action>
+	
+	<action type="check" handler="selectProject" desc="select project"
+		icon="project" id="selectProjectAction" 
+		confirmInfoKey="" label="项目" labelKey="">
+	</action>
+
+	<actiongroup id="workspaceExplorerViewActionGroup">
+		<action ref="selectProjectDropDown"></action>
+		<action ref="addNewWorkspace"></action>
+		<action ref="checkoutWorkspace"></action>
+		<action ref="refresh"></action>
+	</actiongroup>
+	
+	<actiongroup id="serverExplorerViewActionGroup">
+		<action ref="selectProjectDropDown"></action>
+		<action ref="refresh"></action>
+	</actiongroup>
+
+	
+	<action type="push" handler="" desc="add new Libary Resource"
+		icon="build_path" id="workspaceBuildPath" confirmInfoKey=""
+		label="构建路径" labelKey="">
+		<action type="push" handler="addSourceCodeResource" desc="add new Source Code Resource"
+		icon="source_folder_add" id="addSourceCodeResource"
+		confirmInfoKey="" label="添加源码资源" labelKey="">
+		</action>
+	
+		<action type="push" handler="addLibaryResource" desc="add new Libary Resource"
+			icon="depend_lib_add" id="addLibaryResource" confirmInfoKey=""
+			label="添加依赖库资源" labelKey="">
+		</action>
+	</action>
+	
+	<action type="push" handler="" desc="GUI Tools Collection"
+		icon="gui_tools" id="guiTools" confirmInfoKey=""
+		label="GUI工具" labelKey="">
+		<action type="push" handler="addUIAcctionConfig" desc="add action config"
+			icon="ui_action_config_add" id="addUIAcctionConfig" confirmInfoKey=""
+			label="添加动作配置" labelKey="">
+		</action>
+		<action type="push" handler="addUISelectListConfig" desc="add data list config"
+			icon="ui_combox_config_add" id="addUISelectListConfig" confirmInfoKey=""
+			label="添加选择列表配置" labelKey="">
+		</action>
+		<action type="push" handler="addUIFormConfig" desc="add action config"
+			icon="ui_form_config_add" id="addUIFormConfig" confirmInfoKey=""
+			label="添加表单配置" labelKey="">
+		</action>
+		<action type="push" handler="addUITableConfig" desc="add action config"
+			icon="ui_table_config_add" id="addUITableConfig" confirmInfoKey=""
+			label="添加列表配置" labelKey="">
+		</action>
+		<action type="push" handler="addUITreeConfig" desc="add action config"
+			icon="ui_tree_config_add" id="addUITreeConfig" confirmInfoKey=""
+			label="添加树型列表配置" labelKey="">
+		</action>
+		<action type="push" handler="addUITabConfig" desc="add action config"
+			icon="ui_tab_config_add" id="addUITabConfig" confirmInfoKey=""
+			label="添加选项卡配置" labelKey="">
+		</action>
+	</action>
+
+	<action type="push" handler="configWorkspace" desc="config workspace"
+		icon="workspace_config" id="configWorkspace"
+		confirmInfoKey="" label="配置" labelKey="">
+	</action>
+
+	<actiongroup id="workspaceActionGroup">
+		<action ref="workspaceBuildPath" />
+		<action ref="guiTools"/>
+		<action ref="scmActions" />
+		<action ref="configWorkspace" />
+		<action ref="delete" handler="deleteWorkspace" />
+	</actiongroup>
+
+	<action type="push" handler="generateResource" desc="generate resource"
+		icon="generate_resource" id="generateResource"
+		confirmInfoKey="" label="生成资源" labelKey="">
+	</action>
+
+	<action type="push" handler="" desc="scm action group" icon=""
+		id="scmActions" confirmInfoKey="" label="版本控制" labelKey="">
+		<action type="push" handler="checkoutResource" desc="update respurce"
+			icon="vcs_check_out" id="checkoutResource"
+			confirmInfoKey="" label="检出" labelKey="">
+		</action>
+		<action type="push" handler="checkinResource" desc="update respurce"
+			icon="vcs_check_in" id="checkinResource" confirmInfoKey=""
+			label="导入" labelKey="">
+		</action>
+		<action type="push" handler="updateResource" desc="update respurce"
+			icon="vcs_update" id="updateResource" confirmInfoKey=""
+			label="更新" labelKey="">
+		</action>
+		<action type="push" handler="commitResource" desc="commit respurce"
+			icon="vcs_commit" id="commitResource" confirmInfoKey=""
+			label="提交" labelKey="">
+		</action>
+		<action type="push" handler="cleanVersionInfo" desc="clean version"
+			icon="vcs_clear" id="cleanVersionInfo" confirmInfoKey="是否确认清除本地版本信息?"
+			label="清除" labelKey="">
+		</action>
+	</action>
+
+	<action type="push" handler="compareResources" desc="compare respurce"
+		icon="compare_diff" id="compareResources" confirmInfoKey=""
+		label="差异比较" labelKey="">
+	</action>
+
+	<actiongroup id="resourceVersionLogListActionGroup">
+		<action ref="compareResources" />
+	</actiongroup>
+
+	<action type="push" handler="removeWorkspaceResource" desc="remove Workspace respurce"
+		icon="remove_resource_seeting" id="removeWorkspaceResource"
+		confirmInfoKey="是否取消资源设置？相关设置将一起去除" label="取消资源设置" labelKey="">
+	</action>
+
+	<actiongroup id="codeResourceActionGroup">
+		<action ref="removeWorkspaceResource" />
+		<action ref="generateResource"></action>
+		<action ref="delete" handler="deleteWorkspaceResource"></action>
+	</actiongroup>
+
+	<action type="push" handler="uploadLibary" desc="upload Libary"
+		icon="upload_lib" id="uploadLibary" confirmInfoKey="" label="上传..."
+		labelKey="">
+	</action>
+
+	<actiongroup id="libaryResourceActionGroup">
+		<action ref="removeWorkspaceResource" />
+		<action ref="uploadLibary" />
+		<action ref="delete" handler="deleteWorkspaceResource"></action>
+	</actiongroup>
+
+	<action type="push" handler="updateResourceToVersion" desc="update respurce"
+		icon="update_to" id="updateResourceToVersion"
+		confirmInfoKey="" label="更新至..." labelKey="">
+	</action>
+
+	<actiongroup id="resourceActionGroup">
+		<action ref="updateResourceToVersion" />
+		<action ref="delete" handler="deleteResource" />
+	</actiongroup>
+
+	<!-- -->
+
+	
+		<action type="check" handler="setCheckPriority" desc="height priority"
+			icon="height_priority_24" id="heightPriority" confirmInfoKey=""
+			label="高" labelKey="">
+		</action>
+		<action type="check" handler="setCheckPriority" desc="Medium Height Priority"
+			icon="medium_height_priority_24" id="mediumHeightPriority"
+			confirmInfoKey="" label="较高" labelKey="">
+		</action>
+		<action type="check" handler="setCheckPriority" desc="Middle Priority"
+			icon="middle_priority_24" id="middlePriority" confirmInfoKey=""
+			label="中" labelKey="">
+		</action>
+		<action type="check" handler="setCheckPriority" desc="Medium Low Priority"
+			icon="medium_low_priority_24" id="mediumLowPriority" confirmInfoKey=""
+			label="较低" labelKey="">
+		</action>
+		<action type="check" handler="setCheckPriority" desc="Low Priority"
+			icon="low_priority_24" id="lowPriority" confirmInfoKey="" label="低"
+			labelKey="">
+		</action>
+	
+	<actiongroup id="sourceCodeCheckActionGroup">
+		<action ref="refresh" icon="refresh_24"></action>
+		<action ref="heightPriority"/>
+		<action ref="mediumHeightPriority"/>
+		<action ref="middlePriority"/>
+		<action ref="mediumLowPriority"/>
+		<action ref="lowPriority"/>
+		
+	</actiongroup>
+	
+	<action type="push" handler="addUIAction" desc="添加功能" id="addUIActionDropdown"
+		label="添加" icon="add_24" labelKey="action.addNew.label">
+		
+		<action type="push" handler="addUIAction" desc="add ui action"
+		icon="ui_action_config_add" id="addUIAction" domain=""
+		confirmInfoKey="" label="添加动作" labelKey="">
+		</action>
+		
+		<action type="push" handler="addUIActionGroup" desc="add ui action group"
+		icon="ui_action_group_add" id="addUIActionGroup" domain=""
+		confirmInfoKey="" label="添加动作组" labelKey="">
+		</action>
+	</action>
+	
+	<actiongroup id="uiActionConfigEditorActionGroup">
+		<action ref="addUIActionDropdown"/>
+		<action ref="delete" icon="delete_24"/>
+		<action ref="edit" icon="edit_24"/>
+	</actiongroup>
+	
+	<action type="push" handler="addChildUIAction" desc="add ui action"
+		icon="ui_action_config_add" id="addChildUIAction" domain=""
+		confirmInfoKey="" label="添加子动作" labelKey="">
+	</action>
+	
+	<actiongroup id="actionBeanContextMenu">
+		<action ref="addChildUIAction"/>
+	</actiongroup>
+	
+	<actiongroup id="subActionBeanContextMenu">
+		<action ref="moveUp"/>
+		<action ref="moveDown"/>
+	</actiongroup>
+	
+	
+	<action type="push" handler="addUIActionRef" desc="add ui action refrence"
+		icon="ui_action_config_add" id="addUIActionRef" domain=""
+		confirmInfoKey="" label="添加引用" labelKey="">
+	</action>
+	
+	<action type="push" handler="removeUIActionRef" desc="remove ui action refrence"
+		icon="ui_action_config_delete" id="removeUIActionRef" domain=""
+		confirmInfoKey="" label="删除引用" labelKey="">
+	</action>
+	
+	<actiongroup id="actionGroupRefList">
+		<action ref="addUIActionRef"/>
+		<action ref="removeUIActionRef"/>
+		<action ref="edit"/>
+		<action ref="moveUp"/>
+		<action ref="moveDown"/>
+	</actiongroup>
+	
+	<actiongroup id="uiSelectListConfigEditorActionGroup">
+		<action ref="add"/>
+		<action ref="remove"/>
+		<action ref="edit" icon="edit_24"/>
+	</actiongroup>
+	
+	<actiongroup id="uiSelectOptionListConfigActionGroup">
+		<action ref="add" icon="add"/>
+		<action ref="remove" icon="delete"/>
+		<action ref="edit"/>
+		<action ref="moveUp"/>
+		<action ref="moveDown"/>
+	</actiongroup>
+	
+	<actiongroup id="uiFormLayoutListConfigActionGroup">
+		<action ref="add" icon="add"/>
+		<action ref="remove" icon="delete"/>
+	</actiongroup>
+	
+	<action type="push" handler="addFormProperty" desc="add form property"
+		icon="add" id="addFormProperty" 
+		confirmInfoKey="" label="添加属性" labelKey="">
+	</action>
+	
+	<actiongroup id="uiFormConfigActionGroup">
+		<action ref="addFormProperty"/>
+	</actiongroup>
+	
+	<actiongroup id="uiFormPropertyConfigActionGroup">
+		<action ref="moveUp"/>
+		<action ref="moveDown"/>
+		<action ref="remove" handler="removeFormProperty" icon="delete"/>
+	</actiongroup>
+	
+	<actiongroup id="uiFormGroupPropertyConfigActionGroup">
+		<action ref="addFormProperty"/>
+		<action ref="moveUp"/>
+		<action ref="moveDown"/>
+		<action ref="remove" handler="removeFormProperty" icon="delete"/>
+	</actiongroup>
+	
+	<actiongroup id="uiTableColumnPropertyListConfigActionGroup">
+		<action ref="add" handler="addColumnProperty" icon="add"/>
+		<action ref="remove" handler="removeColumnProperty" icon="delete"/>
+	</actiongroup>
+	
+	<actiongroup id="uiTableColumnIconListConfigActionGroup">
+		<action ref="add" handler="addColumnIcon" icon="add"/>
+		<action ref="remove" handler="removeColumnIcon" icon="delete"/>
+	</actiongroup>
+	
+	<action type="push" handler="addTableColumn" desc="add table column"
+		icon="add" id="addTableColumn" 
+		confirmInfoKey="" label="添加列" labelKey="">
+	</action>
+	
+	<actiongroup id="uiTableConfigActionGroup">
+		<action ref="addTableColumn"/>
+	</actiongroup>
+	
+	<actiongroup id="uiTableColumnConfigActionGroup">
+		<action ref="moveUp"/>
+		<action ref="moveDown"/>
+		<action ref="remove" handler="removeTableColumn" icon="delete"/>
+	</actiongroup>
+	
+	
+	<actiongroup id="uiTabItemPropertyListConfigActionGroup">
+		<action ref="add" handler="addTabProperty" icon="add"/>
+		<action ref="remove" handler="removeTabProperty" icon="delete"/>
+	</actiongroup>
+	
+	<action type="push" handler="addTabItem" desc="add tab item"
+		icon="add" id="addTabItem" 
+		confirmInfoKey="" label="添加TAB项" labelKey="">
+	</action>
+	
+	<actiongroup id="uiTabConfigActionGroup">
+		<action ref="addTabItem"/>
+	</actiongroup>
+	
+	<actiongroup id="uiTabItemConfigActionGroup">
+		<action ref="moveUp"/>
+		<action ref="moveDown"/>
+		<action ref="remove" handler="removeTabItem" icon="delete"/>
+	</actiongroup>
+	
+	<actiongroup id="uiTreeConfigEditorActionGroup">
+		<action ref="remove"/>
+		<action ref="edit" icon="edit_24"/>
+	</actiongroup>
+	
+	<action type="push" handler="addNodeDefine" desc="add node define"
+		icon="add" id="addNodeDefine" 
+		confirmInfoKey="" label="添加节点定义" labelKey="">
+	</action>
+	
+	<action type="push" handler="editImagePath" desc="edit Image Path"
+		icon="edit" id="editImagePath" 
+		confirmInfoKey="" label="编辑图片资源路径" labelKey="">
+	</action>
+	
+	<actiongroup id="uiTreeNodeDefineRootActionGroup">
+		<action ref="addNodeDefine"/>
+		<action ref="editImagePath"/>
+	</actiongroup>
+	
+	<actiongroup id="uiTreeNodePropertyListConfigActionGroup">
+		<action ref="add" icon="add"/>
+		<action ref="remove" icon="delete"/>
+	</actiongroup>
+	
+	<action type="push" handler="addSubNodeBuilder" desc="add root node define"
+		icon="add" id="addSubNodeBuilder" 
+		confirmInfoKey="" label="添加节点构造器" labelKey="">
+	</action>
+	
+	<actiongroup id="uiTreeNodeDefineActionGroup">
+		<action ref="addSubNodeBuilder"/>
+	</actiongroup>
+	
+	<actiongroup id="uiTreeNodeBuilderActionGroup">
+		<action ref="moveUp" handler="moveUpNodeBuilder"/>
+		<action ref="moveDown" handler="moveDownNodeBuilder"/>
+	</actiongroup>
+	
+	<action type="push" handler="addRootNode" desc="add root node define"
+		icon="add" id="addRootNode" 
+		confirmInfoKey="" label="添加根节点" labelKey="">
+	</action>
+	
+	<actiongroup id="uiTreeRootNodeDefineRootActionGroup">
+		<action ref="addRootNode"/>
+	</actiongroup>
+	
+	<actiongroup id="uiTreeRootNodeDefineActionGroup">
+		<action ref="addRootNode"/>
+		<action ref="moveUp"/>
+		<action ref="moveDown"/>
+	</actiongroup>
+
+</actions>

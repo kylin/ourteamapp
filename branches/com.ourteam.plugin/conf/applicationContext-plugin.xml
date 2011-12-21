@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- - Application context definition for JPetStore's business layer. - Contains 
+	bean references to the transaction manager and to the DAOs in - dataAccessContext-local/jta.xml 
+	(see web.xml's "contextConfigLocation"). -->
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:aop="http://www.springframework.org/schema/aop"
+	xmlns:tx="http://www.springframework.org/schema/tx" xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.0.xsd
+		   http://www.springframework.org/schema/context
+       	   http://www.springframework.org/schema/context/spring-context-2.5.xsd
+           http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-2.0.xsd
+           http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-2.0.xsd">
+
+	<!-- ========================= GENERAL DEFINITIONS ========================= -->
+
+	<!-- Configurer that replaces ${...} placeholders with values from properties 
+		files -->
+	<!-- (in this case, mail and JDBC related properties) -->
+	<!-- <bean id="propertyConfigurer" class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer"> 
+		<property name="locations"> <list> <value>WEB-INF/mail.properties</value> 
+		<value>WEB-INF/jdbc.properties</value> </list> </property> </bean> -->
+	<!-- MailSender used by EmailAdvice -->
+	<!-- <bean id="mailSender" class="org.springframework.mail.javamail.JavaMailSenderImpl"> 
+		<property name="host" value="${mail.host}"/> </bean> -->
+
+	<bean id="messageSource"
+		class="org.springframework.context.support.ReloadableResourceBundleMessageSource">
+		<property name="basenames">
+			<list>
+				<value>nls/app_message</value>
+			</list>
+		</property>
+	</bean>
+
+	<bean id="propertyConfigurer"
+		class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+		<property name="locations">
+			<list>
+				<value>classpath:jdbc.properties</value>
+			</list>
+		</property>
+	</bean>
+
+	<bean id="SpringContextAgent" class="net.service.SpringContextAgent"
+		scope="singleton" />
+
+	<bean id="UIConfigFactory" class="net.ui.UIConfigSpringFactory"
+		init-method="initConfig" scope="singleton">
+		<property name="tabConfigFilePaths" >
+			<list>
+				<value>classpath:/ui/tabbed-config.xml</value>
+				<value>classpath:/ui/system/system-tabbed-config.xml</value>
+				<value>classpath:/ui/team/team-tabbed-config.xml</value>
+				<value>classpath:/ui/product/product-tabbed-config.xml</value>
+				<value>classpath:/ui/model/model-tabbed-config.xml</value>
+				<value>classpath:/ui/project/project-tabbed-config.xml</value>
+				<value>classpath:/ui/work/work-tabbed-config.xml</value>
+				<value>classpath:/ui/knowledge/knowledge-tabbed-config.xml</value>
+				<value>classpath:/ui/report/report-tabbed-config.xml</value>
+				<value>classpath:/ui/middleware/middleware-tabbed-config.xml</value>
+				<value>classpath:/ui/calendar/calendar-tabbed-config.xml</value>
+				<value>classpath:/ui/bpm/bpm-tabbed-config.xml</value>
+				<value>classpath:/ui/hr/hr-tabbed-config.xml</value>
+			</list>
+		</property>
+		<property name="tableConfigFilePaths" >
+			<list>
+				<value>classpath:/ui/table-define.xml</value>
+				<value>classpath:/ui/system/system-table-define.xml</value>
+				<value>classpath:/ui/team/team-table-define.xml</value>
+				<value>classpath:/ui/product/product-table-define.xml</value>
+				<value>classpath:/ui/model/model-table-define.xml</value>
+				<value>classpath:/ui/project/project-table-define.xml</value>
+				<value>classpath:/ui/work/work-table-define.xml</value>
+				<value>classpath:/ui/knowledge/knowledge-table-define.xml</value>
+				<value>classpath:/ui/report/report-table-define.xml</value>
+				<value>classpath:/ui/middleware/middleware-table-define.xml</value>
+				<value>classpath:/ui/calendar/calendar-table-define.xml</value>
+				<value>classpath:/ui/bpm/bpm-table-define.xml</value>
+				<value>classpath:/ui/hr/hr-table-define.xml</value>
+			</list>
+		</property>
+		<property name="formConfigFilePaths">
+			<list>
+				<value>classpath:/ui/form-config.xml</value>
+				<value>classpath:/ui/system/system-form-config.xml</value>
+				<value>classpath:/ui/team/team-form-config.xml</value>
+				<value>classpath:/ui/product/product-form-config.xml</value>
+				<value>classpath:/ui/model/model-form-config.xml</value>
+				<value>classpath:/ui/project/project-form-config.xml</value>
+				<value>classpath:/ui/work/work-form-config.xml</value>
+				<value>classpath:/ui/knowledge/knowledge-form-config.xml</value>
+				<value>classpath:/ui/report/report-form-config.xml</value>
+				<value>classpath:/ui/middleware/middleware-form-config.xml</value>
+				<value>classpath:/ui/calendar/calendar-form-config.xml</value>
+				<value>classpath:/ui/hr/hr-form-config.xml</value>
+				<value>classpath:/ui/bpm/bpm-form-config.xml</value>
+			</list>
+		</property>
+		<property name="listConfigFilePaths" >
+			<list>
+				<value>classpath:/ui/list-data.xml</value>
+				<value>classpath:/ui/system/system-list-data.xml</value>
+				<value>classpath:/ui/team/team-list-data.xml</value>
+				<value>classpath:/ui/product/product-list-data.xml</value>
+				<value>classpath:/ui/model/model-list-data.xml</value>
+				<value>classpath:/ui/project/project-list-data.xml</value>
+				<value>classpath:/ui/work/work-list-data.xml</value>
+				<value>classpath:/ui/knowledge/knowledge-list-data.xml</value>
+				<value>classpath:/ui/report/report-list-data.xml</value>
+				<value>classpath:/ui/middleware/middleware-list-data.xml</value>
+				<value>classpath:/ui/calendar/calendar-list-data.xml</value>
+				<value>classpath:/ui/hr/hr-list-data.xml</value>
+				<value>classpath:/ui/bpm/bpm-list-data.xml</value>
+			</list>
+		</property>
+		<property name="actionConfigFilePaths" >
+			<list>
+				<value>classpath:/ui/action_config.xml</value>
+				<value>classpath:/ui/model/model-action_config.xml</value>
+				<value>classpath:/ui/calendar/calendar-action_config.xml</value>
+				<value>classpath:/ui/report/report-action_config.xml</value>
+				<value>classpath:/ui/system/system-action_config.xml</value>
+				<value>classpath:/ui/product/product-action_config.xml</value>
+				<value>classpath:/ui/work/work-action_config.xml</value>
+				<value>classpath:/ui/team/team-action_config.xml</value>
+				<value>classpath:/ui/middleware/middleware-action_config.xml</value>
+				<value>classpath:/ui/hr/hr-action_config.xml</value>
+				<value>classpath:/ui/bpm/bpm-action_config.xml</value>
+			</list>
+		</property>
+		<property name="iconLibFilePaths" >
+			<list>
+				<value>classpath:/ui/icon_lib.properties</value>
+			</list>
+		</property>
+		
+	</bean>
+
+	<bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource"
+		destroy-method="close" lazy-init="false">
+		<property name="driverClassName" value="${jdbc.driverClassName}" />
+		<property name="url" value="${jdbc.url}" />
+		<property name="username" value="${jdbc.username}" />
+		<property name="password" value="${jdbc.password}" />
+		<property name="initialSize" value="5" />
+		<property name="maxActive" value="200" />
+		<property name="maxWait" value="60000" />
+		<property name="poolPreparedStatements" value="true" />
+	</bean>
+
+	<context:annotation-config />
+
+	<aop:aspectj-autoproxy />
+
+	<bean id="transactionManager"
+		class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
+		<property name="dataSource" ref="dataSource" />
+	</bean>
+
+	<bean id="velocityResourceLoader"
+		class="org.apache.velocity.runtime.resource.loader.DataSourceResourceLoader">
+		<property name="dataSource" ref="dataSource" />
+	</bean>
+
+	<bean id="org.apache.velocity.app.VelocityEngine"
+		class="org.springframework.ui.velocity.VelocityEngineFactoryBean">
+		<property name="velocityPropertiesMap">
+			<map>
+				
+				<entry key="resource.loader">
+					<value>ds</value>
+				</entry>
+				<entry key="ds.resource.loader.instance">
+					<ref bean="velocityResourceLoader" />
+				</entry>
+				<entry key="ds.resource.loader.resource.table">
+					<value>velocity_template</value>
+				</entry>
+				<entry key="ds.resource.loader.resource.keycolumn">
+					<value>template_name</value>
+				</entry>
+				<entry key="ds.resource.loader.resource.templatecolumn">
+					<value>template_content</value>
+				</entry>
+				<entry key="ds.resource.loader.resource.timestampcolumn">
+					<value>template_timestamp</value>
+				</entry>
+				<entry key="ds.resource.loader.cache">
+					<value>false</value>
+				</entry>
+				<entry key="velocimacro.library">
+					<value>GLOB_VM</value>
+				</entry>
+				<entry key="output.encoding">
+					<value>UTF-8</value>
+				</entry>
+				<entry key="input.encoding">
+					<value>UTF-8</value>
+				</entry>
+				<entry key="directive.parse.max.depth">
+					<value>100</value>
+				</entry>
+			</map>
+		</property>
+	</bean>
+	
+	
+	<bean id="processEngineConfiguration" class="org.activiti.spring.SpringProcessEngineConfiguration">
+	    <property name="dataSource" ref="dataSource" />
+	    <property name="transactionManager" ref="transactionManager" />
+	    <property name="databaseSchemaUpdate" value="true" />
+	    <property name="jobExecutorActivate" value="false" />
+	    <property name="history" value="audit" />
+  	</bean>
+  
+	<bean id="processEngine" class="org.activiti.spring.ProcessEngineFactoryBean">
+	    <property name="processEngineConfiguration" ref="processEngineConfiguration" />
+	</bean>
+  
+    <bean id="org.activiti.engine.RepositoryService" factory-bean="processEngine" factory-method="getRepositoryService" />
+    <bean id="org.activiti.engine.RuntimeService" factory-bean="processEngine" factory-method="getRuntimeService" />
+    <bean id="org.activiti.engine.TaskService" factory-bean="processEngine" factory-method="getTaskService" />
+    <bean id="org.activiti.engine.FormService" factory-bean="processEngine" factory-method="getFormService" />
+    <bean id="org.activiti.engine.HistoryService" factory-bean="processEngine" factory-method="getHistoryService" />
+    <bean id="managementService" factory-bean="processEngine" factory-method="getManagementService" />
+	<bean id="org.activiti.engine.IdentityService" factory-bean="processEngine" factory-method="getIdentityService" />
+   
+	<import resource="applicationContext-dao.xml" />
+
+	<import resource="applicationContext-service.xml" />
+
+</beans>

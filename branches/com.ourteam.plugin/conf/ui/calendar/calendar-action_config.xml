@@ -1,0 +1,83 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<actions>
+
+	<action type="push" handler="goToday" desc="今天" id="goToday"
+		label="今天" icon="go_today_24" labelKey="">
+	</action>
+
+	<action type="custom" handler="" desc="" id="showDatePicker"
+		label="" icon="date_24" labelKey="">
+	</action>
+
+	<action type="radio" handler="monthView" desc="切换到月视图" id="monthView"
+		label="月视图" icon="calendar_view_month_24" labelKey="">
+	</action>
+
+	<action type="radio" handler="weekView" desc="切换到周视图" id="weekView"
+		label="周视图" icon="calendar_view_week_24" labelKey="">
+	</action>
+
+	<action type="radio" handler="dayView" desc="切换到日视图" id="dayView"
+		label="日视图" icon="calendar_view_day_24" labelKey="">
+	</action>
+
+	<action type="push" handler="goPreviousCalendar" desc="后退"
+		id="goPreviousCalendar" label="后退" icon="date_previous_24"
+		labelKey="">
+	</action>
+
+	<action type="push" handler="goNextCalendar" desc="前进"
+		id="goNextCalendar" label="前进" icon="date_next_24"
+		labelKey="">
+	</action>
+	
+	<action type="push" handler="refreshCalendar" desc="Refresh Calendar"
+		icon="refresh_24" id="refreshCalendar" label="刷新"
+		labelKey="">
+	</action>
+
+	<actiongroup id="calendarEditorActionGroup">
+		<action ref="monthView" />
+		<action ref="weekView" />
+		<action ref="dayView" />
+		<action ref="separator"/>
+		<action ref="refreshCalendar"/>
+		<action ref="goPreviousCalendar" />
+		<action ref="goNextCalendar" />
+		<action ref="showDatePicker" />
+		<action ref="goToday" />
+	</actiongroup>
+	
+	<action type="push" handler="addNewCalendarEvent" desc="Add Calendar Evet"
+		icon="calendar_add" id="addNewCalendarEvent" label="新建事件"
+		labelKey="">
+	</action>
+	
+	<actiongroup id="eventListActionGroup">
+		<action ref="addNewCalendarEvent" />
+	</actiongroup>
+	
+	<action type="push" handler="changeCalendarColor" desc="change calendar color"
+		icon="select_by_color" id="changeCalendarColor"
+		confirmInfoKey="" label="选择颜色..." labelKey="">
+	</action>
+	
+	<action type="check" handler="setCalendarShowHidden" desc="set Calendar Show Or Hidden"
+		icon="calendar_delete" id="setCalendarShowHidden"
+		confirmInfoKey="" label="隐藏该日历" labelKey="">
+	</action>
+	
+	<action type="push" handler="editCalendar" desc="Edit Calendar"
+		icon="calendar_edit" id="editCalendar"
+		confirmInfoKey="" label="编辑日历" labelKey="">
+	</action>
+	
+	<actiongroup id="calendarActionGroup">
+		<action ref="editCalendar"/>
+		<action ref="changeCalendarColor"></action>
+		<action ref="setCalendarShowHidden"></action>
+		<action ref="delete" handler="deleteCalendar"
+			></action>
+	</actiongroup>
+
+</actions>

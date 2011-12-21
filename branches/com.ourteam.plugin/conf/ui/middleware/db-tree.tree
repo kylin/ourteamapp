@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tree id="DatabaseTree" imageBase="">
+	<nodeDefine>
+			
+		<node id="DATABASE_ROOT" image="/network-server.png" label="数据库" labelKey="" leaf="false" hidden="false" nodePanel="databaseViewTab">
+			
+					
+			<property name="userData" value="DATABASE_CONFIG" />
+						
+			<actionList>
+		
+					
+			</actionList>
+			
+			<subNodeBuilderList>
+					
+			<nodeBuilder id="DatabaseNodeBuilder" className="com.ourteam.app.middleware.ui.DatabaseNodeBuilder">
+						
+			</nodeBuilder>
+					
+			</subNodeBuilderList>
+			
+			
+		</node>
+			
+		<node id="SCHEMA" image="/schema.gif" label="" labelKey="" leaf="false" hidden="false" nodePanel="">
+			
+					
+			<property name="userData" value="SCHEMA" />
+						
+			<actionList>
+		
+					
+			</actionList>
+			
+			<subNodeBuilderList>
+					
+			<nodeBuilder id="TableNodeBuilder" className="net.tools.eclipse.dbexplorer.editors.TableNodeBuilder">
+						
+			</nodeBuilder>
+					
+			</subNodeBuilderList>
+			
+			
+		</node>
+			
+		<node id="TABLE" image="/table.gif" label="" labelKey="" leaf="false" hidden="false" nodePanel="databaseTableTabbedPane">
+			
+						
+			<actionList>
+		
+					
+			</actionList>
+			
+			<subNodeBuilderList>
+					
+			<nodeBuilder id="ColumnNodeBuilder" className="net.tools.eclipse.dbexplorer.editors.ColumnNodeBuilder">
+						
+			</nodeBuilder>
+					
+			</subNodeBuilderList>
+			
+			
+		</node>
+			
+		<node id="COLUMN" image="/column.gif" label="" labelKey="" leaf="true" hidden="false" nodePanel="">
+			
+					
+			<property name="userData" value="COLUMN" />
+						
+			<actionList>
+		
+					
+			</actionList>
+			
+			<subNodeBuilderList>
+					
+			</subNodeBuilderList>
+			
+			
+		</node>
+			
+		<node id="PRIMARY_COLUMN" image="/pk_column.gif" label="" labelKey="" leaf="true" hidden="false" nodePanel="">
+			
+					
+			<property name="userData" value="COLUMN" />
+						
+			<actionList>
+		
+					
+			</actionList>
+			
+			<subNodeBuilderList>
+					
+			</subNodeBuilderList>
+			
+			
+		</node>
+			
+		<node id="DATABASE" image="database" label="" labelKey="" leaf="false" hidden="false" nodePanel="">
+			
+					
+			<property name="actionGroupId" value="databaseServerActionGroup" />
+						
+			<actionList>
+		
+					
+			</actionList>
+			
+			<subNodeBuilderList>
+					
+			</subNodeBuilderList>
+			
+			
+		</node>
+		
+	</nodeDefine>
+	
+		
+	<rootNode id="DATABASE_ROOT">
+			</rootNode>
+		
+</tree>

@@ -1,0 +1,524 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tabbed>
+   <tabbedpane id="daoConfigTab" desc="数据访问对象Tab">
+  	  	
+  	<tab name="businessObjectForm" label="DAO对象" labelKey="" icon="entity" compentclass="com.ourteam.app.modelbase.editor.BusinessObjectBasicInfoEditorPart">
+  		  
+    </tab>
+  	  	
+  	<tab name="mappingList" label="映射对象" labelKey="" icon="property_mapping" compentclass="com.ourteam.app.modelbase.editor.DaoObjectMappingListEditorPart">
+  		  
+    </tab>
+  	  	
+  	<tab name="extendsList" label="扩展对象" labelKey="" icon="object_extend" compentclass="com.ourteam.app.modelbase.editor.BusinessObjectExtendListEditorPart">
+  		  
+    </tab>
+  	  	
+  	<tab name="relatedOperationList" label="关联操作" labelKey="" icon="object_relation" compentclass="com.ourteam.app.modelbase.editor.DaoRelatedOperationListEditorPart">
+  		  
+    </tab>
+  	  	
+  	<tab name="relatedViewList" label="关联显示" labelKey="" icon="view_relation" compentclass="com.ourteam.app.modelbase.editor.DaoRelatedViewListEditorPart">
+  		  
+    </tab>
+  	  	
+  	<tab name="uniqueList" label="唯一性设置" labelKey="" icon="property_unique" compentclass="com.ourteam.app.modelbase.editor.DaoUniquePropertyConfigEditorPart">
+  		  
+    </tab>
+  	  	
+  	<tab name="actionList" label="动作设置" labelKey="" icon="object_action" compentclass="com.ourteam.app.modelbase.editor.DaoActionListEditorPart">
+  		  
+    </tab>
+  	  	
+  	<tab name="beRefrenceList" label="被引用列表" labelKey="" icon="object_refrences" compentclass="com.ourteam.app.modelbase.editor.BusinessObjectBeRefrenceListEditorPart">
+  		  
+    </tab>
+  	  
+  </tabbedpane>
+    
+  <tabbedpane id="businessBeanConfigTab" desc="业务数据对象Tab">
+  	  	
+  	<tab name="businessObjectForm" label="基本信息" labelKey="" icon="bean" compentclass="com.ourteam.app.modelbase.editor.BusinessObjectBasicInfoEditorPart">
+  		  
+    </tab>
+  	  	
+  	<tab name="dataObjectMappingConfig" label="数据包装配置" labelKey="" icon="bean_mapping" compentclass="com.ourteam.app.modelbase.editor.BusinessBeanMappedDataObjectListEditorPart">
+  		  
+    </tab>
+  	  	
+  	<tab name="beRefrenceList" label="被引用列表" labelKey="" icon="object_refrences" compentclass="com.ourteam.app.modelbase.editor.BusinessObjectBeRefrenceListEditorPart">
+  		  
+    </tab>
+  	  
+  </tabbedpane>
+    
+  <tabbedpane id="serviceObjectConfigTab" desc="服务对象Tab">
+  	  	
+  	<tab name="businessObjectForm" label="基本信息" labelKey="" icon="service" compentclass="com.ourteam.app.modelbase.editor.BusinessObjectBasicInfoEditorPart">
+  		  
+    </tab>
+  	  	
+  	<tab name="dependServiceObjectForm" label="依赖对象列表" labelKey="" icon="object_depend" compentclass="com.ourteam.app.modelbase.editor.ServiceObjectDependListEditorPart">
+  		  
+    </tab>
+  	  	
+  	<tab name="beRefrenceList" label="被引用列表" labelKey="" icon="object_refrences" compentclass="com.ourteam.app.modelbase.editor.BusinessObjectBeRefrenceListEditorPart">
+  		  
+    </tab>
+  	  
+  </tabbedpane>
+    
+  <tabbedpane id="enumObjectConfigTab" desc="枚举对象Tab">
+  	  	
+  	<tab name="enumObjectForm" label="基本信息" labelKey="" icon="enum" compentclass="com.ourteam.app.modelbase.editor.EnumObjectEditorPart">
+  		  
+    </tab>
+  	  	
+  	<tab name="beRefrenceList" label="被引用列表" labelKey="" icon="object_refrences" compentclass="com.ourteam.app.modelbase.editor.BusinessObjectBeRefrenceListEditorPart">
+  		  
+    </tab>
+  	  
+  </tabbedpane>
+    
+  <tabbedpane id="dataObjectConfigTab" desc="数据对象Tab">
+  	  	
+  	<tab name="dataObjectForm" label="基本信息" labelKey="" icon="table" compentclass="com.ourteam.app.modelbase.editor.BusinessObjectBasicInfoEditorPart">
+  		  
+    </tab>
+  	  	
+  	<tab name="beRefrenceList" label="被引用列表" labelKey="" icon="object_refrences" compentclass="com.ourteam.app.modelbase.editor.BusinessObjectBeRefrenceListEditorPart">
+  		  
+    </tab>
+  	  
+  </tabbedpane>
+    
+  <tabbedpane id="daoRelateOperationConfigWizard" desc="关联操作配置向导">
+  	  	
+  	<tab name="selectRelatedObject" label="选择关联对象" labelKey="" icon="" compentclass="com.ourteam.app.modelbase.ui.ModelObjectSearchComposite">
+  		  
+    </tab>
+  	  	
+  	<tab name="configRelation" label="配置关联关系" labelKey="" icon="" compentclass="com.ourteam.app.modelbase.ui.ModelObjectRelationConfigComposite">
+  		  
+    </tab>
+  	  	
+  	<tab name="configDescription" label="配置关联说明" labelKey="" icon="" compentclass="">
+  		  
+    	<property id="formId" value="businessObjectRelationDescFrom"/>
+    	  
+    </tab>
+  	  
+  </tabbedpane>
+    
+  <tabbedpane id="daoRelateViewConfigWizard" desc="关联显示配置向导">
+  	  	
+  	<tab name="selectRelatedObject" label="选择关联对象" labelKey="" icon="" compentclass="com.ourteam.app.modelbase.ui.ModelObjectSearchComposite">
+  		  
+    </tab>
+  	  	
+  	<tab name="configRelation" label="配置关联关系" labelKey="" icon="" compentclass="com.ourteam.app.modelbase.ui.ModelObjectRelationConfigComposite">
+  		  
+    </tab>
+  	  	
+  	<tab name="configRelateView" label="配置关联显示属性" labelKey="" icon="" compentclass="com.ourteam.app.modelbase.ui.ModelObjectMappingConfigComposite">
+  		  
+    </tab>
+  	  	
+  	<tab name="configAliasName" label="配置关联对象别名" labelKey="" icon="" compentclass="">
+  		  
+    	<property id="formId" value="businessObjectAliasNameFrom"/>
+    	  
+    </tab>
+  	  
+  </tabbedpane>
+    
+  <tabbedpane id="daoRelateOperationEditTab" desc="关联操作配置Tab">
+  	  	
+  	<tab name="configRelation" label="配置关联关系" labelKey="" icon="property_mapping" compentclass="com.ourteam.app.modelbase.ui.ModelObjectRelationConfigComposite">
+  		  
+    </tab>
+  	  	
+  	<tab name="configDescription" label="配置关联说明" labelKey="" icon="relation_remarks" compentclass="">
+  		  
+    	<property id="formId" value="businessObjectRelationDescFrom"/>
+    	  
+    </tab>
+  	  
+  </tabbedpane>
+    
+  <tabbedpane id="daoRelateViewEditTab" desc="关联显示配置Tab">
+  	  	
+  	<tab name="configRelation" label="配置关联关系" labelKey="" icon="property_mapping" compentclass="com.ourteam.app.modelbase.ui.ModelObjectRelationConfigComposite">
+  		  
+    </tab>
+  	  	
+  	<tab name="configRelateView" label="配置关联显示属性" labelKey="" icon="view_config" compentclass="com.ourteam.app.modelbase.ui.ModelObjectMappingConfigComposite">
+  		  
+    </tab>
+  	  	
+  	<tab name="configDescription" label="配置关联对象别名" labelKey="" icon="object_alias" compentclass="">
+  		  
+    	<property id="formId" value="businessObjectAliasNameFrom"/>
+    	  
+    </tab>
+  	  
+  </tabbedpane>
+    
+  <tabbedpane id="daoExtendConfigWizard" desc="扩展配置向导">
+  	  	
+  	<tab name="selectRelatedObject" label="选择扩展对象" labelKey="" icon="" compentclass="com.ourteam.app.modelbase.ui.ModelObjectSearchComposite">
+  		  
+    </tab>
+  	  
+  </tabbedpane>
+    
+  <tabbedpane id="daoMappingConfigWizard" desc="持久对象映射置向导">
+  	  	
+  	<tab name="selectRelatedObject" label="选择关联对象" labelKey="" icon="" compentclass="com.ourteam.app.modelbase.ui.ModelObjectSearchComposite">
+  		  
+    </tab>
+  	  	
+  	<tab name="configRelateView" label="配置映射关系" labelKey="" icon="" compentclass="com.ourteam.app.modelbase.ui.ModelObjectMappingConfigComposite">
+  		  
+    </tab>
+  	  
+  </tabbedpane>
+    
+  <tabbedpane id="daoMappingConfigTab" desc="持久对象映射配置Tab">
+  	  	
+  	<tab name="configRelateView" label="配置映射关系" labelKey="" icon="property_mapping" compentclass="com.ourteam.app.modelbase.ui.ModelObjectMappingConfigComposite">
+  		  
+    </tab>
+  	  
+  </tabbedpane>
+    
+  <tabbedpane id="daoActionConfigTab" desc="动作配置">
+  	  	
+  	<tab name="configDaoAction" label="动作配置" labelKey="" icon="object_action" compentclass="com.ourteam.app.modelbase.ui.ModelObjectActionEditorComposite">
+  		  
+    </tab>
+  	  
+  </tabbedpane>
+    
+  <tabbedpane id="addBusinessDoaminWizard" desc="添加业务域向导">
+  	  	
+  	<tab name="businessDmianForm" label="业务域基本信息" labelKey="" icon="" compentclass="">
+  		  
+    	<property id="formId" value="businessDomainForm"/>
+    	  
+    </tab>
+  	  
+  </tabbedpane>
+    
+  <tabbedpane id="addDaoPackageWizard" desc="添加DAO对象包">
+  	  	
+  	<tab name="businessDmianForm" label="业务域基本信息" labelKey="" icon="" compentclass="">
+  		  
+    	<property id="formId" value="businessPackageForm"/>
+    	  
+    </tab>
+  	  
+  </tabbedpane>
+    
+  <tabbedpane id="addServicePackageWizard" desc="添加服务对象包">
+  	  	
+  	<tab name="businessDmianForm" label="业务域基本信息" labelKey="" icon="" compentclass="">
+  		  
+    	<property id="formId" value="businessPackageForm"/>
+    	  
+    </tab>
+  	  
+  </tabbedpane>
+    
+  <tabbedpane id="addPersistentPackageWizard" desc="添加数据对象包">
+  	  	
+  	<tab name="businessDmianForm" label="业务域基本信息" labelKey="" icon="" compentclass="">
+  		  
+    	<property id="formId" value="businessPackageForm"/>
+    	  
+    </tab>
+  	  
+  </tabbedpane>
+    
+  <tabbedpane id="genDaoObjectWizard" desc="生成DAO对象向导">
+  	  	
+  	<tab name="selectDaoPackage" label="选择DAO包" labelKey="" icon="" compentclass="com.ourteam.app.modelbase.ui.ModelPackageSearchComposite">
+  		  
+    </tab>
+  	  	
+  	<tab name="setDaoInfo" label="设置DAO基本信息" labelKey="" icon="" compentclass="">
+  		  
+    	<property id="formId" value="businessObjectForm"/>
+    	  
+    </tab>
+  	  	
+  	<tab name="setDaoProperties" label="设置DAO属性" labelKey="" icon="" compentclass="com.ourteam.app.modelbase.ui.DaoPropertyMappingConfigComposite">
+  		  
+    </tab>
+  	  
+  </tabbedpane>
+    
+  <tabbedpane id="genDtoObjectWizard" desc="生成DTO对象向导">
+  	  	
+  	<tab name="selectDaoPackage" label="选择DTO包" labelKey="" icon="" compentclass="com.ourteam.app.modelbase.ui.ModelPackageSearchComposite">
+  		  
+    </tab>
+  	  	
+  	<tab name="setDaoInfo" label="设置DTO基本信息" labelKey="" icon="" compentclass="">
+  		  
+    	<property id="formId" value="businessObjectForm"/>
+    	  
+    </tab>
+  	  	
+  	<tab name="setDaoProperties" label="设置DTO属性" labelKey="" icon="" compentclass="com.ourteam.app.modelbase.ui.DtoPropertyMappingConfigComposite">
+  		  
+    </tab>
+  	  
+  </tabbedpane>
+    
+  <tabbedpane id="addDaoObjectWizard" desc="新建DAO对象向导">
+  	  	
+  	<tab name="selectPersistentObject" label="选择数据对象" labelKey="" icon="" compentclass="com.ourteam.app.modelbase.ui.ModelObjectSearchComposite">
+  		  
+    </tab>
+  	  	
+  	<tab name="setDaoInfo" label="设置DAO基本信息" labelKey="" icon="" compentclass="">
+  		  
+    	<property id="formId" value="businessObjectForm"/>
+    	  
+    </tab>
+  	  	
+  	<tab name="setDaoProperties" label="设置DAO属性" labelKey="" icon="" compentclass="com.ourteam.app.modelbase.ui.DaoPropertyMappingConfigComposite">
+  		  
+    </tab>
+  	  
+  </tabbedpane>
+    
+  <tabbedpane id="addEnumObjectWizard" desc="新建枚举对象向导">
+  	  	
+  	<tab name="setEnumInfo" label="设置枚举对象基本信息" labelKey="" icon="" compentclass="">
+  		  
+    	<property id="formId" value="enumObjectForm"/>
+    	  
+    </tab>
+  	  
+  </tabbedpane>
+    
+  <tabbedpane id="addBusinessBeanWizard" desc="新建业务数据对象向导">
+  	  	
+  	<tab name="setBeanInfo" label="设置业务数据对象基本信息" labelKey="" icon="" compentclass="">
+  		  
+    	<property id="formId" value="beanObjectForm"/>
+    	  
+    </tab>
+  	  
+  </tabbedpane>
+    
+  <tabbedpane id="addPersistentObjectWizard" desc="新建数据对象向导">
+  	  	
+  	<tab name="setPersistentObjectInfo" label="设置数据对象基本信息" labelKey="" icon="" compentclass="">
+  		  
+    	<property id="formId" value="persistentObjectForm"/>
+    	  
+    </tab>
+  	  
+  </tabbedpane>
+    
+  <tabbedpane id="addPersistentPropertyWizard" desc="新建数据对象属性向导">
+  	  	
+  	<tab name="setPersistentPropertyInfo" label="设置数据对象属性信息" labelKey="" icon="" compentclass="">
+  		  
+    	<property id="formId" value="persistenPropertyForm"/>
+    	  
+    </tab>
+  	  
+  </tabbedpane>
+    
+  <tabbedpane id="addServiceObjectWizard" desc="新建服务对象向导">
+  	  	
+  	<tab name="setServiceInfo" label="设置服务对象基本信息" labelKey="" icon="" compentclass="">
+  		  
+    	<property id="formId" value="serviceObjectForm"/>
+    	  
+    </tab>
+  	  
+  </tabbedpane>
+    
+  <tabbedpane id="addDaoPropertyWizard" desc="新建DAO属性向导">
+  	  	
+  	<tab name="setDaoPropertyInfo" label="设置DAO属性信息" labelKey="" icon="" compentclass="">
+  		  
+    	<property id="formId" value="daoPropertyEditForm"/>
+    	  
+    </tab>
+  	  
+  </tabbedpane>
+    
+  <tabbedpane id="addEnumPropertyWizard" desc="新建枚举属性向导">
+  	  	
+  	<tab name="setDaoPropertyInfo" label="设置枚举属性信息" labelKey="" icon="" compentclass="">
+  		  
+    	<property id="formId" value="enumPropertyEditForm"/>
+    	  
+    </tab>
+  	  
+  </tabbedpane>
+    
+  <tabbedpane id="addBusinessBeanPropertyWizard" desc="新建业务数据对象属性向导">
+  	  	
+  	<tab name="setBusinessBeanPropertyInfo" label="设置业务数据对象属性信息" labelKey="" icon="" compentclass="">
+  		  
+    	<property id="formId" value="beanPropertyEditForm"/>
+    	  
+    </tab>
+  	  
+  </tabbedpane>
+    
+  <tabbedpane id="importPersistentObjectWizard" desc="导入数据对象向导">
+  	  	
+  	<tab name="selectDatabaseServer" label="选择数据库服务" labelKey="" icon="" compentclass="com.ourteam.app.modelbase.ui.DatabaseSearchComposite">
+  		  
+    </tab>
+  	  	
+  	<tab name="selectDatabaseObject" label="选择数据库对象" labelKey="" icon="" compentclass="com.ourteam.app.modelbase.ui.DatabaseTableSearchComposite">
+  		  
+    </tab>
+  	  
+  </tabbedpane>
+    
+  <tabbedpane id="selectBusinessObjectDataTypeTab" desc="选择业务数据类型">
+  	  	
+  	<tab name="selectBasicDataType" label="选择自定义数据类型" labelKey="" icon="custom_data_type" compentclass="com.ourteam.app.modelbase.ui.CustomDataTypeSearchComposite">
+  		  
+    </tab>
+  	  	
+  	<tab name="selectComplexDataType" label="选择系统数据类型" labelKey="" icon="business_model" compentclass="com.ourteam.app.modelbase.ui.ModelObjectSearchComposite">
+  		  
+    </tab>
+  	  
+  </tabbedpane>
+    
+  <tabbedpane id="addServiceMethodWizard" desc="添加服务方法向导">
+  	  	
+  	<tab name="setServiceMethodInfo" label="设置服务方法信息" labelKey="" icon="" compentclass="">
+  		  
+    	<property id="formId" value="serviceMethodForm"/>
+    	  
+    </tab>
+  	  
+  </tabbedpane>
+    
+  <tabbedpane id="serviceMethodEditorTab" desc="服务方法配置Tab">
+  	  	
+  	<tab name="setServiceMethodInfo" label="基本信息" labelKey="" icon="service_method" compentclass="com.ourteam.app.modelbase.editor.ServiceMethodBasicInfoEditorPart">
+  		  
+    </tab>
+  	  	
+  	<tab name="setServiceMethodParameter" label="参数设置" labelKey="" icon="input_output" compentclass="com.ourteam.app.modelbase.editor.ServiceMethodParameterEditorPart">
+  		  
+    </tab>
+  	  
+  </tabbedpane>
+    
+  <tabbedpane id="serviceMethodParameterPanelGroup" desc="服务方法参数配置组件">
+  	  	
+  	<tab name="setServiceMethodOutput" label="输出参数" labelKey="" icon="output_param" compentclass="">
+  		  
+    	<property id="formId" value="serviceOutputParameterForm"/>
+    	  
+    </tab>
+  	  	
+  	<tab name="setServiceMethodInput" label="输入参数" labelKey="" icon="input_param" compentclass="com.ourteam.app.modelbase.ui.ServiceMethodInputParameterListComposite">
+  		  
+    </tab>
+  	  
+  </tabbedpane>
+    
+  <tabbedpane id="businessBeanMappedDataObjectConfigWizard" desc="业务数据对象包装配置向导">
+  	  	
+  	<tab name="selectRelatedObject" label="选择包装对象" labelKey="" icon="" compentclass="com.ourteam.app.modelbase.ui.ModelObjectSearchComposite">
+  		  
+    </tab>
+  	  	
+  	<tab name="configMappedRelation" label="包装映射关系" labelKey="" icon="" compentclass="com.ourteam.app.modelbase.ui.ModelObjectMappingConfigComposite">
+  		  
+    </tab>
+  	  	
+  	<tab name="configDescription" label="包装映射关系说明" labelKey="" icon="" compentclass="">
+  		  
+    	<property id="formId" value="businessObjectRelationDescFrom"/>
+    	  
+    </tab>
+  	  
+  </tabbedpane>
+    
+  <tabbedpane id="businessBeanMappedDataObjectConfigTab" desc="业务数据对象包装配置Tab">
+  	  	
+  	<tab name="configMappedRelation" label="包装映射关系" labelKey="" icon="property_mapping" compentclass="com.ourteam.app.modelbase.ui.ModelObjectMappingConfigComposite">
+  		  
+    </tab>
+  	  	
+  	<tab name="configDescription" label="包装映射关系说明" labelKey="" icon="relation_remarks" compentclass="">
+  		  
+    	<property id="formId" value="businessObjectRelationDescFrom"/>
+    	  
+    </tab>
+  	  
+  </tabbedpane>
+    
+  <tabbedpane id="serviceObjectDependConfigWizard" desc="服务依赖配置向导">
+  	  	
+  	<tab name="selectRelatedObject" label="选择依赖对象" labelKey="" icon="" compentclass="com.ourteam.app.modelbase.ui.ServiceObjectDependBusinessObjectSearchComposite">
+  		  
+    </tab>
+  	  
+  </tabbedpane>
+    
+  <tabbedpane id="serviceMethodInputParameterConfigTab" desc="服务依赖配置向导">
+  	  	
+  	<tab name="setInputParameterInfo" label="输入参数" labelKey="" icon="input_output" compentclass="">
+  		  
+    	<property id="formId" value="serviceInputParameterForm"/>
+    	  
+    </tab>
+  	  
+  </tabbedpane>
+    
+  <tabbedpane id="moveObjectPackageWizard" desc="移动对象包向导">
+  	  	
+  	<tab name="selectBusinessDomain" label="选择业务域" labelKey="" icon="" compentclass="com.ourteam.app.modelbase.ui.BusinessDomainSearchComposite">
+  		  
+    </tab>
+  	  
+  </tabbedpane>
+    
+  <tabbedpane id="customDataObjectConfigTab" desc="自定义数据对象配置">
+  	  	
+  	<tab name="setInputParameterInfo" label="自定义数据对象" labelKey="" icon="custom_data" compentclass="">
+  		  
+    	<property id="formId" value="customDataObjectForm"/>
+    	  
+    </tab>
+  	  
+  </tabbedpane>
+    
+  <tabbedpane id="moveBusinessObjectWizard" desc="移动业务对象">
+  	  	
+  	<tab name="selectBusinessPackage" label="选择包" labelKey="" icon="" compentclass="com.ourteam.app.modelbase.ui.ModelPackageSearchComposite">
+  		  
+    </tab>
+  	  
+  </tabbedpane>
+  
+  <tabbedpane id="businessTemplateEditorTab" desc="业务模板编辑Tab">
+  	  	
+  	<tab name="businessTemplateInfoForm" label="基本信息" labelKey="" icon="template" compentclass="com.ourteam.app.modelbase.editor.BusinessTemplateInfoFormEditorPart">
+  		  
+    </tab>
+  	  	
+  	<tab name="templateContent" label="模板内容" labelKey="" icon="template_content" compentclass="com.ourteam.app.modelbase.editor.BusinessTemplateContentEditor">
+  		  
+    </tab>
+  	  
+  </tabbedpane>
+</tabbed>

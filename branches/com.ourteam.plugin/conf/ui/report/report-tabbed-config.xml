@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tabbed>
+    
+  <tabbedpane id="reportProjectEditorTab" desc="报表项目编辑Tab">
+  	  	
+  	<tab name="reportProjectForm" label="项目基本信息" labelKey="" icon="report_project" compentclass="com.ourteam.app.report.editor.ReportProjectInfoEditor">
+  		  
+    </tab>
+  	  	
+  	<tab name="ReportProjectDatabaseEditorPart" label="报表数据库" labelKey="" icon="database" compentclass="com.ourteam.app.report.editor.ReportProjectDatabaseEditorPart">
+  		  
+    </tab>
+  	  	
+  	<tab name="ListSourceEditorPart" label="选择数据源定义" labelKey="" icon="report_list_source" compentclass="com.ourteam.app.report.editor.ReportProjectListSourceEditorPart">
+  		  
+    </tab>
+  	  
+  </tabbedpane>
+    
+  <tabbedpane id="addReportDatabaseWizard" desc="添加报表数据库向导">
+  	  	
+  	<tab name="selectDatabaseServer" label="选择数据库" labelKey="" icon="" compentclass="com.ourteam.app.modelbase.ui.DatabaseSearchComposite">
+  		  
+    </tab>
+  	  
+  </tabbedpane>
+    
+  <tabbedpane id="addDatabaseServerWizard" desc="添加数据库服务向导">
+  	  	
+  	<tab name="databaseServerInfo" label="数据库信息" labelKey="" icon="" compentclass="">
+  		  
+    	<property id="formId" value="databaseInfoForm"/>
+    	  
+    </tab>
+  	  
+  </tabbedpane>
+    
+  <tabbedpane id="addReportProjectWizard" desc="添加报表项目向导">
+  	  	
+  	<tab name="reportProjectForm" label="项目基本信息" labelKey="" icon="" compentclass="">
+  		  
+    	<property id="formId" value="reportProjectForm"/>
+    	  
+    </tab>
+  	  	
+  	<tab name="DatabaseSearchComposite" label="选择报表数据库" labelKey="" icon="" compentclass="com.ourteam.app.modelbase.ui.DatabaseSearchComposite">
+  		  
+    </tab>
+  	  
+  </tabbedpane>
+    
+  <tabbedpane id="addReportListSourceWizard" desc="添加报表选择数据源定义向导">
+  	  	
+  	<tab name="reportListSourceForm" label="列表数据源信息" labelKey="" icon="" compentclass="">
+  		  
+    	<property id="formId" value="reportListSourceForm"/>
+    	  
+    </tab>
+  	  
+  </tabbedpane>
+    
+  <tabbedpane id="addReportViewDefineWizard" desc="添加报表视图定义向导">
+  	  	
+  	<tab name="reportViewDefineForm" label="基本信息" labelKey="" icon="" compentclass="">
+  		  
+    	<property id="formId" value="reportViewDefineForm"/>
+    	  
+    </tab>
+  	  
+  </tabbedpane>
+    
+  <tabbedpane id="reportViewEditorTab" desc="报表视图编辑Tab">
+  	  	
+  	<tab name="ReportViewDefineInfoEditor" label="基本信息" labelKey="" icon="report_view" compentclass="com.ourteam.app.report.editor.ReportViewDefineInfoEditor">
+  		  
+    </tab>
+  	  	
+  	<tab name="ReportViewDefineTableListEditorPart" label="数据表" labelKey="" icon="view_table" compentclass="com.ourteam.app.report.editor.ReportViewDefineTableListEditorPart">
+  		  
+    </tab>
+  	  	
+  	<tab name="ReportViewDefineFieldListEditorPart" label="数据字段" labelKey="" icon="view_field" compentclass="com.ourteam.app.report.editor.ReportViewDefineFieldListEditorPart">
+  		  
+    </tab>
+  	  	
+  	<tab name="ReportViewDefineCondictionEditor" label="条件设置" labelKey="" icon="filter" compentclass="com.ourteam.app.report.editor.ReportViewDefineCondictionEditor">
+  		  
+    </tab>
+  	  	
+  	<tab name="ReportViewDefineUnionListEditorPart" label="联合视图" labelKey="" icon="view_union" compentclass="com.ourteam.app.report.editor.ReportViewDefineUnionListEditorPart">
+  		  
+    </tab>
+  	  
+  </tabbedpane>
+    
+  <tabbedpane id="reportViewDefineTableListTabel" desc="报表视图表对象列表">
+  	  
+  </tabbedpane>
+    
+  <tabbedpane id="addReportViewTableWizard" desc="添加报表视图表向导">
+  	  	
+  	<tab name="DatabaseTableSearchComposite" label="选择数据表" labelKey="" icon="" compentclass="com.ourteam.app.middleware.ui.DatabaseTableSearchComposite">
+  		  
+    </tab>
+  	  	
+  	<tab name="ReportViewTableBatchEditComposite" label="编辑表关联" labelKey="" icon="" compentclass="com.ourteam.app.report.ui.ReportViewTableBatchEditComposite">
+  		  
+    </tab>
+  	  
+  </tabbedpane>
+    
+  <tabbedpane id="addReportViewFieldWizard" desc="添加报表视图字段向导">
+  	  	
+  	<tab name="DatabaseFieldSelectorComposite" label="选择报表字段" labelKey="" icon="" compentclass="com.ourteam.app.middleware.ui.DatabaseFieldSelectorComposite">
+  		  
+    </tab>
+  	  	
+  	<tab name="ReportViewFieldBatchEditComposite" label="配置报表字段" labelKey="" icon="" compentclass="com.ourteam.app.report.ui.ReportViewFieldBatchEditComposite">
+  		  
+    </tab>
+  	  
+  </tabbedpane>
+    
+  <tabbedpane id="addReportViewUnionWizard" desc="添加报表视图联合向导">
+  	  	
+  	<tab name="reportViewUnionInfoForm" label="配置联合视图" labelKey="" icon="" compentclass="">
+  		  
+    	<property id="formId" value="reportViewUnionInfoForm"/>
+    	  
+    </tab>
+  	  
+  </tabbedpane>
+    
+  <tabbedpane id="addReportWizard" desc="添加报表向导">
+  	  	
+  	<tab name="ReportViewDefineSearchComposite" label="选择报表视图" labelKey="" icon="" compentclass="com.ourteam.app.report.ui.ReportViewDefineSearchComposite">
+  		  
+    </tab>
+  	  	
+  	<tab name="reportInstanceInfoForm" label="报表信息" labelKey="" icon="" compentclass="">
+  		  
+    	<property id="formId" value="reportInstanceInfoForm"/>
+    	  
+    </tab>
+  	  	
+  	<tab name="ReportDisplayColumnBatchEditComposite" label="编辑报表显示列" labelKey="" icon="" compentclass="com.ourteam.app.report.ui.ReportDisplayColumnBatchEditComposite">
+  		  
+    </tab>
+  	  	
+  	<tab name="ReportFilterEditComposite" label="设置过滤条件" labelKey="" icon="" compentclass="com.ourteam.app.report.ui.ReportFilterEditComposite">
+  		  
+    </tab>
+  	  
+  </tabbedpane>
+    
+  <tabbedpane id="reportInstanceEditTab" desc="报表编辑Tab">
+  	  	
+  	<tab name="reportInstanceEditForm" label="报表信息" labelKey="" icon="report" compentclass="">
+  		  
+    	<property id="formId" value="reportInstanceEditForm"/>
+    	  
+    </tab>
+  	  	
+  	<tab name="ReportDisplayColumnBatchEditComposite" label="显示列" labelKey="" icon="view_field" compentclass="com.ourteam.app.report.ui.ReportDisplayColumnBatchEditComposite">
+  		  
+    </tab>
+  	  	
+  	<tab name="ReportFilterEditComposite" label="过滤条件" labelKey="" icon="filter" compentclass="com.ourteam.app.report.ui.ReportFilterEditComposite">
+  		  
+    </tab>
+  	  
+  </tabbedpane>
+    
+  <tabbedpane id="reportEditorTab" desc="报表编辑Tab">
+  	  	
+  	<tab name="ReportDataEditorPart" label="报表" labelKey="" icon="report" compentclass="com.ourteam.app.report.editor.ReportDataEditorPart">
+  		  
+    </tab>
+  	  
+  </tabbedpane>
+      
+</tabbed>

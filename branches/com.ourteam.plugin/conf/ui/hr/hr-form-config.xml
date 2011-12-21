@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<formSet>
+	<form id="departmentEditForm" title="部门信息编辑表单" titleKey="" desc="">
+						
+		<property id="departmentName" title="名称" titleKey="" type="text" tipInfo="" desc="" readOnly="false" style="" command="" dataType="" dataSrc="" allowNull="false" value="" >
+								</property>
+				
+		<property id="description" title="说明" titleKey="" type="ref" tipInfo="" desc="" readOnly="false" style="" command="" dataType="" dataSrc="" allowNull="true" value="descriptionForm" >
+								</property>
+				
+	</form>
+	<form id="departMemberInfoForm" title="部门成员信息" titleKey="" desc="">
+						
+		<property id="sysUserName" title="名称" titleKey="" type="text" tipInfo="" desc="" readOnly="true" style="" command="" dataType="" dataSrc="" allowNull="true" value="" >
+								</property>
+				
+		<property id="departmentRole" title="职责说明" titleKey="" type="text" tipInfo="" desc="" readOnly="false" style="" command="" dataType="" dataSrc="" allowNull="true" value="" >
+								</property>
+				
+	</form>
+	<form id="employeeEditForm" title="员工表单" titleKey="" desc="">
+						
+		<property id="code" title="员工编号" titleKey="" type="text" tipInfo="" desc="" readOnly="true" style="" command="" dataType="" dataSrc="" allowNull="false" value="" >
+								</property>
+				
+		<property id="name" title="员工姓名" titleKey="" type="text" tipInfo="" desc="" readOnly="false" style="" command="" dataType="" dataSrc="" allowNull="false" value="" >
+								</property>
+				
+		<property id="userId" title="系统帐号" titleKey="" type="com.ourteam.app.system.ui.ChooseSysUserDialogPropertyComosite" tipInfo="" desc="" readOnly="false" style="" command="" dataType="" dataSrc="" allowNull="false" value="" >
+								</property>
+				
+		<property id="sex" title="性别" titleKey="" type="combolist" tipInfo="" desc="" readOnly="true" style="" command="" dataType="" dataSrc="employee.sexList" allowNull="false" value="" >
+								</property>
+				
+		<property id="birthDay" title="出生日期" titleKey="" type="combodate" tipInfo="" desc="" readOnly="false" style="DATE|DROP_DOWN" command="" dataType="" dataSrc="" allowNull="false" value="" >
+								</property>
+				
+		<property id="mailAddress" title="邮件地址" titleKey="" type="text" tipInfo="" desc="" readOnly="false" style="" command="" dataType="" dataSrc="" allowNull="false" value="" >
+								</property>
+				
+		<property id="homeAddress" title="住址" titleKey="" type="text" tipInfo="" desc="" readOnly="false" style="" command="" dataType="" dataSrc="" allowNull="true" value="" >
+								</property>
+				
+		<property id="phoneCall" title="联系电话" titleKey="" type="text" tipInfo="" desc="" readOnly="false" style="" command="" dataType="" dataSrc="" allowNull="true" value="" >
+								</property>
+				
+		<property id="remarks" title="备注" titleKey="" type="ref" tipInfo="" desc="" readOnly="false" style="" command="" dataType="" dataSrc="" allowNull="true" value="remarksForm" >
+								</property>
+				
+	</form>
+	<form id="employeeQueryForm" title="员工查询表单" titleKey="" desc="">
+						
+		<property id="employeeName" title="员工名称" titleKey="" type="text" tipInfo="" desc="" readOnly="false" style="" command="" dataType="" dataSrc="" allowNull="true" value="" >
+								</property>
+				
+	</form>
+
+</formSet>

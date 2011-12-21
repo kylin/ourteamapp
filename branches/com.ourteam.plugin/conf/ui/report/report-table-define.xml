@@ -1,0 +1,452 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tableList>
+
+	<table id="reportDatabaseTable" desc="报表数据库列表" extend="">
+				
+		<column property="databaseName" label="名称" labelKey="" width="200" 
+			editable="true" cellEditor="" showValue="true" dataType="java.lang.String" 
+			align="3" listDataSource="" 
+			canSort="false" canReOrder="true" canFilter="true"
+			canResize="true" icon=""
+			>
+					
+			<image value="*" file="database"/>
+								</column>
+				
+		<column property="databaseProvider" label="类型" labelKey="" width="100" 
+			editable="true" cellEditor="" showValue="true" dataType="java.lang.String" 
+			align="3" listDataSource="" 
+			canSort="false" canReOrder="true" canFilter="true"
+			canResize="true" icon=""
+			>
+								</column>
+				
+		<column property="remarks" label="备注" labelKey="" width="300" 
+			editable="true" cellEditor="" showValue="true" dataType="java.lang.String" 
+			align="3" listDataSource="" 
+			canSort="false" canReOrder="true" canFilter="true"
+			canResize="true" icon=""
+			>
+								</column>
+		
+	</table>
+
+	<table id="reportListSourceTable" desc="报表列表数据源列表" extend="">
+				
+		<column property="code" label="标识" labelKey="" width="200" 
+			editable="true" cellEditor="" showValue="true" dataType="java.lang.String" 
+			align="3" listDataSource="" 
+			canSort="true" canReOrder="true" canFilter="true"
+			canResize="true" icon=""
+			>
+					
+			<image value="*" file="report_list_source"/>
+								</column>
+				
+		<column property="name" label="名称" labelKey="" width="200" 
+			editable="true" cellEditor="" showValue="true" dataType="java.lang.String" 
+			align="3" listDataSource="" 
+			canSort="true" canReOrder="true" canFilter="true"
+			canResize="true" icon=""
+			>
+								</column>
+				
+		<column property="idAttr" label="数据属性" labelKey="" width="200" 
+			editable="true" cellEditor="" showValue="true" dataType="java.lang.String" 
+			align="3" listDataSource="" 
+			canSort="true" canReOrder="true" canFilter="true"
+			canResize="true" icon=""
+			>
+								</column>
+				
+		<column property="textAttr" label="标签属性" labelKey="" width="200" 
+			editable="true" cellEditor="" showValue="true" dataType="java.lang.String" 
+			align="3" listDataSource="" 
+			canSort="true" canReOrder="true" canFilter="true"
+			canResize="true" icon=""
+			>
+								</column>
+				
+		<column property="sqlScript" label="SQL" labelKey="" width="300" 
+			editable="true" cellEditor="" showValue="true" dataType="java.lang.String" 
+			align="3" listDataSource="" 
+			canSort="false" canReOrder="true" canFilter="true"
+			canResize="true" icon=""
+			>
+								</column>
+				
+		<column property="remarks" label="备注" labelKey="" width="300" 
+			editable="true" cellEditor="" showValue="true" dataType="java.lang.String" 
+			align="3" listDataSource="" 
+			canSort="false" canReOrder="true" canFilter="true"
+			canResize="true" icon=""
+			>
+								</column>
+		
+	</table>
+
+	<table id="reportViewDefineTableListTabel" desc="报表视图表定义列表" extend="">
+				
+		<column property="tableName" label="表名称" labelKey="" width="200" 
+			editable="false" cellEditor="" showValue="true" dataType="java.lang.String" 
+			align="3" listDataSource="" 
+			canSort="false" canReOrder="true" canFilter="true"
+			canResize="true" icon=""
+			>
+					
+			<image value="*" file="view_table"/>
+								</column>
+				
+		<column property="tableAlias" label="别名" labelKey="" width="200" 
+			editable="true" cellEditor="" showValue="true" dataType="java.lang.String" 
+			align="3" listDataSource="" 
+			canSort="false" canReOrder="true" canFilter="true"
+			canResize="true" icon=""
+			>
+								</column>
+				
+		<column property="joinType" label="关联类型" labelKey="" width="100" 
+			editable="true" cellEditor="" showValue="true" dataType="java.lang.String" 
+			align="3" listDataSource="report.joinTypeList" 
+			canSort="false" canReOrder="true" canFilter="true"
+			canResize="true" icon=""
+			>
+								</column>
+				
+		<column property="joinCond" label="关联条件" labelKey="" width="300" 
+			editable="true" cellEditor="" showValue="true" dataType="java.lang.String" 
+			align="3" listDataSource="" 
+			canSort="false" canReOrder="true" canFilter="true"
+			canResize="true" icon=""
+			>
+								</column>
+				
+		<column property="remarks" label="备注" labelKey="" width="300" 
+			editable="true" cellEditor="" showValue="true" dataType="java.lang.String" 
+			align="3" listDataSource="" 
+			canSort="false" canReOrder="true" canFilter="true"
+			canResize="true" icon=""
+			>
+								</column>
+		
+	</table>
+
+	<table id="databaseColumnListTable" desc="数据库字段列表" extend="">
+				
+		<column property="primaryKey" label="" labelKey="" width="30" 
+			editable="true" cellEditor="" showValue="false" dataType="java.lang.String" 
+			align="3" listDataSource="" 
+			canSort="false" canReOrder="true" canFilter="true"
+			canResize="true" icon=""
+			>
+					
+			<image value="true" file="table_key"/>
+					
+			<image value="false" file="table_column"/>
+								</column>
+				
+		<column property="name" label="名称" labelKey="" width="200" 
+			editable="true" cellEditor="" showValue="true" dataType="java.lang.String" 
+			align="3" listDataSource="" 
+			canSort="false" canReOrder="true" canFilter="true"
+			canResize="true" icon=""
+			>
+								</column>
+				
+		<column property="type" label="数据类型" labelKey="" width="200" 
+			editable="true" cellEditor="" showValue="true" dataType="java.lang.String" 
+			align="3" listDataSource="" 
+			canSort="false" canReOrder="true" canFilter="true"
+			canResize="true" icon=""
+			>
+								</column>
+				
+		<column property="size" label="数据长度" labelKey="" width="100" 
+			editable="true" cellEditor="" showValue="true" dataType="java.lang.String" 
+			align="3" listDataSource="" 
+			canSort="false" canReOrder="true" canFilter="true"
+			canResize="true" icon=""
+			>
+								</column>
+				
+		<column property="scale" label="数据精度" labelKey="" width="100" 
+			editable="true" cellEditor="" showValue="true" dataType="java.lang.String" 
+			align="3" listDataSource="" 
+			canSort="false" canReOrder="true" canFilter="true"
+			canResize="true" icon=""
+			>
+								</column>
+				
+		<column property="description" label="说明" labelKey="" width="300" 
+			editable="true" cellEditor="" showValue="true" dataType="java.lang.String" 
+			align="3" listDataSource="" 
+			canSort="false" canReOrder="true" canFilter="true"
+			canResize="true" icon=""
+			>
+								</column>
+		
+	</table>
+
+	<table id="reportViewFieldListEditTable" desc="报表视图字段编辑列表" extend="">
+				
+		<column property="fieldName" label="字段名称" labelKey="" width="200" 
+			editable="true" cellEditor="" showValue="true" dataType="java.lang.String" 
+			align="3" listDataSource="" 
+			canSort="false" canReOrder="true" canFilter="true"
+			canResize="true" icon=""
+			>
+					
+			<image value="*" file="table_column"/>
+								</column>
+				
+		<column property="fieldAlias" label="字段别名" labelKey="" width="200" 
+			editable="true" cellEditor="" showValue="true" dataType="java.lang.String" 
+			align="3" listDataSource="" 
+			canSort="false" canReOrder="true" canFilter="true"
+			canResize="true" icon=""
+			>
+								</column>
+				
+		<column property="tableName" label="表名称" labelKey="" width="200" 
+			editable="false" cellEditor="" showValue="true" dataType="java.lang.String" 
+			align="3" listDataSource="" 
+			canSort="false" canReOrder="true" canFilter="true"
+			canResize="true" icon=""
+			>
+								</column>
+				
+		<column property="tableAlias" label="表别名" labelKey="" width="200" 
+			editable="false" cellEditor="" showValue="true" dataType="java.lang.String" 
+			align="3" listDataSource="" 
+			canSort="false" canReOrder="true" canFilter="true"
+			canResize="true" icon=""
+			>
+								</column>
+				
+		<column property="title" label="标题" labelKey="" width="200" 
+			editable="true" cellEditor="" showValue="true" dataType="java.lang.String" 
+			align="3" listDataSource="" 
+			canSort="false" canReOrder="true" canFilter="true"
+			canResize="true" icon=""
+			>
+								</column>
+				
+		<column property="width" label="宽度" labelKey="" width="100" 
+			editable="true" cellEditor="" showValue="true" dataType="java.lang.Integer" 
+			align="3" listDataSource="" 
+			canSort="false" canReOrder="true" canFilter="true"
+			canResize="true" icon=""
+			>
+								</column>
+				
+		<column property="dataType" label="数据类型" labelKey="" width="100" 
+			editable="true" cellEditor="" showValue="true" dataType="java.lang.String" 
+			align="3" listDataSource="report.fieldDataType" 
+			canSort="false" canReOrder="true" canFilter="true"
+			canResize="true" icon=""
+			>
+								</column>
+				
+		<column property="listSourceId" label="列表数据源" labelKey="" width="200" 
+			editable="true" cellEditor="" showValue="true" dataType="java.lang.Long" 
+			align="3" listDataSource="report.listSource" 
+			canSort="false" canReOrder="true" canFilter="true"
+			canResize="true" icon=""
+			>
+								</column>
+				
+		<column property="remarks" label="备注" labelKey="" width="300" 
+			editable="true" cellEditor="" showValue="true" dataType="java.lang.String" 
+			align="3" listDataSource="" 
+			canSort="false" canReOrder="true" canFilter="true"
+			canResize="true" icon=""
+			>
+								</column>
+		
+	</table>
+
+	<table id="reportViewFieldListTable" desc="报表视图字段列表" extend="">
+				
+		<column property="fieldName" label="字段名称" labelKey="" width="200" 
+			editable="false" cellEditor="" showValue="true" dataType="java.lang.String" 
+			align="3" listDataSource="" 
+			canSort="false" canReOrder="true" canFilter="true"
+			canResize="true" icon=""
+			>
+					
+			<image value="*" file="table_column"/>
+								</column>
+				
+		<column property="fieldAlias" label="字段别名" labelKey="" width="200" 
+			editable="true" cellEditor="" showValue="true" dataType="java.lang.String" 
+			align="3" listDataSource="" 
+			canSort="false" canReOrder="true" canFilter="true"
+			canResize="true" icon=""
+			>
+								</column>
+				
+		<column property="tableName" label="表名称" labelKey="" width="200" 
+			editable="false" cellEditor="" showValue="true" dataType="java.lang.String" 
+			align="3" listDataSource="" 
+			canSort="false" canReOrder="true" canFilter="true"
+			canResize="true" icon=""
+			>
+								</column>
+				
+		<column property="tableAlias" label="表别名" labelKey="" width="200" 
+			editable="false" cellEditor="" showValue="true" dataType="java.lang.String" 
+			align="3" listDataSource="" 
+			canSort="false" canReOrder="true" canFilter="true"
+			canResize="true" icon=""
+			>
+								</column>
+				
+		<column property="title" label="标题" labelKey="" width="200" 
+			editable="true" cellEditor="" showValue="true" dataType="java.lang.String" 
+			align="3" listDataSource="" 
+			canSort="false" canReOrder="true" canFilter="true"
+			canResize="true" icon=""
+			>
+								</column>
+				
+		<column property="width" label="宽度" labelKey="" width="100" 
+			editable="true" cellEditor="" showValue="true" dataType="java.lang.Integer" 
+			align="3" listDataSource="" 
+			canSort="false" canReOrder="true" canFilter="true"
+			canResize="true" icon=""
+			>
+								</column>
+				
+		<column property="dataType" label="数据类型" labelKey="" width="100" 
+			editable="true" cellEditor="" showValue="true" dataType="java.lang.String" 
+			align="3" listDataSource="report.fieldDataType" 
+			canSort="false" canReOrder="true" canFilter="true"
+			canResize="true" icon=""
+			>
+								</column>
+				
+		<column property="listSourceName" label="列表数据源" labelKey="" width="200" 
+			editable="true" cellEditor="" showValue="true" dataType="java.lang.String" 
+			align="3" listDataSource="" 
+			canSort="false" canReOrder="true" canFilter="true"
+			canResize="true" icon=""
+			>
+								</column>
+				
+		<column property="remarks" label="备注" labelKey="" width="300" 
+			editable="true" cellEditor="" showValue="true" dataType="java.lang.String" 
+			align="3" listDataSource="" 
+			canSort="false" canReOrder="true" canFilter="true"
+			canResize="true" icon=""
+			>
+								</column>
+		
+	</table>
+
+	<table id="reportViewDefineUnionListTabel" desc="报表视图联合列表" extend="">
+				
+		<column property="unionedViewCode" label="联合视图标识" labelKey="" width="200" 
+			editable="true" cellEditor="" showValue="true" dataType="java.lang.String" 
+			align="3" listDataSource="" 
+			canSort="false" canReOrder="true" canFilter="true"
+			canResize="true" icon=""
+			>
+					
+			<image value="*" file="view_union"/>
+								</column>
+				
+		<column property="unionedViewName" label="联合视图名称" labelKey="" width="200" 
+			editable="true" cellEditor="" showValue="true" dataType="java.lang.String" 
+			align="3" listDataSource="" 
+			canSort="false" canReOrder="true" canFilter="true"
+			canResize="true" icon=""
+			>
+								</column>
+				
+		<column property="remarks" label="备注" labelKey="" width="300" 
+			editable="true" cellEditor="" showValue="true" dataType="java.lang.String" 
+			align="3" listDataSource="" 
+			canSort="false" canReOrder="true" canFilter="true"
+			canResize="true" icon=""
+			>
+								</column>
+		
+	</table>
+
+	<table id="reportViewDefineListTable" desc="报表视图定义列表" extend="">
+				
+		<column property="code" label="标识" labelKey="" width="200" 
+			editable="true" cellEditor="" showValue="true" dataType="java.lang.String" 
+			align="3" listDataSource="" 
+			canSort="false" canReOrder="true" canFilter="true"
+			canResize="true" icon=""
+			>
+					
+			<image value="*" file="report_view"/>
+								</column>
+				
+		<column property="name" label="名称" labelKey="" width="200" 
+			editable="true" cellEditor="" showValue="true" dataType="java.lang.String" 
+			align="3" listDataSource="" 
+			canSort="false" canReOrder="true" canFilter="true"
+			canResize="true" icon=""
+			>
+								</column>
+				
+		<column property="reportProjectName" label="项目名称" labelKey="" width="200" 
+			editable="true" cellEditor="" showValue="true" dataType="java.lang.String" 
+			align="3" listDataSource="" 
+			canSort="false" canReOrder="true" canFilter="true"
+			canResize="true" icon=""
+			>
+								</column>
+				
+		<column property="remarks" label="备注" labelKey="" width="300" 
+			editable="true" cellEditor="" showValue="true" dataType="java.lang.String" 
+			align="3" listDataSource="" 
+			canSort="false" canReOrder="true" canFilter="true"
+			canResize="true" icon=""
+			>
+								</column>
+		
+	</table>
+
+	<table id="reportDisplayColumnTable" desc="报表显示列列表" extend="">
+				
+		<column property="fieldName" label="字段名" labelKey="" width="200" 
+			editable="false" cellEditor="" showValue="true" dataType="java.lang.String" 
+			align="3" listDataSource="" 
+			canSort="false" canReOrder="true" canFilter="true"
+			canResize="true" icon=""
+			>
+					
+			<image value="*" file="table_column"/>
+								</column>
+				
+		<column property="columnTitle" label="标题" labelKey="" width="200" 
+			editable="true" cellEditor="" showValue="true" dataType="java.lang.String" 
+			align="3" listDataSource="" 
+			canSort="false" canReOrder="true" canFilter="true"
+			canResize="true" icon=""
+			>
+								</column>
+				
+		<column property="columnWidth" label="宽度" labelKey="" width="100" 
+			editable="true" cellEditor="" showValue="true" dataType="java.lang.Integer" 
+			align="3" listDataSource="" 
+			canSort="false" canReOrder="true" canFilter="true"
+			canResize="true" icon=""
+			>
+								</column>
+				
+		<column property="remarks" label="备注" labelKey="" width="300" 
+			editable="true" cellEditor="" showValue="true" dataType="java.lang.String" 
+			align="3" listDataSource="" 
+			canSort="false" canReOrder="true" canFilter="true"
+			canResize="true" icon=""
+			>
+								</column>
+		
+	</table>
+
+</tableList>

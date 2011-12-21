@@ -1,0 +1,288 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<listdata>
+
+	<select name="booleanList" type="static">
+		<option value="true">是</option>
+		<option value="false">否</option>
+	</select>
+	
+	<select name="Form.propertyType" type="static">
+		<option value="text">文本框</option>
+		<option value="radiobutton">单选框</option>
+		<option value="checkbox">复选框</option>
+		<option value="combolist">下拉列表</option>
+		<option value="combodate">日期选择</option>
+		<option value="group">面板</option>
+	</select>
+	
+	<select name="Form.layoutProperty" type="static">
+		<option value=""></option>
+		<option value="verticalAlignment">verticalAlignment</option>
+		<option value="horizontalAlignment">horizontalAlignment</option>
+		<option value="widthHint">widthHint</option>
+		<option value="heightHint">heightHint</option>
+		<option value="horizontalIndent">horizontalIndent</option>
+		<option value="verticalIndent">verticalIndent</option>
+		<option value="horizontalSpan">horizontalSpan</option>
+		<option value="verticalSpan">verticalSpan</option>
+		<option value="grabExcessHorizontalSpace">grabExcessHorizontalSpace</option>
+		<option value="grabExcessVerticalSpace">grabExcessVerticalSpace</option>
+		<option value="minimumWidth">minimumWidth</option>
+		<option value="minimumHeight">minimumHeight</option>
+		<option value="exclude">exclude</option>
+	</select>
+	
+	<select name="modelbase.businessObjectPropertyPrimaryKey" type="static">
+		<option value="true">是</option>
+		<option value="false">否</option>
+	</select>
+	
+	<select name="modelbase.enumType" type="static">
+		<option value="0">字符类型枚举</option>
+		<option value="1">数字类型枚举</option>
+	</select>
+	
+	<select name="modelbase.businessObjectPropertyDataType" type="static">
+		<option value="long">long</option>
+		<option value="int">int</option>
+		<option value="float">float</option>
+		<option value="double">double</option>
+		<option value="String">String</option>
+		<option value="Long">Long</option>
+		<option value="Integer">Integer</option>
+		<option value="Float">Float</option>
+		<option value="Double">Double</option>
+		<option value="java.util.Date">Date</option>
+		<option value="java.math.BigDecimal">BigDecimal</option>
+		<option value="byte[]">byte[]</option>
+		<option value="Object">Object</option>
+		
+	</select>
+	
+	<select name="modelbase.relatType" type="static">
+		<option value="RELATED_OPERATION">关联操作</option>
+		<option value="RELATED_VIEW">关联显示</option>
+		<option value="REFERENCE">引用</option>
+		<option value="EXTEND">扩展</option>
+		<option value="MAPPED">映射</option>
+		<option value="DEPENDED">依赖</option>
+		<option value="COMPOUNDED">包装</option>
+	</select>
+	
+	<select name="serviceParameter.PreProcess" type="static">
+		<option value="NONE">不处理</option>
+		<option value="WHEN_NULL_LOG_WAR">空值记录警告日志</option>
+		<option value="WHEN_NULL_EXIT">空值退出</option>
+		<option value="WHEN_NULL_THROW_EXCEPTION">空值抛出异常</option>
+		<option value="WHEN_NULL_AUTO_CREATE">自动创建实例</option>
+	</select>
+	
+	<select name="database.driverList" type="static">
+		<option value="oracle.jdbc.driver.OracleDriver">oracle.jdbc.driver.OracleDriver</option>
+		<option value="com.mysql.jdbc.Driver">com.mysql.jdbc.Driver</option>
+	</select>
+	
+	<select name="database.ProviderList" type="static">
+		<option value="mysql">mysql</option>
+		<option value="oracle">oracle</option>
+	</select>
+	
+	<select name="Torque.dbList" type="static">
+		<option value="oracle">oracle</option>
+		<option value="mysql">mysql</option>
+		<option value="axion">axion</option>
+		<option value="cloudscape">cloudscape</option>
+		<option value="db2">db2</option>
+		<option value="db2400">db2400</option>
+		<option value="hypersonic">hypersonic</option>
+		<option value="interbase">interbase</option>
+		<option value="mssql">mssql</option>
+		<option value="postgresql">postgresql</option>
+		<option value="sapdb">sapdb</option>
+		<option value="sybase">sybase</option>
+	</select>
+	
+	<select name="PersistentProperty.DataType" type="static">
+		<option value="BIT">BIT</option>
+		<option value="TINYINT">TINYINT</option>
+		<option value="SMALLINT">SMALLINT</option>
+		<option value="INTEGER">INTEGER</option>
+		<option value="BIGINT">BIGINT</option>
+		<option value="FLOAT">FLOAT</option>
+		<option value="REAL">REAL</option>
+		<option value="DOUBLE">DOUBLE</option>
+		<option value="NUMERIC">NUMERIC</option>
+		<option value="DECIMAL">DECIMAL</option>
+		<option value="CHAR">CHAR</option>
+		<option value="VARCHAR">VARCHAR</option>
+		<option value="LONGVARCHAR">LONGVARCHAR</option>
+		<option value="DATE">DATE</option>
+		<option value="TIME">TIME</option>
+		<option value="TIMESTAMP">TIMESTAMP</option>
+		<option value="BINARY">BINARY</option>
+		<option value="VARBINARY">VARBINARY</option>
+		<option value="LONGVARBINARY">LONGVARBINARY</option>
+		<option value="NULL">NULL</option>
+		<option value="OTHER">OTHER</option>
+		<option value="JAVA_OBJECT">JAVA_OBJECT</option>
+		<option value="DISTINCT">DISTINCT</option>
+		<option value="STRUCT">STRUCT</option>
+		<option value="ARRAY">ARRAY</option>
+		<option value="BLOB">BLOB</option>
+		<option value="CLOB">CLOB</option>
+		<option value="REF">REF</option>
+		<option value="DATALINK">DATALINK</option>
+		<option value="BOOLEAN">BOOLEAN</option>
+	</select>
+	
+	<select name="PersistentDataTypeToJavaType" type="static">
+		<option value="BIT">boolean</option>
+		<option value="TINYINT">byte</option>
+		<option value="SMALLINT">short</option>
+		<option value="INTEGER">int</option>
+		<option value="BIGINT">long</option>
+		<option value="FLOAT">double</option>
+		<option value="REAL">float</option>
+		<option value="DOUBLE">double</option>
+		<option value="NUMERIC">java.math.BigDecimal</option>
+		<option value="DECIMAL">java.math.BigDecimal</option>
+		<option value="CHAR">String</option>
+		<option value="VARCHAR">String</option>
+		<option value="LONGVARCHAR">String</option>
+		<option value="DATE">java.util.Date</option>
+		<option value="TIME">java.util.Date</option>
+		<option value="TIMESTAMP">java.util.Date</option>
+		<option value="BINARY">byte[]</option>
+		<option value="VARBINARY">byte[]</option>
+		<option value="LONGVARBINARY">byte[]</option>
+		<option value="OTHER">Object</option>
+		<option value="JAVA_OBJECT">Object</option>
+		<option value="DISTINCT">Object</option>
+		<option value="STRUCT">Object</option>
+		<option value="ARRAY">java.sql.Array</option>
+		<option value="BLOB">java.sql.Blob</option>
+		<option value="CLOB">java.sql.Clob</option>
+		<option value="REF">java.sql.Ref</option>
+		<option value="DATALINK">java.net.URL</option>
+		<option value="BOOLEAN">boolean</option>
+	</select>
+	
+	<select name="modelbase.businessDomain" type="getAllBusinessDomain"
+		dataProperty="businessDomainId" labelProperty="name">
+	</select>
+	
+	<select name="modelbase.objectAction" type="static">
+		<option value="create">新建</option>
+		<option value="update">更新</option>
+		<option value="query">查询</option>
+		<option value="delete">删除</option>
+	</select>
+	
+	<select name="database.databaseList" type="getDatabaseList"
+		dataProperty="businessDomainId" labelProperty="name">
+	</select>
+	
+	<select name="JDK.versionList" type="static">
+		<option value="jdk1.4">JDK 1.4</option>
+		<option value="jdk1.5">JDK 1.5</option>
+		<option value="jdk1.6">JDK 1.6</option>
+		<option value="jdk1.7">JDK 1.7</option>
+	</select>
+	
+	<select name="ORM.typeList" type="static">
+		<option value="SpringDAO">Spring DAO</option>
+		<option value="ibitas2.3">iBitas 2.3.X</option>
+		<option value="jpaHibernate">JPA Hibernate</option>
+	</select>
+	
+	<select name="workspaceConfig.daoProviderType" type="getDAOProviderType"
+		dataProperty="id" labelProperty="providerName">
+	</select>
+	
+	<select name="workspaceConfig.scmProviderType" type="getSCMService"
+		dataProperty="id" labelProperty="name">
+	</select>
+	
+	<select name="cvs.ConnectTypeList" type="static">
+		<option value="ext">extssh</option>
+		<option value="pserver">pserver</option>
+		<option value="pserverssh2">pserverssh2</option>
+	</select>
+	
+	<select name="svn.ConnectTypeList" type="static">
+		<option value="https">https</option>
+		<option value="svn+ssh">svn+ssh</option>
+		<option value="http">http</option>
+	</select>
+	
+	<select name="cms.resourceVersionList" type="getResourceVersionList"
+		dataProperty="revision" labelProperty="">
+	</select>
+	
+	<select name="team.teamRoleList" type="getTeamRoles"
+		dataProperty="id" labelProperty="teamRoleName">
+	</select>
+	
+	<select name="calendar.calendarList" type="getCalendarDefines"
+		dataProperty="id" labelProperty="calendarName">
+	</select>
+	
+	<select name="uiconfig.actionType" type="static">
+		<option value="push">点击</option>
+		<option value="check">复选</option>
+		<option value="radio">单选</option>
+		<option value="custom">定制</option>
+		<option value="separator">分隔</option>
+	</select>
+	
+	<select name="uiconfig.actionDomainList" type="getUIActionDomains"
+		dataProperty="id" labelProperty="id">
+	</select>
+	
+	<select name="uiconfig.selectListType" type="static">
+		<option value="static">静态</option>
+	</select>
+	
+	<select name="uiconfig.columnAlignList" type="static">
+		<option value="">默认</option>
+		<option value="left">左</option>
+		<option value="center">中</option>
+		<option value="right">右</option>
+	</select>
+	
+	<select name="report.joinTypeList" type="static">
+	    <option value=""></option>
+		<option value="LEFT">LEFT</option>
+		<option value="RIGHT">RIGHT</option>
+		<option value="INNER">INNER</option>
+		<option value="OUTER">OUTER</option>
+	</select>
+	
+	<select name="report.fieldDataType" type="static">
+	    <option value="general"></option>
+		<option value="dateTime">日期时间</option>
+	</select>
+	
+	<select name="report.listSource" type="getReportListSource"
+		dataProperty="id" labelProperty="name">
+	</select>
+	
+	<select name="report.unionViewList" type="getReportunionViewList"
+		dataProperty="id" labelProperty="name">
+	</select>
+	
+	<select name="report.reportProjectList" type="getReporProjects"
+		dataProperty="id" labelProperty="name">
+	</select>
+	
+	<select name="report.filterLeftSymb0l" type="static">
+	    <option value=""></option>
+		<option value="(">(</option>
+	</select>
+	
+	<select name="report.filterRightSymb0l" type="static">
+	    <option value=""></option>
+		<option value=")">)</option>
+	</select>
+	
+</listdata>

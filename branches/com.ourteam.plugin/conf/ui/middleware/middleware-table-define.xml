@@ -1,0 +1,346 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tableList>
+
+	<table id="databaseInfoTable" desc="数据库信息列表" extend="">
+				
+		<column property="name" label="名称" labelKey="" width="200" 
+			editable="false" cellEditor="" showValue="true" dataType="java.lang.String" 
+			align="3" listDataSource="" 
+			canSort="false" canReOrder="true" canFilter="true"
+			canResize="true" icon=""
+			>
+					
+			<image value="*" file="database"/>
+								</column>
+				
+		<column property="provider" label="提供商" labelKey="" width="100" 
+			editable="false" cellEditor="" showValue="true" dataType="java.lang.String" 
+			align="" listDataSource="" 
+			canSort="false" canReOrder="true" canFilter="true"
+			canResize="true" icon=""
+			>
+								</column>
+				
+		<column property="hostName" label="服务地址" labelKey="" width="100" 
+			editable="false" cellEditor="" showValue="true" dataType="java.lang.String" 
+			align="" listDataSource="" 
+			canSort="false" canReOrder="true" canFilter="true"
+			canResize="true" icon=""
+			>
+								</column>
+				
+		<column property="hostPort" label="服务端口" labelKey="" width="100" 
+			editable="false" cellEditor="" showValue="true" dataType="java.lang.String" 
+			align="" listDataSource="" 
+			canSort="false" canReOrder="true" canFilter="true"
+			canResize="true" icon=""
+			>
+								</column>
+				
+		<column property="serviceName" label="数据库名" labelKey="" width="200" 
+			editable="false" cellEditor="" showValue="true" dataType="java.lang.String" 
+			align="" listDataSource="" 
+			canSort="false" canReOrder="true" canFilter="true"
+			canResize="true" icon=""
+			>
+								</column>
+				
+		<column property="desc" label="说明" labelKey="" width="300" 
+			editable="false" cellEditor="" showValue="true" dataType="java.lang.String" 
+			align="" listDataSource="" 
+			canSort="false" canReOrder="true" canFilter="true"
+			canResize="true" icon=""
+			>
+								</column>
+		
+	</table>
+
+	<table id="databaseTableInfoTable" desc="数据库对象信息列表" extend="">
+				
+		<column property="name" label="名称" labelKey="" width="300" 
+			editable="false" cellEditor="" showValue="true" dataType="java.lang.String" 
+			align="3" listDataSource="" 
+			canSort="false" canReOrder="true" canFilter="true"
+			canResize="true" icon=""
+			>
+					
+			<image value="*" file="table"/>
+								</column>
+				
+		<column property="type" label="类型" labelKey="" width="200" 
+			editable="false" cellEditor="" showValue="true" dataType="java.lang.String" 
+			align="" listDataSource="" 
+			canSort="false" canReOrder="true" canFilter="true"
+			canResize="true" icon=""
+			>
+								</column>
+				
+		<column property="description" label="说明" labelKey="" width="300" 
+			editable="false" cellEditor="" showValue="true" dataType="java.lang.String" 
+			align="" listDataSource="" 
+			canSort="false" canReOrder="true" canFilter="true"
+			canResize="true" icon=""
+			>
+								</column>
+		
+	</table>
+
+	<table id="databaseTreeTable" desc="数据库列表" extend="">
+				
+		<column property="name" label="名称" labelKey="" width="300" 
+			editable="false" cellEditor="" showValue="true" dataType="java.lang.String" 
+			align="" listDataSource="" 
+			canSort="false" canReOrder="true" canFilter="true"
+			canResize="true" icon=""
+			>
+								</column>
+				
+		<column property="desc" label="说明" labelKey="" width="200" 
+			editable="false" cellEditor="" showValue="true" dataType="java.lang.String" 
+			align="" listDataSource="" 
+			canSort="false" canReOrder="true" canFilter="true"
+			canResize="true" icon=""
+			>
+								</column>
+		
+	</table>
+
+	<table id="databaseColumnListTable" desc="数据库字段列表" extend="">
+				
+		<column property="primaryKey" label="" labelKey="" width="30" 
+			editable="true" cellEditor="" showValue="false" dataType="java.lang.String" 
+			align="3" listDataSource="" 
+			canSort="false" canReOrder="true" canFilter="true"
+			canResize="true" icon=""
+			>
+					
+			<image value="true" file="table_key"/>
+					
+			<image value="false" file="table_column"/>
+								</column>
+				
+		<column property="name" label="名称" labelKey="" width="200" 
+			editable="true" cellEditor="" showValue="true" dataType="java.lang.String" 
+			align="3" listDataSource="" 
+			canSort="false" canReOrder="true" canFilter="true"
+			canResize="true" icon=""
+			>
+								</column>
+				
+		<column property="type" label="数据类型" labelKey="" width="200" 
+			editable="true" cellEditor="" showValue="true" dataType="java.lang.String" 
+			align="3" listDataSource="" 
+			canSort="false" canReOrder="true" canFilter="true"
+			canResize="true" icon=""
+			>
+								</column>
+				
+		<column property="size" label="数据长度" labelKey="" width="100" 
+			editable="true" cellEditor="" showValue="true" dataType="java.lang.String" 
+			align="3" listDataSource="" 
+			canSort="false" canReOrder="true" canFilter="true"
+			canResize="true" icon=""
+			>
+								</column>
+				
+		<column property="scale" label="数据精度" labelKey="" width="100" 
+			editable="true" cellEditor="" showValue="true" dataType="java.lang.String" 
+			align="3" listDataSource="" 
+			canSort="false" canReOrder="true" canFilter="true"
+			canResize="true" icon=""
+			>
+								</column>
+				
+		<column property="description" label="说明" labelKey="" width="300" 
+			editable="true" cellEditor="" showValue="true" dataType="java.lang.String" 
+			align="3" listDataSource="" 
+			canSort="false" canReOrder="true" canFilter="true"
+			canResize="true" icon=""
+			>
+								</column>
+		
+	</table>
+
+	<table id="middleWareProviderListTable" desc="中间件提供商列表" extend="">
+				
+		<column property="providerName" label="提供商名称" labelKey="" width="150" 
+			editable="true" cellEditor="" showValue="true" dataType="java.lang.String" 
+			align="3" listDataSource="" 
+			canSort="false" canReOrder="true" canFilter="true"
+			canResize="true" icon=""
+			>
+					
+			<image value="*" file="middle_ware_provider"/>
+								</column>
+				
+		<column property="middleWareName" label="产品名称" labelKey="" width="200" 
+			editable="true" cellEditor="" showValue="true" dataType="java.lang.String" 
+			align="3" listDataSource="" 
+			canSort="false" canReOrder="true" canFilter="true"
+			canResize="true" icon=""
+			>
+								</column>
+				
+		<column property="middleWareVersion" label="产品版本" labelKey="" width="100" 
+			editable="true" cellEditor="" showValue="true" dataType="java.lang.String" 
+			align="3" listDataSource="" 
+			canSort="false" canReOrder="true" canFilter="true"
+			canResize="true" icon=""
+			>
+								</column>
+				
+		<column property="remarks" label="备注" labelKey="" width="300" 
+			editable="true" cellEditor="" showValue="true" dataType="java.lang.String" 
+			align="3" listDataSource="" 
+			canSort="false" canReOrder="true" canFilter="true"
+			canResize="true" icon=""
+			>
+								</column>
+		
+	</table>
+
+	<table id="middleWareToolsTreeTable" desc="中间件工具树表" extend="">
+				
+		<column property="__name" label="名称" labelKey="" width="300" 
+			editable="true" cellEditor="" showValue="true" dataType="java.lang.String" 
+			align="3" listDataSource="" 
+			canSort="false" canReOrder="true" canFilter="true"
+			canResize="true" icon=""
+			>
+								</column>
+				
+		<column property="remarks" label="备注" labelKey="" width="300" 
+			editable="true" cellEditor="" showValue="true" dataType="java.lang.String" 
+			align="3" listDataSource="" 
+			canSort="false" canReOrder="true" canFilter="true"
+			canResize="true" icon=""
+			>
+								</column>
+		
+	</table>
+
+	<table id="middleWareToolInputTable" desc="中间件工具输入列表" extend="">
+				
+		<column property="parameterName" label="输入名称" labelKey="" width="200" 
+			editable="true" cellEditor="" showValue="true" dataType="java.lang.String" 
+			align="3" listDataSource="" 
+			canSort="false" canReOrder="true" canFilter="true"
+			canResize="true" icon=""
+			>
+					
+			<image value="*" file="middle_ware_tool_input"/>
+								</column>
+				
+		<column property="parameterCode" label="变量名称" labelKey="" width="200" 
+			editable="true" cellEditor="" showValue="true" dataType="java.lang.String" 
+			align="3" listDataSource="" 
+			canSort="false" canReOrder="true" canFilter="true"
+			canResize="true" icon=""
+			>
+								</column>
+				
+		<column property="parameterType" label="类型" labelKey="" width="100" 
+			editable="true" cellEditor="" showValue="true" dataType="java.lang.String" 
+			align="3" listDataSource="middleWare.InputTypeList" 
+			canSort="false" canReOrder="true" canFilter="true"
+			canResize="true" icon=""
+			>
+								</column>
+				
+		<column property="isRequired" label="必须" labelKey="" width="50" 
+			editable="true" cellEditor="" showValue="true" dataType="java.lang.String" 
+			align="3" listDataSource="booleanList" 
+			canSort="false" canReOrder="true" canFilter="true"
+			canResize="true" icon=""
+			>
+								</column>
+				
+		<column property="remarks" label="备注" labelKey="" width="300" 
+			editable="true" cellEditor="" showValue="true" dataType="java.lang.String" 
+			align="3" listDataSource="" 
+			canSort="false" canReOrder="true" canFilter="true"
+			canResize="true" icon=""
+			>
+								</column>
+		
+	</table>
+
+	<table id="middleWareToolInputOptionTable" desc="中间件工具输入选项列表" extend="">
+				
+		<column property="displayLabel" label="显示标签" labelKey="" width="200" 
+			editable="true" cellEditor="" showValue="true" dataType="java.lang.String" 
+			align="3" listDataSource="" 
+			canSort="false" canReOrder="true" canFilter="true"
+			canResize="true" icon=""
+			>
+								</column>
+				
+		<column property="realValue" label="实际值" labelKey="" width="200" 
+			editable="true" cellEditor="" showValue="true" dataType="java.lang.String" 
+			align="3" listDataSource="" 
+			canSort="false" canReOrder="true" canFilter="true"
+			canResize="true" icon=""
+			>
+								</column>
+				
+		<column property="remarks" label="备注" labelKey="" width="300" 
+			editable="true" cellEditor="" showValue="true" dataType="java.lang.String" 
+			align="3" listDataSource="" 
+			canSort="false" canReOrder="true" canFilter="true"
+			canResize="true" icon=""
+			>
+								</column>
+		
+	</table>
+
+	<table id="middleWareToolExecuteLogTable" desc="中间件工具执行日志" extend="">
+				
+		<column property="executorName" label="执行人" labelKey="" width="100" 
+			editable="true" cellEditor="" showValue="true" dataType="java.lang.String" 
+			align="3" listDataSource="" 
+			canSort="false" canReOrder="true" canFilter="true"
+			canResize="true" icon=""
+			>
+					
+			<image value="*" file="middle_ware_tool_go"/>
+								</column>
+				
+		<column property="executeStartTime" label="开始时间" labelKey="" width="150" 
+			editable="true" cellEditor="" showValue="true" dataType="java.lang.String" 
+			align="3" listDataSource="" 
+			canSort="false" canReOrder="true" canFilter="true"
+			canResize="true" icon=""
+			>
+								
+			<value label="dateFormat" data="yyyy-MM-dd HH:mm:ss"/>
+					</column>
+				
+		<column property="executeFinishTime" label="结束时间" labelKey="" width="150" 
+			editable="true" cellEditor="" showValue="true" dataType="java.lang.String" 
+			align="3" listDataSource="" 
+			canSort="false" canReOrder="true" canFilter="true"
+			canResize="true" icon=""
+			>
+								
+			<value label="dateFormat" data="yyyy-MM-dd HH:mm:ss"/>
+					</column>
+				
+		<column property="executeResult" label="执行结果" labelKey="" width="100" 
+			editable="true" cellEditor="" showValue="true" dataType="java.lang.String" 
+			align="3" listDataSource="" 
+			canSort="false" canReOrder="true" canFilter="true"
+			canResize="true" icon=""
+			>
+								</column>
+				
+		<column property="remarks" label="执行说明" labelKey="" width="200" 
+			editable="true" cellEditor="" showValue="true" dataType="java.lang.String" 
+			align="3" listDataSource="" 
+			canSort="false" canReOrder="true" canFilter="true"
+			canResize="true" icon=""
+			>
+								</column>
+		
+	</table>
+
+</tableList>

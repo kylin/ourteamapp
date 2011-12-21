@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xmlns:tx="http://www.springframework.org/schema/tx"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.0.xsd
+		   http://www.springframework.org/schema/context
+       	   http://www.springframework.org/schema/context/spring-context-2.5.xsd
+           http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-2.0.xsd
+           http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-2.0.xsd">
+
+		
+	<bean id="com.ourteam.middleware.service.IMiddleWareService"
+		class="com.ourteam.middleware.service.MiddleWareServiceImpl" scope="singleton">
+		
+						
+		<property name="middleWareDao"
+			ref="com.ourteam.middleware.dao.IMiddleWareDAO" />
+								
+		<property name="middleWareToolGroupDao"
+			ref="com.ourteam.middleware.dao.IMiddleWareToolGroupDAO" />
+								
+		<property name="middleWareProviderDao"
+			ref="com.ourteam.middleware.dao.IMiddleWareProviderDAO" />
+								
+		<property name="middleWareToolDao"
+			ref="com.ourteam.middleware.dao.IMiddleWareToolDAO" />
+								
+		<property name="middleWareToolInputDao"
+			ref="com.ourteam.middleware.dao.IMiddleWareToolInputDAO" />
+								
+		<property name="middleWareToolInputOptionDao"
+			ref="com.ourteam.middleware.dao.IMiddleWareToolInputOptionDAO" />
+								
+		<property name="middleWareToolLogDao"
+			ref="com.ourteam.middleware.dao.IMiddleWareToolLogDAO" />
+								
+		<property name="middleWareToolInputLogDao"
+			ref="com.ourteam.middleware.dao.IMiddleWareToolInputLogDAO" />
+								
+	</bean>
+	
+</beans>

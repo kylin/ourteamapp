@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tree id="report_project" imageBase="">
+	<nodeDefine>
+			
+		<node id="reportProjectRoot" image="" label="" labelKey="" leaf="false" hidden="false" nodePanel="">
+			
+						
+			<actionList>
+		
+					
+			</actionList>
+			
+			<subNodeBuilderList>
+					
+			<nodeBuilder id="ReportProjectRootSubNodeBuilder" className="com.ourteam.app.report.ui.ReportProjectRootSubNodeBuilder">
+						
+			</nodeBuilder>
+					
+			</subNodeBuilderList>
+			
+			
+		</node>
+			
+		<node id="reportProject" image="report_project" label="name" labelKey="" leaf="false" hidden="false" nodePanel="">
+			
+					
+			<property name="actionGroupId" value="reportProjectNodeActionGroup" />
+						
+			<actionList>
+		
+					
+			</actionList>
+			
+			<subNodeBuilderList>
+					
+			<nodeBuilder id="ReportViewDefineNodeBuilder" className="com.ourteam.app.report.ui.ReportViewDefineNodeBuilder">
+						
+			</nodeBuilder>
+					
+			</subNodeBuilderList>
+			
+			
+		</node>
+			
+		<node id="reportViewDefine" image="report_view" label="name" labelKey="" leaf="true" hidden="false" nodePanel="">
+			
+					
+			<property name="actionGroupId" value="reportViewDefineNodeActionGroup" />
+						
+			<actionList>
+		
+					
+			</actionList>
+			
+			<subNodeBuilderList>
+					
+			</subNodeBuilderList>
+			
+			
+		</node>
+		
+	</nodeDefine>
+	
+		
+	<rootNode id="reportProjectRoot">
+			</rootNode>
+		
+</tree>

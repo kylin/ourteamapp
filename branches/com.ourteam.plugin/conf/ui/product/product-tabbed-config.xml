@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tabbed>
+    
+  <tabbedpane id="productCatalogEditorTab" desc="产品目录编辑Tab">
+  	  	
+  	<tab name="productCatalogInfo" label="基本信息" labelKey="" icon="product_folder" compentclass="com.ourteam.app.product.editor.ProductCatalogInfoEditorPart">
+  		  
+    </tab>
+  	  
+  </tabbedpane>
+    
+  <tabbedpane id="productDefineEditorTab" desc="产品定义编辑Tab">
+  	  	
+  	<tab name="productDefineInfo" label="基本信息" labelKey="" icon="product" compentclass="com.ourteam.app.product.editor.ProductDefineInfoEditorPart">
+  		  
+    </tab>
+  	  	
+  	<tab name="ProductTeamRelateListEditorPart" label="设计团队" labelKey="" icon="team" compentclass="com.ourteam.app.product.editor.ProductTeamRelateListEditorPart">
+  		  
+    </tab>
+  	  	
+  	<tab name="ProductVersionEditorPart" label="版本定义" labelKey="" icon="product_version" compentclass="com.ourteam.app.product.editor.ProductVersionEditorPart">
+  		  
+    </tab>
+  	  	
+  	<tab name="ProductDefineBpmRoleUserEditorPart" label="业务流程角色" labelKey="" icon="bpm_role" compentclass="com.ourteam.app.product.editor.ProductDefineBpmRoleUserEditorPart">
+  		  
+    </tab>
+  	  
+  </tabbedpane>
+    
+  <tabbedpane id="productVersionEditorTab" desc="产品版本编辑Tab">
+  	  	
+  	<tab name="productVersionInfo" label="基本信息" labelKey="" icon="vcs_version" compentclass="com.ourteam.app.product.ui.editor.ProductVersionInfoEditorPart">
+  		  
+    </tab>
+  	  
+  </tabbedpane>
+    
+  <tabbedpane id="addProductCatalogWizard" desc="添加产品目录向导">
+  	  	
+  	<tab name="productCatalogInfo" label="产品目录信息" labelKey="" icon="" compentclass="">
+  		  
+    	<property id="formId" value="productCatalogForm"/>
+    	  
+    </tab>
+  	  
+  </tabbedpane>
+    
+  <tabbedpane id="addProductDefineWizard" desc="添加产品定义向导">
+  	  	
+  	<tab name="productDefineInfo" label="产品定义信息" labelKey="" icon="" compentclass="">
+  		  
+    	<property id="formId" value="productDefineForm"/>
+    	  
+    </tab>
+  	  
+  </tabbedpane>
+    
+  <tabbedpane id="productRequiremnetEditorTab" desc="产品需求管理编辑Tab">
+  	  	
+  	<tab name="ProductGlossaryListEditorPart" label="词汇表" labelKey="" icon="product_glossary" compentclass="com.ourteam.app.product.editor.ProductGlossaryListEditorPart">
+  		  
+    </tab>
+  	  
+  </tabbedpane>
+    
+  <tabbedpane id="addProductGlossaryWizard" desc="添加产品词汇表向导">
+  	  	
+  	<tab name="productGlossaryForm" label="词汇表信息" labelKey="" icon="" compentclass="">
+  		  
+    	<property id="formId" value="productGlossaryForm"/>
+    	  
+    </tab>
+  	  
+  </tabbedpane>
+    
+  <tabbedpane id="addProductTeamRelateWizard" desc="添加产品团队向导">
+  	  	
+  	<tab name="selectTeam" label="选择团队" labelKey="" icon="" compentclass="com.ourteam.app.team.ui.TeamSearchComposite">
+  		  
+    </tab>
+  	  
+  </tabbedpane>
+      
+</tabbed>

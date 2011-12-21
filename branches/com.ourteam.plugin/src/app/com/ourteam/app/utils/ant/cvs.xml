@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- ====================================================================== 
+     2010-12-16 上午09:03:53                                                        
+
+     CVS Command Script
+                   
+     kylin                                                                
+     ====================================================================== -->
+<project name="cvscommand" default="default">
+	<description>
+            CVS Command
+    </description>
+
+	<!-- ================================= 
+          target: default              
+         ================================= -->
+	<target name="default">
+
+		<deltree dir="${dest.package}" />
+
+		<echo message="Make Temp Dir" />
+
+		<mkdir dir="${dest.package}" />
+
+		<echo message="Checkout" />
+
+		<cvspass cvsroot="${cvs.root}" password="${cvs.password}" passfile="${cvs.password.file}" />
+
+		<cvs cvsroot="${cvs.root}" port="${cvs.port}" package="${cvs.package}" tag="${cvs.tag}" dest="${dest.package}" command="${cvs.command}" passfile="${cvs.password.file}" failonerror="true" />
+
+		<copy todir="${workspacePath}" overwrite="true">
+			<fileset dir="${dest.package}">
+				<include name="**/*.*" />
+			</fileset>
+		</copy>
+
+		<echo message="Delete Temp Dir" />
+
+		<deltree dir="${dest.package}" />
+
+		<echo message="Finished" />
+
+	</target>
+
+</project>

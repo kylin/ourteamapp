@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tree id="ui" imageBase="/16X16/">
+	<nodeDefine>
+			
+		<node id="UI_TREE_ROOT" image="GuiTools/box_closed.png" label="id" labelKey="" leaf="false" hidden="false" nodePanel="">
+			
+						
+			<actionList>
+		
+					
+			</actionList>
+			
+			<subNodeBuilderList>
+					
+			</subNodeBuilderList>
+			
+			
+		</node>
+			
+		<node id="UI_NODE" image="GuiTools/box_closed.png" label="id" labelKey="" leaf="false" hidden="false" nodePanel="">
+			
+					
+			<property name="actionGroupId" value="uiTreeNodeDefineActionGroup" />
+						
+			<actionList>
+		
+					
+			</actionList>
+			
+			<subNodeBuilderList>
+					
+			<nodeBuilder id="UITreeSubNodeBuilderSubNodeBuilder" className="com.ourteam.app.workspace.editor.UITreeSubNodeBuilderSubNodeBuilder">
+						
+			</nodeBuilder>
+					
+			</subNodeBuilderList>
+			
+			
+		</node>
+			
+		<node id="UI_NODE_DEFINE" image="GuiTools/legend.png" label="节点定义" labelKey="" leaf="false" hidden="false" nodePanel="">
+			
+					
+			<property name="actionGroupId" value="uiTreeNodeDefineRootActionGroup" />
+						
+			<actionList>
+		
+					
+			</actionList>
+			
+			<subNodeBuilderList>
+					
+			<nodeBuilder id="UITreeNodeDefineSubNodeBuilder" className="com.ourteam.app.workspace.ui.UITreeNodeDefineSubNodeBuilder">
+						
+			</nodeBuilder>
+					
+			</subNodeBuilderList>
+			
+			
+		</node>
+			
+		<node id="UI_ROOT_DEFINE" image="GuiTools/node-tree.png" label="根节点定义" labelKey="" leaf="false" hidden="false" nodePanel="">
+			
+					
+			<property name="actionGroupId" value="uiTreeRootNodeDefineRootActionGroup" />
+						
+			<actionList>
+		
+					
+			</actionList>
+			
+			<subNodeBuilderList>
+					
+			<nodeBuilder id="UITreeRootNodeSubNodeBuilder" className="com.ourteam.app.workspace.ui.UITreeRootNodeSubNodeBuilder">
+						
+			</nodeBuilder>
+					
+			</subNodeBuilderList>
+			
+			
+		</node>
+			
+		<node id="UI_ROOT_NODE" image="GuiTools/box_closed.png" label="id" labelKey="" leaf="false" hidden="false" nodePanel="">
+			
+					
+			<property name="actionGroupId" value="uiTreeRootNodeDefineActionGroup" />
+						
+			<actionList>
+		
+					
+			</actionList>
+			
+			<subNodeBuilderList>
+					
+			<nodeBuilder id="UITreeNodeSubNodeBuilder" className="com.ourteam.app.workspace.ui.UITreeNodeSubNodeBuilder">
+						
+			</nodeBuilder>
+					
+			</subNodeBuilderList>
+			
+			
+		</node>
+			
+		<node id="UI_NODE_BUILDER" image="GuiTools/folders_explorer.png" label="id" labelKey="" leaf="true" hidden="false" nodePanel="">
+			
+					
+			<property name="actionGroupId" value="uiTreeNodeBuilderActionGroup" />
+						
+			<actionList>
+		
+					
+			</actionList>
+			
+			<subNodeBuilderList>
+					
+			</subNodeBuilderList>
+			
+			
+		</node>
+		
+	</nodeDefine>
+	
+		
+	<rootNode id="UI_TREE_ROOT">
+				<subNode id="UI_NODE_DEFINE">
+</subNode>				<subNode id="UI_ROOT_DEFINE">
+</subNode>			</rootNode>
+		
+</tree>

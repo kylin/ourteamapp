@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tree id="sys_module_business" imageBase="">
+	<nodeDefine>
+			
+		<node id="sysModuleRoot" image="" label="" labelKey="" leaf="false" hidden="false" nodePanel="">
+			
+						
+			<actionList>
+		
+					
+			</actionList>
+			
+			<subNodeBuilderList>
+					
+			<nodeBuilder id="SystemSubModuleNodeBuilder" className="com.ourteam.app.system.ui.SystemSubModuleNodeBuilder">
+						
+			</nodeBuilder>
+					
+			</subNodeBuilderList>
+			
+			
+		</node>
+			
+		<node id="sysModule" image="moduleIcon" label="moduleName" labelKey="" leaf="false" hidden="false" nodePanel="">
+			
+						
+			<actionList>
+		
+					
+			</actionList>
+			
+			<subNodeBuilderList>
+					
+			<nodeBuilder id="SystemSubModuleNodeBuilder" className="com.ourteam.app.system.ui.SystemSubModuleNodeBuilder">
+						
+			</nodeBuilder>
+					
+			</subNodeBuilderList>
+			
+			
+		</node>
+		
+	</nodeDefine>
+	
+		
+	<rootNode id="sysModuleRoot">
+			</rootNode>
+		
+</tree>

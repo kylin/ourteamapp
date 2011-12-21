@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tableList>
+
+	<table id="meetingListTable" desc="会议列表" extend="">
+				
+		<column property="topic" label="主题" labelKey="" width="300" 
+			editable="true" cellEditor="" showValue="true" dataType="java.lang.String" 
+			align="3" listDataSource="" 
+			canSort="false" canReOrder="true" canFilter="true"
+			canResize="true" icon=""
+			>
+								</column>
+				
+		<column property="startDate" label="开始时间" labelKey="" width="100" 
+			editable="true" cellEditor="" showValue="true" dataType="java.lang.String" 
+			align="3" listDataSource="" 
+			canSort="false" canReOrder="true" canFilter="true"
+			canResize="true" icon=""
+			>
+								</column>
+				
+		<column property="endDate" label="结束时间" labelKey="" width="100" 
+			editable="true" cellEditor="" showValue="true" dataType="java.lang.String" 
+			align="3" listDataSource="" 
+			canSort="false" canReOrder="true" canFilter="true"
+			canResize="true" icon=""
+			>
+								</column>
+				
+		<column property="status" label="状态" labelKey="" width="100" 
+			editable="true" cellEditor="" showValue="true" dataType="java.lang.String" 
+			align="3" listDataSource="" 
+			canSort="false" canReOrder="true" canFilter="true"
+			canResize="true" icon=""
+			>
+								</column>
+				
+		<column property="remarks" label="备注" labelKey="" width="300" 
+			editable="true" cellEditor="" showValue="true" dataType="java.lang.String" 
+			align="3" listDataSource="" 
+			canSort="false" canReOrder="true" canFilter="true"
+			canResize="true" icon=""
+			>
+								</column>
+		
+	</table>
+
+	<table id="defaultTreeTable" desc="默认树形列表" extend="">
+				
+		<column property="__name" label="" labelKey="" width="300" 
+			editable="true" cellEditor="" showValue="true" dataType="java.lang.String" 
+			align="3" listDataSource="" 
+			canSort="false" canReOrder="true" canFilter="true"
+			canResize="true" icon=""
+			>
+								</column>
+		
+	</table>
+
+</tableList>

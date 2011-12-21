@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xmlns:tx="http://www.springframework.org/schema/tx"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.0.xsd
+		   http://www.springframework.org/schema/context
+       	   http://www.springframework.org/schema/context/spring-context-2.5.xsd
+           http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-2.0.xsd
+           http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-2.0.xsd">
+
+			
+		
+	<bean id="com.ourteam.modelbase.dao.IBusinessDomainDAO"
+		class="com.ourteam.modelbase.dao.impl.BusinessDomainDAO" scope="singleton">
+				
+				
+						
+		<property name="dataSource" ref="dataSource"/>
+				
+						
+	</bean>
+					
+		
+	<bean id="com.ourteam.modelbase.dao.IBusinessDomainGroupDAO"
+		class="com.ourteam.modelbase.dao.impl.BusinessDomainGroupDAO" scope="singleton">
+				
+				
+						
+		<property name="dataSource" ref="dataSource"/>
+				
+						
+	</bean>
+					
+		
+	<bean id="com.ourteam.modelbase.dao.IBusinessDomainGroupRelateDAO"
+		class="com.ourteam.modelbase.dao.impl.BusinessDomainGroupRelateDAO" scope="singleton">
+				
+				
+						
+		<property name="dataSource" ref="dataSource"/>
+				
+																		
+		<property name="businessDomain" ref="com.ourteam.modelbase.dao.IBusinessDomainDAO"/>
+								
+	</bean>
+					
+		
+	<bean id="com.ourteam.modelbase.dao.IBusinessObjectDAO"
+		class="com.ourteam.modelbase.dao.impl.BusinessObjectDAO" scope="singleton">
+				
+				
+						
+		<property name="dataSource" ref="dataSource"/>
+				
+																		
+		<property name="objectProperty" ref="com.ourteam.modelbase.dao.IObjectPropertyDAO"/>
+								
+	</bean>
+					
+		
+	<bean id="com.ourteam.modelbase.dao.IBusinessObjectActionDAO"
+		class="com.ourteam.modelbase.dao.impl.BusinessObjectActionDAO" scope="singleton">
+				
+				
+						
+		<property name="dataSource" ref="dataSource"/>
+				
+												
+	</bean>
+					
+		
+	<bean id="com.ourteam.modelbase.dao.IBusinessPackageDAO"
+		class="com.ourteam.modelbase.dao.impl.BusinessPackageDAO" scope="singleton">
+				
+				
+						
+		<property name="dataSource" ref="dataSource"/>
+				
+						
+	</bean>
+					
+		
+	<bean id="com.ourteam.modelbase.dao.IBusinessTemplateDAO"
+		class="com.ourteam.modelbase.dao.impl.BusinessTemplateDAO" scope="singleton">
+				
+				
+						
+		<property name="dataSource" ref="dataSource"/>
+				
+												
+	</bean>
+					
+		
+	<bean id="com.ourteam.modelbase.dao.IBusinessTemplateProviderTypeDAO"
+		class="com.ourteam.modelbase.dao.impl.BusinessTemplateProviderTypeDAO" scope="singleton">
+				
+				
+						
+		<property name="dataSource" ref="dataSource"/>
+				
+						
+	</bean>
+					
+		
+	<bean id="com.ourteam.modelbase.dao.IObjectMappingDAO"
+		class="com.ourteam.modelbase.dao.impl.ObjectMappingDAO" scope="singleton">
+				
+				
+						
+		<property name="dataSource" ref="dataSource"/>
+				
+						
+	</bean>
+					
+		
+	<bean id="com.ourteam.modelbase.dao.IObjectPropertyDAO"
+		class="com.ourteam.modelbase.dao.impl.ObjectPropertyDAO" scope="singleton">
+				
+				
+						
+		<property name="dataSource" ref="dataSource"/>
+				
+												
+	</bean>
+					
+		
+	<bean id="com.ourteam.modelbase.dao.IObjectRelationDAO"
+		class="com.ourteam.modelbase.dao.impl.ObjectRelationDAO" scope="singleton">
+				
+				
+						
+		<property name="dataSource" ref="dataSource"/>
+				
+						
+		<property name="objectRelationAttr" ref="com.ourteam.modelbase.dao.IObjectRelationAttrDAO"/>
+																				
+	</bean>
+					
+		
+	<bean id="com.ourteam.modelbase.dao.IObjectRelationAttrDAO"
+		class="com.ourteam.modelbase.dao.impl.ObjectRelationAttrDAO" scope="singleton">
+				
+				
+						
+		<property name="dataSource" ref="dataSource"/>
+				
+																								
+	</bean>
+					
+		
+	<bean id="com.ourteam.modelbase.dao.IPersistentPropertyConstValueDAO"
+		class="com.ourteam.modelbase.dao.impl.PersistentPropertyConstValueDAO" scope="singleton">
+				
+				
+						
+		<property name="dataSource" ref="dataSource"/>
+				
+						
+	</bean>
+					
+		
+	<bean id="com.ourteam.modelbase.dao.IServiceFunctionDAO"
+		class="com.ourteam.modelbase.dao.impl.ServiceFunctionDAO" scope="singleton">
+				
+				
+						
+		<property name="dataSource" ref="dataSource"/>
+				
+						
+		<property name="serviceParameter" ref="com.ourteam.modelbase.dao.IServiceParameterDAO"/>
+								
+	</bean>
+					
+		
+	<bean id="com.ourteam.modelbase.dao.IServiceParameterDAO"
+		class="com.ourteam.modelbase.dao.impl.ServiceParameterDAO" scope="singleton">
+				
+				
+						
+		<property name="dataSource" ref="dataSource"/>
+				
+						
+	</bean>
+					
+		
+	<bean id="com.ourteam.modelbase.dao.IVelocityTemplateDAO"
+		class="com.ourteam.modelbase.dao.impl.VelocityTemplateDAO" scope="singleton">
+				
+				
+						
+		<property name="dataSource" ref="dataSource"/>
+				
+						
+	</bean>
+			
+</beans>

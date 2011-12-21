@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xmlns:tx="http://www.springframework.org/schema/tx"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.0.xsd
+		   http://www.springframework.org/schema/context
+       	   http://www.springframework.org/schema/context/spring-context-2.5.xsd
+           http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-2.0.xsd
+           http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-2.0.xsd">
+
+			
+		
+	<bean id="com.ourteam.calendar.dao.ICalendarDateDAO"
+		class="com.ourteam.calendar.dao.impl.CalendarDateDAO" scope="singleton">
+				
+				
+						
+		<property name="dataSource" ref="dataSource"/>
+				
+						
+		<property name="calendarItem" ref="com.ourteam.calendar.dao.ICalendarItemDAO"/>
+								
+	</bean>
+					
+		
+	<bean id="com.ourteam.calendar.dao.ICalendarDefineDAO"
+		class="com.ourteam.calendar.dao.impl.CalendarDefineDAO" scope="singleton">
+				
+				
+						
+		<property name="dataSource" ref="dataSource"/>
+				
+						
+	</bean>
+					
+		
+	<bean id="com.ourteam.calendar.dao.ICalendarItemDAO"
+		class="com.ourteam.calendar.dao.impl.CalendarItemDAO" scope="singleton">
+				
+				
+						
+		<property name="dataSource" ref="dataSource"/>
+				
+												
+		<property name="calendarDate" ref="com.ourteam.calendar.dao.ICalendarDateDAO"/>
+								
+		<property name="calendarItemAssign" ref="com.ourteam.calendar.dao.ICalendarItemAssignDAO"/>
+								
+	</bean>
+					
+		
+	<bean id="com.ourteam.calendar.dao.ICalendarItemAssignDAO"
+		class="com.ourteam.calendar.dao.impl.CalendarItemAssignDAO" scope="singleton">
+				
+				
+						
+		<property name="dataSource" ref="dataSource"/>
+				
+						
+	</bean>
+					
+		
+	<bean id="com.ourteam.calendar.dao.ITeamCalendarDefineDAO"
+		class="com.ourteam.calendar.dao.impl.TeamCalendarDefineDAO" scope="singleton">
+				
+				
+						
+		<property name="dataSource" ref="dataSource"/>
+				
+												
+	</bean>
+			
+</beans>

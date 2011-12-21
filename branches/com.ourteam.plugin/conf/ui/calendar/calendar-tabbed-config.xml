@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tabbed>
+    
+  <tabbedpane id="calendarItemEditTab" desc="日历项编辑Tab">
+  	  	
+  	<tab name="calendarItemForm" label="基本信息" labelKey="" icon="calendar" compentclass="">
+  		  
+    	<property id="formId" value="calendarItemForm"/>
+    	  
+    </tab>
+  	  	
+  	<tab name="calendarItemActorList" label="参与者" labelKey="" icon="user" compentclass="com.ourteam.app.calendar.ui.CalendarItemActorComposite">
+  		  
+    </tab>
+  	  	
+  	<tab name="calendarItemAttch" label="附件" labelKey="" icon="attachment" compentclass="">
+  		  
+    </tab>
+  	  
+  </tabbedpane>
+    
+  <tabbedpane id="calendarDefineEditTab" desc="日历编辑Tab">
+  	  	
+  	<tab name="calendarDefine" label="日历信息" labelKey="" icon="calendar" compentclass="">
+  		  
+    	<property id="formId" value="calendarDefineForm"/>
+    	  
+    </tab>
+  	  
+  </tabbedpane>
+      
+</tabbed>

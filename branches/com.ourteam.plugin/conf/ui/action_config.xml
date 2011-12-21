@@ -1,0 +1,296 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<actions>
+
+	<action type="separator" handler="" desc="" id="separator"
+		label="" icon="" labelKey="">
+	</action>
+	
+	<action type="push" handler="refresh" desc="Refresh Relation"
+		icon="refresh_24" id="refreshRelation" label="刷新"
+		labelKey="action.add.label">
+	</action>
+
+	<!-- 数据导航 -->
+	
+	<action type="push" handler="save" desc="保存" id="save"
+		label="保存" icon="save" labelKey="">
+	</action>
+	
+	<actiongroup id="formEditorActionGroup">
+		<action ref="save" />
+	</actiongroup>
+
+	<action type="push" handler="goFirst" desc="跳转到首页" id="goFirst"
+		label="" icon="resultset_first" labelKey="">
+	</action>
+	<action type="push" handler="goPrevious" desc="跳转到前一页" id="goPrevious"
+		label="" icon="resultset_previous" labelKey="">
+	</action>
+	<action type="custom" handler="" desc="" id="showCurrentPageNum"
+		label="" icon="" labelKey="">
+	</action>
+	<action type="push" handler="goNext" desc="跳转到后一页" id="goNext"
+		label="" icon="resultset_next" labelKey="">
+	</action>
+	<action type="push" handler="goLast" desc="跳转到末页" id="goLast"
+		label="" icon="resultset_last" labelKey="">
+	</action>
+
+	<action type="push" handler="" desc="显示行数" id="setRowCount"
+		label="显示行数" icon="resultset_page_setting" labelKey="">
+		<action type="radio" handler="setRowCount" desc="" id="50"
+			label="50" icon="" labelKey="">
+		</action>
+		<action type="radio" handler="setRowCount" desc="" id="100"
+			label="100" icon="" labelKey="">
+		</action>
+		<action type="radio" handler="setRowCount" desc="" id="150"
+			label="150" icon="" labelKey="">
+		</action>
+	</action>
+
+	<actiongroup id="dataNavigationActionActionGroup">
+		<action ref="refresh" handler="refreshPage"/>
+		<action ref="goFirst" />
+		<action ref="goPrevious" />
+		<action ref="showCurrentPageNum" />
+		<action ref="goNext" />
+		<action ref="goLast" />
+		<action ref="setRowCount"></action>
+	</actiongroup>
+	
+	<actiongroup id="dataNavigationEditorActionGroup">
+		<action ref="refresh" handler="refreshPage"/>
+		<action ref="goFirst" icon="resultset_first_24"/>
+		<action ref="goPrevious" icon="resultset_previous_24"/>
+		<action ref="showCurrentPageNum" />
+		<action ref="goNext" icon="resultset_next_24"/>
+		<action ref="goLast" icon="resultset_last_24"/>
+		<action ref="setRowCount" icon="resultset_page_setting_24"></action>
+	</actiongroup>
+	
+	<!--  -->
+	
+	<action type="push" handler="moveToRight" desc="添加" id="moveToRight"
+		label="" icon="move_right" labelKey="">
+	</action>
+
+	<action type="push" handler="moveAllToRight" desc="添加所有"
+		id="moveAllToRight" label="" icon="move_all_right" labelKey="">
+	</action>
+
+	<action type="push" handler="moveAllToLeft" desc="删除所有" id="moveAllToLeft"
+		label="" icon="move_left" labelKey="">
+	</action>
+
+	<action type="push" handler="moveToLeft" desc="删除" id="moveToLeft"
+		label="" icon="move_all_left" labelKey="">
+	</action>
+
+	<actiongroup id="towListEditActionActionGroup">
+		<action ref="moveToRight" />
+		<action ref="moveAllToRight" />
+		<action ref="moveToLeft" />
+		<action ref="moveAllToLeft" />
+	</actiongroup>
+
+	<!-- 公共操作 -->
+	
+	<action type="push" handler="search" desc="查询功能" id="search"
+		label="查询" icon="search_24" labelKey="">
+	</action>
+
+	<action type="push" handler="addNew" desc="添加功能" id="addNew"
+		label="添加" icon="add" labelKey="action.addNew.label">
+	</action>
+
+	<action type="push" desc="删除功能" handler="delete" id="delete"
+		label="删除" confirmInfoKey="是否确认删除？" supportMultiSelection="true"
+		icon="delete" labelKey="action.delete.label">
+	</action>
+
+	<action type="push" desc="编辑功能" handler="edit" id="edit" label="编辑"
+		confirmInfoKey="" icon="edit_24" labelKey="action.delete.label">
+	</action>
+
+	
+	
+	<action type="push" handler="add" desc="Add"
+		icon="add_24" id="add" label="添加" labelKey="">
+	</action>
+	
+	<action type="push" handler="remove" desc="Remove"
+		icon="delete_24" id="remove" label="删除"  confirmInfoKey="是否确认删除？" labelKey="">
+	</action>
+
+
+	<action type="push" handler="addRelation" desc="Add Relation"
+		icon="add_24" id="addRelation" label="添加" labelKey="action.add.label">
+	</action>
+
+	<action type="push" handler="removeRelation" desc="Remove Relation"
+		icon="delete_24" id="removeRelation" confirmInfoKey="是否确认删除？"
+		label="删除" labelKey="action.remove.label">
+	</action>
+
+	<action type="push" handler="editRelation" desc="Edit Relation"
+		icon="edit_24" id="editRelation" confirmInfoKey="" label="编辑"
+		labelKey="action.edit.label">
+	</action>
+
+	<action type="push" handler="moveUp" desc="Move Up" icon="move_up"
+		id="moveUp" confirmInfoKey="" label="上移" labelKey="action.edit.label">
+	</action>
+
+	<action type="push" handler="moveDown" desc="Move Down" icon="move_down"
+		id="moveDown" confirmInfoKey="" label="下移" labelKey="action.edit.label">
+	</action>
+	
+	<action type="push" handler="selectAll" desc="Select All" icon="select_all"
+		id="selectAll" confirmInfoKey="" label="全选" labelKey="">
+	</action>
+	
+	<actiongroup id="defaultListMoveActionGroup">
+		<action ref="moveUp" />
+		<action ref="moveDown" />
+	</actiongroup>
+	
+	<actiongroup id="defaultListActionGroup_24">
+		<action ref="addNew" icon="add_24"></action>
+		<action ref="delete" icon="delete_24"></action>
+		<action ref="edit" icon="edit_24"></action>
+	</actiongroup>
+	
+	<actiongroup id="defaultRelationActionGroup_16">
+		<action ref="refreshRelation" icon="refresh"></action>
+		<action ref="addRelation" icon="add"></action>
+		<action ref="removeRelation" icon="delete"></action>
+		<action ref="editRelation" icon="edit"></action>
+	</actiongroup>
+	
+	<actiongroup id="addRemoveRelationActionGroup_16">
+		<action ref="addRelation" icon="add"></action>
+		<action ref="removeRelation" icon="delete"></action>
+	</actiongroup>
+
+	<actiongroup id="defaultRelationActionGroup">
+		<action ref="refreshRelation"></action>
+		<action ref="addRelation"></action>
+		<action ref="removeRelation"></action>
+		<action ref="editRelation"></action>
+	</actiongroup>
+	
+	<actiongroup id="defaultOnlyOneRelationActionGroup">
+		<action ref="refreshRelation"></action>
+		<action ref="editRelation"></action>
+	</actiongroup>
+	
+	<actiongroup id="defaultRemoveRelationActionGroup">
+		<action ref="refreshRelation" icon="refresh"></action>
+		<action ref="removeRelation" icon="delete"></action>
+	</actiongroup>
+
+	<actiongroup id="defaultRemoveRelationActionGroup">
+		<action ref="refreshRelation"></action>
+		<action ref="removeRelation"></action>
+	</actiongroup>
+
+	<actiongroup id="extendRelationActionGroup">
+		<action ref="refreshRelation"></action>
+		<action ref="addRelation"></action>
+		<action ref="removeRelation"></action>
+	</actiongroup>
+
+	<actiongroup id="relationActionGroup">
+		<action ref="refreshRelation"></action>
+		<action ref="addRelation"></action>
+		<action ref="removeRelation"></action>
+	</actiongroup>
+
+	<action type="push" handler="refresh" desc="refresh"
+		icon="refresh" id="refresh" confirmInfoKey="" label="刷新"
+		labelKey="">
+	</action>
+
+	<action type="push" handler="active" desc="Active Object" icon="select_all"
+		id="active" confirmInfoKey="" label="启用对象" labelKey="action.edit.label">
+	</action>
+
+	<action type="push" handler="deActive" desc="DeActive Object"
+		icon="un_select_all" id="deActive" confirmInfoKey=""
+		label="停用对象" labelKey="action.edit.label">
+	</action>
+	
+	<actiongroup id="meetingActionGroup">
+		<action ref="add"></action>
+		<action ref="remove"></action>
+	</actiongroup>
+	
+	
+	
+	<actiongroup id="defaultTreeViewActionGroup">
+		<action ref="refresh"></action>
+	</actiongroup>
+	
+	<actiongroup id="defaultTreeEditorActionGroup">
+		<action ref="refresh" icon="refresh_24"></action>
+	</actiongroup>
+
+	<actiongroup id="emptyActionGroup">
+	</actiongroup>
+	
+
+	<action type="push" handler="" desc="Exit Button" icon=""
+		id="systemFile" label="系统" labelKey="action.exit.label">
+		
+		<action type="push" handler="handleRefreshConfig" desc="Refreh Button"
+			icon="refresh" id="refreshConfig" label="刷新配置"
+			labelKey="action.exit.label">
+		</action>
+		
+		<action type="push" handler="changePassword" desc="修改密码"
+			icon="change_password" id="changePassword"
+			confirmInfoKey="" label="修改密码" labelKey="">
+		</action>
+		
+		<action type="push" handler="logout" desc="Exit Button"
+			icon="log_out" id="exitSystemButton" label="退出"
+			labelKey="" confirmInfoKey="是否确认注销当前会话？">
+		</action>
+		
+	</action>
+
+	<action type="push" handler="" desc="Window" icon="" id="windows"
+		label="窗口" labelKey="action.exit.label">
+		<action type="push" handler="openViewPart" desc="openViewPart"
+			icon="open_view" id="openViewPart" label="打开视图窗口"
+			labelKey="">
+		</action>
+	</action>
+
+	<actiongroup id="systemMenuBar" desc="">
+		<action ref="systemFile"></action>
+		<action ref="windows"></action>
+	</actiongroup>
+	
+	<action type="push" handler="logout" desc="注销"
+		icon="log_out" id="logout"
+		confirmInfoKey="是否确认注销当前会话？" label="注销" labelKey="">
+	</action>
+	
+	<action type="push" handler="changePassword" desc="修改密码"
+		icon="change_password" id="changePassword"
+		confirmInfoKey="" label="修改密码" labelKey="">
+	</action>
+	
+	<action type="push" handler="changePassword" desc="修改密码"
+		icon="change_password" id="changePassword"
+		confirmInfoKey="" label="修改密码" labelKey="">
+	</action>
+	
+	<actiongroup id="systemToolBar" desc="">
+		<action ref="logout"></action>
+		<action ref="changePassword"></action>
+	</actiongroup>
+
+</actions>

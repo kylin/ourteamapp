@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xmlns:tx="http://www.springframework.org/schema/tx"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.0.xsd
+		   http://www.springframework.org/schema/context
+       	   http://www.springframework.org/schema/context/spring-context-2.5.xsd
+           http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-2.0.xsd
+           http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-2.0.xsd">
+
+		
+	<bean id="com.ourteam.system.service.ISysMessageResourceService"
+		class="com.ourteam.system.service.SysMessageResourceServiceImpl" scope="singleton">
+		
+						
+		<property name="sysMessageKeyDao"
+			ref="com.ourteam.system.dao.ISysMessageKeyDAO" />
+								
+		<property name="sysMessageResourceDao"
+			ref="com.ourteam.system.dao.ISysMessageResourceDAO" />
+								
+	</bean>
+		
+	<bean id="com.ourteam.system.service.ISysResourceService"
+		class="com.ourteam.system.service.SysResourceServiceImpl" scope="singleton">
+		
+						
+		<property name="sysDomainDao"
+			ref="com.ourteam.system.dao.ISysDomainDAO" />
+								
+		<property name="sysResourceDao"
+			ref="com.ourteam.system.dao.ISysResourceDAO" />
+								
+		<property name="sysResourcePropertyDao"
+			ref="com.ourteam.system.dao.ISysResourcePropertyDAO" />
+								
+		<property name="sysResourceTypeDao"
+			ref="com.ourteam.system.dao.ISysResourceTypeDAO" />
+								
+		<property name="sysResourcePropertyOptionDao"
+			ref="com.ourteam.system.dao.ISysResourcePropertyOptionDAO" />
+								
+		<property name="sysMessageResourceService"
+			ref="com.ourteam.system.service.ISysMessageResourceService" />		
+								
+	</bean>
+		
+	<bean id="com.ourteam.system.service.ISysRoleService"
+		class="com.ourteam.system.service.SysRoleServiceImpl" scope="singleton">
+		
+						
+		<property name="sysRoleDao"
+			ref="com.ourteam.system.dao.ISysRoleDAO" />
+								
+		<property name="sysRoleRelateDao"
+			ref="com.ourteam.system.dao.ISysRoleRelateDAO" />
+								
+		<property name="sysRoleResourceRelateDao"
+			ref="com.ourteam.system.dao.ISysRoleResourceRelateDAO" />
+								
+		<property name="sysRoleGroupDao"
+			ref="com.ourteam.system.dao.ISysRoleGroupDAO" />
+								
+		<property name="sysRoleActionRelateDao"
+			ref="com.ourteam.system.dao.ISysRoleActionRelateDAO" />
+								
+		<property name="sysActionDao"
+			ref="com.ourteam.system.dao.ISysActionDAO" />
+								
+		<property name="sysRoleModuleRelateDao"
+			ref="com.ourteam.system.dao.ISysRoleModuleRelateDAO" />
+								
+	</bean>
+		
+	<bean id="com.ourteam.system.service.ISystemApplicationService"
+		class="com.ourteam.system.service.SystemApplicationServiceImpl" scope="singleton">
+		
+						
+		<property name="sysDomainDao"
+			ref="com.ourteam.system.dao.ISysDomainDAO" />
+								
+		<property name="sysResourceService"
+			ref="com.ourteam.system.service.ISysResourceService" />		
+								
+		<property name="sysResourceDao"
+			ref="com.ourteam.system.dao.ISysResourceDAO" />
+								
+		<property name="sysMessageResourceService"
+			ref="com.ourteam.system.service.ISysMessageResourceService" />		
+								
+		<property name="sysModuleDao"
+			ref="com.ourteam.system.dao.ISysModuleDAO" />
+								
+		<property name="sysActionDao"
+			ref="com.ourteam.system.dao.ISysActionDAO" />
+								
+		<property name="sysRoleActionRelateDao"
+			ref="com.ourteam.system.dao.ISysRoleActionRelateDAO" />
+								
+	</bean>
+		
+	<bean id="com.ourteam.system.service.ISystemNotifyConfigService"
+		class="com.ourteam.system.service.SystemNotifyConfigServiceImpl" scope="singleton">
+		
+						
+		<property name="sysNotifyConfigDao"
+			ref="com.ourteam.system.dao.ISysNotifyConfigDAO" />
+								
+	</bean>
+		
+	<bean id="com.ourteam.system.service.ISystemSerialCodeService"
+		class="com.ourteam.system.service.SystemSerialCodeServiceImpl" scope="singleton">
+		
+						
+		<property name="sysSerialCodeDao"
+			ref="com.ourteam.system.dao.ISysSerialCodeDAO" />
+								
+	</bean>
+		
+	<bean id="com.ourteam.system.service.ISysUserService"
+		class="com.ourteam.system.service.SysUserServiceImpl" scope="singleton">
+		
+						
+		<property name="sysUserDao"
+			ref="com.ourteam.system.dao.ISysUserDAO" />
+								
+		<property name="sysUserRoleRelateDao"
+			ref="com.ourteam.system.dao.ISysUserRoleRelateDAO" />
+								
+	</bean>
+	
+</beans>

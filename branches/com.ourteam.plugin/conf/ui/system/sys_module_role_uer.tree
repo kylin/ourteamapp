@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tree id="sys_module_role_uer" imageBase="">
+	<nodeDefine>
+			
+		<node id="bpmRole" image="bpm_role" label="roleName" labelKey="" leaf="false" hidden="false" nodePanel="">
+			
+					
+			<property name="actionGroupId" value="bpmRoleNodeActionGroup" />
+						
+			<actionList>
+		
+					
+			</actionList>
+			
+			<subNodeBuilderList>
+					
+			<nodeBuilder id="BpmRoleUserSubNodeBuilder" className="com.ourteam.app.system.ui.BpmRoleUserSubNodeBuilder">
+						
+			</nodeBuilder>
+					
+			</subNodeBuilderList>
+			
+			
+		</node>
+			
+		<node id="user" image="user" label="sysUserName" labelKey="" leaf="true" hidden="false" nodePanel="">
+			
+					
+			<property name="actionGroupId" value="bpmRoleUserNodeActionGroup" />
+						
+			<actionList>
+		
+					
+			</actionList>
+			
+			<subNodeBuilderList>
+					
+			</subNodeBuilderList>
+			
+			
+		</node>
+			
+		<node id="sysModule" image="moduleIcon" label="moduleName" labelKey="" leaf="false" hidden="false" nodePanel="">
+			
+						
+			<actionList>
+		
+					
+			</actionList>
+			
+			<subNodeBuilderList>
+					
+			<nodeBuilder id="SystemModuleRoleSubNodeBuilder" className="com.ourteam.app.system.ui.SystemModuleRoleSubNodeBuilder">
+						
+			</nodeBuilder>
+					
+			<nodeBuilder id="SystemModuleCatalogNodeBuilder" className="com.ourteam.app.system.ui.SystemModuleCatalogNodeBuilder">
+						
+			</nodeBuilder>
+					
+			</subNodeBuilderList>
+			
+			
+		</node>
+			
+		<node id="sysModuleRoot" image="" label="" labelKey="" leaf="false" hidden="false" nodePanel="">
+			
+						
+			<actionList>
+		
+					
+			</actionList>
+			
+			<subNodeBuilderList>
+					
+			<nodeBuilder id="SystemModuleRoleRootNodeBuilder" className="com.ourteam.app.system.ui.SystemModuleRoleRootNodeBuilder">
+						
+			</nodeBuilder>
+					
+			</subNodeBuilderList>
+			
+			
+		</node>
+			
+		<node id="subModuleCatalog" image="module" label="子业务模块" labelKey="" leaf="false" hidden="false" nodePanel="">
+			
+						
+			<actionList>
+		
+					
+			</actionList>
+			
+			<subNodeBuilderList>
+					
+			<nodeBuilder id="SystemModuleCatalogSubNodeBuilder" className="com.ourteam.app.system.ui.SystemModuleCatalogSubNodeBuilder">
+						
+			</nodeBuilder>
+					
+			</subNodeBuilderList>
+			
+			
+		</node>
+		
+	</nodeDefine>
+	
+		
+	<rootNode id="sysModuleRoot">
+			</rootNode>
+		
+</tree>

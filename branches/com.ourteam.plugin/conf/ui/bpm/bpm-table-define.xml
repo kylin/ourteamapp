@@ -1,0 +1,424 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tableList>
+
+	<table id="bpmProcessInstanceTable" desc="业务流程实例列表" extend="">
+				
+		<column property="serialNumber" label="流程序列号" labelKey="" width="200" 
+			editable="true" cellEditor="" showValue="true" dataType="java.lang.String" 
+			align="3" listDataSource="" 
+			canSort="false" canReOrder="true" canFilter="true"
+			canResize="true" icon=""
+			>
+					
+			<image value="*" file="work_flow_process"/>
+								</column>
+				
+		<column property="processName" label="流程名称" labelKey="" width="200" 
+			editable="true" cellEditor="" showValue="true" dataType="java.lang.String" 
+			align="3" listDataSource="" 
+			canSort="false" canReOrder="true" canFilter="true"
+			canResize="true" icon=""
+			>
+								</column>
+				
+		<column property="starterName" label="发起人" labelKey="" width="100" 
+			editable="true" cellEditor="" showValue="true" dataType="java.lang.String" 
+			align="3" listDataSource="" 
+			canSort="true" canReOrder="true" canFilter="true"
+			canResize="true" icon=""
+			>
+								</column>
+				
+		<column property="startDate" label="发起时间" labelKey="" width="150" 
+			editable="true" cellEditor="" showValue="true" dataType="java.lang.String" 
+			align="3" listDataSource="" 
+			canSort="true" canReOrder="true" canFilter="true"
+			canResize="true" icon=""
+			>
+								
+			<value label="dateFormat" data="yyyy-MM-dd HH:mmss"/>
+					</column>
+				
+		<column property="remarks" label="备注" labelKey="" width="300" 
+			editable="true" cellEditor="" showValue="true" dataType="java.lang.String" 
+			align="3" listDataSource="" 
+			canSort="false" canReOrder="true" canFilter="true"
+			canResize="true" icon=""
+			>
+								</column>
+		
+	</table>
+
+	<table id="finishedBpmProcessInstanceTable" desc="完成业务流程实例列表" extend="">
+				
+		<column property="serialNumber" label="流程序列号" labelKey="" width="200" 
+			editable="true" cellEditor="" showValue="true" dataType="java.lang.String" 
+			align="3" listDataSource="" 
+			canSort="false" canReOrder="true" canFilter="true"
+			canResize="true" icon=""
+			>
+					
+			<image value="*" file="work_flow_finish"/>
+								</column>
+				
+		<column property="processName" label="流程名称" labelKey="" width="200" 
+			editable="true" cellEditor="" showValue="true" dataType="java.lang.String" 
+			align="3" listDataSource="" 
+			canSort="false" canReOrder="true" canFilter="true"
+			canResize="true" icon=""
+			>
+								</column>
+				
+		<column property="starterName" label="发起人" labelKey="" width="100" 
+			editable="true" cellEditor="" showValue="true" dataType="java.lang.String" 
+			align="3" listDataSource="" 
+			canSort="true" canReOrder="true" canFilter="true"
+			canResize="true" icon=""
+			>
+								</column>
+				
+		<column property="startDate" label="发起时间" labelKey="" width="150" 
+			editable="true" cellEditor="" showValue="true" dataType="java.lang.String" 
+			align="3" listDataSource="" 
+			canSort="true" canReOrder="true" canFilter="true"
+			canResize="true" icon=""
+			>
+								
+			<value label="dateFormat" data="yyyy-MM-dd HH:mmss"/>
+					</column>
+				
+		<column property="completeDate" label="完成时间" labelKey="" width="150" 
+			editable="true" cellEditor="" showValue="true" dataType="java.lang.String" 
+			align="3" listDataSource="" 
+			canSort="true" canReOrder="true" canFilter="true"
+			canResize="true" icon=""
+			>
+								
+			<value label="dateFormat" data="yyyy-MM-dd HH:mmss"/>
+					</column>
+				
+		<column property="status" label="状态" labelKey="" width="100" 
+			editable="true" cellEditor="" showValue="true" dataType="java.lang.String" 
+			align="3" listDataSource="bpm.processStatusList" 
+			canSort="false" canReOrder="true" canFilter="true"
+			canResize="true" icon=""
+			>
+								</column>
+				
+		<column property="remarks" label="备注" labelKey="" width="300" 
+			editable="true" cellEditor="" showValue="true" dataType="java.lang.String" 
+			align="3" listDataSource="" 
+			canSort="false" canReOrder="true" canFilter="true"
+			canResize="true" icon=""
+			>
+								</column>
+		
+	</table>
+
+	<table id="bpmEmployeeRoleListTable" desc="业务流程角色员工关联表" extend="">
+				
+		<column property="employeeCode" label="员工编号" labelKey="" width="150" 
+			editable="true" cellEditor="" showValue="true" dataType="java.lang.String" 
+			align="3" listDataSource="" 
+			canSort="false" canReOrder="true" canFilter="true"
+			canResize="true" icon=""
+			>
+					
+			<image value="*" file="employee"/>
+								</column>
+				
+		<column property="employeeName" label="员工名称" labelKey="" width="150" 
+			editable="true" cellEditor="" showValue="true" dataType="java.lang.String" 
+			align="3" listDataSource="" 
+			canSort="false" canReOrder="true" canFilter="true"
+			canResize="true" icon=""
+			>
+								</column>
+				
+		<column property="remarks" label="备注" labelKey="" width="300" 
+			editable="true" cellEditor="" showValue="true" dataType="java.lang.String" 
+			align="3" listDataSource="" 
+			canSort="false" canReOrder="true" canFilter="true"
+			canResize="true" icon=""
+			>
+								</column>
+		
+	</table>
+
+	<table id="bpmProcessRolePurviewTable" desc="流程角色权限设置" extend="">
+				
+		<column property="roleName" label="角色名称" labelKey="" width="200" 
+			editable="false" cellEditor="" showValue="true" dataType="java.lang.String" 
+			align="3" listDataSource="" 
+			canSort="false" canReOrder="false" canFilter="true"
+			canResize="true" icon=""
+			>
+					
+			<image value="*" file="bpm_role"/>
+								</column>
+				
+		<column property="canStart" label="启动流程" labelKey="" width="100" 
+			editable="true" cellEditor="" showValue="true" dataType="java.lang.String" 
+			align="3" listDataSource="booleanList" 
+			canSort="false" canReOrder="true" canFilter="true"
+			canResize="true" icon=""
+			>
+								</column>
+				
+		<column property="canReAssign" label="重新分派" labelKey="" width="100" 
+			editable="true" cellEditor="" showValue="true" dataType="java.lang.String" 
+			align="3" listDataSource="booleanList" 
+			canSort="false" canReOrder="true" canFilter="true"
+			canResize="true" icon=""
+			>
+								</column>
+				
+		<column property="canBreak" label="终止流程" labelKey="" width="100" 
+			editable="true" cellEditor="" showValue="true" dataType="java.lang.String" 
+			align="3" listDataSource="booleanList" 
+			canSort="false" canReOrder="true" canFilter="true"
+			canResize="true" icon=""
+			>
+								</column>
+		
+	</table>
+
+	<table id="bpmRoleListTable" desc="流程角色列表" extend="">
+				
+		<column property="roleKey" label="标识" labelKey="" width="200" 
+			editable="true" cellEditor="" showValue="true" dataType="java.lang.String" 
+			align="3" listDataSource="" 
+			canSort="false" canReOrder="true" canFilter="true"
+			canResize="true" icon=""
+			>
+					
+			<image value="*" file="bpm_role"/>
+								</column>
+				
+		<column property="roleName" label="名称" labelKey="" width="200" 
+			editable="true" cellEditor="" showValue="true" dataType="java.lang.String" 
+			align="3" listDataSource="" 
+			canSort="false" canReOrder="true" canFilter="true"
+			canResize="true" icon=""
+			>
+								</column>
+				
+		<column property="bpmDomainName" label="业务域" labelKey="" width="100" 
+			editable="true" cellEditor="" showValue="true" dataType="java.lang.String" 
+			align="3" listDataSource="" 
+			canSort="false" canReOrder="true" canFilter="true"
+			canResize="true" icon="bpm_domain"
+			>
+								</column>
+				
+		<column property="sysModuleName" label="功能模块" labelKey="" width="100" 
+			editable="true" cellEditor="" showValue="true" dataType="java.lang.String" 
+			align="3" listDataSource="" 
+			canSort="false" canReOrder="true" canFilter="true"
+			canResize="true" icon="module"
+			>
+								</column>
+				
+		<column property="remarks" label="备注" labelKey="" width="300" 
+			editable="true" cellEditor="" showValue="true" dataType="java.lang.String" 
+			align="3" listDataSource="" 
+			canSort="false" canReOrder="true" canFilter="true"
+			canResize="true" icon=""
+			>
+								</column>
+		
+	</table>
+
+	<table id="bpmProcessFormListTable" desc="流程表单列表" extend="">
+				
+		<column property="formKey" label="表单标识" labelKey="" width="200" 
+			editable="true" cellEditor="" showValue="true" dataType="java.lang.String" 
+			align="3" listDataSource="" 
+			canSort="false" canReOrder="true" canFilter="true"
+			canResize="true" icon=""
+			>
+					
+			<image value="*" file="bpm_form"/>
+								</column>
+				
+		<column property="formName" label="表单名称" labelKey="" width="200" 
+			editable="true" cellEditor="" showValue="true" dataType="java.lang.String" 
+			align="3" listDataSource="" 
+			canSort="false" canReOrder="true" canFilter="true"
+			canResize="true" icon=""
+			>
+								</column>
+				
+		<column property="remarks" label="备注" labelKey="" width="300" 
+			editable="true" cellEditor="" showValue="true" dataType="java.lang.String" 
+			align="3" listDataSource="" 
+			canSort="false" canReOrder="true" canFilter="true"
+			canResize="true" icon=""
+			>
+								</column>
+		
+	</table>
+
+	<table id="bpmProcessTaskList" desc="流程任务列表" extend="">
+				
+		<column property="priority" label="级别" labelKey="" width="50" 
+			editable="false" cellEditor="" showValue="true" dataType="java.lang.Integer" 
+			align="2" listDataSource="bpm.taskPriorityList" 
+			canSort="false" canReOrder="false" canFilter="true"
+			canResize="false" icon="prioritys"
+			>
+					
+			<image value="50" file="priority_normal"/>
+					
+			<image value="100" file="priority_high"/>
+					
+			<image value="0" file="priority_low"/>
+								</column>
+				
+		<column property="commentCount" label="注释" labelKey="" width="50" 
+			editable="true" cellEditor="" showValue="true" dataType="java.lang.String" 
+			align="2" listDataSource="" 
+			canSort="false" canReOrder="false" canFilter="true"
+			canResize="false" icon="comments"
+			>
+								</column>
+				
+		<column property="attachmentCount" label="附件" labelKey="" width="50" 
+			editable="true" cellEditor="" showValue="true" dataType="java.lang.String" 
+			align="2" listDataSource="" 
+			canSort="false" canReOrder="false" canFilter="true"
+			canResize="false" icon="attach"
+			>
+								</column>
+				
+		<column property="serialNumber" label="任务序列号" labelKey="" width="150" 
+			editable="true" cellEditor="" showValue="true" dataType="java.lang.String" 
+			align="3" listDataSource="" 
+			canSort="false" canReOrder="true" canFilter="true"
+			canResize="true" icon=""
+			>
+								</column>
+				
+		<column property="taskName" label="任务名称" labelKey="" width="200" 
+			editable="true" cellEditor="" showValue="true" dataType="java.lang.String" 
+			align="3" listDataSource="" 
+			canSort="false" canReOrder="true" canFilter="true"
+			canResize="true" icon=""
+			>
+								</column>
+				
+		<column property="processName" label="流程名称" labelKey="" width="200" 
+			editable="true" cellEditor="" showValue="true" dataType="java.lang.String" 
+			align="3" listDataSource="" 
+			canSort="false" canReOrder="true" canFilter="true"
+			canResize="true" icon=""
+			>
+								</column>
+				
+		<column property="assignerName" label="指派给" labelKey="" width="100" 
+			editable="true" cellEditor="" showValue="true" dataType="java.lang.String" 
+			align="3" listDataSource="" 
+			canSort="false" canReOrder="true" canFilter="true"
+			canResize="true" icon=""
+			>
+								</column>
+				
+		<column property="startDateTime" label="开始时间" labelKey="" width="150" 
+			editable="true" cellEditor="" showValue="true" dataType="java.lang.String" 
+			align="3" listDataSource="" 
+			canSort="false" canReOrder="true" canFilter="true"
+			canResize="true" icon=""
+			>
+								
+			<value label="dateFormat" data="yyyy-MM-dd HH:mm:ss"/>
+					</column>
+				
+		<column property="endDateTime" label="结束时间" labelKey="" width="150" 
+			editable="true" cellEditor="" showValue="true" dataType="java.lang.String" 
+			align="3" listDataSource="" 
+			canSort="false" canReOrder="true" canFilter="true"
+			canResize="true" icon=""
+			>
+								
+			<value label="dateFormat" data="yyyy-MM-dd HH:mm:ss"/>
+					</column>
+				
+		<column property="remarks" label="任务说明" labelKey="" width="300" 
+			editable="true" cellEditor="" showValue="true" dataType="java.lang.String" 
+			align="3" listDataSource="" 
+			canSort="false" canReOrder="true" canFilter="true"
+			canResize="true" icon=""
+			>
+								</column>
+		
+	</table>
+
+	<table id="bpmAttachmentListTable" desc="流程附件列表" extend="">
+				
+		<column property="fileType" label="类型" labelKey="" width="80" 
+			editable="true" cellEditor="" showValue="true" dataType="java.lang.String" 
+			align="3" listDataSource="" 
+			canSort="false" canReOrder="true" canFilter="true"
+			canResize="true" icon=""
+			>
+					
+			<image value="*" file="/16X16/File/file_extension_${fileType}.png"/>
+								</column>
+				
+		<column property="name" label="名称" labelKey="" width="200" 
+			editable="true" cellEditor="" showValue="true" dataType="java.lang.String" 
+			align="3" listDataSource="" 
+			canSort="false" canReOrder="true" canFilter="true"
+			canResize="true" icon=""
+			>
+								</column>
+				
+		<column property="attachmentDisplaySize" label="大小" labelKey="" width="100" 
+			editable="true" cellEditor="" showValue="true" dataType="java.lang.String" 
+			align="3" listDataSource="" 
+			canSort="false" canReOrder="true" canFilter="true"
+			canResize="true" icon=""
+			>
+								</column>
+				
+		<column property="createDate" label="上传时间" labelKey="" width="150" 
+			editable="true" cellEditor="" showValue="true" dataType="java.lang.String" 
+			align="3" listDataSource="" 
+			canSort="false" canReOrder="true" canFilter="true"
+			canResize="true" icon=""
+			>
+								
+			<value label="dateFormat" data="yyyy-MM-dd HH:mm:ss"/>
+					</column>
+				
+		<column property="creratorName" label="上传人" labelKey="" width="100" 
+			editable="true" cellEditor="" showValue="true" dataType="java.lang.String" 
+			align="3" listDataSource="" 
+			canSort="false" canReOrder="true" canFilter="true"
+			canResize="true" icon=""
+			>
+								</column>
+		
+	</table>
+
+	<table id="bpmTaskTreeTable" desc="流程任务树列表" extend="">
+				
+		<column property="serialNumber" label="" labelKey="" width="150" 
+			editable="true" cellEditor="" showValue="true" dataType="java.lang.String" 
+			align="3" listDataSource="" 
+			canSort="false" canReOrder="true" canFilter="true"
+			canResize="true" icon=""
+			>
+								</column>
+				
+		<column property="taskName" label="名称" labelKey="" width="200" 
+			editable="true" cellEditor="" showValue="true" dataType="java.lang.String" 
+			align="3" listDataSource="" 
+			canSort="false" canReOrder="true" canFilter="true"
+			canResize="true" icon=""
+			>
+								</column>
+		
+	</table>
+
+</tableList>

@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<listdata>
+	<select name="modelbase.businessObjectPropertyPrimaryKey" type="static">
+		<option value="true">是</option>
+		<option value="false">否</option>
+	</select>
+	
+	<select name="modelbase.enumType" type="static">
+		<option value="0">字符类型枚举</option>
+		<option value="1">数字类型枚举</option>
+	</select>
+	
+	<select name="modelbase.businessObjectPropertyDataType" type="static">
+		<option value="long">long</option>
+		<option value="int">int</option>
+		<option value="float">float</option>
+		<option value="double">double</option>
+		<option value="String">String</option>
+		<option value="Long">Long</option>
+		<option value="Integer">Integer</option>
+		<option value="Float">Float</option>
+		<option value="Double">Double</option>
+		<option value="java.util.Date">Date</option>
+		<option value="java.math.BigDecimal">BigDecimal</option>
+		<option value="byte[]">byte[]</option>
+		<option value="Object">Object</option>
+		
+	</select>
+	
+	<select name="modelbase.relatType" type="static">
+		<option value="RELATED_OPERATION">关联操作</option>
+		<option value="RELATED_VIEW">关联显示</option>
+		<option value="REFERENCE">引用</option>
+		<option value="EXTEND">扩展</option>
+		<option value="MAPPED">映射</option>
+		<option value="DEPENDED">依赖</option>
+		<option value="COMPOUNDED">包装</option>
+	</select>
+	
+	<select name="serviceParameter.PreProcess" type="static">
+		<option value="NONE">不处理</option>
+		<option value="WHEN_NULL_LOG_WAR">空值记录警告日志</option>
+		<option value="WHEN_NULL_EXIT">空值退出</option>
+		<option value="WHEN_NULL_THROW_EXCEPTION">空值抛出异常</option>
+		<option value="WHEN_NULL_AUTO_CREATE">自动创建实例</option>
+	</select>
+	
+	<select name="database.driverList" type="static">
+		<option value="oracle.jdbc.driver.OracleDriver">oracle.jdbc.driver.OracleDriver</option>
+		<option value="com.mysql.jdbc.Driver">com.mysql.jdbc.Driver</option>
+	</select>
+	
+	<select name="database.ProviderList" type="static">
+		<option value="mysql">mysql</option>
+		<option value="oracle">oracle</option>
+	</select>
+	
+	<select name="Torque.dbList" type="static">
+		<option value="oracle">oracle</option>
+		<option value="mysql">mysql</option>
+		<option value="axion">axion</option>
+		<option value="cloudscape">cloudscape</option>
+		<option value="db2">db2</option>
+		<option value="db2400">db2400</option>
+		<option value="hypersonic">hypersonic</option>
+		<option value="interbase">interbase</option>
+		<option value="mssql">mssql</option>
+		<option value="postgresql">postgresql</option>
+		<option value="sapdb">sapdb</option>
+		<option value="sybase">sybase</option>
+	</select>
+	
+	<select name="PersistentProperty.DataType" type="static">
+		<option value="BIT">BIT</option>
+		<option value="TINYINT">TINYINT</option>
+		<option value="SMALLINT">SMALLINT</option>
+		<option value="INTEGER">INTEGER</option>
+		<option value="BIGINT">BIGINT</option>
+		<option value="FLOAT">FLOAT</option>
+		<option value="REAL">REAL</option>
+		<option value="DOUBLE">DOUBLE</option>
+		<option value="NUMERIC">NUMERIC</option>
+		<option value="DECIMAL">DECIMAL</option>
+		<option value="CHAR">CHAR</option>
+		<option value="VARCHAR">VARCHAR</option>
+		<option value="LONGVARCHAR">LONGVARCHAR</option>
+		<option value="DATE">DATE</option>
+		<option value="TIME">TIME</option>
+		<option value="TIMESTAMP">TIMESTAMP</option>
+		<option value="BINARY">BINARY</option>
+		<option value="VARBINARY">VARBINARY</option>
+		<option value="LONGVARBINARY">LONGVARBINARY</option>
+		<option value="NULL">NULL</option>
+		<option value="OTHER">OTHER</option>
+		<option value="JAVA_OBJECT">JAVA_OBJECT</option>
+		<option value="DISTINCT">DISTINCT</option>
+		<option value="STRUCT">STRUCT</option>
+		<option value="ARRAY">ARRAY</option>
+		<option value="BLOB">BLOB</option>
+		<option value="CLOB">CLOB</option>
+		<option value="REF">REF</option>
+		<option value="DATALINK">DATALINK</option>
+		<option value="BOOLEAN">BOOLEAN</option>
+	</select>
+	
+	<select name="PersistentDataTypeToJavaType" type="static">
+		<option value="BIT">boolean</option>
+		<option value="TINYINT">byte</option>
+		<option value="SMALLINT">short</option>
+		<option value="INTEGER">int</option>
+		<option value="BIGINT">long</option>
+		<option value="FLOAT">double</option>
+		<option value="REAL">float</option>
+		<option value="DOUBLE">double</option>
+		<option value="NUMERIC">java.math.BigDecimal</option>
+		<option value="DECIMAL">java.math.BigDecimal</option>
+		<option value="CHAR">String</option>
+		<option value="VARCHAR">String</option>
+		<option value="LONGVARCHAR">String</option>
+		<option value="DATE">java.util.Date</option>
+		<option value="TIME">java.util.Date</option>
+		<option value="TIMESTAMP">java.util.Date</option>
+		<option value="BINARY">byte[]</option>
+		<option value="VARBINARY">byte[]</option>
+		<option value="LONGVARBINARY">byte[]</option>
+		<option value="OTHER">Object</option>
+		<option value="JAVA_OBJECT">Object</option>
+		<option value="DISTINCT">Object</option>
+		<option value="STRUCT">Object</option>
+		<option value="ARRAY">java.sql.Array</option>
+		<option value="BLOB">java.sql.Blob</option>
+		<option value="CLOB">java.sql.Clob</option>
+		<option value="REF">java.sql.Ref</option>
+		<option value="DATALINK">java.net.URL</option>
+		<option value="BOOLEAN">boolean</option>
+	</select>
+	
+	<select name="modelbase.businessDomain" type="getAllBusinessDomain"
+		dataProperty="businessDomainId" labelProperty="name">
+	</select>
+	
+	<select name="modelbase.objectAction" type="static">
+		<option value="create">新建</option>
+		<option value="update">更新</option>
+		<option value="query">查询</option>
+		<option value="delete">删除</option>
+	</select>
+</listdata>
