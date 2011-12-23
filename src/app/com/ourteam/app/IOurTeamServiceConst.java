@@ -13,7 +13,9 @@ import com.ourteam.hr.service.IEmployeeService;
 import com.ourteam.middleware.service.IMiddleWareService;
 import com.ourteam.middleware.service.MiddleWareServiceFactory;
 import com.ourteam.modelbase.service.BusinessObjectServiceFactory;
+import com.ourteam.modelbase.service.BusinessPackageServiceFactory;
 import com.ourteam.modelbase.service.IBusinessObjectService;
+import com.ourteam.modelbase.service.IBusinessPackageService;
 import com.ourteam.product.service.IProductCatalogService;
 import com.ourteam.product.service.IProductService;
 import com.ourteam.product.service.IProductVersionService;
@@ -66,6 +68,9 @@ public interface IOurTeamServiceConst {
 
 	static final IBusinessObjectService BUSINESS_OBJECT_SERVICE = BusinessObjectServiceFactory
 			.getBusinessObjectService();
+
+	final static IBusinessPackageService BUSINESS_PACKAGE_SERVICE = BusinessPackageServiceFactory
+			.getBusinessPackageService();
 
 	static final ISystemApplicationService APPLICATION_SERVICE = SystemApplicationServiceFactory
 			.getSystemApplicationService();
