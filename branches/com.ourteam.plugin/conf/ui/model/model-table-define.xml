@@ -1,4 +1,807 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <tableList>
+	<table id="businessDomainTable" desc="业务域列表" extend="">
+				
+		<column property="name" label="业务域" labelKey="" width="200" 
+			editable="false" cellEditor="" showValue="true" dataType="java.lang.String" 
+			align="" listDataSource="" 
+			canSort="false" canReOrder="true" canFilter="true"
+			canResize="true" icon=""
+			>
+					
+			<image value="*" file="packagefolder"/>
+								</column>
+				
+		<column property="description" label="说明" labelKey="" width="300" 
+			editable="false" cellEditor="" showValue="true" dataType="java.lang.String" 
+			align="" listDataSource="" 
+			canSort="false" canReOrder="true" canFilter="true"
+			canResize="true" icon=""
+			>
+								</column>
+		
+	</table>
+
+	<table id="businessObjectMappingTable" desc="对象映射列表" extend="">
+				
+		<column property="relatedBusinessObjectName" label="映射对象" labelKey="" width="200" 
+			editable="false" cellEditor="" showValue="true" dataType="java.lang.String" 
+			align="" listDataSource="" 
+			canSort="false" canReOrder="true" canFilter="true"
+			canResize="true" icon=""
+			>
+					
+			<image value="*" file="table"/>
+								</column>
+				
+		<column property="relatedBusinessPackageName" label="包" labelKey="" width="300" 
+			editable="false" cellEditor="" showValue="true" dataType="java.lang.String" 
+			align="" listDataSource="" 
+			canSort="false" canReOrder="true" canFilter="true"
+			canResize="true" icon=""
+			>
+								</column>
+		
+	</table>
+
+	<table id="businessObjectExtendsTable" desc="对象扩展列表" extend="">
+				
+		<column property="relatedBusinessObjectName" label="扩展对象" labelKey="" width="200" 
+			editable="false" cellEditor="" showValue="true" dataType="java.lang.String" 
+			align="" listDataSource="" 
+			canSort="false" canReOrder="true" canFilter="true"
+			canResize="true" icon=""
+			>
+					
+			<image value="*" file="entity"/>
+								</column>
+				
+		<column property="relatedBusinessPackageName" label="包" labelKey="" width="300" 
+			editable="false" cellEditor="" showValue="true" dataType="java.lang.String" 
+			align="" listDataSource="" 
+			canSort="false" canReOrder="true" canFilter="true"
+			canResize="true" icon=""
+			>
+								</column>
+		
+	</table>
+
+	<table id="businessObjectRelatedOperationTable" desc="对象关联操作列表" extend="">
+				
+		<column property="relatedBusinessObjectName" label="关联对象" labelKey="" width="200" 
+			editable="false" cellEditor="" showValue="true" dataType="java.lang.String" 
+			align="" listDataSource="" 
+			canSort="false" canReOrder="true" canFilter="true"
+			canResize="true" icon=""
+			>
+					
+			<image value="*" file="entity"/>
+								</column>
+				
+		<column property="description" label="关联说明" labelKey="" width="200" 
+			editable="false" cellEditor="" showValue="true" dataType="java.lang.String" 
+			align="" listDataSource="" 
+			canSort="false" canReOrder="true" canFilter="true"
+			canResize="true" icon=""
+			>
+								</column>
+				
+		<column property="relatedBusinessPackageName" label="包" labelKey="" width="300" 
+			editable="false" cellEditor="" showValue="true" dataType="java.lang.String" 
+			align="" listDataSource="" 
+			canSort="false" canReOrder="true" canFilter="true"
+			canResize="true" icon=""
+			>
+								</column>
+		
+	</table>
+
+	<table id="businessObjectRelatedViewTable" desc="对象关联显示列表" extend="">
+				
+		<column property="relatedBusinessObjectName" label="关联对象" labelKey="" width="200" 
+			editable="false" cellEditor="" showValue="true" dataType="java.lang.String" 
+			align="" listDataSource="" 
+			canSort="false" canReOrder="true" canFilter="true"
+			canResize="true" icon=""
+			>
+					
+			<image value="*" file="entity"/>
+								</column>
+				
+		<column property="relateConfig" label="关联对象别名" labelKey="" width="200" 
+			editable="false" cellEditor="" showValue="true" dataType="java.lang.String" 
+			align="" listDataSource="" 
+			canSort="false" canReOrder="true" canFilter="true"
+			canResize="true" icon=""
+			>
+								</column>
+				
+		<column property="description" label="关联说明" labelKey="" width="200" 
+			editable="false" cellEditor="" showValue="true" dataType="java.lang.String" 
+			align="" listDataSource="" 
+			canSort="false" canReOrder="true" canFilter="true"
+			canResize="true" icon=""
+			>
+								</column>
+				
+		<column property="relatedBusinessPackageName" label="包" labelKey="" width="300" 
+			editable="false" cellEditor="" showValue="true" dataType="java.lang.String" 
+			align="" listDataSource="" 
+			canSort="false" canReOrder="true" canFilter="true"
+			canResize="true" icon=""
+			>
+								</column>
+		
+	</table>
+
+	<table id="businessObjectUniquePropertyList" desc="业务对象逻辑唯一属性列表" extend="">
+				
+		<column property="isPrimaryProperty" label="" labelKey="" width="30" 
+			editable="false" cellEditor="" showValue="false" dataType="java.lang.String" 
+			align="" listDataSource="" 
+			canSort="false" canReOrder="true" canFilter="true"
+			canResize="true" icon=""
+			>
+					
+			<image value="true" file="key_property"/>
+					
+			<image value="false" file="object_property"/>
+								</column>
+				
+		<column property="name" label="名称" labelKey="data.common.name" width="200" 
+			editable="true" cellEditor="" showValue="true" dataType="java.lang.String" 
+			align="" listDataSource="" 
+			canSort="false" canReOrder="true" canFilter="true"
+			canResize="true" icon=""
+			>
+								</column>
+				
+		<column property="isUnique" label="唯一性" labelKey="data.modelbase.uniqueProperty" width="100" 
+			editable="true" cellEditor="" showValue="false" dataType="java.lang.String" 
+			align="3" listDataSource="" 
+			canSort="false" canReOrder="true" canFilter="true"
+			canResize="true" icon=""
+			>
+					
+			<image value="true" file="select_all"/>
+					
+			<image value="*" file="un_select_all"/>
+								</column>
+		
+	</table>
+
+	<table id="businessObjectActionList" desc="对象动作列表" extend="">
+				
+		<column property="action" label="动作" labelKey="data.modelbase.objectAction.actionName" width="100" 
+			editable="true" cellEditor="" showValue="true" dataType="java.lang.String" 
+			align="" listDataSource="modelbase.objectAction" 
+			canSort="true" canReOrder="true" canFilter="true"
+			canResize="true" icon=""
+			>
+					
+			<image value="query" file="action_select"/>
+					
+			<image value="update" file="action_update"/>
+					
+			<image value="create" file="action_insert"/>
+					
+			<image value="delete" file="action_delete"/>
+								</column>
+				
+		<column property="propertyName" label="属性名" labelKey="data.modelbase.relation.propertyName" width="200" 
+			editable="true" cellEditor="" showValue="true" dataType="java.lang.String" 
+			align="" listDataSource="" 
+			canSort="false" canReOrder="true" canFilter="true"
+			canResize="true" icon=""
+			>
+								</column>
+				
+		<column property="operation" label="操作" labelKey="data.modelbase.objectAction.actionValue" width="50" 
+			editable="true" cellEditor="" showValue="true" dataType="java.lang.String" 
+			align="" listDataSource="" 
+			canSort="false" canReOrder="true" canFilter="true"
+			canResize="true" icon=""
+			>
+								</column>
+				
+		<column property="propertyValue" label="动作值" labelKey="data.modelbase.objectAction.actionValue" width="300" 
+			editable="true" cellEditor="" showValue="true" dataType="java.lang.String" 
+			align="" listDataSource="" 
+			canSort="false" canReOrder="true" canFilter="true"
+			canResize="true" icon=""
+			>
+								</column>
+		
+	</table>
+
+	<table id="businessPackageTable" desc="对象包列表" extend="">
+				
+		<column property="type" label="" labelKey="" width="30" 
+			editable="false" cellEditor="" showValue="false" dataType="java.lang.String" 
+			align="" listDataSource="" 
+			canSort="false" canReOrder="true" canFilter="true"
+			canResize="true" icon=""
+			>
+					
+			<image value="PERSISTENT_PACKAGE" file="packd"/>
+					
+			<image value="BUSINESS_PACKAGE" file="package"/>
+					
+			<image value="SERVICE_PACKAGE" file="service_package"/>
+								</column>
+				
+		<column property="name" label="包名" labelKey="" width="300" 
+			editable="false" cellEditor="" showValue="true" dataType="java.lang.String" 
+			align="" listDataSource="" 
+			canSort="false" canReOrder="true" canFilter="true"
+			canResize="true" icon=""
+			>
+								</column>
+		
+	</table>
+
+	<table id="objectPropertyTable" desc="对象属性列表" extend="">
+				
+		<column property="isPrimaryProperty" label="" labelKey="" width="30" 
+			editable="false" cellEditor="" showValue="false" dataType="java.lang.String" 
+			align="" listDataSource="" 
+			canSort="false" canReOrder="true" canFilter="true"
+			canResize="true" icon=""
+			>
+					
+			<image value="true" file="key_property"/>
+					
+			<image value="*" file="object_property"/>
+								</column>
+				
+		<column property="name" label="名称" labelKey="" width="100" 
+			editable="false" cellEditor="" showValue="true" dataType="java.lang.String" 
+			align="" listDataSource="" 
+			canSort="false" canReOrder="true" canFilter="true"
+			canResize="true" icon=""
+			>
+								</column>
+				
+		<column property="description" label="说明" labelKey="" width="100" 
+			editable="false" cellEditor="" showValue="true" dataType="java.lang.String" 
+			align="" listDataSource="" 
+			canSort="false" canReOrder="true" canFilter="true"
+			canResize="true" icon=""
+			>
+								</column>
+		
+	</table>
+
+	<table id="propertyRelatedTable" desc="属性关联列表" extend="">
+				
+		<column property="objectPropertyBean.name" label="属性名称" labelKey="" width="200" 
+			editable="false" cellEditor="" showValue="true" dataType="java.lang.String" 
+			align="" listDataSource="" 
+			canSort="false" canReOrder="true" canFilter="true"
+			canResize="true" icon=""
+			>
+					
+			<image value="*" file="object_property"/>
+								</column>
+				
+		<column property="relatedObjectPropertyBean.name" label="关联属性名称" labelKey="" width="200" 
+			editable="false" cellEditor="" showValue="true" dataType="java.lang.String" 
+			align="3" listDataSource="" 
+			canSort="false" canReOrder="true" canFilter="true"
+			canResize="true" icon=""
+			>
+					
+			<image value="*" file="object_property"/>
+								</column>
+		
+	</table>
+
+	<table id="businessObjectTable" desc="业务对象列表" extend="">
+				
+		<column property="type" label="类型" labelKey="data.common.type" width="30" 
+			editable="true" cellEditor="" showValue="false" dataType="java.lang.String" 
+			align="" listDataSource="" 
+			canSort="true" canReOrder="true" canFilter="true"
+			canResize="true" icon=""
+			>
+					
+			<image value="DAO" file="entity"/>
+					
+			<image value="DAO_QUERY_BEAN" file="entity"/>
+					
+			<image value="SERVICE" file="service"/>
+					
+			<image value="PERSISTENT" file="table"/>
+					
+			<image value="JAVA_CLASS" file="bean"/>
+					
+			<image value="ENUM" file="enum"/>
+								</column>
+				
+		<column property="name" label="名称" labelKey="data.common.name" width="300" 
+			editable="true" cellEditor="" showValue="true" dataType="java.lang.String" 
+			align="" listDataSource="" 
+			canSort="true" canReOrder="true" canFilter="true"
+			canResize="true" icon=""
+			>
+								</column>
+				
+		<column property="packageName" label="包名" labelKey="data.modelbase.packageName" width="200" 
+			editable="true" cellEditor="" showValue="true" dataType="java.lang.String" 
+			align="" listDataSource="" 
+			canSort="false" canReOrder="true" canFilter="true"
+			canResize="true" icon=""
+			>
+								</column>
+				
+		<column property="domainName" label="域名" labelKey="data.modelbase.domainName" width="100" 
+			editable="true" cellEditor="" showValue="true" dataType="java.lang.String" 
+			align="" listDataSource="" 
+			canSort="false" canReOrder="true" canFilter="true"
+			canResize="true" icon=""
+			>
+								</column>
+				
+		<column property="description" label="说明" labelKey="data.common.desc" width="300" 
+			editable="true" cellEditor="" showValue="true" dataType="java.lang.String" 
+			align="" listDataSource="" 
+			canSort="false" canReOrder="true" canFilter="true"
+			canResize="true" icon=""
+			>
+								</column>
+		
+	</table>
+
+	<table id="customDataTypeTable" desc="自定义数据类型列表" extend="">
+				
+		<column property="name" label="名称" labelKey="data.common.name" width="200" 
+			editable="true" cellEditor="" showValue="true" dataType="java.lang.String" 
+			align="" listDataSource="" 
+			canSort="true" canReOrder="true" canFilter="true"
+			canResize="true" icon=""
+			>
+					
+			<image value="*" file="custom_data"/>
+								</column>
+				
+		<column property="description" label="说明" labelKey="data.common.desc" width="300" 
+			editable="true" cellEditor="" showValue="true" dataType="java.lang.String" 
+			align="" listDataSource="" 
+			canSort="false" canReOrder="true" canFilter="true"
+			canResize="true" icon=""
+			>
+								</column>
+				
+		<column property="state" label="状态" labelKey="data.modelbase.uniqueProperty" width="100" 
+			editable="true" cellEditor="" showValue="false" dataType="java.lang.String" 
+			align="3" listDataSource="" 
+			canSort="false" canReOrder="true" canFilter="true"
+			canResize="true" icon=""
+			>
+					
+			<image value="ACTIVE" file="select_all"/>
+					
+			<image value="DEACTIVE" file="un_select_all"/>
+								</column>
+		
+	</table>
+
+	<table id="propertyMappedTable" desc="属性映射列表" extend="">
+				
+		<column property="objectProperty.name" label="名称" labelKey="" width="200" 
+			editable="false" cellEditor="" showValue="true" dataType="java.lang.String" 
+			align="" listDataSource="" 
+			canSort="false" canReOrder="true" canFilter="true"
+			canResize="true" icon=""
+			>
+					
+			<image value="*" file="object_property"/>
+								</column>
+				
+		<column property="mappedProperty.name" label="映射属性" labelKey="" width="200" 
+			editable="false" cellEditor="" showValue="true" dataType="java.lang.String" 
+			align="" listDataSource="" 
+			canSort="false" canReOrder="true" canFilter="true"
+			canResize="true" icon=""
+			>
+					
+			<image value="*" file="/object_property.gif"/>
+								</column>
+		
+	</table>
+
+	<table id="genPropertyTable" desc="属性生成列表" extend="">
+				
+		<column property="mappedPropertyName" label="字段名称" labelKey="" width="200" 
+			editable="false" cellEditor="" showValue="true" dataType="java.lang.String" 
+			align="" listDataSource="" 
+			canSort="false" canReOrder="true" canFilter="true"
+			canResize="true" icon=""
+			>
+					
+			<image value="*" file="column"/>
+								</column>
+				
+		<column property="propertyName" label="DAO属性名称" labelKey="" width="200" 
+			editable="true" cellEditor="" showValue="true" dataType="java.lang.String" 
+			align="3" listDataSource="" 
+			canSort="false" canReOrder="true" canFilter="true"
+			canResize="true" icon=""
+			>
+					
+			<image value="*" file="object_property"/>
+								</column>
+				
+		<column property="primaryKey" label="主属性" labelKey="" width="80" 
+			editable="true" cellEditor="" showValue="true" dataType="java.lang.String" 
+			align="" listDataSource="modelbase.businessObjectPropertyPrimaryKey" 
+			canSort="false" canReOrder="true" canFilter="true"
+			canResize="true" icon=""
+			>
+								</column>
+				
+		<column property="dataType" label="映射数据类型" labelKey="" width="200" 
+			editable="true" cellEditor="" showValue="true" dataType="java.lang.String" 
+			align="" listDataSource="PersistentDataTypeToJavaType" 
+			canSort="false" canReOrder="true" canFilter="true"
+			canResize="true" icon=""
+			>
+								</column>
+				
+		<column property="description" label="说明" labelKey="" width="300" 
+			editable="true" cellEditor="" showValue="true" dataType="java.lang.String" 
+			align="" listDataSource="" 
+			canSort="false" canReOrder="true" canFilter="true"
+			canResize="true" icon=""
+			>
+								</column>
+		
+	</table>
+
+	<table id="genDtoPropertyTable" desc="DTO属性生成列表" extend="">
+				
+		<column property="mappedPropertyName" label="DAO属性名称" labelKey="" width="200" 
+			editable="false" cellEditor="" showValue="true" dataType="java.lang.String" 
+			align="" listDataSource="" 
+			canSort="false" canReOrder="true" canFilter="true"
+			canResize="true" icon=""
+			>
+					
+			<image value="*" file="object_property"/>
+								</column>
+				
+		<column property="propertyName" label="DTO属性名称" labelKey="" width="200" 
+			editable="true" cellEditor="" showValue="true" dataType="java.lang.String" 
+			align="3" listDataSource="" 
+			canSort="false" canReOrder="true" canFilter="true"
+			canResize="true" icon=""
+			>
+					
+			<image value="*" file="field_public"/>
+								</column>
+				
+		<column property="readable" label="读属性" labelKey="" width="80" 
+			editable="true" cellEditor="" showValue="true" dataType="java.lang.String" 
+			align="" listDataSource="booleanList" 
+			canSort="false" canReOrder="true" canFilter="true"
+			canResize="true" icon=""
+			>
+								</column>
+				
+		<column property="writable" label="写属性" labelKey="" width="80" 
+			editable="true" cellEditor="" showValue="true" dataType="java.lang.String" 
+			align="" listDataSource="booleanList" 
+			canSort="false" canReOrder="true" canFilter="true"
+			canResize="true" icon=""
+			>
+								</column>
+				
+		<column property="dataType" label="映射数据类型" labelKey="" width="200" 
+			editable="true" cellEditor="" showValue="true" dataType="java.lang.String" 
+			align="" listDataSource="modelbase.businessObjectPropertyDataType" 
+			canSort="false" canReOrder="true" canFilter="true"
+			canResize="true" icon=""
+			>
+								</column>
+				
+		<column property="description" label="说明" labelKey="" width="300" 
+			editable="true" cellEditor="" showValue="true" dataType="java.lang.String" 
+			align="" listDataSource="" 
+			canSort="false" canReOrder="true" canFilter="true"
+			canResize="true" icon=""
+			>
+								</column>
+		
+	</table>
+
+	<table id="importObjectPropertyTable" desc="导入对象属性列表" extend="">
+				
+		<column property="name" label="名称" labelKey="" width="100" 
+			editable="true" cellEditor="" showValue="true" dataType="java.lang.String" 
+			align="" listDataSource="" 
+			canSort="false" canReOrder="true" canFilter="true"
+			canResize="true" icon=""
+			>
+					
+			<image value="*" file="object_property"/>
+								</column>
+				
+		<column property="isPrimaryProperty" label="主属性" labelKey="" width="100" 
+			editable="true" cellEditor="" showValue="true" dataType="java.lang.String" 
+			align="" listDataSource="" 
+			canSort="false" canReOrder="true" canFilter="true"
+			canResize="true" icon=""
+			>
+								
+			<value label="是" data="true"/>
+					
+			<value label="否" data="false"/>
+					</column>
+				
+		<column property="type" label="访问设置" labelKey="" width="100" 
+			editable="true" cellEditor="" showValue="true" dataType="java.lang.String" 
+			align="" listDataSource="" 
+			canSort="false" canReOrder="true" canFilter="true"
+			canResize="true" icon=""
+			>
+								
+			<value label="get/set" data="GET_SET_TYPE"/>
+					
+			<value label="get" data="GET_TYPE"/>
+					
+			<value label="set" data="SET_TYPE"/>
+					</column>
+				
+		<column property="dataType" label="数据类型" labelKey="" width="300" 
+			editable="true" cellEditor="" showValue="true" dataType="java.lang.String" 
+			align="" listDataSource="" 
+			canSort="false" canReOrder="true" canFilter="true"
+			canResize="true" icon=""
+			>
+								</column>
+				
+		<column property="description" label="说明" labelKey="" width="300" 
+			editable="true" cellEditor="" showValue="true" dataType="java.lang.String" 
+			align="" listDataSource="" 
+			canSort="false" canReOrder="true" canFilter="true"
+			canResize="true" icon=""
+			>
+								</column>
+		
+	</table>
+
+	<table id="objectPackageTable" desc="对象包列表" extend="">
+				
+		<column property="type" label="" labelKey="" width="30" 
+			editable="false" cellEditor="" showValue="false" dataType="java.lang.String" 
+			align="" listDataSource="" 
+			canSort="false" canReOrder="true" canFilter="true"
+			canResize="true" icon=""
+			>
+					
+			<image value="PERSISTENT_PACKAGE" file="/persistent_package.gif"/>
+					
+			<image value="BUSINESS_PACKAGE" file="/business_package.gif"/>
+								</column>
+				
+		<column property="name" label="包名" labelKey="" width="300" 
+			editable="false" cellEditor="" showValue="true" dataType="java.lang.String" 
+			align="" listDataSource="" 
+			canSort="false" canReOrder="true" canFilter="true"
+			canResize="true" icon=""
+			>
+								</column>
+		
+	</table>
+
+	<table id="propertyObjectMappedTable" desc="属性对象映射表" extend="">
+				
+		<column property="propertyValue" label="属性值" labelKey="" width="100" 
+			editable="true" cellEditor="" showValue="true" dataType="java.lang.String" 
+			align="" listDataSource="" 
+			canSort="false" canReOrder="true" canFilter="true"
+			canResize="true" icon=""
+			>
+								</column>
+				
+		<column property="mappedBusinessObject.fullName" label="对象" labelKey="" width="200" 
+			editable="false" cellEditor="" showValue="true" dataType="java.lang.String" 
+			align="" listDataSource="" 
+			canSort="false" canReOrder="true" canFilter="true"
+			canResize="true" icon=""
+			>
+					
+			<image value="*" file="/business_object.gif"/>
+								</column>
+				
+		<column property="description" label="说明" labelKey="" width="300" 
+			editable="true" cellEditor="" showValue="true" dataType="java.lang.String" 
+			align="" listDataSource="" 
+			canSort="false" canReOrder="true" canFilter="true"
+			canResize="true" icon=""
+			>
+								</column>
+		
+	</table>
+
+	<table id="PersistenPropertyValueTable" desc="持久对象属性值列表" extend="">
+				
+		<column property="value" label="" labelKey="" width="30" 
+			editable="false" cellEditor="" showValue="false" dataType="java.lang.String" 
+			align="" listDataSource="" 
+			canSort="false" canReOrder="true" canFilter="true"
+			canResize="true" icon=""
+			>
+					
+			<image value="*" file="/brkp_obj.gif"/>
+								</column>
+				
+		<column property="value" label="值" labelKey="" width="100" 
+			editable="true" cellEditor="" showValue="true" dataType="java.lang.String" 
+			align="" listDataSource="" 
+			canSort="false" canReOrder="true" canFilter="true"
+			canResize="true" icon=""
+			>
+								</column>
+				
+		<column property="description" label="说明" labelKey="" width="100" 
+			editable="true" cellEditor="" showValue="true" dataType="java.lang.String" 
+			align="" listDataSource="" 
+			canSort="false" canReOrder="true" canFilter="true"
+			canResize="true" icon=""
+			>
+								</column>
+		
+	</table>
+
+	<table id="enumValueListTable" desc="枚举对象值列表" extend="">
+				
+		<column property="value" label="" labelKey="" width="30" 
+			editable="false" cellEditor="" showValue="false" dataType="java.lang.String" 
+			align="" listDataSource="" 
+			canSort="false" canReOrder="true" canFilter="true"
+			canResize="true" icon=""
+			>
+					
+			<image value="*" file="/brkp_obj.gif"/>
+								</column>
+				
+		<column property="name" label="名称" labelKey="" width="100" 
+			editable="true" cellEditor="" showValue="true" dataType="java.lang.String" 
+			align="" listDataSource="" 
+			canSort="false" canReOrder="true" canFilter="true"
+			canResize="true" icon=""
+			>
+								</column>
+				
+		<column property="value" label="值" labelKey="" width="100" 
+			editable="false" cellEditor="" showValue="true" dataType="java.lang.String" 
+			align="" listDataSource="" 
+			canSort="false" canReOrder="true" canFilter="true"
+			canResize="true" icon=""
+			>
+								</column>
+				
+		<column property="description" label="说明" labelKey="" width="200" 
+			editable="true" cellEditor="" showValue="true" dataType="java.lang.String" 
+			align="" listDataSource="" 
+			canSort="false" canReOrder="true" canFilter="true"
+			canResize="true" icon=""
+			>
+								</column>
+		
+	</table>
+
+	<table id="objectActionTable" desc="对象动作列表" extend="">
+				
+		<column property="property.name" label="属性名称" labelKey="" width="100" 
+			editable="false" cellEditor="" showValue="true" dataType="java.lang.String" 
+			align="" listDataSource="" 
+			canSort="false" canReOrder="true" canFilter="true"
+			canResize="true" icon=""
+			>
+								</column>
+				
+		<column property="propertyValue" label="属性值" labelKey="" width="100" 
+			editable="true" cellEditor="" showValue="true" dataType="java.lang.String" 
+			align="" listDataSource="" 
+			canSort="false" canReOrder="true" canFilter="true"
+			canResize="true" icon=""
+			>
+								</column>
+		
+	</table>
+
+	<table id="functionInputTable" desc="方法输入参数列表" extend="">
+				
+		<column property="name" label="名称" labelKey="" width="100" 
+			editable="false" cellEditor="" showValue="true" dataType="java.lang.String" 
+			align="" listDataSource="" 
+			canSort="false" canReOrder="true" canFilter="true"
+			canResize="true" icon=""
+			>
+					
+			<image value="*" file="/in_obj.gif"/>
+								</column>
+				
+		<column property="dataType" label="数据类型" labelKey="" width="200" 
+			editable="false" cellEditor="" showValue="true" dataType="java.lang.String" 
+			align="" listDataSource="" 
+			canSort="false" canReOrder="true" canFilter="true"
+			canResize="true" icon=""
+			>
+								</column>
+				
+		<column property="array" label="数组" labelKey="" width="50" 
+			editable="false" cellEditor="" showValue="false" dataType="java.lang.Boolean" 
+			align="" listDataSource="" 
+			canSort="false" canReOrder="true" canFilter="true"
+			canResize="true" icon=""
+			>
+					
+			<image value="true" file="/complete_tsk.gif"/>
+					
+			<image value="false" file="/incomplete_tsk.gif"/>
+								</column>
+				
+		<column property="description" label="说明" labelKey="" width="300" 
+			editable="false" cellEditor="" showValue="true" dataType="java.lang.String" 
+			align="" listDataSource="" 
+			canSort="false" canReOrder="true" canFilter="true"
+			canResize="true" icon=""
+			>
+								</column>
+				
+		<column property="validateInfo" label="校验信息" labelKey="" width="200" 
+			editable="false" cellEditor="" showValue="true" dataType="java.lang.String" 
+			align="" listDataSource="" 
+			canSort="false" canReOrder="true" canFilter="true"
+			canResize="true" icon=""
+			>
+								</column>
+				
+		<column property="preProcess" label="预处理" labelKey="" width="100" 
+			editable="false" cellEditor="" showValue="true" dataType="java.lang.String" 
+			align="" listDataSource="MethodParameterFrom.PreProcess" 
+			canSort="false" canReOrder="true" canFilter="true"
+			canResize="true" icon=""
+			>
+								</column>
+		
+	</table>
+
+	<table id="serviceObjectExtendsTable" desc="服务对象依赖列表" extend="">
+				
+		<column property="type" label="" labelKey="" width="50" 
+			editable="false" cellEditor="" showValue="false" dataType="java.lang.String" 
+			align="" listDataSource="" 
+			canSort="false" canReOrder="true" canFilter="true"
+			canResize="true" icon=""
+			>
+					
+			<image value="SERVICE" file="/service_object.gif"/>
+					
+			<image value="INTERFACE" file="/business_object.gif"/>
+					
+			<image value="JAVA_CLASS" file="/class_obj.gif"/>
+								</column>
+				
+		<column property="fullName" label="对象名称" labelKey="" width="300" 
+			editable="false" cellEditor="" showValue="true" dataType="java.lang.String" 
+			align="" listDataSource="" 
+			canSort="false" canReOrder="true" canFilter="true"
+			canResize="true" icon=""
+			>
+								</column>
+				
+		<column property="description" label="说明" labelKey="" width="100" 
+			editable="false" cellEditor="" showValue="true" dataType="java.lang.String" 
+			align="" listDataSource="" 
+			canSort="false" canReOrder="true" canFilter="true"
+			canResize="true" icon=""
+			>
+								</column>
+		
+	</table>
 
 </tableList>

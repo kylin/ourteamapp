@@ -202,9 +202,9 @@
 	</actiongroup>
 
 	<actiongroup id="relationActionGroup">
-		<action ref="refreshRelation"></action>
-		<action ref="addRelation"></action>
-		<action ref="removeRelation"></action>
+		<action ref="refreshRelation" icon="refresh"></action>
+		<action ref="addRelation" icon="add"></action>
+		<action ref="removeRelation" icon="delete"></action>
 	</actiongroup>
 
 	<action type="push" handler="refresh" desc="refresh"

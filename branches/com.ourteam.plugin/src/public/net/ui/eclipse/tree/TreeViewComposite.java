@@ -1251,7 +1251,7 @@ public class TreeViewComposite extends AbstractContentViewerComposite implements
 		}
 	}
 
-	public List getCheckedUserObjects() {
+	public List<Object> getCheckedUserObjects() {
 
 		List<Object> objects = new ArrayList<Object>();
 

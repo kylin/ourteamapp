@@ -19,7 +19,7 @@ import com.ourteam.workspace.service.WorkspaceServiceFactory;
 public class AddWorkspaceResourceBusinessPackageWizardProvider extends
 		AbstractReflectWizardProvider {
 
-	private ModelPackageSearchPageHelper modelPackageSearchCompositeHelper;
+	protected ModelPackageSearchPageHelper modelPackageSearchCompositeHelper;
 
 	private long workspaceResourceId;
 
