@@ -59,24 +59,41 @@
    <extension
          point="org.eclipse.ui.popupMenus">
       <objectContribution
-            id="com.ourteam.plugin.CodegenerateContribution"
-            objectClass="org.eclipse.core.runtime.IPath">
+            id="com.ourteam.plugin.CodeGenerateContribution"
+            objectClass="org.eclipse.jdt.core.IPackageFragmentRoot">
          <menu
-               id="com.ourteam.plugin.CodeGenerateMenu"
+               id="CodeGenerateMenu"
                label="代码生成"
                path="additions">
-            <separator
-                  name="group1">
-            </separator>
+            <groupMarker
+                  name="CodeGenerateGroupMarker">
+            </groupMarker>
          </menu>
          <action
                class="com.ourteam.plugin.popup.actions.CodeGenerateAction"
-               enablesFor="multiple"
+               enablesFor="+"
                id="com.ourteam.plugin.popup.actions.CodeGenerateAction"
                label="生成代码"
-               menubarPath="com.ourteam.plugin.menu1/group1">
+               menubarPath="CodeGenerateMenu/CodeGenerateGroupMarker">
+            <selection
+                  class="org.eclipse.jdt.core.IPackageFragmentRoot">
+            </selection>
          </action>
       </objectContribution>
+   </extension>
+   <extension
+         point="org.eclipse.ui.preferencePages">
+      <page
+            class="com.ourteam.plugin.preferences.DevelopAssistantPreferencePage"
+            id="com.ourteam.plugin.preferences.DevelopAssistantPreferencePage"
+            name="开发助手库配置">
+      </page>
+   </extension>
+   <extension
+         point="org.eclipse.core.runtime.preferences">
+      <initializer
+            class="com.ourteam.plugin.preferences.PreferenceInitializer">
+      </initializer>
    </extension>
 
 </plugin>

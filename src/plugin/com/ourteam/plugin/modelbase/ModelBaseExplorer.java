@@ -36,11 +36,14 @@ public class ModelBaseExplorer extends AbstractMultiViewPart {
 
 	private Map<SystemModule, AbstractViewPart> moduleViewPartCache = new HashMap<SystemModule, AbstractViewPart>();
 
-	/*
-	 * (non-Javadoc)
-	 * 
-	 * @see net.ui.eclipse.viewpart.AbstractMultiViewPart#getViewParts()
-	 */
+	
+	
+	
+	public ModelBaseExplorer() {
+		super();
+		ModelBaseContext.start();
+	}
+
 	@Override
 	protected AbstractViewPart[] getViewParts() {
 		try {
