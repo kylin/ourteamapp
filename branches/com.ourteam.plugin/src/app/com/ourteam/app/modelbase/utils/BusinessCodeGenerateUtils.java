@@ -333,7 +333,9 @@ public class BusinessCodeGenerateUtils {
 				.getBusinessTemplateCache().get(key);
 
 		if (businessObjectBean.getType().equals(
-				BusinessObjectTypeEnum.DAO.getName())) {
+				BusinessObjectTypeEnum.DAO.getName())
+				|| businessObjectBean.getType().equals(
+						BusinessPackageTypeEnum.BUSINESS_PACKAGE.getName())) {
 
 			String provider = context.getDaoGenerateConfig()
 					.get("providerType");
@@ -481,7 +483,7 @@ public class BusinessCodeGenerateUtils {
 
 			// CodeFormatUtils.format(businessFile);
 
-			logger.debug("Write File :" + businessFile.getName());
+			logger.debug("Write File :" + businessFile.getPath());
 		}
 
 	}

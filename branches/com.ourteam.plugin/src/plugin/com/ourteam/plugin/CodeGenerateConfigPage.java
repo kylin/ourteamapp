@@ -6,12 +6,15 @@ import java.util.List;
 
 import net.ui.UIConfigFactory;
 import net.ui.eclipse.editorpart.AbstractObjectRelationActionHandler;
+import net.ui.eclipse.utils.AbstractComboListProvider;
 import net.ui.eclipse.utils.IDialogProvider;
+import net.ui.eclipse.utils.SWTUtils;
 import net.ui.eclipse.widget.AbstractDataListTableComposite;
 import net.ui.eclipse.wizard.IWizardProvider;
 import net.ui.model.action.ActionBean;
 import net.ui.model.table.TableBean;
 
+import org.apache.commons.configuration.Configuration;
 import org.apache.commons.configuration.ConfigurationException;
 import org.eclipse.jdt.core.IClasspathEntry;
 import org.eclipse.jdt.core.JavaModelException;
@@ -27,6 +30,7 @@ import org.eclipse.swt.SWT;
 import org.eclipse.swt.graphics.Image;
 import org.eclipse.swt.layout.GridData;
 import org.eclipse.swt.layout.GridLayout;
+import org.eclipse.swt.widgets.Combo;
 import org.eclipse.swt.widgets.Composite;
 import org.eclipse.swt.widgets.Control;
 import org.eclipse.swt.widgets.Group;
@@ -36,11 +40,17 @@ import org.eclipse.swt.widgets.Text;
 
 import com.ourteam.app.IOurTeamServiceConst;
 import com.ourteam.app.workspace.editor.AddWorkspaceResourceBusinessPackageWizardProvider;
+import com.ourteam.modelbase.domain.BusinessObjectTypeEnum;
 import com.ourteam.modelbase.domain.BusinessPackageBean;
+import com.ourteam.modelbase.domain.BusinessTemplateProviderTypeBean;
+import com.ourteam.modelbase.service.BusinessTemplateServiceFactory;
+import com.ourteam.modelbase.service.IBusinessTemplateService;
 
 public class CodeGenerateConfigPage extends WorkbenchPropertyPage {
 
 	private Text dataSourceText;
+
+	private Combo daoProviderCombo;
 
 	private Text serviceBaseText;
 
@@ -48,12 +58,20 @@ public class CodeGenerateConfigPage extends WorkbenchPropertyPage {
 
 	private ListViewer sourceListView;
 
+	private Configuration generateConfiguration;
+
+	private static final IBusinessTemplateService BUSINESS_TEMPLATE_SERVICE = BusinessTemplateServiceFactory
+			.getBusinessTemplateService();
+
 	public CodeGenerateConfigPage() {
 
 	}
 
 	@Override
 	protected Control createContents(Composite parent) {
+
+		generateConfiguration = configuration.subset("generator");
+
 		Composite composite = new Composite(parent, SWT.NONE);
 
 		composite.setLayout(new GridLayout());
@@ -66,11 +84,19 @@ public class CodeGenerateConfigPage extends WorkbenchPropertyPage {
 
 		daoConfigGroup.setLayout(new GridLayout(2, false));
 
+		Label daoProviderLabel = new Label(daoConfigGroup, SWT.NONE);
+		daoProviderLabel.setText("DAO实现类型:");
+
+		daoProviderCombo = new Combo(daoConfigGroup, SWT.READ_ONLY);
+
+		daoProviderCombo.setLayoutData(new GridData(GridData.FILL_HORIZONTAL));
+
 		Label dataSourceLabel = new Label(daoConfigGroup, SWT.NONE);
 		dataSourceLabel.setText("数据源名称:");
 		dataSourceText = new Text(daoConfigGroup, SWT.BORDER);
-		if (this.configuration.containsKey("dataSource")) {
-			dataSourceText.setText(this.configuration.getString("dataSource"));
+		if (this.generateConfiguration.containsKey("DAO.dataSource")) {
+			dataSourceText.setText(this.generateConfiguration
+					.getString("DAO.dataSource"));
 		} else {
 			dataSourceText.setText("dataSource");
 		}
@@ -89,9 +115,9 @@ public class CodeGenerateConfigPage extends WorkbenchPropertyPage {
 		Label serviceBaseLabel = new Label(serviceConfigGroup, SWT.NONE);
 		serviceBaseLabel.setText("服务基类:");
 		serviceBaseText = new Text(serviceConfigGroup, SWT.BORDER);
-		if (this.configuration.containsKey("serviceBase")) {
-			serviceBaseText
-					.setText(this.configuration.getString("serviceBase"));
+		if (this.generateConfiguration.containsKey("Service.baseClass")) {
+			serviceBaseText.setText(this.generateConfiguration
+					.getString("Service.baseClass"));
 		} else {
 			serviceBaseText.setText("net.service.DefaultServiceImpl");
 		}
@@ -107,6 +133,35 @@ public class CodeGenerateConfigPage extends WorkbenchPropertyPage {
 		sourcePathGroup.setLayout(new GridLayout());
 
 		try {
+
+			long providerTypeId = this.generateConfiguration.getLong(
+					"DAO.providerType", 0);
+
+			SWTUtils.fillCommboBox(
+					daoProviderCombo,
+					new AbstractComboListProvider<BusinessTemplateProviderTypeBean>(
+							false) {
+
+						@Override
+						public BusinessTemplateProviderTypeBean[] getDataList()
+								throws Exception {
+							return BUSINESS_TEMPLATE_SERVICE
+									.getBusinessTemplateProviderTypes(BusinessObjectTypeEnum.DAO
+											.getName());
+						}
+
+						@Override
+						public String getDataLabel(
+								BusinessTemplateProviderTypeBean dataItem) {
+							return dataItem.getProviderName();
+						}
+					});
+
+			if (providerTypeId != 0) {
+				SWTUtils.setCommboBoxSelection(BUSINESS_TEMPLATE_SERVICE
+						.getBusinessTemplateProviderTypeById(providerTypeId),
+						daoProviderCombo);
+			}
 
 			sourceListView = new ListViewer(sourcePathGroup, SWT.SINGLE
 					| SWT.H_SCROLL | SWT.V_SCROLL | SWT.BORDER);
@@ -180,7 +235,7 @@ public class CodeGenerateConfigPage extends WorkbenchPropertyPage {
 						firstClasspathEntry));
 			}
 
-		} catch (JavaModelException e) {
+		} catch (Exception e) {
 			e.printStackTrace();
 			setErrorMessage(e.getLocalizedMessage());
 		}
@@ -193,7 +248,7 @@ public class CodeGenerateConfigPage extends WorkbenchPropertyPage {
 				.getElementAt(sourceListView.getList().getSelectionIndex());
 
 		try {
-			List packageIds = this.configuration.getList(classpathEntry
+			List packageIds = this.generateConfiguration.getList(classpathEntry
 					.getPath().toString());
 
 			if (packageIds == null) {
@@ -223,10 +278,14 @@ public class CodeGenerateConfigPage extends WorkbenchPropertyPage {
 	@Override
 	public boolean performOk() {
 		try {
-			this.configuration.setProperty("dataSource",
+			this.generateConfiguration.setProperty("DAO.dataSource",
 					this.dataSourceText.getText());
-			this.configuration.setProperty("serviceBase",
+			this.generateConfiguration.setProperty("Service.baseClass",
 					this.serviceBaseText.getText());
+			BusinessTemplateProviderTypeBean providerTypeBean = (BusinessTemplateProviderTypeBean) SWTUtils
+					.getCommboBoxSelectedData(daoProviderCombo);
+			this.generateConfiguration.setProperty("DAO.providerType",
+					String.valueOf(providerTypeBean.getId()));
 			this.configuration.save();
 			return true;
 		} catch (ConfigurationException e) {
@@ -276,7 +335,8 @@ public class CodeGenerateConfigPage extends WorkbenchPropertyPage {
 			final IClasspathEntry classpathEntry = (IClasspathEntry) sourceListView
 					.getElementAt(sourceListView.getList().getSelectionIndex());
 
-			configuration.clearProperty(classpathEntry.getPath().toString());
+			generateConfiguration.clearProperty(classpathEntry.getPath()
+					.toString());
 
 			List<BusinessPackageBean> packageBeans = businessPackageTableViewComposite
 					.getTableComposite().getDataList();
@@ -285,9 +345,9 @@ public class CodeGenerateConfigPage extends WorkbenchPropertyPage {
 					.iterator(); iterator.hasNext();) {
 				BusinessPackageBean businessPackageBean = iterator.next();
 
-				configuration.addProperty(classpathEntry.getPath().toString(),
-						String.valueOf(businessPackageBean
-								.getBusinessPackageId()));
+				generateConfiguration.addProperty(classpathEntry.getPath()
+						.toString(), String.valueOf(businessPackageBean
+						.getBusinessPackageId()));
 
 			}
 
@@ -308,8 +368,8 @@ public class CodeGenerateConfigPage extends WorkbenchPropertyPage {
 					List<BusinessPackageBean> businessPackageBeans = modelPackageSearchCompositeHelper
 							.getSelectedItems();
 
-					List ids = configuration.getList(classpathEntry.getPath()
-							.toString());
+					List ids = generateConfiguration.getList(classpathEntry
+							.getPath().toString());
 
 					if (ids == null) {
 						ids = new ArrayList();
@@ -327,7 +387,7 @@ public class CodeGenerateConfigPage extends WorkbenchPropertyPage {
 
 					}
 
-					configuration.setProperty(classpathEntry.getPath()
+					generateConfiguration.setProperty(classpathEntry.getPath()
 							.toString(), ids);
 
 				}

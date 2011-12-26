@@ -5,8 +5,6 @@ import org.apache.commons.logging.LogFactory;
 import org.eclipse.jface.resource.ImageDescriptor;
 import org.eclipse.ui.plugin.AbstractUIPlugin;
 import org.osgi.framework.BundleContext;
-import org.springframework.context.support.AbstractApplicationContext;
-import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 /**
  * The activator class controls the plug-in life cycle
@@ -21,14 +19,15 @@ public class Activator extends AbstractUIPlugin {
 	// The plug-in ID
 	public static final String PLUGIN_ID = "DeveloperAssistant"; //$NON-NLS-1$
 
-	private static final String[] applictionContexts = new String[] {
-			"applicationContext-plugin.xml", "applicationContext-api.xml" };
+//	private static final String[] applictionContexts = new String[] {
+//			"applicationContext-plugin.xml", "applicationContext-api.xml" };
 
 	// The shared instance
 	private static Activator plugin;
 
-	protected AbstractApplicationContext applictionContext;
-
+//	protected AbstractApplicationContext applictionContext;
+	
+	
 	/**
 	 * The constructor
 	 */
@@ -60,22 +59,23 @@ public class Activator extends AbstractUIPlugin {
 	@Override
 	public void start(BundleContext context) throws Exception {
 		super.start(context);
-		try {
-
-			applictionContext = new ClassPathXmlApplicationContext(
-					applictionContexts);
-
-			logger.info("Application Context Started");
-
-		} catch (Exception e) {
-			e.printStackTrace();
-			throw e;
-		}
+//		try {
+//
+//			applictionContext = new ClassPathXmlApplicationContext(
+//					applictionContexts);
+//
+//			logger.info("Application Context Started");
+//
+//		} catch (Exception e) {
+//			e.printStackTrace();
+//			throw e;
+//		}
 	}
 
 	@Override
 	public void stop(BundleContext context) throws Exception {
 		super.stop(context);
-		applictionContext.stop();
+//		applictionContext.stop();
 	}
+	
 }
