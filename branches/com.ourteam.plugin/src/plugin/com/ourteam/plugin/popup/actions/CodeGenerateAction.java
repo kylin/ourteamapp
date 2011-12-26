@@ -17,35 +17,22 @@ import org.eclipse.core.runtime.Status;
 import org.eclipse.core.runtime.jobs.IJobChangeEvent;
 import org.eclipse.core.runtime.jobs.Job;
 import org.eclipse.core.runtime.jobs.JobChangeAdapter;
-import org.eclipse.jdt.core.IJavaProject;
-import org.eclipse.jdt.core.IPackageFragmentRoot;
 import org.eclipse.jface.action.IAction;
 import org.eclipse.jface.dialogs.MessageDialog;
-import org.eclipse.jface.viewers.ISelection;
-import org.eclipse.jface.viewers.StructuredSelection;
-import org.eclipse.swt.widgets.Shell;
 import org.eclipse.ui.IActionDelegate;
-import org.eclipse.ui.IObjectActionDelegate;
-import org.eclipse.ui.IWorkbenchPart;
 
 import com.ourteam.app.modelbase.utils.BusinessCodeGenerateContext;
 import com.ourteam.app.modelbase.utils.BusinessCodeGenerateUtils;
 import com.ourteam.app.modelbase.utils.IBusinessCodeGenerateListener;
 import com.ourteam.plugin.modelbase.ModelBaseContext;
 
-public class CodeGenerateAction implements IObjectActionDelegate {
+public class CodeGenerateAction extends AbstractJavaProjectAction {
 
 	/**
 	 * Logger for this class
 	 */
 	private static final Log logger = LogFactory
 			.getLog(CodeGenerateAction.class);
-
-	private Shell shell;
-
-	private IPackageFragmentRoot packageFragmentRoot;
-
-	private IJavaProject javaProject;
 
 	private PropertiesConfiguration configuration;
 
@@ -57,19 +44,11 @@ public class CodeGenerateAction implements IObjectActionDelegate {
 	}
 
 	/**
-	 * @see IObjectActionDelegate#setActivePart(IAction, IWorkbenchPart)
-	 */
-	public void setActivePart(IAction action, IWorkbenchPart targetPart) {
-		shell = targetPart.getSite().getShell();
-	}
-
-	/**
 	 * @see IActionDelegate#run(IAction)
 	 */
 	public void run(final IAction action) {
-		
-		ModelBaseContext.start();
 
+		
 		File projectDir = this.javaProject.getProject().getLocation().toFile();
 
 		File configFile = new File(projectDir, ".ourteam");
@@ -191,7 +170,8 @@ public class CodeGenerateAction implements IObjectActionDelegate {
 				shell.getDisplay().asyncExec(new Runnable() {
 					public void run() {
 						try {
-							javaProject.getProject().refreshLocal(IResource.DEPTH_INFINITE, null);
+							javaProject.getProject().refreshLocal(
+									IResource.DEPTH_INFINITE, null);
 						} catch (CoreException e) {
 							e.printStackTrace();
 						}
@@ -202,25 +182,4 @@ public class CodeGenerateAction implements IObjectActionDelegate {
 
 		job.schedule();
 	}
-
-	/**
-	 * @see IActionDelegate#selectionChanged(IAction, ISelection)
-	 */
-	public void selectionChanged(IAction action, ISelection selection) {
-
-		StructuredSelection structuredSelection = (StructuredSelection) selection;
-
-		if (structuredSelection.isEmpty()) {
-			return;
-		}
-
-		if (structuredSelection.getFirstElement() instanceof IPackageFragmentRoot) {
-			this.packageFragmentRoot = (IPackageFragmentRoot) structuredSelection
-					.getFirstElement();
-
-			this.javaProject = this.packageFragmentRoot.getJavaProject();
-		}
-
-	}
-
 }

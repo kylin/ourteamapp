@@ -95,5 +95,27 @@
             class="com.ourteam.plugin.preferences.PreferenceInitializer">
       </initializer>
    </extension>
+   <extension
+         point="org.eclipse.ui.popupMenus">
+      <objectContribution
+            adaptable="true"
+            id="com.ourteam.plugin.UIConfigContribution"
+            objectClass="org.eclipse.jdt.core.IJavaProject">
+         <menu
+               id="UIConfigMenu"
+               label="界面元素配置工具"
+               path="additions">
+            <groupMarker
+                  name="UIConfigGroupMarker">
+            </groupMarker>
+         </menu>
+         <action
+               class="com.ourteam.plugin.popup.actions.AddUIActionAction"
+               id="com.ourteam.plugin.popup.actions.AddUIActionAction"
+               label="新建界面动作配置"
+               menubarPath="UIConfigMenu/UIConfigGroupMarker">
+         </action>
+      </objectContribution>
+   </extension>
 
 </plugin>
