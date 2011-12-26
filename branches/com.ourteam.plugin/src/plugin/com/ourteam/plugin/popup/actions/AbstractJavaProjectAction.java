@@ -32,6 +32,8 @@ abstract public class AbstractJavaProjectAction implements
 	protected IPackageFragment packageFragment;
 
 	protected IJavaProject javaProject;
+	
+	protected IWorkbenchPart targetPart;
 
 	/**
 	 * Constructor for Action1.
@@ -46,6 +48,7 @@ abstract public class AbstractJavaProjectAction implements
 	 */
 	public void setActivePart(IAction action, IWorkbenchPart targetPart) {
 		shell = targetPart.getSite().getShell();
+		this.targetPart = targetPart;
 	}
 
 	/**
