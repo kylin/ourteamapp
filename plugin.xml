@@ -117,5 +117,18 @@
          </action>
       </objectContribution>
    </extension>
+   <extension
+         point="org.eclipse.ui.popupMenus">
+      <objectContribution
+            adaptable="false"
+            id="EditUIConfigMenu"
+            objectClass="org.eclipse.core.resources.IFile">
+         <action
+               class="com.ourteam.plugin.popup.actions.EditUIConfigAction"
+               id="com.ourteam.plugin.popup.actions.EditUIConfigAction"
+               label="编辑界面元素配置">
+         </action>
+      </objectContribution>
+   </extension>
 
 </plugin>
