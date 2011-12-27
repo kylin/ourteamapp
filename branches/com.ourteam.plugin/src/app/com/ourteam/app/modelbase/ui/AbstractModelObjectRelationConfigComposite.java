@@ -14,11 +14,12 @@ import net.ui.model.action.ActionBean;
 import net.ui.model.action.ActionGroupBean;
 import net.ui.model.table.TableBean;
 
+import org.apache.commons.lang.StringUtils;
 import org.eclipse.jface.viewers.ISelectionChangedListener;
 import org.eclipse.jface.viewers.SelectionChangedEvent;
 import org.eclipse.swt.SWT;
+import org.eclipse.swt.events.SelectionAdapter;
 import org.eclipse.swt.events.SelectionEvent;
-import org.eclipse.swt.events.SelectionListener;
 import org.eclipse.swt.layout.FillLayout;
 import org.eclipse.swt.layout.GridData;
 import org.eclipse.swt.layout.GridLayout;
@@ -97,19 +98,15 @@ abstract public class AbstractModelObjectRelationConfigComposite extends
 
 		Button addRelationBut = new Button(propertiyListGroup, SWT.PUSH);
 
-		addRelationBut.setText(" = ");
+		addRelationBut.setText(" 映射 ");
 
-		addRelationBut.addSelectionListener(new SelectionListener() {
+		addRelationBut.addSelectionListener(new SelectionAdapter() {
 
 			@Override
 			public void widgetSelected(SelectionEvent e) {
 				addPropertyRelation();
 			}
 
-			@Override
-			public void widgetDefaultSelected(SelectionEvent e) {
-				addPropertyRelation();
-			}
 		});
 
 		relatedPropertyCombo = new Combo(propertiyListGroup, SWT.READ_ONLY);
@@ -145,7 +142,8 @@ abstract public class AbstractModelObjectRelationConfigComposite extends
 				"propertyRelatedTable");
 
 		relationTableComposite = new TableViewComposite<ObjectPropertyRelationDataModel>(
-				relationListGroup, tableBean, SWT.MULTI | SWT.BORDER);
+				relationListGroup, tableBean, SWT.MULTI | SWT.BORDER
+						| SWT.FULL_SELECTION);
 
 		relationTableComposite.setLayoutData(new GridData(GridData.FILL_BOTH));
 
@@ -162,8 +160,9 @@ abstract public class AbstractModelObjectRelationConfigComposite extends
 					@Override
 					public boolean isActionEnable(ActionBean aAction) {
 						boolean flag = true;
-						if (relationTableComposite.getSelectedDataList()
-								.isEmpty()) {
+						if ("removeRelation".equals(aAction.getId())
+								&& relationTableComposite.getSelectedDataList()
+										.isEmpty()) {
 							return false;
 						} else {
 							return true && flag;
@@ -171,12 +170,16 @@ abstract public class AbstractModelObjectRelationConfigComposite extends
 					}
 
 					@Override
-					public void doAction(ActionEvent actionEvent) throws Exception {
-						removePropertyRelation();
+					public void doAction(ActionEvent actionEvent)
+							throws Exception {
+						if ("removeRelation".equals(actionEvent.getActionBean()
+								.getId())) {
+							removePropertyRelation();
+						}
 					}
 
 				}, SWT.FLAT | SWT.HORIZONTAL);
-		
+
 		toolBarComposite.update();
 
 	}
@@ -213,11 +216,13 @@ abstract public class AbstractModelObjectRelationConfigComposite extends
 			if (this.propertyCombo.getItemCount() > 0) {
 				this.propertyCombo.select(0);
 			}
+			relatedPropertyCombo.setText(StringUtils
+					.upperCase(this.propertyCombo.getText()));
 		}
 
 	}
 
-	protected void removePropertyRelation() throws Exception{
+	protected void removePropertyRelation() throws Exception {
 		if (isCanMultiEstablishRelation() == false) {
 
 			List<ObjectPropertyRelationDataModel> selectedList = this.relationTableComposite

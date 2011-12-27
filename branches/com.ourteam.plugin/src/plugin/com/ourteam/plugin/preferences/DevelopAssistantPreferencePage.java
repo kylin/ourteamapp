@@ -86,7 +86,6 @@ public class DevelopAssistantPreferencePage extends FieldEditorPreferencePage
 	@Override
 	public boolean performOk() {
 		ModelBaseContext.stop();
-		ModelBaseContext.start();
 		return super.performOk();
 	}
 

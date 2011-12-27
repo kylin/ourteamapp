@@ -100,9 +100,9 @@ public class TableViewComposite<T> extends AbstractContentViewerComposite
 	private List<ISortListener> sortListeners = new ArrayList<ISortListener>();
 
 	private List<ITableCellListener<T>> tableCellListeners = new ArrayList<ITableCellListener<T>>();
-	
+
 	private ToolBarComposite headToolBarComposite;
-	
+
 	private ToolBarComposite footToolBarComposite;
 
 	private boolean editable = false;
@@ -792,7 +792,17 @@ public class TableViewComposite<T> extends AbstractContentViewerComposite
 
 	public void clearAllSelection() {
 
-		this.table.deselectAll();
+		if ((SWT.CHECK & this.table.getStyle()) > 0) {
+
+			TableItem[] rowItems = this.table.getItems();
+
+			for (int i = 0; i < rowItems.length; i++) {
+				TableItem item = rowItems[i];
+				item.setChecked(false);
+			}
+		} else {
+			this.table.deselectAll();
+		}
 
 	}
 
@@ -944,8 +954,8 @@ public class TableViewComposite<T> extends AbstractContentViewerComposite
 
 				if (StringUtils.contains(imageFile, "${")
 						&& StringUtils.contains(imageFile, "}")) {
-					String property = StringUtils.substringBetween(imageFile, "${",
-							"}");
+					String property = StringUtils.substringBetween(imageFile,
+							"${", "}");
 
 					String tmpValue = String.valueOf(PropertyUtils.getProperty(
 							element, property));

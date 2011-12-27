@@ -40,7 +40,7 @@ abstract public class AbstractJavaProjectAction implements
 	 */
 	public AbstractJavaProjectAction() {
 		super();
-		ModelBaseContext.start();
+		
 	}
 
 	/**
@@ -49,6 +49,7 @@ abstract public class AbstractJavaProjectAction implements
 	public void setActivePart(IAction action, IWorkbenchPart targetPart) {
 		shell = targetPart.getSite().getShell();
 		this.targetPart = targetPart;
+		ModelBaseContext.start(shell);
 	}
 
 	/**

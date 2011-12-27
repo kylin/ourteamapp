@@ -442,7 +442,7 @@
 				
 		<column property="dataType" label="映射数据类型" labelKey="" width="200" 
 			editable="true" cellEditor="" showValue="true" dataType="java.lang.String" 
-			align="" listDataSource="PersistentDataTypeToJavaType" 
+			align="" listDataSource="modelbase.businessObjectPropertyDataType" 
 			canSort="false" canReOrder="true" canFilter="true"
 			canResize="true" icon=""
 			>

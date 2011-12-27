@@ -20,6 +20,8 @@ import net.ui.eclipse.viewpart.ViewPartFactory;
 import org.apache.commons.lang.ClassUtils;
 import org.apache.commons.lang.StringUtils;
 import org.apache.commons.lang.reflect.ConstructorUtils;
+import org.eclipse.ui.IViewSite;
+import org.eclipse.ui.PartInitException;
 
 import com.ourteam.app.IOurTeamServiceConst;
 import com.ourteam.system.domain.ApplicationDomain;
@@ -39,9 +41,10 @@ public class ModelBaseExplorer extends AbstractMultiViewPart {
 	
 	
 	
-	public ModelBaseExplorer() {
-		super();
-		ModelBaseContext.start();
+	@Override
+	public void init(IViewSite site) throws PartInitException {
+		ModelBaseContext.start(site.getShell());
+		super.init(site);
 	}
 
 	@Override

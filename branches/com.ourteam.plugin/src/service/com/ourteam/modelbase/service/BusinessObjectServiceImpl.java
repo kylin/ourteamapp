@@ -670,10 +670,8 @@ public class BusinessObjectServiceImpl extends AbstractBusinessObjectService {
 
 		for (int i = 0; i < relations.length; i++) {
 			relations[i] = objectRelations[i].convertToObjectRelation();
-
+			this.objectRelationDao.insertObjectRelation(relations[i]);
 		}
-
-		this.objectRelationDao.batchInsertObjectRelation(relations);
 
 		List objectRelationAttrs = new ArrayList();
 
@@ -887,6 +885,7 @@ public class BusinessObjectServiceImpl extends AbstractBusinessObjectService {
 		if (relation.getObjectRelationId() != 0) {
 			removeBusinessObjectMappedPersistentObject(objectMapping
 					.getObjectId());
+			relation.setObjectRelationId(0);
 		}
 
 		relation.setRelateType(ObjectRelationTypeEnum.MAPPED.getName());
@@ -1254,8 +1253,10 @@ public class BusinessObjectServiceImpl extends AbstractBusinessObjectService {
 									.toArray(new ObjectRelation[referenceObjects
 											.size()]), queryBean);
 		}
-
-		this.objectPropertyDao.batchInsertObjectProperty(objectProperties);
+		
+		for (int i = 0; i < objectProperties.length; i++) {
+			this.objectPropertyDao.insertObjectProperty(objectProperties[i]);
+		}
 
 	}
 
