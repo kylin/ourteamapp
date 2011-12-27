@@ -4,9 +4,12 @@ import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 
+import net.ui.UIConfigFactory;
 import net.ui.eclipse.wizard.AbstractSerachWizardPageControlHelper;
 import net.ui.eclipse.wizard.AbstractWizardProvider;
 import net.ui.eclipse.wizard.IReflectWizardPageControlHelper;
+import net.ui.model.constlist.ListData;
+import net.ui.model.constlist.ListDataContainer;
 
 import org.apache.commons.lang.ArrayUtils;
 import org.eclipse.swt.widgets.Control;
@@ -63,15 +66,20 @@ abstract public class AbstractGenBusinessObjectWizardProvider extends
 					.getBusinessObjectProperties(
 							this.businessObject.getBusinessObjectId());
 
+			ListDataContainer persistentDataTypeToJavaType = UIConfigFactory
+					.getInstance().getListDataConfig(
+							"PersistentDataTypeToJavaType");
+
 			propertyMappingDataModels = new BusinessPropertyMappingDataModel[persistentObjectPropertyBeans.length];
 
 			for (int i = 0; i < persistentObjectPropertyBeans.length; i++) {
 				ObjectPropertyBean objectPropertyBean = persistentObjectPropertyBeans[i];
 
 				propertyMappingDataModels[i] = new BusinessPropertyMappingDataModel();
-
+				
 				propertyMappingDataModels[i]
-						.setMappedPropertyName(objectPropertyBean.getName());
+						.setMappedPropertyName(objectPropertyBean.getName()
+								+ ":" + objectPropertyBean.getDataType());
 
 				propertyMappingDataModels[i]
 						.setPropertyName(convertPropertyName(objectPropertyBean
@@ -83,8 +91,25 @@ abstract public class AbstractGenBusinessObjectWizardProvider extends
 				propertyMappingDataModels[i]
 						.setMappedProperty(objectPropertyBean);
 
-				propertyMappingDataModels[i].setDataType(objectPropertyBean
-						.getDataType());
+				if (this.businessObject.getType().equals(
+						BusinessObjectTypeEnum.PERSISTENT.getName())
+						&& getBusinessObjectTypeEnum().equals(
+								BusinessObjectTypeEnum.DAO)) {
+					for (Iterator<ListData> iterator = persistentDataTypeToJavaType
+							.iterator(); iterator.hasNext();) {
+						ListData listData = iterator.next();
+						if (listData.getData().equals(
+								objectPropertyBean.getDataType())) {
+							propertyMappingDataModels[i].setDataType(listData
+									.getLabel());
+							break;
+						}
+
+					}
+				} else {
+					propertyMappingDataModels[i].setDataType(objectPropertyBean
+							.getDataType());
+				}
 
 				propertyMappingDataModels[i].setPrimaryKey(objectPropertyBean
 						.getIsPrimaryProperty());
@@ -117,8 +142,6 @@ abstract public class AbstractGenBusinessObjectWizardProvider extends
 		mappingBean.setRelatedObjectId(this.businessObject
 				.getBusinessObjectId());
 
-		mappingBean.setRelateType(ObjectRelationTypeEnum.COMPOUNDED.getName());
-
 		List<ObjectPropertyBean> propertyList = new ArrayList<ObjectPropertyBean>();
 
 		List<ObjectRelationAttrBean> propertyRelatedList = new ArrayList<ObjectRelationAttrBean>();
@@ -130,9 +153,14 @@ abstract public class AbstractGenBusinessObjectWizardProvider extends
 
 		if (getBusinessObjectTypeEnum().equals(BusinessObjectTypeEnum.DAO)) {
 			propertyTypeEnum = ObjectPropertyTypeEnum.BUSINESS_PROPERTY;
+			mappingBean.setRelateType(ObjectRelationTypeEnum.MAPPED.getName());
+
 		} else if (getBusinessObjectTypeEnum().equals(
 				BusinessObjectTypeEnum.JAVA_CLASS)) {
 			propertyTypeEnum = ObjectPropertyTypeEnum.BEAN_PROPERTY;
+			mappingBean.setRelateType(ObjectRelationTypeEnum.COMPOUNDED
+					.getName());
+
 		}
 
 		for (Iterator<BusinessPropertyMappingDataModel> iterator = slectedPropertyMappings
@@ -181,7 +209,7 @@ abstract public class AbstractGenBusinessObjectWizardProvider extends
 					.next();
 
 			ObjectRelationAttrBean relationAttrBean = new ObjectRelationAttrBean();
-
+			
 			relationAttrBean.setPropertyId(daoPropertyMappingDataModel
 					.getProperty().getObjectPropertyId());
 
@@ -271,7 +299,7 @@ abstract public class AbstractGenBusinessObjectWizardProvider extends
 				propertyMappingConfigComposite.getTableComposite().setDataList(
 						propertyMappingDataModels);
 
-				propertyMappingConfigComposite.getTableComposite().selectAll();
+				// propertyMappingConfigComposite.getTableComposite().selectAll();
 
 			}
 		}

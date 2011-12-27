@@ -2,8 +2,8 @@
 <actions>
 
 	<action type="push" handler="addBusinessDomain" desc="addBusinessDomain"
-		icon="packfolder_add" id="addBusinessDomain"
-		confirmInfoKey="" label="添加业务域" labelKey="action.edit.label">
+		icon="packfolder_add" id="addBusinessDomain" confirmInfoKey="" label="添加业务域"
+		labelKey="action.edit.label">
 	</action>
 
 	<actiongroup id="modelBaseViewActionGroup">
@@ -12,18 +12,18 @@
 	</actiongroup>
 
 	<action type="radio" handler="editBusinessDomainGroup" desc="Edit Business Domain Group"
-		icon="model_group" id="editBusinessDomainGroup"
-		confirmInfoKey="" label="编辑业务域分组..." labelKey="action.edit.label">
+		icon="model_group" id="editBusinessDomainGroup" confirmInfoKey=""
+		label="编辑业务域分组..." labelKey="action.edit.label">
 	</action>
 
 	<action type="radio" handler="showAllBusinessDomainGroup" desc="Show All Business Domain Group"
-		icon="model_group" id="showAllBusinessDomainGroup"
-		confirmInfoKey="" label="所有业务域" labelKey="action.edit.label">
+		icon="model_group" id="showAllBusinessDomainGroup" confirmInfoKey=""
+		label="所有业务域" labelKey="action.edit.label">
 	</action>
 
 	<action type="radio" handler="showBusinessDomainGroup" desc="Show Business Domain Group"
-		icon="model_group" id="showBusinessDomainGroup"
-		confirmInfoKey="" label="${groupName}" labelKey="">
+		icon="model_group" id="showBusinessDomainGroup" confirmInfoKey=""
+		label="${groupName}" labelKey="">
 	</action>
 
 	<actiongroup id="modelBaseViewMenuActionGroup">
@@ -31,14 +31,13 @@
 		<action ref="showAllBusinessDomainGroup"></action>
 	</actiongroup>
 
-	<action type="push" handler="setUnique" desc="set unique"
-		icon="select_all_24" id="setUnique" confirmInfoKey="" label="设置唯一"
-		labelKey="action.edit.label">
+	<action type="push" handler="setUnique" desc="set unique" icon="select_all_24"
+		id="setUnique" confirmInfoKey="" label="设置唯一" labelKey="action.edit.label">
 	</action>
 
 	<action type="push" handler="releaseUnique" desc="release unique"
-		icon="un_select_all_24" id="releaseUnique" confirmInfoKey=""
-		label="解除唯一" labelKey="action.edit.label">
+		icon="un_select_all_24" id="releaseUnique" confirmInfoKey="" label="解除唯一"
+		labelKey="action.edit.label">
 	</action>
 
 	<actiongroup id="daoPropertyUniqueActionGroup">
@@ -47,23 +46,23 @@
 	</actiongroup>
 
 	<action type="push" handler="createBusinessDomain" desc="create business domain"
-		icon="packfolder_add" id="createBusinessDomain"
-		confirmInfoKey="" label="新建业务域" labelKey="action.edit.label">
+		icon="packfolder_add" id="createBusinessDomain" confirmInfoKey=""
+		label="新建业务域" labelKey="action.edit.label">
 	</action>
 
 	<action type="check" handler="showDaoObject" desc="show DaoObject"
-		icon="entity" id="showDaoObject" confirmInfoKey=""
-		label="DAO对象" labelKey="action.edit.label">
+		icon="entity" id="showDaoObject" confirmInfoKey="" label="DAO对象"
+		labelKey="action.edit.label">
 	</action>
 
 	<action type="check" handler="showBusinessBeanObject" desc="show BusinessBeanObject"
-		icon="bean" id="showBusinessBeanObject"
-		confirmInfoKey="" label="DTO对象" labelKey="action.edit.label">
+		icon="bean" id="showBusinessBeanObject" confirmInfoKey="" label="DTO对象"
+		labelKey="action.edit.label">
 	</action>
 
 	<action type="check" handler="showServiceObject" desc="show Service Object"
-		icon="service" id="showServiceObject"
-		confirmInfoKey="" label="服务对象" labelKey="action.edit.label">
+		icon="service" id="showServiceObject" confirmInfoKey="" label="服务对象"
+		labelKey="action.edit.label">
 	</action>
 
 	<actiongroup id="businessObjectBeRefrenceFilterActionGroup">
@@ -95,17 +94,17 @@
 		icon="" id="addNewBusinessPackage" confirmInfoKey="" label="新建"
 		labelKey="action.edit.label">
 		<action type="push" handler="addDaoPackage" desc="add new dao package"
-			icon="pack_add" id="addDoaPackage" confirmInfoKey=""
-			label="DAO对象包" labelKey="action.edit.label">
+			icon="pack_add" id="addDoaPackage" confirmInfoKey="" label="DAO对象包"
+			labelKey="action.edit.label">
 		</action>
 		<action type="push" handler="addServicePackage" desc="add new service package"
-			icon="service_package" id="addServicePackage"
-			confirmInfoKey="" label="服务对象包" labelKey="action.edit.label">
+			icon="service_package" id="addServicePackage" confirmInfoKey=""
+			label="服务对象包" labelKey="action.edit.label">
 		</action>
 
 		<action type="push" handler="addPersistentPackage" desc="add new persistent package"
-			icon="packd" id="addPersistentPackage" confirmInfoKey=""
-			label="数据对象包" labelKey="action.edit.label">
+			icon="packd" id="addPersistentPackage" confirmInfoKey="" label="数据对象包"
+			labelKey="action.edit.label">
 		</action>
 	</action>
 
@@ -122,8 +121,8 @@
 		icon="" id="addNewDaoObject" confirmInfoKey="" label="新建"
 		labelKey="action.edit.label">
 		<action type="push" handler="addDaoObject" desc="add new dao object"
-			icon="entity_add" id="addDaoObject" confirmInfoKey=""
-			label="DAO对象" labelKey="action.edit.label">
+			icon="entity_add" id="addDaoObject" confirmInfoKey="" label="DAO对象"
+			labelKey="action.edit.label">
 		</action>
 	</action>
 
@@ -137,16 +136,16 @@
 		icon="" id="addNewServiceObject" confirmInfoKey="" label="新建"
 		labelKey="action.edit.label">
 		<action type="push" handler="addServiceObject" desc="add new dao object"
-			icon="service" id="addServiceObject"
-			confirmInfoKey="" label="服务对象" labelKey="action.edit.label">
+			icon="service" id="addServiceObject" confirmInfoKey="" label="服务对象"
+			labelKey="action.edit.label">
 		</action>
 		<action type="push" handler="addBsinessBeanObject" desc="add new bean object"
-			icon="class_add" id="addBsinessBeanObject"
-			confirmInfoKey="" label="DTO对象" labelKey="action.edit.label">
+			icon="class_add" id="addBsinessBeanObject" confirmInfoKey="" label="DTO对象"
+			labelKey="action.edit.label">
 		</action>
 		<action type="push" handler="addEnumObject" desc="add new enum object"
-			icon="enum_add" id="addEnumObject" confirmInfoKey=""
-			label="枚举对象" labelKey="action.edit.label">
+			icon="enum_add" id="addEnumObject" confirmInfoKey="" label="枚举对象"
+			labelKey="action.edit.label">
 		</action>
 	</action>
 
@@ -160,14 +159,14 @@
 		icon="" id="addNewPersistentObject" confirmInfoKey="" label="新建"
 		labelKey="action.edit.label">
 		<action type="push" handler="addPersistentObject" desc="add new persistent object"
-			icon="table" id="addPersistentObject" confirmInfoKey=""
-			label="数据对象" labelKey="action.edit.label">
+			icon="table" id="addPersistentObject" confirmInfoKey="" label="数据对象"
+			labelKey="action.edit.label">
 		</action>
 	</action>
 
 	<action type="push" handler="importPersistentObject" desc="import persistent object"
-		icon="impotr_table" id="importPersistentObject"
-		confirmInfoKey="" label="导入数据对象" labelKey="action.edit.label">
+		icon="impotr_table" id="importPersistentObject" confirmInfoKey=""
+		label="导入数据对象" labelKey="action.edit.label">
 	</action>
 
 	<actiongroup id="persistentPackageActionGroup">
@@ -178,13 +177,13 @@
 	</actiongroup>
 
 	<action type="push" handler="addDaoProperty" desc="add new daoProperty"
-		icon="object_property" id="addDaoProperty" confirmInfoKey=""
-		label="添加DAO属性" labelKey="action.edit.label">
+		icon="object_property" id="addDaoProperty" confirmInfoKey="" label="添加DAO属性"
+		labelKey="action.edit.label">
 	</action>
 
 	<action type="push" handler="genDtoObject" desc="gen dto object"
-		icon="class_add" id="genDtoObject" confirmInfoKey=""
-		label="导出DTO对象" labelKey="action.edit.label">
+		icon="class_add" id="genDtoObject" confirmInfoKey="" label="导出DTO对象"
+		labelKey="action.edit.label">
 	</action>
 
 	<actiongroup id="daoObjectActionGroup">
@@ -195,8 +194,8 @@
 	</actiongroup>
 
 	<action type="push" handler="addBusinessBeanProperty" desc="add new daoProperty"
-		icon="field_public" id="addBusinessBeanProperty"
-		confirmInfoKey="" label="添加DTO对象属性" labelKey="action.edit.label">
+		icon="field_public" id="addBusinessBeanProperty" confirmInfoKey=""
+		label="添加DTO对象属性" labelKey="action.edit.label">
 	</action>
 
 	<actiongroup id="beanObjectActionGroup">
@@ -206,8 +205,8 @@
 	</actiongroup>
 
 	<action type="push" handler="addEnumProperty" desc="add new daoProperty"
-		icon="enum_property" id="addEnumProperty" confirmInfoKey=""
-		label="添加枚举属性" labelKey="action.edit.label">
+		icon="enum_property" id="addEnumProperty" confirmInfoKey="" label="添加枚举属性"
+		labelKey="action.edit.label">
 	</action>
 
 	<actiongroup id="enumObjectActionGroup">
@@ -217,13 +216,13 @@
 	</actiongroup>
 
 	<action type="push" handler="addPersistentProperty" desc="add new persistent Property"
-		icon="column" id="addPersistentProperty" confirmInfoKey=""
-		label="添加字段" labelKey="action.edit.label">
+		icon="column" id="addPersistentProperty" confirmInfoKey="" label="添加字段"
+		labelKey="action.edit.label">
 	</action>
 
 	<action type="push" handler="genDaoObject" desc="export dao object"
-		icon="entity_add" id="genDaoObject" confirmInfoKey=""
-		label="导出DAO对象" labelKey="action.edit.label">
+		icon="entity_add" id="genDaoObject" confirmInfoKey="" label="导出DAO对象"
+		labelKey="action.edit.label">
 	</action>
 
 	<actiongroup id="persistentObjectActionGroup">
@@ -234,8 +233,8 @@
 	</actiongroup>
 
 	<action type="push" handler="addServiceMessthod" desc="add new service method"
-		icon="service_method" id="addServiceMessthod"
-		confirmInfoKey="" label="添加服务方法" labelKey="action.edit.label">
+		icon="service_method" id="addServiceMessthod" confirmInfoKey="" label="添加服务方法"
+		labelKey="action.edit.label">
 	</action>
 
 	<actiongroup id="serviceObjectActionGroup">
@@ -251,10 +250,10 @@
 	<actiongroup id="serviceMethodActionGroup">
 		<action ref="delete" handler="deleteServiceMethod"></action>
 	</actiongroup>
-	
-<action type="push" handler="addNewBusinessTemplate" desc="Add New Business Template"
-		icon="template_add" id="addNewBusinessTemplate"
-		confirmInfoKey="" label="添加业务模板" labelKey="">
+
+	<action type="push" handler="addNewBusinessTemplate" desc="Add New Business Template"
+		icon="template_add" id="addNewBusinessTemplate" confirmInfoKey=""
+		label="添加业务模板" labelKey="">
 	</action>
 
 	<actiongroup id="businessTypeActionGroup">
@@ -266,6 +265,11 @@
 	<actiongroup id="editBusinessTypeActionGroup">
 		<action ref="edit" handler="editBusinessTemplateProviderType"
 			label="编辑模板类型"></action>
+	</actiongroup>
+
+	<actiongroup id="genPropertyListActionGroup">
+		<action ref="selectAll"></action>
+		<action ref="unSelectAll"></action>
 	</actiongroup>
 
 </actions>

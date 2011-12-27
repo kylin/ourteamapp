@@ -150,6 +150,10 @@
 		id="selectAll" confirmInfoKey="" label="全选" labelKey="">
 	</action>
 	
+	<action type="push" handler="unSelectAll" desc="Select All" icon="un_select_all"
+		id="unSelectAll" confirmInfoKey="" label="全消" labelKey="">
+	</action>
+	
 	<actiongroup id="defaultListMoveActionGroup">
 		<action ref="moveUp" />
 		<action ref="moveDown" />

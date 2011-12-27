@@ -6,8 +6,8 @@ import net.ui.eclipse.widget.AbstractSearchComposite;
 
 abstract public class AbstractSerachWizardPageControlHelper<T, Control extends AbstractSearchComposite<T>>
 		extends AbstractReflectWizardPageControlHelper<Control> {
-
-	private List<T> selectedItems;
+	
+	private AbstractSearchComposite<T> searchComposite;
 
 	public AbstractSerachWizardPageControlHelper(
 			AbstractWizardProvider wizardProvider) {
@@ -16,7 +16,7 @@ abstract public class AbstractSerachWizardPageControlHelper<T, Control extends A
 
 	@Override
 	public void doNextWizardPageControl(Control control) {
-
+		
 	}
 
 	@Override
@@ -26,18 +26,16 @@ abstract public class AbstractSerachWizardPageControlHelper<T, Control extends A
 
 	@Override
 	public void onActiveWizardPageControlChanged(Control control)throws Exception {
-
-		selectedItems = control.getSelectedSearchResults();
-
+		
 	}
 
 	public List<T> getSelectedItems() {
-		return selectedItems;
+		return this.searchComposite.getSelectedSearchResults();
 	}
 
 	@Override
 	public void initWizardPageControl(Control control) throws Exception {
-
+		this.searchComposite = control;
 		doInitSearchConfig(control);
 
 		control.addSelectionChangedListener(getWizardProvider());

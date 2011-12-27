@@ -376,11 +376,11 @@
     
   <tabbedpane id="importPersistentObjectWizard" desc="导入数据对象向导">
   	  	
-  	<tab name="selectDatabaseServer" label="选择数据库服务" labelKey="" icon="" compentclass="com.ourteam.app.modelbase.ui.DatabaseSearchComposite">
+  	<tab name="selectDatabaseServer" label="选择数据库服务" labelKey="" icon="" compentclass="com.ourteam.app.middleware.ui.DatabaseSearchComposite">
   		  
     </tab>
   	  	
-  	<tab name="selectDatabaseObject" label="选择数据库对象" labelKey="" icon="" compentclass="com.ourteam.app.modelbase.ui.DatabaseTableSearchComposite">
+  	<tab name="selectDatabaseObject" label="选择数据库对象" labelKey="" icon="" compentclass="com.ourteam.app.middleware.ui.DatabaseTableSearchComposite">
   		  
     </tab>
   	  
@@ -506,6 +506,16 @@
   	  	
   	<tab name="selectBusinessPackage" label="选择包" labelKey="" icon="" compentclass="com.ourteam.app.modelbase.ui.ModelPackageSearchComposite">
   		  
+    </tab>
+  	  
+  </tabbedpane>
+  
+  <tabbedpane id="businessTemplateProviderTypeConfigTab" desc="业务模板提供类型编辑Tab">
+  	  	
+  	<tab name="setProviderTypeInfo" label="基本信息" labelKey="" icon="template_type" compentclass="">
+  		  
+    	<property id="formId" value="businessTemplateProviderFrom"/>
+    	  
     </tab>
   	  
   </tabbedpane>
