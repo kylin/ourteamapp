@@ -414,9 +414,21 @@ public class BusinessCodeGenerateUtils {
 
 		StringWriter fileNameWriter = new StringWriter();
 
+		StringBuffer fileNameBuffer = new StringBuffer();
+
+		if (StringUtils.isNotBlank(businessTemplateBean.getFileNamePrefix())) {
+			fileNameBuffer.append(businessTemplateBean.getFileNamePrefix());
+		}
+
+		fileNameBuffer.append(businessTemplateBean.getFileName());
+
+		if (StringUtils.isNotBlank(businessTemplateBean.getFileNamePostfix())) {
+			fileNameBuffer.append(businessTemplateBean.getFileNamePostfix());
+		}
+
 		VELOCITY_ENGINE.evaluate(new VelocityContext(templateContext),
 				fileNameWriter, "BusinessTemplate", new StringReader(
-						businessTemplateBean.getFileName()));
+						fileNameBuffer.toString()));
 
 		templateContext.put("fileName", fileNameWriter.getBuffer().toString());
 

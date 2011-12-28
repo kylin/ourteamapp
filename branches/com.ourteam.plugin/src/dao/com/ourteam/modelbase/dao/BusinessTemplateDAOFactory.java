@@ -9,7 +9,7 @@ import net.service.SpringContextAgent;
 
 
 /**
- * DAO Factory GenDate 2011-09-22 10:16:40
+ * DAO Factory GenDate 2011-12-28 11:21:30
  *
  * @author kylin
  */

@@ -4,7 +4,7 @@
 package com.ourteam.modelbase.dao;
 
 /**
- * Generate Date 2011-09-22 10:16:39
+ * Generate Date 2011-12-28 11:21:28
  *
  * @author Auto Gen
  */
@@ -123,6 +123,24 @@ public class BusinessTemplate implements java.io.Serializable {
 
     /** Attribute  is Null Falg */
     private boolean fileTypeNull = false;
+
+    /** Attribute */
+    private String fileNamePrefix;
+
+    /** Attribute  Be Seted Falg */
+    private boolean fileNamePrefixSetted = false;
+
+    /** Attribute  is Null Falg */
+    private boolean fileNamePrefixNull = false;
+
+    /** Attribute */
+    private String fileNamePostfix;
+
+    /** Attribute  Be Seted Falg */
+    private boolean fileNamePostfixSetted = false;
+
+    /** Attribute  is Null Falg */
+    private boolean fileNamePostfixNull = false;
 
     /**
      * Get Id
@@ -807,6 +825,118 @@ public class BusinessTemplate implements java.io.Serializable {
     } // end isFileTypeNull()
 
     /**
+     * Get FileNamePrefix
+     *
+     * @return fileNamePrefix
+     */
+    final public String getFileNamePrefix() {
+        return fileNamePrefix;
+    } // end getFileNamePrefix()
+
+    /**
+     * Set FileNamePrefix
+     *
+     * @param aFileNamePrefix
+     */
+    final public void setFileNamePrefix(String aFileNamePrefix) {
+        this.fileNamePrefix = aFileNamePrefix;
+
+        this.fileNamePrefixSetted = true;
+
+        this.setFileNamePrefixNull(this.fileNamePrefix == null);
+    } // end setFileNamePrefix()
+
+    /**
+     * Get FileNamePrefix Has Been Setted
+     *
+     * @return fileNamePrefix
+     */
+    final public boolean isFileNamePrefixSetted() {
+        return this.fileNamePrefixSetted;
+    } // end isFileNamePrefixSetted()
+
+    /**
+     * Set FileNamePrefix Null
+     */
+    final public void setFileNamePrefixNull() {
+        this.fileNamePrefixNull = true;
+    } // end setFileNamePrefixNull()
+
+    /**
+     * DOCUMENT ME!
+     *
+     * @param aNullFlag DOCUMENT ME!
+     */
+    final public void setFileNamePrefixNull(boolean aNullFlag) {
+        this.fileNamePrefixNull = aNullFlag;
+    } // end setFileNamePrefixNull()
+
+    /**
+     * DOCUMENT ME!
+     *
+     * @return DOCUMENT ME!
+     */
+    final public boolean isFileNamePrefixNull() {
+        return this.fileNamePrefixNull;
+    } // end isFileNamePrefixNull()
+
+    /**
+     * Get FileNamePostfix
+     *
+     * @return fileNamePostfix
+     */
+    final public String getFileNamePostfix() {
+        return fileNamePostfix;
+    } // end getFileNamePostfix()
+
+    /**
+     * Set FileNamePostfix
+     *
+     * @param aFileNamePostfix
+     */
+    final public void setFileNamePostfix(String aFileNamePostfix) {
+        this.fileNamePostfix = aFileNamePostfix;
+
+        this.fileNamePostfixSetted = true;
+
+        this.setFileNamePostfixNull(this.fileNamePostfix == null);
+    } // end setFileNamePostfix()
+
+    /**
+     * Get FileNamePostfix Has Been Setted
+     *
+     * @return fileNamePostfix
+     */
+    final public boolean isFileNamePostfixSetted() {
+        return this.fileNamePostfixSetted;
+    } // end isFileNamePostfixSetted()
+
+    /**
+     * Set FileNamePostfix Null
+     */
+    final public void setFileNamePostfixNull() {
+        this.fileNamePostfixNull = true;
+    } // end setFileNamePostfixNull()
+
+    /**
+     * DOCUMENT ME!
+     *
+     * @param aNullFlag DOCUMENT ME!
+     */
+    final public void setFileNamePostfixNull(boolean aNullFlag) {
+        this.fileNamePostfixNull = aNullFlag;
+    } // end setFileNamePostfixNull()
+
+    /**
+     * DOCUMENT ME!
+     *
+     * @return DOCUMENT ME!
+     */
+    final public boolean isFileNamePostfixNull() {
+        return this.fileNamePostfixNull;
+    } // end isFileNamePostfixNull()
+
+    /**
      * DOCUMENT ME!
      *
      * @return DOCUMENT ME!
@@ -905,6 +1035,14 @@ public class BusinessTemplate implements java.io.Serializable {
 
         buffer.append("fileType=");
         buffer.append(this.fileType);
+        buffer.append("\r\n");
+
+        buffer.append("fileNamePrefix=");
+        buffer.append(this.fileNamePrefix);
+        buffer.append("\r\n");
+
+        buffer.append("fileNamePostfix=");
+        buffer.append(this.fileNamePostfix);
         buffer.append("\r\n");
 
         buffer.append("]");

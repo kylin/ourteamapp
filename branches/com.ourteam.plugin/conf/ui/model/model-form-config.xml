@@ -339,8 +339,14 @@
 						
 		<property id="name" title="模板名称" titleKey="" type="text" tipInfo="" desc="" readOnly="false" style="" command="" dataType="" dataSrc="" allowNull="false" value="" >
 								</property>
+								
+		<property id="fileNamePrefix" title="文件名前缀" titleKey="" type="text" tipInfo="" desc="" readOnly="false" style="" command="" dataType="" dataSrc="" allowNull="true" value="" >
+								</property>
 				
 		<property id="fileName" title="文件名称" titleKey="" type="text" tipInfo="" desc="" readOnly="false" style="" command="" dataType="" dataSrc="" allowNull="false" value="" >
+								</property>
+								
+		<property id="fileNamePostfix" title="文件名后缀" titleKey="" type="text" tipInfo="" desc="" readOnly="false" style="" command="" dataType="" dataSrc="" allowNull="true" value="" >
 								</property>
 				
 		<property id="fileType" title="文件类型" titleKey="" type="text" tipInfo="" desc="" readOnly="false" style="" command="" dataType="" dataSrc="" allowNull="true" value="" >

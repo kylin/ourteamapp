@@ -88,7 +88,7 @@ public class CodeGenerateAction extends AbstractJavaProjectAction {
 					for (Iterator<String> iterator = serviceConfiguration
 							.getKeys(); iterator.hasNext();) {
 						String key = iterator.next();
-						generateContext.getDaoGenerateConfig().put(key,
+						generateContext.getServiceGenerateConfig().put(key,
 								serviceConfiguration.getString(key));
 					}
 
