@@ -14,7 +14,7 @@ import java.util.Map;
 
 
 /**
- * BusinessTemplate query bean 2011-09-22 10:16:39
+ * BusinessTemplate query bean 2011-12-28 11:21:29
  *
  * @author Auto Gen
  */
@@ -328,6 +328,50 @@ public class BusinessTemplateDAOQueryBean extends BaseQueryBean {
     /**
      * DOCUMENT ME!
      */
+    public void addFileNamePrefixSelectProperty() {
+        addFileNamePrefixSelectProperty("fileNamePrefix");
+    } // end addFileNamePrefixSelectProperty()
+
+    /**
+     * DOCUMENT ME!
+     *
+     * @param aAlias DOCUMENT ME!
+     */
+    public void addFileNamePrefixSelectProperty(String aAlias) {
+        if (StringUtils.isNotBlank(aAlias)) {
+            addSelectProperty(IBusinessTemplateDAO.FileNamePrefix, aAlias);
+        } // end if
+        else {
+            addSelectProperty(IBusinessTemplateDAO.FileNamePrefix,
+                "fileNamePrefix");
+        } // end else
+    } // end addFileNamePrefixSelectProperty()
+
+    /**
+     * DOCUMENT ME!
+     */
+    public void addFileNamePostfixSelectProperty() {
+        addFileNamePostfixSelectProperty("fileNamePostfix");
+    } // end addFileNamePostfixSelectProperty()
+
+    /**
+     * DOCUMENT ME!
+     *
+     * @param aAlias DOCUMENT ME!
+     */
+    public void addFileNamePostfixSelectProperty(String aAlias) {
+        if (StringUtils.isNotBlank(aAlias)) {
+            addSelectProperty(IBusinessTemplateDAO.FileNamePostfix, aAlias);
+        } // end if
+        else {
+            addSelectProperty(IBusinessTemplateDAO.FileNamePostfix,
+                "fileNamePostfix");
+        } // end else
+    } // end addFileNamePostfixSelectProperty()
+
+    /**
+     * DOCUMENT ME!
+     */
     public void addAllSelectProperties() {
         addIdSelectProperty();
 
@@ -352,6 +396,10 @@ public class BusinessTemplateDAOQueryBean extends BaseQueryBean {
         addCanOverWriteSelectProperty();
 
         addFileTypeSelectProperty();
+
+        addFileNamePrefixSelectProperty();
+
+        addFileNamePostfixSelectProperty();
     } // end addAllSelectProperties()
 
     /**
@@ -5197,5 +5245,777 @@ public class BusinessTemplateDAOQueryBean extends BaseQueryBean {
 
             return this;
         } // end andFileTypeNotBetween()
+
+        /**
+         * DOCUMENT ME!
+         *
+         * @return DOCUMENT ME!
+         */
+        public Criteria andFileNamePrefixIsNull() {
+            addCriterion("BUSINESS_TEMPLATE.FILE_NAME_PREFIX is null");
+
+            return this;
+        } // end andFileNamePrefixIsNull()
+
+        /**
+         * DOCUMENT ME!
+         *
+         * @return DOCUMENT ME!
+         */
+        public Criteria andFileNamePrefixIsNotNull() {
+            addCriterion("BUSINESS_TEMPLATE.FILE_NAME_PREFIX is not null");
+
+            return this;
+        } // end andFileNamePrefixIsNotNull()
+
+        /**
+         * DOCUMENT ME!
+         *
+         * @return DOCUMENT ME!
+         */
+        public Criteria andFileNamePrefixIsNotEmpty() {
+            addCriterion(
+                "BUSINESS_TEMPLATE.FILE_NAME_PREFIX is not null AND BUSINESS_TEMPLATE.FILE_NAME_PREFIX <> ''");
+
+            return this;
+        } // end andFileNamePrefixIsNotEmpty()
+
+        /**
+         * DOCUMENT ME!
+         *
+         * @return DOCUMENT ME!
+         */
+        public Criteria andFileNamePrefixIsEmpty() {
+            addCriterion(
+                "(BUSINESS_TEMPLATE.FILE_NAME_PREFIX is null OR BUSINESS_TEMPLATE.FILE_NAME_PREFIX = '')");
+
+            return this;
+        } // end andFileNamePrefixIsEmpty()
+
+        /**
+         * DOCUMENT ME!
+         *
+         * @param value DOCUMENT ME!
+         *
+         * @return DOCUMENT ME!
+         */
+        public Criteria andFileNamePrefixEqualTo(String value) {
+            addCriterion("BUSINESS_TEMPLATE.FILE_NAME_PREFIX =", value,
+                "fileNamePrefix");
+
+            return this;
+        } // end andFileNamePrefixEqualTo()
+
+        /**
+         * DOCUMENT ME!
+         *
+         * @param key DOCUMENT ME!
+         *
+         * @return DOCUMENT ME!
+         */
+        public Criteria andFileNamePrefixEqualToForeignKey(java.lang.String key) {
+            StringBuffer str = new StringBuffer(
+                    "BUSINESS_TEMPLATE.FILE_NAME_PREFIX");
+            str.append(" = ").append(key);
+            addForeignKeyCriterion(str.toString());
+
+            return this;
+        } // end andFileNamePrefixEqualToForeignKey()
+
+        /**
+         * DOCUMENT ME!
+         *
+         * @param value DOCUMENT ME!
+         *
+         * @return DOCUMENT ME!
+         */
+        public Criteria andFileNamePrefixNotEqualTo(String value) {
+            addCriterion("BUSINESS_TEMPLATE.FILE_NAME_PREFIX <>", value,
+                "fileNamePrefix");
+
+            return this;
+        } // end andFileNamePrefixNotEqualTo()
+
+        /**
+         * DOCUMENT ME!
+         *
+         * @param value DOCUMENT ME!
+         *
+         * @return DOCUMENT ME!
+         */
+        public Criteria andFileNamePrefixNotEqualToOrIsNull(String value) {
+            addCriterion("BUSINESS_TEMPLATE.FILE_NAME_PREFIX is null OR BUSINESS_TEMPLATE.FILE_NAME_PREFIX <>",
+                value, "fileNamePrefix");
+
+            return this;
+        } // end andFileNamePrefixNotEqualToOrIsNull()
+
+        /**
+         * DOCUMENT ME!
+         *
+         * @param key DOCUMENT ME!
+         *
+         * @return DOCUMENT ME!
+         */
+        public Criteria andFileNamePrefixNotEqualToForeignKey(
+            java.lang.String key) {
+            StringBuffer str = new StringBuffer(
+                    "BUSINESS_TEMPLATE.FILE_NAME_PREFIX");
+            str.append(" <> ").append(key);
+            addForeignKeyCriterion(str.toString());
+
+            return this;
+        } // end andFileNamePrefixNotEqualToForeignKey()
+
+        /**
+         * DOCUMENT ME!
+         *
+         * @param value DOCUMENT ME!
+         *
+         * @return DOCUMENT ME!
+         */
+        public Criteria andFileNamePrefixGreaterThan(String value) {
+            addCriterion("BUSINESS_TEMPLATE.FILE_NAME_PREFIX >", value,
+                "fileNamePrefix");
+
+            return this;
+        } // end andFileNamePrefixGreaterThan()
+
+        /**
+         * DOCUMENT ME!
+         *
+         * @param key DOCUMENT ME!
+         *
+         * @return DOCUMENT ME!
+         */
+        public Criteria andFileNamePrefixGreaterThanForeignKey(
+            java.lang.String key) {
+            StringBuffer str = new StringBuffer(
+                    "BUSINESS_TEMPLATE.FILE_NAME_PREFIX");
+            str.append(" > ").append(key);
+            addForeignKeyCriterion(str.toString());
+
+            return this;
+        } // end andFileNamePrefixGreaterThanForeignKey()
+
+        /**
+         * DOCUMENT ME!
+         *
+         * @param value DOCUMENT ME!
+         *
+         * @return DOCUMENT ME!
+         */
+        public Criteria andFileNamePrefixGreaterThanOrEqualTo(String value) {
+            addCriterion("BUSINESS_TEMPLATE.FILE_NAME_PREFIX >=", value,
+                "fileNamePrefix");
+
+            return this;
+        } // end andFileNamePrefixGreaterThanOrEqualTo()
+
+        /**
+         * DOCUMENT ME!
+         *
+         * @param key DOCUMENT ME!
+         *
+         * @return DOCUMENT ME!
+         */
+        public Criteria andFileNamePrefixGreaterThanOrEqualToForeignKey(
+            java.lang.String key) {
+            StringBuffer str = new StringBuffer(
+                    "BUSINESS_TEMPLATE.FILE_NAME_PREFIX");
+            str.append(" >= ").append(key);
+            addForeignKeyCriterion(str.toString());
+
+            return this;
+        } // end andFileNamePrefixGreaterThanOrEqualToForeignKey()
+
+        /**
+         * DOCUMENT ME!
+         *
+         * @param value DOCUMENT ME!
+         *
+         * @return DOCUMENT ME!
+         */
+        public Criteria andFileNamePrefixLessThan(String value) {
+            addCriterion("BUSINESS_TEMPLATE.FILE_NAME_PREFIX <", value,
+                "fileNamePrefix");
+
+            return this;
+        } // end andFileNamePrefixLessThan()
+
+        /**
+         * DOCUMENT ME!
+         *
+         * @param key DOCUMENT ME!
+         *
+         * @return DOCUMENT ME!
+         */
+        public Criteria andFileNamePrefixLessThanForeignKey(
+            java.lang.String key) {
+            StringBuffer str = new StringBuffer(
+                    "BUSINESS_TEMPLATE.FILE_NAME_PREFIX");
+            str.append(" < ").append(key);
+            addForeignKeyCriterion(str.toString());
+
+            return this;
+        } // end andFileNamePrefixLessThanForeignKey()
+
+        /**
+         * DOCUMENT ME!
+         *
+         * @param value DOCUMENT ME!
+         *
+         * @return DOCUMENT ME!
+         */
+        public Criteria andFileNamePrefixLessThanOrEqualTo(String value) {
+            addCriterion("BUSINESS_TEMPLATE.FILE_NAME_PREFIX <=", value,
+                "fileNamePrefix");
+
+            return this;
+        } // end andFileNamePrefixLessThanOrEqualTo()
+
+        /**
+         * DOCUMENT ME!
+         *
+         * @param key DOCUMENT ME!
+         *
+         * @return DOCUMENT ME!
+         */
+        public Criteria andFileNamePrefixLessThanOrEqualToForeignKey(
+            java.lang.String key) {
+            StringBuffer str = new StringBuffer(
+                    "BUSINESS_TEMPLATE.FILE_NAME_PREFIX");
+            str.append(" <= ").append(key);
+            addForeignKeyCriterion(str.toString());
+
+            return this;
+        } // end andFileNamePrefixLessThanOrEqualToForeignKey()
+
+        /**
+         * DOCUMENT ME!
+         *
+         * @param value DOCUMENT ME!
+         *
+         * @return DOCUMENT ME!
+         */
+        public Criteria andFileNamePrefixLike(String value) {
+            StringBuffer buffer = new StringBuffer("%");
+            buffer.append(value);
+            buffer.append("%");
+            addCriterion("BUSINESS_TEMPLATE.FILE_NAME_PREFIX like",
+                buffer.toString(), "fileNamePrefix");
+
+            return this;
+        } // end andFileNamePrefixLike()
+
+        /**
+         * DOCUMENT ME!
+         *
+         * @param value DOCUMENT ME!
+         *
+         * @return DOCUMENT ME!
+         */
+        public Criteria andFileNamePrefixNotLike(String value) {
+            StringBuffer buffer = new StringBuffer("%");
+            buffer.append(value);
+            buffer.append("%");
+            addCriterion("BUSINESS_TEMPLATE.FILE_NAME_PREFIX not like",
+                buffer.toString(), "fileNamePrefix");
+
+            return this;
+        } // end andFileNamePrefixNotLike()
+
+        /**
+         * DOCUMENT ME!
+         *
+         * @param values DOCUMENT ME!
+         *
+         * @return DOCUMENT ME!
+         */
+        public Criteria andFileNamePrefixIn(List values) {
+            if (values.size() == 1) {
+                return andFileNamePrefixEqualTo((String) values.get(0));
+            } // end if
+            else {
+                addCriterion("BUSINESS_TEMPLATE.FILE_NAME_PREFIX in", values,
+                    "fileNamePrefix");
+
+                return this;
+            } // end else
+        } // end andFileNamePrefixIn()
+
+        /**
+         * DOCUMENT ME!
+         *
+         * @param values DOCUMENT ME!
+         *
+         * @return DOCUMENT ME!
+         */
+        public Criteria andFileNamePrefixNotIn(List values) {
+            if (values.size() == 1) {
+                return andFileNamePrefixNotEqualTo((String) values.get(0));
+            } // end if
+            else {
+                addCriterion("BUSINESS_TEMPLATE.FILE_NAME_PREFIX not in",
+                    values, "fileNamePrefix");
+
+                return this;
+            } // end else
+        } // end andFileNamePrefixNotIn()
+
+        /**
+         * DOCUMENT ME!
+         *
+         * @param values DOCUMENT ME!
+         *
+         * @return DOCUMENT ME!
+         */
+        public Criteria andFileNamePrefixIn(Object[] values) {
+            if (values.length == 1) {
+                return andFileNamePrefixEqualTo((String) values[0]);
+            } // end if
+            else {
+                addCriterion("BUSINESS_TEMPLATE.FILE_NAME_PREFIX in",
+                    Arrays.asList(values), "fileNamePrefix");
+
+                return this;
+            } // end else
+        } // end andFileNamePrefixIn()
+
+        /**
+         * DOCUMENT ME!
+         *
+         * @param values DOCUMENT ME!
+         *
+         * @return DOCUMENT ME!
+         */
+        public Criteria andFileNamePrefixNotIn(Object[] values) {
+            if (values.length == 1) {
+                return andFileNamePrefixNotEqualTo((String) values[0]);
+            } // end if
+            else {
+                addCriterion("BUSINESS_TEMPLATE.FILE_NAME_PREFIX not in",
+                    Arrays.asList(values), "fileNamePrefix");
+
+                return this;
+            } // end else
+        } // end andFileNamePrefixNotIn()
+
+        /**
+         * DOCUMENT ME!
+         *
+         * @param value1 DOCUMENT ME!
+         * @param value2 DOCUMENT ME!
+         *
+         * @return DOCUMENT ME!
+         */
+        public Criteria andFileNamePrefixBetween(String value1, String value2) {
+            addCriterion("BUSINESS_TEMPLATE.FILE_NAME_PREFIX between", value1,
+                value2, "fileNamePrefix");
+
+            return this;
+        } // end andFileNamePrefixBetween()
+
+        /**
+         * DOCUMENT ME!
+         *
+         * @param value1 DOCUMENT ME!
+         * @param value2 DOCUMENT ME!
+         *
+         * @return DOCUMENT ME!
+         */
+        public Criteria andFileNamePrefixNotBetween(String value1, String value2) {
+            addCriterion("BUSINESS_TEMPLATE.FILE_NAME_PREFIX not between",
+                value1, value2, "fileNamePrefix");
+
+            return this;
+        } // end andFileNamePrefixNotBetween()
+
+        /**
+         * DOCUMENT ME!
+         *
+         * @return DOCUMENT ME!
+         */
+        public Criteria andFileNamePostfixIsNull() {
+            addCriterion("BUSINESS_TEMPLATE.FILE_NAME_POSTFIX is null");
+
+            return this;
+        } // end andFileNamePostfixIsNull()
+
+        /**
+         * DOCUMENT ME!
+         *
+         * @return DOCUMENT ME!
+         */
+        public Criteria andFileNamePostfixIsNotNull() {
+            addCriterion("BUSINESS_TEMPLATE.FILE_NAME_POSTFIX is not null");
+
+            return this;
+        } // end andFileNamePostfixIsNotNull()
+
+        /**
+         * DOCUMENT ME!
+         *
+         * @return DOCUMENT ME!
+         */
+        public Criteria andFileNamePostfixIsNotEmpty() {
+            addCriterion(
+                "BUSINESS_TEMPLATE.FILE_NAME_POSTFIX is not null AND BUSINESS_TEMPLATE.FILE_NAME_POSTFIX <> ''");
+
+            return this;
+        } // end andFileNamePostfixIsNotEmpty()
+
+        /**
+         * DOCUMENT ME!
+         *
+         * @return DOCUMENT ME!
+         */
+        public Criteria andFileNamePostfixIsEmpty() {
+            addCriterion(
+                "(BUSINESS_TEMPLATE.FILE_NAME_POSTFIX is null OR BUSINESS_TEMPLATE.FILE_NAME_POSTFIX = '')");
+
+            return this;
+        } // end andFileNamePostfixIsEmpty()
+
+        /**
+         * DOCUMENT ME!
+         *
+         * @param value DOCUMENT ME!
+         *
+         * @return DOCUMENT ME!
+         */
+        public Criteria andFileNamePostfixEqualTo(String value) {
+            addCriterion("BUSINESS_TEMPLATE.FILE_NAME_POSTFIX =", value,
+                "fileNamePostfix");
+
+            return this;
+        } // end andFileNamePostfixEqualTo()
+
+        /**
+         * DOCUMENT ME!
+         *
+         * @param key DOCUMENT ME!
+         *
+         * @return DOCUMENT ME!
+         */
+        public Criteria andFileNamePostfixEqualToForeignKey(
+            java.lang.String key) {
+            StringBuffer str = new StringBuffer(
+                    "BUSINESS_TEMPLATE.FILE_NAME_POSTFIX");
+            str.append(" = ").append(key);
+            addForeignKeyCriterion(str.toString());
+
+            return this;
+        } // end andFileNamePostfixEqualToForeignKey()
+
+        /**
+         * DOCUMENT ME!
+         *
+         * @param value DOCUMENT ME!
+         *
+         * @return DOCUMENT ME!
+         */
+        public Criteria andFileNamePostfixNotEqualTo(String value) {
+            addCriterion("BUSINESS_TEMPLATE.FILE_NAME_POSTFIX <>", value,
+                "fileNamePostfix");
+
+            return this;
+        } // end andFileNamePostfixNotEqualTo()
+
+        /**
+         * DOCUMENT ME!
+         *
+         * @param value DOCUMENT ME!
+         *
+         * @return DOCUMENT ME!
+         */
+        public Criteria andFileNamePostfixNotEqualToOrIsNull(String value) {
+            addCriterion("BUSINESS_TEMPLATE.FILE_NAME_POSTFIX is null OR BUSINESS_TEMPLATE.FILE_NAME_POSTFIX <>",
+                value, "fileNamePostfix");
+
+            return this;
+        } // end andFileNamePostfixNotEqualToOrIsNull()
+
+        /**
+         * DOCUMENT ME!
+         *
+         * @param key DOCUMENT ME!
+         *
+         * @return DOCUMENT ME!
+         */
+        public Criteria andFileNamePostfixNotEqualToForeignKey(
+            java.lang.String key) {
+            StringBuffer str = new StringBuffer(
+                    "BUSINESS_TEMPLATE.FILE_NAME_POSTFIX");
+            str.append(" <> ").append(key);
+            addForeignKeyCriterion(str.toString());
+
+            return this;
+        } // end andFileNamePostfixNotEqualToForeignKey()
+
+        /**
+         * DOCUMENT ME!
+         *
+         * @param value DOCUMENT ME!
+         *
+         * @return DOCUMENT ME!
+         */
+        public Criteria andFileNamePostfixGreaterThan(String value) {
+            addCriterion("BUSINESS_TEMPLATE.FILE_NAME_POSTFIX >", value,
+                "fileNamePostfix");
+
+            return this;
+        } // end andFileNamePostfixGreaterThan()
+
+        /**
+         * DOCUMENT ME!
+         *
+         * @param key DOCUMENT ME!
+         *
+         * @return DOCUMENT ME!
+         */
+        public Criteria andFileNamePostfixGreaterThanForeignKey(
+            java.lang.String key) {
+            StringBuffer str = new StringBuffer(
+                    "BUSINESS_TEMPLATE.FILE_NAME_POSTFIX");
+            str.append(" > ").append(key);
+            addForeignKeyCriterion(str.toString());
+
+            return this;
+        } // end andFileNamePostfixGreaterThanForeignKey()
+
+        /**
+         * DOCUMENT ME!
+         *
+         * @param value DOCUMENT ME!
+         *
+         * @return DOCUMENT ME!
+         */
+        public Criteria andFileNamePostfixGreaterThanOrEqualTo(String value) {
+            addCriterion("BUSINESS_TEMPLATE.FILE_NAME_POSTFIX >=", value,
+                "fileNamePostfix");
+
+            return this;
+        } // end andFileNamePostfixGreaterThanOrEqualTo()
+
+        /**
+         * DOCUMENT ME!
+         *
+         * @param key DOCUMENT ME!
+         *
+         * @return DOCUMENT ME!
+         */
+        public Criteria andFileNamePostfixGreaterThanOrEqualToForeignKey(
+            java.lang.String key) {
+            StringBuffer str = new StringBuffer(
+                    "BUSINESS_TEMPLATE.FILE_NAME_POSTFIX");
+            str.append(" >= ").append(key);
+            addForeignKeyCriterion(str.toString());
+
+            return this;
+        } // end andFileNamePostfixGreaterThanOrEqualToForeignKey()
+
+        /**
+         * DOCUMENT ME!
+         *
+         * @param value DOCUMENT ME!
+         *
+         * @return DOCUMENT ME!
+         */
+        public Criteria andFileNamePostfixLessThan(String value) {
+            addCriterion("BUSINESS_TEMPLATE.FILE_NAME_POSTFIX <", value,
+                "fileNamePostfix");
+
+            return this;
+        } // end andFileNamePostfixLessThan()
+
+        /**
+         * DOCUMENT ME!
+         *
+         * @param key DOCUMENT ME!
+         *
+         * @return DOCUMENT ME!
+         */
+        public Criteria andFileNamePostfixLessThanForeignKey(
+            java.lang.String key) {
+            StringBuffer str = new StringBuffer(
+                    "BUSINESS_TEMPLATE.FILE_NAME_POSTFIX");
+            str.append(" < ").append(key);
+            addForeignKeyCriterion(str.toString());
+
+            return this;
+        } // end andFileNamePostfixLessThanForeignKey()
+
+        /**
+         * DOCUMENT ME!
+         *
+         * @param value DOCUMENT ME!
+         *
+         * @return DOCUMENT ME!
+         */
+        public Criteria andFileNamePostfixLessThanOrEqualTo(String value) {
+            addCriterion("BUSINESS_TEMPLATE.FILE_NAME_POSTFIX <=", value,
+                "fileNamePostfix");
+
+            return this;
+        } // end andFileNamePostfixLessThanOrEqualTo()
+
+        /**
+         * DOCUMENT ME!
+         *
+         * @param key DOCUMENT ME!
+         *
+         * @return DOCUMENT ME!
+         */
+        public Criteria andFileNamePostfixLessThanOrEqualToForeignKey(
+            java.lang.String key) {
+            StringBuffer str = new StringBuffer(
+                    "BUSINESS_TEMPLATE.FILE_NAME_POSTFIX");
+            str.append(" <= ").append(key);
+            addForeignKeyCriterion(str.toString());
+
+            return this;
+        } // end andFileNamePostfixLessThanOrEqualToForeignKey()
+
+        /**
+         * DOCUMENT ME!
+         *
+         * @param value DOCUMENT ME!
+         *
+         * @return DOCUMENT ME!
+         */
+        public Criteria andFileNamePostfixLike(String value) {
+            StringBuffer buffer = new StringBuffer("%");
+            buffer.append(value);
+            buffer.append("%");
+            addCriterion("BUSINESS_TEMPLATE.FILE_NAME_POSTFIX like",
+                buffer.toString(), "fileNamePostfix");
+
+            return this;
+        } // end andFileNamePostfixLike()
+
+        /**
+         * DOCUMENT ME!
+         *
+         * @param value DOCUMENT ME!
+         *
+         * @return DOCUMENT ME!
+         */
+        public Criteria andFileNamePostfixNotLike(String value) {
+            StringBuffer buffer = new StringBuffer("%");
+            buffer.append(value);
+            buffer.append("%");
+            addCriterion("BUSINESS_TEMPLATE.FILE_NAME_POSTFIX not like",
+                buffer.toString(), "fileNamePostfix");
+
+            return this;
+        } // end andFileNamePostfixNotLike()
+
+        /**
+         * DOCUMENT ME!
+         *
+         * @param values DOCUMENT ME!
+         *
+         * @return DOCUMENT ME!
+         */
+        public Criteria andFileNamePostfixIn(List values) {
+            if (values.size() == 1) {
+                return andFileNamePostfixEqualTo((String) values.get(0));
+            } // end if
+            else {
+                addCriterion("BUSINESS_TEMPLATE.FILE_NAME_POSTFIX in", values,
+                    "fileNamePostfix");
+
+                return this;
+            } // end else
+        } // end andFileNamePostfixIn()
+
+        /**
+         * DOCUMENT ME!
+         *
+         * @param values DOCUMENT ME!
+         *
+         * @return DOCUMENT ME!
+         */
+        public Criteria andFileNamePostfixNotIn(List values) {
+            if (values.size() == 1) {
+                return andFileNamePostfixNotEqualTo((String) values.get(0));
+            } // end if
+            else {
+                addCriterion("BUSINESS_TEMPLATE.FILE_NAME_POSTFIX not in",
+                    values, "fileNamePostfix");
+
+                return this;
+            } // end else
+        } // end andFileNamePostfixNotIn()
+
+        /**
+         * DOCUMENT ME!
+         *
+         * @param values DOCUMENT ME!
+         *
+         * @return DOCUMENT ME!
+         */
+        public Criteria andFileNamePostfixIn(Object[] values) {
+            if (values.length == 1) {
+                return andFileNamePostfixEqualTo((String) values[0]);
+            } // end if
+            else {
+                addCriterion("BUSINESS_TEMPLATE.FILE_NAME_POSTFIX in",
+                    Arrays.asList(values), "fileNamePostfix");
+
+                return this;
+            } // end else
+        } // end andFileNamePostfixIn()
+
+        /**
+         * DOCUMENT ME!
+         *
+         * @param values DOCUMENT ME!
+         *
+         * @return DOCUMENT ME!
+         */
+        public Criteria andFileNamePostfixNotIn(Object[] values) {
+            if (values.length == 1) {
+                return andFileNamePostfixNotEqualTo((String) values[0]);
+            } // end if
+            else {
+                addCriterion("BUSINESS_TEMPLATE.FILE_NAME_POSTFIX not in",
+                    Arrays.asList(values), "fileNamePostfix");
+
+                return this;
+            } // end else
+        } // end andFileNamePostfixNotIn()
+
+        /**
+         * DOCUMENT ME!
+         *
+         * @param value1 DOCUMENT ME!
+         * @param value2 DOCUMENT ME!
+         *
+         * @return DOCUMENT ME!
+         */
+        public Criteria andFileNamePostfixBetween(String value1, String value2) {
+            addCriterion("BUSINESS_TEMPLATE.FILE_NAME_POSTFIX between", value1,
+                value2, "fileNamePostfix");
+
+            return this;
+        } // end andFileNamePostfixBetween()
+
+        /**
+         * DOCUMENT ME!
+         *
+         * @param value1 DOCUMENT ME!
+         * @param value2 DOCUMENT ME!
+         *
+         * @return DOCUMENT ME!
+         */
+        public Criteria andFileNamePostfixNotBetween(String value1,
+            String value2) {
+            addCriterion("BUSINESS_TEMPLATE.FILE_NAME_POSTFIX not between",
+                value1, value2, "fileNamePostfix");
+
+            return this;
+        } // end andFileNamePostfixNotBetween()
     } // end Criteria
 } // end BusinessTemplateDAOQueryBean

@@ -12,7 +12,7 @@ import java.util.Map;
 
 
 /**
- * Generate date 2011-09-22 10:22:33
+ * Generate date 2011-12-28 11:24:40
  *
  * @model auto gen
  */
@@ -63,6 +63,12 @@ public class BusinessTemplateBean implements Serializable {
 
         mappedDaoFields.put("fileType",
             com.ourteam.modelbase.dao.IBusinessTemplateDAO.FileType);
+
+        mappedDaoFields.put("fileNamePrefix",
+            com.ourteam.modelbase.dao.IBusinessTemplateDAO.FileNamePrefix);
+
+        mappedDaoFields.put("fileNamePostfix",
+            com.ourteam.modelbase.dao.IBusinessTemplateDAO.FileNamePostfix);
     } 
 
     /**
@@ -321,6 +327,42 @@ public class BusinessTemplateBean implements Serializable {
     public void setFileType(String aFileType) {
         this.objBusinessTemplate.setFileType(aFileType);
     } // end setFileType()
+
+    /**
+     * Get FileNamePrefix
+     *
+     * @return fileNamePrefix
+     */
+    public String getFileNamePrefix() {
+        return objBusinessTemplate.getFileNamePrefix();
+    } // end getFileNamePrefix()
+
+    /**
+     * Set FileNamePrefix
+     *
+     * @param aFileNamePrefix
+     */
+    public void setFileNamePrefix(String aFileNamePrefix) {
+        this.objBusinessTemplate.setFileNamePrefix(aFileNamePrefix);
+    } // end setFileNamePrefix()
+
+    /**
+     * Get FileNamePostfix
+     *
+     * @return fileNamePostfix
+     */
+    public String getFileNamePostfix() {
+        return objBusinessTemplate.getFileNamePostfix();
+    } // end getFileNamePostfix()
+
+    /**
+     * Set FileNamePostfix
+     *
+     * @param aFileNamePostfix
+     */
+    public void setFileNamePostfix(String aFileNamePostfix) {
+        this.objBusinessTemplate.setFileNamePostfix(aFileNamePostfix);
+    } // end setFileNamePostfix()
 
     /**
      * DOCUMENT ME!

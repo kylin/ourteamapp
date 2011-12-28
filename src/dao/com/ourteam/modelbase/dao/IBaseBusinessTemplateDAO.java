@@ -10,7 +10,7 @@ import java.util.Map;
 
 /**
 *  IBusinessTemplate Data Access Object
-*  GenDate 2011-09-22 10:16:39  
+*  GenDate 2011-12-28 11:21:29  
 *  @model  interface="true"
 *  @author Auto Generate        
 */
@@ -54,6 +54,12 @@ public interface IBaseBusinessTemplateDAO extends IDataAccessObject {
     /** Attribute */
     static final String FileType = "BUSINESS_TEMPLATE.FILE_TYPE";
 
+    /** Attribute */
+    static final String FileNamePrefix = "BUSINESS_TEMPLATE.FILE_NAME_PREFIX";
+
+    /** Attribute */
+    static final String FileNamePostfix = "BUSINESS_TEMPLATE.FILE_NAME_POSTFIX";
+
     /**
      * DOCUMENT ME!
      *
@@ -96,6 +102,12 @@ public interface IBaseBusinessTemplateDAO extends IDataAccessObject {
 
         /** Attribute */
         static final String FileType = "fileType";
+
+        /** Attribute */
+        static final String FileNamePrefix = "fileNamePrefix";
+
+        /** Attribute */
+        static final String FileNamePostfix = "fileNamePostfix";
     } // end DataProperty
 
     /**

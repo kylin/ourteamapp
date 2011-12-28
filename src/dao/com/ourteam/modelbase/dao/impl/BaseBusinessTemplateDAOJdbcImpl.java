@@ -26,9 +26,9 @@ import java.util.Map;
 
 
 /**
- * DAO JDBC Impl Generate Date : 2011-06-29 21:07:05
+ * DAO JDBC Impl Generate Date : 2011-12-28 11:23:19
  *
- * @author Kylin
+ * @author kylin
  */
 abstract public class BaseBusinessTemplateDAOJdbcImpl extends AbstractJdbcDAO
     implements IBusinessTemplateDAO {
@@ -38,7 +38,7 @@ abstract public class BaseBusinessTemplateDAOJdbcImpl extends AbstractJdbcDAO
     public static final String[] ENTITY_FIELDS = new String[] {
             Id, BusinessObjectType, ProviderTypeId, Description, Status,
             TemplateId, TemplateName, TemplateDescription, FileName, Name,
-            CanOverWrite, FileType
+            CanOverWrite, FileType, FileNamePrefix, FileNamePostfix
         };
 
     /**
@@ -50,7 +50,8 @@ abstract public class BaseBusinessTemplateDAOJdbcImpl extends AbstractJdbcDAO
             DataProperty.Status, DataProperty.TemplateId,
             DataProperty.TemplateName, DataProperty.TemplateDescription,
             DataProperty.FileName, DataProperty.Name, DataProperty.CanOverWrite,
-            DataProperty.FileType
+            DataProperty.FileType, DataProperty.FileNamePrefix,
+            DataProperty.FileNamePostfix
         };
 
     /**
@@ -619,6 +620,25 @@ abstract public class BaseBusinessTemplateDAOJdbcImpl extends AbstractJdbcDAO
                 if (FileType != null) {
                     BeanUtils.setProperty(object, DataProperty.FileType,
                         FileType);
+                } // end if
+
+                Object FileNamePrefix = resultSet.getObject(columnIndex++);
+
+                object.setFileNamePrefixNull(resultSet.getBoolean(columnIndex++));
+
+                if (FileNamePrefix != null) {
+                    BeanUtils.setProperty(object, DataProperty.FileNamePrefix,
+                        FileNamePrefix);
+                } // end if
+
+                Object FileNamePostfix = resultSet.getObject(columnIndex++);
+
+                object.setFileNamePostfixNull(resultSet.getBoolean(
+                        columnIndex++));
+
+                if (FileNamePostfix != null) {
+                    BeanUtils.setProperty(object, DataProperty.FileNamePostfix,
+                        FileNamePostfix);
                 } // end if
 
                 return object;
