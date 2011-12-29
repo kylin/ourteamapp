@@ -102,6 +102,7 @@
             id="com.ourteam.plugin.UIConfigContribution"
             objectClass="org.eclipse.jdt.core.IJavaProject">
          <menu
+               icon="icons/16X16/GuiTools/gui_tools.png"
                id="UIConfigMenu"
                label="界面元素配置工具"
                path="additions">
@@ -111,8 +112,44 @@
          </menu>
          <action
                class="com.ourteam.plugin.popup.actions.AddUIActionAction"
+               icon="icons/16X16/GuiTools/cog_add.png"
                id="com.ourteam.plugin.popup.actions.AddUIActionAction"
                label="新建界面动作配置"
+               menubarPath="UIConfigMenu/UIConfigGroupMarker">
+         </action>
+         <action
+               class="com.ourteam.plugin.popup.actions.AddUISelectAction"
+               icon="icons/16X16/GuiTools/combo_box_add.png"
+               id="com.ourteam.plugin.popup.actions.AddUISelectAction"
+               label="新建界面选项配置"
+               menubarPath="UIConfigMenu/UIConfigGroupMarker">
+         </action>
+         <action
+               class="com.ourteam.plugin.popup.actions.AddUIFormAction"
+               icon="icons/16X16/GuiTools/application_form_add.png"
+               id="com.ourteam.plugin.popup.actions.AddUIFormAction"
+               label="新建界面表单配置"
+               menubarPath="UIConfigMenu/UIConfigGroupMarker">
+         </action>
+         <action
+               class="com.ourteam.plugin.popup.actions.AddUITableAction"
+               icon="icons/16X16/GuiTools/table_add.png"
+               id="com.ourteam.plugin.popup.actions.AddUITableAction"
+               label="新建界面列表配置"
+               menubarPath="UIConfigMenu/UIConfigGroupMarker">
+         </action>
+         <action
+               class="com.ourteam.plugin.popup.actions.AddUITabAction"
+               icon="icons/16X16/GuiTools/tabbar_add.png"
+               id="com.ourteam.plugin.popup.actions.AddUITabAction"
+               label="新建界面选项卡配置"
+               menubarPath="UIConfigMenu/UIConfigGroupMarker">
+         </action>
+         <action
+               class="com.ourteam.plugin.popup.actions.AddUITreeAction"
+               icon="icons/16X16/GuiTools/node-tree_add.png"
+               id="com.ourteam.plugin.popup.actions.AddUITreeAction"
+               label="新建界面树形列表配置"
                menubarPath="UIConfigMenu/UIConfigGroupMarker">
          </action>
       </objectContribution>
@@ -123,10 +160,20 @@
             adaptable="false"
             id="EditUIConfigMenu"
             objectClass="org.eclipse.core.resources.IFile">
+         <menu
+               icon="icons/16X16/GuiTools/gui_tools.png"
+               id="EditUIConfigMenu"
+               label="编辑界面元素配置">
+            <groupMarker
+                  name="EditUIConfigGroupMarker">
+            </groupMarker>
+         </menu>
          <action
                class="com.ourteam.plugin.popup.actions.EditUIConfigAction"
+               icon="icons/16X16/Action/pencil.png"
                id="com.ourteam.plugin.popup.actions.EditUIConfigAction"
-               label="编辑界面元素配置">
+               label="编辑"
+               menubarPath="EditUIConfigMenu/EditUIConfigGroupMarker">
          </action>
       </objectContribution>
    </extension>

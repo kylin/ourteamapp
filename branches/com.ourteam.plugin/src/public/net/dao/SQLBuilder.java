@@ -185,6 +185,32 @@ public class SQLBuilder {
 
 	}
 
+	public String buildDeleteByIdSQL() throws Exception {
+		StringBuffer sql = new StringBuffer();
+
+		sql.append(buildDeleteSQL(getEntityName()));
+
+		String basicQueryFilter = getBaiscQueryFilter();
+
+		if (StringUtils.isNotBlank(basicQueryFilter)) {
+			sql.append(" WHERE ").append(basicQueryFilter).append(" AND ");
+		} else {
+			sql.append(" WHERE ");
+		}
+
+		String[] pkFields = getEntityPKFields();
+
+		for (int i = 0; i < pkFields.length; i++) {
+			String pkField = pkFields[i];
+			if (i > 0) {
+				sql.append(" AND ");
+			}
+			sql.append(pkField).append("=?");
+		}
+
+		return sql.toString();
+	}
+
 	public String buildQuerySQL(String entityName, String[] entityFields,
 			String[] entityProperties, BaseQueryBean aBaseQueryBean)
 			throws Exception {
