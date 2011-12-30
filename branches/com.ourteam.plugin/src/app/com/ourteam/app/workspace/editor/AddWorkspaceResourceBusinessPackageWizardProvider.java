@@ -93,7 +93,7 @@ public class AddWorkspaceResourceBusinessPackageWizardProvider extends
 					packageIds[i] = relateBeans[i].getBusinessPcakageId();
 
 				}
-
+				
 				control.setExculdPackageIds(packageIds);
 
 			}
