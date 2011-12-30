@@ -244,10 +244,13 @@
 	</form>
 	<form id="businessPackageSearchForm" title="业务包查询表单" titleKey="" desc="">
 						
-		<property id="businessDomainId" title="业务域" titleKey="data.common.name" type="combolist" tipInfo="" desc="" readOnly="true" style="" command="" dataType="java.lang.Long" dataSrc="modelbase.businessDomain" allowNull="false" value="" >
+		<property id="businessDomainId" title="业务域" titleKey="" type="combolist" tipInfo="" desc="" readOnly="true" style="" command="" dataType="java.lang.Long" dataSrc="modelbase.businessDomain" allowNull="true" value="" >
+								</property>
+								
+		<property id="packageType" title="类型" titleKey="" type="combolist" tipInfo="" desc="" readOnly="true" style="" command="" dataType="java.lang.String" dataSrc="modelbase.businessPackageType" allowNull="true" value="" >
 								</property>
 				
-		<property id="name" title="名称" titleKey="data.common.name" type="text" tipInfo="" desc="" readOnly="false" style="" command="" dataType="" dataSrc="" allowNull="true" value="" >
+		<property id="name" title="名称" titleKey="" type="text" tipInfo="" desc="" readOnly="false" style="" command="" dataType="" dataSrc="" allowNull="true" value="" >
 								</property>
 				
 	</form>

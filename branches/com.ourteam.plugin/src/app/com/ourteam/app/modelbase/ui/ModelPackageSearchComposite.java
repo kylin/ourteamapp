@@ -56,18 +56,24 @@ public class ModelPackageSearchComposite
 		Long businessDomianId = packageSearchDataModel.getBusinessDomainId();
 
 		String packageName = packageSearchDataModel.getName();
+		
+		String packageType = packageSearchDataModel.getPackageType();
 
 		BusinessPackageDAOQueryBean queryBean = new BusinessPackageDAOQueryBean();
 
 		BusinessPackageDAOQueryBean.Criteria criteria = queryBean
 				.createCriteria();
 
-		if (businessDomianId != null) {
+		if (businessDomianId != null && businessDomianId.longValue() != 0) {
 			criteria.andBusinessDomainIdEqualTo(businessDomianId);
 		}
 
 		if (StringUtils.isNotBlank(packageName)) {
 			criteria.andNameLike(packageName);
+		}
+		
+		if(StringUtils.isNotBlank(packageType)){
+			criteria.andTypeEqualTo(packageType);
 		}
 
 		if (ArrayUtils.isNotEmpty(packageTypeEnums)) {

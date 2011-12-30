@@ -7,6 +7,8 @@ public class BusinessPackageSearchDataModel extends SearchDataModel {
 	private Long businessDomainId;
 	
 	private String name;
+	
+	private String packageType;
 
 	public String getName() {
 		return name;
@@ -22,6 +24,14 @@ public class BusinessPackageSearchDataModel extends SearchDataModel {
 
 	public void setBusinessDomainId(Long businessDomainId) {
 		this.businessDomainId = businessDomainId;
+	}
+
+	public String getPackageType() {
+		return packageType;
+	}
+
+	public void setPackageType(String packageType) {
+		this.packageType = packageType;
 	}
 	
 	
