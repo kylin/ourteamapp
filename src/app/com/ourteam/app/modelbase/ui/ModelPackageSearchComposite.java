@@ -118,4 +118,9 @@ public class ModelPackageSearchComposite
 		return new BusinessPackageSearchDataModel();
 	}
 
+	@Override
+	protected int getResultTableStyle() {
+		return SWT.BORDER | SWT.FULL_SELECTION | SWT.MULTI;
+	}
+
 }

@@ -1148,7 +1148,7 @@ public class BusinessObjectServiceImpl extends AbstractBusinessObjectService {
 			serviceParameterBean.setSort(Integer.valueOf(i + 1));
 			serviceParameterBean.setType(ServiceParameterTypeEnum.IN.getName());
 			if (StringUtils.isBlank(serviceParameterBean.getIsArray())) {
-				serviceParameterBean.setIsArray("N");
+				serviceParameterBean.setIsArray("false");
 			}
 
 			parameters[i] = serviceParameterBean.convertToServiceParameter();

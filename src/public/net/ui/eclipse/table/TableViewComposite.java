@@ -443,6 +443,9 @@ public class TableViewComposite<T> extends AbstractContentViewerComposite
 	}
 
 	public void setDataList(List<T> aDataList) {
+		if (this.table.isDisposed()) {
+			return;
+		}
 		this.table.deselectAll();
 
 		this.tableViewer.setInput(aDataList);

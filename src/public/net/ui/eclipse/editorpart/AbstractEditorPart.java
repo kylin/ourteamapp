@@ -352,7 +352,7 @@ public abstract class AbstractEditorPart<K, T extends IDataModelEditorInput<K>>
 	}
 
 	public void updateActionStatus() {
-		if (this.toolBarBuilder != null) {
+		if (this.toolBarBuilder != null && form.isDisposed() == false) {
 			this.toolBarBuilder.reBuildActionItems(getActionGroupBeans(), true);
 			form.getToolBarManager().add(new ShowTextContributionItem(null));
 			this.toolBarBuilder.updateActionStatus();

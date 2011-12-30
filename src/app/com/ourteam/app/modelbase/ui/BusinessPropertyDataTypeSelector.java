@@ -181,14 +181,18 @@ public class BusinessPropertyDataTypeSelector extends
 				List<BusinessObjectBean> selectedObject = customDataTypeSearchComposite
 						.getSelectedSearchResults();
 
-				BusinessObjectBean customDataObjectBean = selectedObject.get(0);
+				if (selectedObject.isEmpty() == false) {
 
-				this.propertyDataTypeDataModel.setDataType(customDataObjectBean
-						.getName());
+					BusinessObjectBean customDataObjectBean = selectedObject
+							.get(0);
 
-				this.propertyDataTypeDataModel
-						.setReferencedObjectId(customDataObjectBean
-								.getBusinessObjectId());
+					this.propertyDataTypeDataModel
+							.setDataType(customDataObjectBean.getName());
+
+					this.propertyDataTypeDataModel
+							.setReferencedObjectId(customDataObjectBean
+									.getBusinessObjectId());
+				}
 
 				return true;
 
@@ -236,9 +240,13 @@ public class BusinessPropertyDataTypeSelector extends
 								BusinessObjectTypeEnum.JAVA_CLASS,
 								BusinessObjectTypeEnum.DAO_QUERY_BEAN,
 								BusinessObjectTypeEnum.ENUM });
+				
+				objectSearchComposite.getQueryDataModel().setName(this.propertyDataTypeDataModel.getDataType());
 
 			} else if (aPanel instanceof CustomDataTypeSearchComposite) {
 				customDataTypeSearchComposite = (CustomDataTypeSearchComposite) aPanel;
+				
+				customDataTypeSearchComposite.getQueryDataModel().setName(this.propertyDataTypeDataModel.getDataType());
 
 			}
 
