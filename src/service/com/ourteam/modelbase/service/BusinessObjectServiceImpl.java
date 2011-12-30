@@ -519,7 +519,7 @@ public class BusinessObjectServiceImpl extends AbstractBusinessObjectService {
 		StringBuffer dataTypeName = new StringBuffer();
 
 		if (aBusinessObject.getPackageId() != 0) {
-			dataTypeName.append(aBusinessObject.getPackageName());
+			dataTypeName.append(aBusinessObject.getPackageName()).append(".");
 		}
 
 		dataTypeName.append(aBusinessObject.getName());

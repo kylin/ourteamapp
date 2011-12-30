@@ -145,4 +145,11 @@
 		<option value="query">查询</option>
 		<option value="delete">删除</option>
 	</select>
+	
+	<select name="modelbase.businessPackageType" type="static">
+		<option value="BUSINESS_PACKAGE">DAO对象包</option>
+		<option value="SERVICE_PACKAGE">服务对象包</option>
+	</select>
+	
+	
 </listdata>

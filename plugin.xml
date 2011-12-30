@@ -7,6 +7,7 @@
             allowMultiple="false"
             category="com.ourteam.app.ViewCategory"
             class="com.ourteam.plugin.modelbase.ModelBaseExplorer"
+            icon="icons/16X16/Model/business_model.png"
             id="com.ourteam.plugin.modelbase.ModelBaseExplorer"
             name="模型库浏览"
             restorable="true">
@@ -39,13 +40,6 @@
             class="com.ourteam.plugin.WorkbenchPropertyPage"
             id="com.ourteam.plugin.WorkbenchPropertyPage"
             name="开发助手设置"
-            objectClass="org.eclipse.jdt.core.IJavaProject">
-      </page>
-      <page
-            category="com.ourteam.plugin.WorkbenchPropertyPage"
-            class="com.ourteam.plugin.CodeTemplateConfigPage"
-            id="com.ourteam.plugin.CodeTemplateConfigPage"
-            name="代码模板配置"
             objectClass="org.eclipse.jdt.core.IJavaProject">
       </page>
       <page
