@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<listdata>
-	<select name="product.productVersion" type="getAllProductVersion"
-		dataProperty="id" labelProperty="">
-	</select>
-</listdata>

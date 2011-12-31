@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<listdata>
-	
-	<select name="team.teamRoleList" type="getTeamRoles"
-		dataProperty="id" labelProperty="teamRoleName">
-	</select>
-	
-</listdata>

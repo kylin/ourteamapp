@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<info primitiveTypes="attribute">
-  <element name="actiongroup">
-    <element name="action" property="actionBeans"/>
-    <element name="actionGroup" property="actionGroupBeans"/>
-    <addDefaults/>
-  </element>
-</info>
