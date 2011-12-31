@@ -86,4 +86,6 @@ Bundle-ClassPath: lib/acegi-security-1.0.7.jar,
  lib/svnkit.jar,
  lib/trilead.jar,
  lib/velocity-1.7.jar,
- .
+ .,
+ lib/our_team_api-1.0.jar,
+ lib/our_team_ui-1.0.jar
