@@ -12,6 +12,8 @@ import org.eclipse.swt.widgets.Control;
 import org.eclipse.ui.IWorkbenchPropertyPage;
 import org.eclipse.ui.dialogs.PropertyPage;
 
+import com.ourteam.plugin.modelbase.ModelBaseContext;
+
 public class WorkbenchPropertyPage extends PropertyPage implements
 		IWorkbenchPropertyPage {
 
@@ -27,6 +29,9 @@ public class WorkbenchPropertyPage extends PropertyPage implements
 	public void createControl(Composite parent) {
 
 		try {
+			
+			ModelBaseContext.start(getShell());
+			
 			IAdaptable adaptable = getElement();
 			if (adaptable instanceof IJavaProject) {
 
