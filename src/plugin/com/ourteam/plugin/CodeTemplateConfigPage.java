@@ -31,7 +31,6 @@ public class CodeTemplateConfigPage extends WorkbenchPropertyPage {
 
 	private TreeViewComposite templateTreeViewComposite;
 
-	
 	public CodeTemplateConfigPage() {
 
 	}
@@ -44,11 +43,12 @@ public class CodeTemplateConfigPage extends WorkbenchPropertyPage {
 		try {
 			IAdaptable adaptable = getElement();
 			if (adaptable instanceof IJavaProject) {
-				
-				Configuration templateConfiguration = configuration.subset("template");
 
-				for (Iterator<String> iterator = templateConfiguration.getKeys(); iterator
-						.hasNext();) {
+				Configuration templateConfiguration = getPropertiesConfiguration()
+						.subset("template");
+
+				for (Iterator<String> iterator = templateConfiguration
+						.getKeys(); iterator.hasNext();) {
 					String key = iterator.next();
 					BusinessObjectTypeEnum objectTypeEnum = BusinessObjectTypeEnum
 							.getEnum(key);
@@ -147,13 +147,16 @@ public class CodeTemplateConfigPage extends WorkbenchPropertyPage {
 		try {
 			List<Object> selectedObjects = templateTreeViewComposite
 					.getCheckedUserObjects();
-			
-			Configuration templateConfiguration = configuration.subset("template");
 
-			templateConfiguration.clearProperty(BusinessTemplateBean.class.getName());
+			Configuration templateConfiguration = getPropertiesConfiguration()
+					.subset("template");
 
-			templateConfiguration.clearProperty(BusinessTemplateProviderTypeBean.class
+			templateConfiguration.clearProperty(BusinessTemplateBean.class
 					.getName());
+
+			templateConfiguration
+					.clearProperty(BusinessTemplateProviderTypeBean.class
+							.getName());
 
 			for (Iterator<Object> iterator = selectedObjects.iterator(); iterator
 					.hasNext();) {
@@ -165,8 +168,9 @@ public class CodeTemplateConfigPage extends WorkbenchPropertyPage {
 							"true");
 				} else if (nodeObj instanceof BusinessTemplateBean) {
 					BusinessTemplateBean templateBean = (BusinessTemplateBean) nodeObj;
-					templateConfiguration.addProperty(BusinessTemplateBean.class
-							.getName(), new Long(templateBean.getId()));
+					templateConfiguration.addProperty(
+							BusinessTemplateBean.class.getName(), new Long(
+									templateBean.getId()));
 				} else if (nodeObj instanceof BusinessTemplateProviderTypeBean) {
 					BusinessTemplateProviderTypeBean templateProviderBean = (BusinessTemplateProviderTypeBean) nodeObj;
 					templateConfiguration.addProperty(
@@ -176,7 +180,7 @@ public class CodeTemplateConfigPage extends WorkbenchPropertyPage {
 
 			}
 
-			configuration.save();
+			getPropertiesConfiguration().save();
 
 			return true;
 		} catch (Exception e) {
