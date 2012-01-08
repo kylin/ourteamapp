@@ -16,6 +16,7 @@ import net.ui.model.table.TableBean;
 
 import org.apache.commons.configuration.Configuration;
 import org.apache.commons.configuration.ConfigurationException;
+import org.apache.commons.configuration.PropertiesConfiguration;
 import org.eclipse.jdt.core.IClasspathEntry;
 import org.eclipse.jdt.ui.ISharedImages;
 import org.eclipse.jdt.ui.JavaUI;
@@ -68,6 +69,8 @@ public class CodeGenerateConfigPage extends WorkbenchPropertyPage {
 
 	@Override
 	protected Control createContents(Composite parent) {
+
+		PropertiesConfiguration configuration = getPropertiesConfiguration();
 
 		generateConfiguration = configuration.subset("generator");
 
@@ -194,7 +197,8 @@ public class CodeGenerateConfigPage extends WorkbenchPropertyPage {
 			sourceListView.getList().setLayoutData(
 					new GridData(GridData.FILL_HORIZONTAL));
 
-			IClasspathEntry[] classpathEntries = javaProject.getRawClasspath();
+			IClasspathEntry[] classpathEntries = getJavaProject()
+					.getRawClasspath();
 
 			IClasspathEntry firstClasspathEntry = null;
 
@@ -285,7 +289,7 @@ public class CodeGenerateConfigPage extends WorkbenchPropertyPage {
 					.getCommboBoxSelectedData(daoProviderCombo);
 			this.generateConfiguration.setProperty("DAO.providerType",
 					String.valueOf(providerTypeBean.getId()));
-			this.configuration.save();
+			this.getPropertiesConfiguration().save();
 			return true;
 		} catch (ConfigurationException e) {
 			e.printStackTrace();

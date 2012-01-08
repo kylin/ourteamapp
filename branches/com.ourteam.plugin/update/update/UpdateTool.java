@@ -36,7 +36,7 @@ import com.ourteam.modelbase.service.IBusinessPackageService;
 
 public class UpdateTool {
 
-	private static final String[] applictionContexts = new String[] { "applicationContext-app.xml" };
+	private static final String[] applictionContexts = new String[] { "applicationContext-api.xml" };
 
 	private static AbstractApplicationContext applictionContext = new ClassPathXmlApplicationContext(
 			applictionContexts);
@@ -589,6 +589,7 @@ public class UpdateTool {
 				while (objectResultSet.next()) {
 					BusinessObjectBean objectBean = new BusinessObjectBean();
 					objectBean.setPackageId(packageBean.getBusinessPackageId());
+					objectBean.setIsGenerate("true");
 					objectBean.setDescription(objectResultSet
 							.getString("description"));
 					objectBean.setName(objectResultSet.getString("name"));
@@ -598,13 +599,22 @@ public class UpdateTool {
 					if ("INTERFACE".equals(objectType)) {
 						objectBean
 								.setType(BusinessObjectTypeEnum.DAO.getName());
-						objectBean.setName(StringUtils.substringAfter(
-								objectBean.getName(), "I"));
+						if (StringUtils.startsWith(objectBean.getName(), "I")) {
+							objectBean.setName(StringUtils.substringAfter(
+									objectBean.getName(), "I"));
+						} else {
+							objectBean.setName(objectBean.getName());
+						}
+
 					} else if ("SERVICE".equals(objectType)) {
 						objectBean.setType(BusinessObjectTypeEnum.SERVICE
 								.getName());
-						objectBean.setName(StringUtils.substringAfter(
-								objectBean.getName(), "I"));
+						if (StringUtils.startsWith(objectBean.getName(), "I")) {
+							objectBean.setName(StringUtils.substringAfter(
+									objectBean.getName(), "I"));
+						} else {
+							objectBean.setName(objectBean.getName());
+						}
 					} else if ("PERSISTENT".equals(objectType)) {
 						objectBean.setType(BusinessObjectTypeEnum.PERSISTENT
 								.getName());
@@ -640,8 +650,9 @@ public class UpdateTool {
 			if (customerDataMap.containsKey(dataType)) {
 				refid = customerDataMap.get(dataType);
 			} else {
-				System.out.println("select a.* from business_object as a,business_package as b where CONCAT(b.NAME,'.',a.NAME) = '"
-										+ dataType + "'");
+				System.out
+						.println("select a.* from business_object as a,business_package as b where CONCAT(b.NAME,'.',a.NAME) = '"
+								+ dataType + "'");
 				ResultSet refResultSet = connection
 						.createStatement()
 						.executeQuery(
