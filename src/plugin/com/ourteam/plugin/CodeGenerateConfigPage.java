@@ -262,10 +262,14 @@ public class CodeGenerateConfigPage extends WorkbenchPropertyPage {
 
 			for (Iterator<String> iterator = packageIds.iterator(); iterator
 					.hasNext();) {
-				businessPackageBeans
-						.add(IOurTeamServiceConst.BUSINESS_PACKAGE_SERVICE
-								.getBusinessPackageById(Long
-										.parseLong((String) iterator.next())));
+
+				BusinessPackageBean packageBean = IOurTeamServiceConst.BUSINESS_PACKAGE_SERVICE
+						.getBusinessPackageById(Long
+								.parseLong((String) iterator.next()));
+
+				if (packageBean != null) {
+					businessPackageBeans.add(packageBean);
+				}
 
 			}
 
