@@ -60,9 +60,6 @@ public class CodeGenerateConfigPage extends WorkbenchPropertyPage {
 
 	private Configuration generateConfiguration;
 
-	private static final IBusinessTemplateService BUSINESS_TEMPLATE_SERVICE = BusinessTemplateServiceFactory
-			.getBusinessTemplateService();
-
 	public CodeGenerateConfigPage() {
 
 	}
@@ -136,6 +133,9 @@ public class CodeGenerateConfigPage extends WorkbenchPropertyPage {
 
 		try {
 
+			final IBusinessTemplateService BUSINESS_TEMPLATE_SERVICE = BusinessTemplateServiceFactory
+					.getBusinessTemplateService();
+
 			long providerTypeId = this.generateConfiguration.getLong(
 					"DAO.providerType", 0);
 
@@ -207,7 +207,9 @@ public class CodeGenerateConfigPage extends WorkbenchPropertyPage {
 
 				if (iClasspathEntry.getEntryKind() == IClasspathEntry.CPE_SOURCE) {
 					sourceListView.add(iClasspathEntry);
-					firstClasspathEntry = iClasspathEntry;
+					if (firstClasspathEntry == null) {
+						firstClasspathEntry = iClasspathEntry;
+					}
 				}
 			}
 

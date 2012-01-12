@@ -1,11 +1,13 @@
 package com.ourteam.plugin.popup.actions;
 
 import java.io.File;
+import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 
 import org.apache.commons.configuration.Configuration;
 import org.apache.commons.configuration.PropertiesConfiguration;
+import org.apache.commons.lang.ArrayUtils;
 import org.apache.commons.lang.StringUtils;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
@@ -24,7 +26,10 @@ import org.eclipse.ui.IActionDelegate;
 import com.ourteam.app.modelbase.utils.BusinessCodeGenerateContext;
 import com.ourteam.app.modelbase.utils.BusinessCodeGenerateUtils;
 import com.ourteam.app.modelbase.utils.IBusinessCodeGenerateListener;
-import com.ourteam.plugin.modelbase.ModelBaseContext;
+import com.ourteam.modelbase.dao.BusinessPackageDAOQueryBean;
+import com.ourteam.modelbase.domain.BusinessPackageBean;
+import com.ourteam.modelbase.service.BusinessPackageServiceFactory;
+import com.ourteam.modelbase.service.IBusinessPackageService;
 
 public class CodeGenerateAction extends AbstractJavaProjectAction {
 
@@ -48,7 +53,6 @@ public class CodeGenerateAction extends AbstractJavaProjectAction {
 	 */
 	public void run(final IAction action) {
 
-		
 		File projectDir = this.javaProject.getProject().getLocation().toFile();
 
 		File configFile = new File(projectDir, ".ourteam");
@@ -59,9 +63,11 @@ public class CodeGenerateAction extends AbstractJavaProjectAction {
 			logger.error("", e);
 		}
 
-		final File sourceDir = new File(projectDir, StringUtils.remove(
-				this.packageFragmentRoot.getPath().toOSString(),
-				this.javaProject.getPath().toOSString()));
+		String sourcePath = StringUtils.remove(this.packageFragmentRoot
+				.getPath().toOSString(), this.javaProject.getPath()
+				.toOSString());
+
+		final File sourceDir = new File(projectDir, sourcePath);
 
 		Job job = new Job(action.getText()) {
 			protected IStatus run(final IProgressMonitor monitor) {
@@ -95,10 +101,36 @@ public class CodeGenerateAction extends AbstractJavaProjectAction {
 					List<String> modelIds = configuration.getList("generator."
 							+ packageFragmentRoot.getPath().toString());
 
-					final long[] packageIds = new long[modelIds.size()];
+					final List<Long> packageIds = new ArrayList<Long>();
 
-					for (int i = 0; i < packageIds.length; i++) {
-						packageIds[i] = Long.parseLong(modelIds.get(i));
+					for (int i = 0; i < modelIds.size(); i++) {
+						packageIds.add(new Long(modelIds.get(i)));
+					}
+
+					if (packageFragment != null) {
+
+						IBusinessPackageService businessPackageService = BusinessPackageServiceFactory
+								.getBusinessPackageService();
+
+						BusinessPackageDAOQueryBean queryBean = new BusinessPackageDAOQueryBean();
+
+						queryBean
+								.createCriteria()
+								.andBusinessPackageIdIn(packageIds)
+								.andNameEqualTo(
+										packageFragment.getElementName());
+
+						BusinessPackageBean[] packageBeans = businessPackageService
+								.queryBusinessPackages(queryBean);
+
+						packageIds.clear();
+
+						for (int i = 0; i < packageBeans.length; i++) {
+							BusinessPackageBean businessPackageBean = packageBeans[i];
+							packageIds.add(new Long(businessPackageBean
+									.getBusinessPackageId()));
+						}
+
 					}
 
 					generateContext
@@ -145,8 +177,14 @@ public class CodeGenerateAction extends AbstractJavaProjectAction {
 								}
 							});
 
-					BusinessCodeGenerateUtils.generateBusinessFileObjects(
-							generateContext, packageIds);
+					if (packageIds.isEmpty() == false) {
+
+						BusinessCodeGenerateUtils.generateBusinessFileObjects(
+								generateContext, ArrayUtils
+										.toPrimitive(packageIds
+												.toArray(new Long[packageIds
+														.size()])));
+					}
 
 					monitor.done();
 
@@ -154,6 +192,8 @@ public class CodeGenerateAction extends AbstractJavaProjectAction {
 
 				} catch (Exception e) {
 					logger.error("gen code error", e);
+					MessageDialog.openError(shell, "Error",
+							e.getLocalizedMessage());
 					return Status.CANCEL_STATUS;
 				}
 
