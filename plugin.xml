@@ -55,23 +55,11 @@
       <objectContribution
             id="com.ourteam.plugin.CodeGenerateContribution"
             objectClass="org.eclipse.jdt.core.IPackageFragmentRoot">
-         <menu
-               id="CodeGenerateMenu"
-               label="代码生成"
-               path="additions">
-            <groupMarker
-                  name="CodeGenerateGroupMarker">
-            </groupMarker>
-         </menu>
          <action
                class="com.ourteam.plugin.popup.actions.CodeGenerateAction"
-               enablesFor="+"
+               icon="icons/16X16/Work/wand.png"
                id="com.ourteam.plugin.popup.actions.CodeGenerateAction"
-               label="生成代码"
-               menubarPath="CodeGenerateMenu/CodeGenerateGroupMarker">
-            <selection
-                  class="org.eclipse.jdt.core.IPackageFragmentRoot">
-            </selection>
+               label="生成代码">
          </action>
       </objectContribution>
    </extension>
@@ -94,7 +82,7 @@
       <objectContribution
             adaptable="true"
             id="com.ourteam.plugin.UIConfigContribution"
-            objectClass="org.eclipse.jdt.core.IJavaProject">
+            objectClass="org.eclipse.core.resources.IFolder">
          <menu
                icon="icons/16X16/GuiTools/gui_tools.png"
                id="UIConfigMenu"
@@ -154,20 +142,24 @@
             adaptable="false"
             id="EditUIConfigMenu"
             objectClass="org.eclipse.core.resources.IFile">
-         <menu
-               icon="icons/16X16/GuiTools/gui_tools.png"
-               id="EditUIConfigMenu"
-               label="编辑界面元素配置">
-            <groupMarker
-                  name="EditUIConfigGroupMarker">
-            </groupMarker>
-         </menu>
          <action
                class="com.ourteam.plugin.popup.actions.EditUIConfigAction"
-               icon="icons/16X16/Action/pencil.png"
+               icon="icons/16X16/GuiTools/gui_tools.png"
                id="com.ourteam.plugin.popup.actions.EditUIConfigAction"
-               label="编辑"
-               menubarPath="EditUIConfigMenu/EditUIConfigGroupMarker">
+               label="编辑界面元素配置">
+         </action>
+      </objectContribution>
+   </extension>
+   <extension
+         point="org.eclipse.ui.popupMenus">
+      <objectContribution
+            id="com.ourteam.plugin.PackageCodeGenerateContribution"
+            objectClass="org.eclipse.jdt.core.IPackageFragment">
+         <action
+               class="com.ourteam.plugin.popup.actions.CodeGenerateAction"
+               icon="icons/16X16/Work/wand.png"
+               id="com.ourteam.plugin.popup.actions.PackageCodeGenerateAction"
+               label="生成代码">
          </action>
       </objectContribution>
    </extension>
