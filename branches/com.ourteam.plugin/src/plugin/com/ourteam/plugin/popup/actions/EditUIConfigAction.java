@@ -5,16 +5,21 @@ import java.util.Iterator;
 import java.util.Map;
 
 import net.ui.eclipse.ImageChache;
+import net.ui.eclipse.editorpart.AbstractEditorPart;
 import net.ui.eclipse.editorpart.MultiPageEditorPartAgent;
 
 import org.apache.commons.io.FileUtils;
 import org.apache.commons.io.FilenameUtils;
 import org.apache.commons.lang.StringUtils;
 import org.eclipse.core.resources.IFile;
+import org.eclipse.core.resources.IResource;
+import org.eclipse.core.runtime.CoreException;
 import org.eclipse.jface.action.IAction;
 import org.eclipse.jface.viewers.ISelection;
 import org.eclipse.jface.viewers.StructuredSelection;
 import org.eclipse.ui.IActionDelegate;
+import org.eclipse.ui.IEditorPart;
+import org.eclipse.ui.IPropertyListener;
 
 import com.ourteam.app.workspace.WorkspaceResourceFileObject;
 import com.ourteam.app.workspace.editor.WorkspaceEditorHelper.FileResourceEditorInput;
@@ -28,29 +33,29 @@ public class EditUIConfigAction extends AbstractJavaProjectAction {
 				"uiActionConfigEditorTab", "ui_action_config" });
 		UI_CONFIG_NODE_MAP.put("<actions/>", new String[] {
 				"uiActionConfigEditorTab", "ui_action_config" });
-		
+
 		UI_CONFIG_NODE_MAP.put("<listdata>", new String[] {
 				"uiSelectListConfigEditorTab", "ui_combox_config" });
 		UI_CONFIG_NODE_MAP.put("<listdata/>", new String[] {
 				"uiSelectListConfigEditorTab", "ui_combox_config" });
-		
+
 		UI_CONFIG_NODE_MAP.put("<formSet>", new String[] {
 				"uiFormConfigEditorTab", "ui_form_config" });
 		UI_CONFIG_NODE_MAP.put("<formSet/>", new String[] {
 				"uiFormConfigEditorTab", "ui_form_config" });
-		
+
 		UI_CONFIG_NODE_MAP.put("<tableList>", new String[] {
 				"uiTableConfigEditorTab", "ui_table_config" });
 		UI_CONFIG_NODE_MAP.put("<tableList/>", new String[] {
 				"uiTableConfigEditorTab", "ui_table_config" });
-		
+
 		UI_CONFIG_NODE_MAP.put("<tabbed>", new String[] {
 				"uiTabConfigListEditorTab", "ui_tab_config" });
 		UI_CONFIG_NODE_MAP.put("<tabbed/>", new String[] {
 				"uiTabConfigListEditorTab", "ui_tab_config" });
-		
-		UI_CONFIG_NODE_MAP.put("<tree", new String[] {
-				"uiTreeConfigEditorTab", "ui_tree_config" });
+
+		UI_CONFIG_NODE_MAP.put("<tree", new String[] { "uiTreeConfigEditorTab",
+				"ui_tree_config" });
 		UI_CONFIG_NODE_MAP.put("<tree/>", new String[] {
 				"uiTreeConfigEditorTab", "ui_tree_config" });
 	}
@@ -71,6 +76,9 @@ public class EditUIConfigAction extends AbstractJavaProjectAction {
 		if (FilenameUtils.isExtension(file.getName(), "xml")) {
 
 			try {
+
+				file.refreshLocal(IResource.DEPTH_ZERO, null);
+
 				String xmlContent = FileUtils.readFileToString(file
 						.getRawLocation().toFile(), "UTF-8");
 
@@ -91,11 +99,28 @@ public class EditUIConfigAction extends AbstractJavaProjectAction {
 						editorInput.setImageDescriptor(ImageChache
 								.getImageDescriptor(editorConfigs[1]));
 
-						this.targetPart
+						IEditorPart editorPart = this.targetPart
 								.getSite()
 								.getPage()
 								.openEditor(editorInput,
 										MultiPageEditorPartAgent.EDITOR_ID);
+
+						editorPart.addPropertyListener(new IPropertyListener() {
+
+							@Override
+							public void propertyChanged(Object source,
+									int propId) {
+								if (AbstractEditorPart.EDITOR_SAVED == propId) {
+									try {
+										file.refreshLocal(
+												IResource.DEPTH_ONE, null);
+									} catch (CoreException e) {
+										e.printStackTrace();
+									}
+								}
+
+							}
+						});
 
 					}
 				}

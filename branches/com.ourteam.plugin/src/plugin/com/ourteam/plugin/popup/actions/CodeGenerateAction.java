@@ -210,8 +210,16 @@ public class CodeGenerateAction extends AbstractJavaProjectAction {
 				shell.getDisplay().asyncExec(new Runnable() {
 					public void run() {
 						try {
-							javaProject.getProject().refreshLocal(
-									IResource.DEPTH_INFINITE, null);
+
+							if (packageFragment != null) {
+								packageFragment.getResource().refreshLocal(
+										IResource.DEPTH_INFINITE, null);
+							} else {
+
+								packageFragmentRoot.getResource().refreshLocal(
+										IResource.DEPTH_INFINITE, null);
+							}
+
 						} catch (CoreException e) {
 							e.printStackTrace();
 						}
