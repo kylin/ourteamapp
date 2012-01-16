@@ -45,7 +45,7 @@ abstract public class AbstractAddUIConfigAction extends
 
 		if (SWTUtils.openDialog(shell, dialogProvider)) {
 			try {
-				this.folder.getProject().refreshLocal(IResource.DEPTH_INFINITE,
+				this.folder.refreshLocal(IResource.DEPTH_ONE,
 						null);
 			} catch (CoreException e) {
 				e.printStackTrace();
