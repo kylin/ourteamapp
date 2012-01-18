@@ -112,8 +112,8 @@ public class EditUIConfigAction extends AbstractJavaProjectAction {
 									int propId) {
 								if (AbstractEditorPart.EDITOR_SAVED == propId) {
 									try {
-										file.refreshLocal(
-												IResource.DEPTH_ONE, null);
+										file.getParent().refreshLocal(
+												IResource.DEPTH_INFINITE, null);
 									} catch (CoreException e) {
 										e.printStackTrace();
 									}
