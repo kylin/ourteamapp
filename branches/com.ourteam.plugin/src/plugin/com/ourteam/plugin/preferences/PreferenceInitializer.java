@@ -23,7 +23,6 @@ public class PreferenceInitializer extends AbstractPreferenceInitializer {
 		store.setDefault(PreferenceConstants.P_SERVER_INSTANCE, "our_team");
 		store.setDefault(PreferenceConstants.P_SERVER_USER, "user");
 		store.setDefault(PreferenceConstants.P_SERVER_PASSWORD, "");
-		store.setDefault(PreferenceConstants.P_SERVER_PASSWORD, "com.mysql.jdbc.Driver");
 		
 	}
 
