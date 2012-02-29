@@ -414,6 +414,16 @@ public class CodeGenerateConfigPage extends WorkbenchPropertyPage {
 
 		}
 
+		@Override
+		public String getDomainCode() {
+			return null;
+		}
+
+		@Override
+		public String getModuleCode() {
+			return null;
+		}
+
 	}
 
 }

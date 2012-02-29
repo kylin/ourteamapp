@@ -6,7 +6,7 @@
 	<classpathentry kind="src" path="update"/>
 	<classpathentry exported="true" kind="lib" path="lib/our_team_ui-1.0.jar"/>
 	<classpathentry exported="true" kind="lib" path="lib/our_team_api-1.0.jar"/>
-	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/jdk1.6.0_20"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.6"/>
 	<classpathentry kind="con" path="org.eclipse.pde.core.requiredPlugins"/>
 	<classpathentry kind="lib" path="lib/acegi-security-1.0.7.jar"/>
 	<classpathentry kind="lib" path="lib/activation-1.1.jar"/>
