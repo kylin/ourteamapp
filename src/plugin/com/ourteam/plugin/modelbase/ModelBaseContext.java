@@ -19,7 +19,7 @@ public class ModelBaseContext {
 	private static final Log logger = LogFactory.getLog(ModelBaseContext.class);
 
 	private static final String[] applictionContexts = new String[] {
-			"applicationContext-plugin.xml", "applicationContext-api.xml" };
+			"applicationContext-plugin.xml" };
 
 	private static AbstractApplicationContext applictionContext;
 
